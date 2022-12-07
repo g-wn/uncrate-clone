@@ -555,7 +555,7 @@ Deletes an existing product.
 
 ## CARTS
 
-### Get cart by User's Cart id
+### Get Cart by User's Cart id
 
 Returns the user's cart specified by the cart id.
 
