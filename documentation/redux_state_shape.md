@@ -4,6 +4,7 @@
     # CARTS SLICE OF REDUX STATE:
     carts: {
         1: {
+            id: 1,
             user_id: 1,
             total: 1.00,
             purchased: false,
@@ -11,6 +12,7 @@
             updated_at: "2022-12-07 15:00:00",
         },
         2: {
+            id: 2,
             user_id: 2,
             total: 2.00,
             purchased: false,
@@ -22,6 +24,7 @@
     # CART_ITEMS SLICE OF REDUX STATE:
     cart_items: {
         1: {
+            id: 1,
             cart_id: 1,
             product_id: 1,
             quantity: 1,
@@ -29,6 +32,7 @@
             updated_at: "2022-12-07 15:00:00",
         },
         2: {
+            id: 2,
             cart_id: 2,
             product_id: 2,
             quantity: 2,
