@@ -290,3 +290,112 @@ Returns all the products listed (created) by the current user.
       ]
     }
     ```
+
+### Get details of a Product from an id
+
+Returns the details of a product specified by its id.
+
+* Require Authentication: false
+* Request
+  * Method: GET
+  * URL: /api/products/:productId
+  * Body: none
+
+* Successful Response
+  * Status Code: 200
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+    ```json
+    {
+      "id": 1,
+      "title": "Whiskey-flavored Soap",
+      "description": "Ever wanted to get drunk in the shower? Now you can!",
+      "categoryId": 1,
+      "price": 24.99,
+      "previewImgId": 1,
+      "createdAt": "2021-11-19 20:39:36",
+      "updatedAt": "2021-11-19 20:39:36",
+      "ProductImages": [
+        {
+          "id": 1,
+          "url": "image url",
+        },
+        {
+          "id": 2,
+          "url": "image url",
+        }
+      ],
+    }
+    ```
+
+* Error response: Couldn't find a Product with the specified id
+  * Status Code: 404
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+    ```json
+    {
+      "message": "Product couldn't be found",
+      "statusCode": 404
+    }
+    ```
+    
+### Create a Product
+
+Creates and returns a new product.
+
+* Require Authentication: true
+* Request
+  * Method: POST
+  * URL: /api/products
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+    ```json
+    {
+      "title": "Whiskey-flavored Soap",
+      "description": "Ever wanted to get drunk in the shower? Now you can!",
+      "categoryId": 1,
+      "price": 24.99
+    }
+    ```
+
+* Successful Response
+  * Status Code: 201
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+    ```json
+    {
+      "title": "Whiskey-flavored Soap",
+      "description": "Ever wanted to get drunk in the shower? Now you can!",
+      "categoryId": 1,
+      "price": 24.99,
+      "createdAt": "2021-11-19 20:39:36",
+      "updatedAt": "2021-11-19 20:39:36"
+    }
+    ```
+
+* Error Response: Body validation error
+  * Status Code: 400
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+    ```json
+    {
+      "message": "Validation Error",
+      "statusCode": 400,
+      "errors": {
+        "title": "Title is required",
+        "description": "Description is required",
+        "categoryId": "Category ID is required",
+        "price": "Price is required",
+      }
+    }
+    ```
