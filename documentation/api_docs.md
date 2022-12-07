@@ -503,7 +503,7 @@ Updates and returns an existing product.
     }
     ```
 
-* Error response: Couldn't find a Spot with the specified id
+* Error response: Couldn't find a Product with the specified id
   * Status Code: 404
   * Headers:
     * Content-Type: application/json
