@@ -1,6 +1,22 @@
-# reduncrate REDUX STORE STATE SHAPE
+# "reduncrate" REDUX STORE STATE SHAPE
 
 {
+    carts: {
+        1: {
+            user_id: 1,
+            total: 1.00,
+            purchased: False,
+            created_at: "2022-12-07 14:00:00",
+            updated_at: "2022-12-07 15:00:00",
+        },
+        2: {
+            user_id: 2,
+            total: 2.00,
+            purchased: False,
+            created_at: "2022-12-07 14:00:00",
+            updated_at: "2022-12-07 15:00:00",
+        },
+    },
     # CART_ITEMS SLICE OF REDUX STATE:
     cart_items: {
         1: {
@@ -17,6 +33,11 @@
             created_at: "2022-12-07 14:00:00",
             updated_at: "2022-12-07 15:00:00",
         },
+    },
+    # FAVORITES SLICE OF REDUX STATE:
+    favorites: {
+        {user_id: 1, product_id: 1},
+        {user_id: 2, product_id: 2},
     },
     # PRODUCTS SLICE OF REDUX STATE:
     products: {
@@ -75,11 +96,23 @@
     users: {
         1: {
             id: 1,
-            first_name: "first_name",
-            last_name: "last_name",
-            username: "user_name",
-            hashed_password: "password",
-            email: "user@email.io",
+            first_name: "first_name_2",
+            last_name: "last_name_2",
+            username: "user_name_2",
+            hashed_password: "password_2",
+            email: "user_2@email.io",
+            cart_id: 1,
+            created_at: "2022-12-07 14:00:00",
+            updated_at: "2022-12-07 15:00:00",
+        },
+        2: {
+            id: 2,
+            first_name: "first_name_2",
+            last_name: "last_name_2",
+            username: "user_name_2",
+            hashed_password: "password_2",
+            email: "user_2@email.io",
+            cart_id: 2,
             created_at: "2022-12-07 14:00:00",
             updated_at: "2022-12-07 15:00:00",
         },
