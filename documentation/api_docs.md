@@ -552,3 +552,339 @@ Deletes an existing product.
       "statusCode": 404
     }
     ```
+
+## CARTS
+
+### Get cart by User's Cart id
+
+Returns the user's cart specified by the cart id.
+
+* Require Authentication: true
+* Request
+  * Method: GET
+  * URL: /api/users/:cartId
+  * Body: none
+
+* Successful Response
+  * Status Code: 200
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+    ```json
+    {
+      "Cart": [
+        {
+          "id": 1,
+          "usedId": 1,
+          "total": 92.43,
+          "purchased": false,
+          "createdAt": "2021-11-19 20:39:36",
+          "updatedAt": "2021-11-19 20:39:36",
+          "CartItems": [
+            {
+              "id": 1,
+              "cartId": 1,
+              "productId": 5,
+              "quantity": 1,
+              "createdAt": "2021-11-19 20:39:36",
+              "updatedAt": "2021-11-19 20:39:36"
+            },
+            {
+              "id": 2,
+              "cartId": 1,
+              "productId": 12,
+              "quantity": 1,
+              "createdAt": "2021-11-19 20:39:36",
+              "updatedAt": "2021-11-19 20:39:36"
+            },
+            {
+              "id": 3,
+              "cartId": 1,
+              "productId": 17
+              "quantity": 1,
+              "createdAt": "2021-11-19 20:39:36",
+              "updatedAt": "2021-11-19 20:39:36"
+            }
+          ]
+        }
+      ]
+    }
+    ```
+
+### Add an Item to a Cart
+
+Adds an item to a cart by the cart's id and returns the cart.
+
+* Require Authentication: true
+* Request
+  * Method: POST
+  * URL: /api/users/:cartId
+  * Body:
+
+    ```json
+    {
+      "productId": 18,
+      "quantity": 1
+    }
+    ```
+    
+* Successful Response
+  * Status Code: 201
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+    ```json
+    {
+      "Cart": [
+        {
+          "id": 1,
+          "usedId": 1,
+          "total": 134.67,
+          "purchased": false,
+          "createdAt": "2021-11-19 20:39:36",
+          "updatedAt": "2021-11-19 20:39:36",
+          "CartItems": [
+            {
+              "id": 1,
+              "cartId": 1,
+              "productId": 5,
+              "quantity": 1,
+              "createdAt": "2021-11-19 20:39:36",
+              "updatedAt": "2021-11-19 20:39:36"
+            },
+            {
+              "id": 2,
+              "cartId": 1,
+              "productId": 12,
+              "quantity": 1,
+              "createdAt": "2021-11-19 20:39:36",
+              "updatedAt": "2021-11-19 20:39:36"
+            },
+            {
+              "id": 3,
+              "cartId": 1,
+              "productId": 17
+              "quantity": 1,
+              "createdAt": "2021-11-19 20:39:36",
+              "updatedAt": "2021-11-19 20:39:36"
+            },
+            {
+              "id": 4,
+              "cartId": 1,
+              "productId": 18
+              "quantity": 1,
+              "createdAt": "2021-11-19 20:39:36",
+              "updatedAt": "2021-11-19 20:39:36"
+            }
+          ]
+        }
+      ]
+    }
+    ```
+    
+* Error Response: Body validation error
+  * Status Code: 400
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+    ```json
+    {
+      "message": "Validation Error",
+      "statusCode": 400,
+      "errors": {
+        "productId": "Product id is required",
+        "quantity": "Quantity is required",
+      }
+    }
+    ```
+    
+### Edit a Cart Item
+
+Updates and returns a cart item by the cart item's id.
+
+* Require Authentication: true
+* Require proper authorization: Cart must belong to the current user
+* Request
+  * Method: PUT
+  * URL: /api/users/:cartItemId
+  * Body:
+
+    ```json
+    {
+      "quantity": 2,
+    }
+    ```
+
+* Successful Response
+  * Status Code: 200
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+    ```json
+    {
+      "id": 1,
+      "cartId": 1,
+      "productId": 5
+      "quantity": 2,
+      "createdAt": "2021-11-19 20:39:36",
+      "updatedAt": "2021-11-19 20:39:36"
+    }
+    ```
+
+* Error Response: Body validation error
+  * Status Code: 400
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+    ```json
+    {
+      "message": "Validation Error",
+      "statusCode": 400,
+      "errors": {
+        "quantity": "Quantity is required",
+      }
+    }
+    ```
+    
+* Error response: Couldn't find a Cart Item with the specified id
+  * Status Code: 404
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+    ```json
+    {
+      "message": "Cart Item couldn't be found",
+      "statusCode": 404
+    }
+    ```
+    
+### Edit a Cart's Purchased Status
+
+Updates a cart's purchased status and returns the cart.
+
+* Require Authentication: true
+* Require proper authorization: Cart must belong to the current user
+* Request
+  * Method: PUT
+  * URL: /api/users/:cartId
+  * Body:
+
+    ```json
+    {
+      "purchased": true,
+    }
+    ```
+
+* Successful Response
+  * Status Code: 200
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+    ```json
+    {
+      "Cart": [
+        {
+          "id": 1,
+          "usedId": 1,
+          "total": 134.67,
+          "purchased": true,
+          "createdAt": "2021-11-19 20:39:36",
+          "updatedAt": "2021-11-19 20:39:36",
+          "CartItems": [
+            {
+              "id": 1,
+              "cartId": 1,
+              "productId": 5,
+              "quantity": 1,
+              "createdAt": "2021-11-19 20:39:36",
+              "updatedAt": "2021-11-19 20:39:36"
+            },
+            {
+              "id": 2,
+              "cartId": 1,
+              "productId": 12,
+              "quantity": 1,
+              "createdAt": "2021-11-19 20:39:36",
+              "updatedAt": "2021-11-19 20:39:36"
+            },
+            {
+              "id": 3,
+              "cartId": 1,
+              "productId": 17
+              "quantity": 1,
+              "createdAt": "2021-11-19 20:39:36",
+              "updatedAt": "2021-11-19 20:39:36"
+            },
+            {
+              "id": 4,
+              "cartId": 1,
+              "productId": 18
+              "quantity": 1,
+              "createdAt": "2021-11-19 20:39:36",
+              "updatedAt": "2021-11-19 20:39:36"
+            }
+          ]
+        }
+      ]
+    }
+    ```
+
+* Error Response: Body validation error
+  * Status Code: 400
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+    ```json
+    {
+      "message": "Validation Error",
+      "statusCode": 400,
+      "errors": {
+        "purchased": "Purchased status is required",
+      }
+    }
+    ```
+    
+### Remove a Cart Item
+
+Deletes a cart item by the cart item's id.
+
+* Require Authentication: true
+* Require proper authorization: Cart must belong to the current user
+* Request
+  * Method: DELETE
+  * URL: /api/users/cart/:cartItemId
+  * Body: none
+
+* Successful Response
+  * Status Code: 200
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+    ```json
+    {
+      "message": "Successfully deleted",
+      "statusCode": 200
+    }
+    ```
+
+* Error response: Couldn't find a Cart Item with the specified id
+  * Status Code: 404
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+    ```json
+    {
+      "message": "Cart Item couldn't be found",
+      "statusCode": 404
+    }
+    ```
