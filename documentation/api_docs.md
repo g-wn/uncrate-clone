@@ -247,7 +247,7 @@ Returns all the products.
         {
           "id": 1,
           "title": "Whiskey-flavored Soap",
-          "description": "Ever wanted to get drunk in the shower? Now you can!",
+          "description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy.",
           "categoryId": 1,
           "price": 24.99,
           "previewImgId": 1,
@@ -280,7 +280,7 @@ Returns all the products listed (created) by the current user.
         {
           "id": 1,
           "title": "Whiskey-flavored Soap",
-          "description": "Ever wanted to get drunk in the shower? Now you can!",
+          "description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy.",
           "categoryId": 1,
           "price": 24.99,
           "previewImgId": 1,
@@ -311,7 +311,7 @@ Returns the details of a product specified by its id.
     {
       "id": 1,
       "title": "Whiskey-flavored Soap",
-      "description": "Ever wanted to get drunk in the shower? Now you can!",
+      "description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy.",
       "categoryId": 1,
       "price": 24.99,
       "previewImgId": 1,
@@ -358,7 +358,7 @@ Creates and returns a new product.
     ```json
     {
       "title": "Whiskey-flavored Soap",
-      "description": "Ever wanted to get drunk in the shower? Now you can!",
+      "description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy.",
       "categoryId": 1,
       "price": 24.99
     }
@@ -373,7 +373,7 @@ Creates and returns a new product.
     ```json
     {
       "title": "Whiskey-flavored Soap",
-      "description": "Ever wanted to get drunk in the shower? Now you can!",
+      "description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy.",
       "categoryId": 1,
       "price": 24.99,
       "createdAt": "2021-11-19 20:39:36",
@@ -461,7 +461,7 @@ Updates and returns an existing product.
     ```json
     {
       "title": "Whiskey-flavored Soap",
-      "description": "Ever wanted to get drunk in the shower? Now you can!",
+      "description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy.",
       "categoryId": 1,
       "price": 24.99
     }
@@ -476,7 +476,7 @@ Updates and returns an existing product.
     ```json
     {
       "title": "Whiskey-flavored Soap",
-      "description": "Ever wanted to get drunk in the shower? Now you can!",
+      "description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy.",
       "categoryId": 1,
       "price": 24.99,
       "createdAt": "2021-11-19 20:39:36",
