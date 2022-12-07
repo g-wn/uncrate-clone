@@ -399,3 +399,156 @@ Creates and returns a new product.
       }
     }
     ```
+
+### Add an Image to a Product based on the Product's id
+
+Create and return a new image for a product specified by id.
+
+* Require Authentication: true
+* Require proper authorization: Product must belong to the current user
+* Request
+  * Method: POST
+  * URL: /api/products/:productId/images
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+    ```json
+    {
+      "url": "image url",
+    }
+    ```
+
+* Successful Response
+  * Status Code: 200
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+    ```json
+    {
+      "id": 1,
+      "url": "image url",
+    }
+    ```
+
+* Error response: Couldn't find a Product with the specified id
+  * Status Code: 404
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+    ```json
+    {
+      "message": "Product couldn't be found",
+      "statusCode": 404
+    }
+    ```
+    
+### Edit a Product
+
+Updates and returns an existing product.
+
+* Require Authentication: true
+* Require proper authorization: Product must belong to the current user
+* Request
+  * Method: PUT
+  * URL: /api/products/:productId
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+    ```json
+    {
+      "title": "Whiskey-flavored Soap",
+      "description": "Ever wanted to get drunk in the shower? Now you can!",
+      "categoryId": 1,
+      "price": 24.99
+    }
+    ```
+
+* Successful Response
+  * Status Code: 200
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+    ```json
+    {
+      "title": "Whiskey-flavored Soap",
+      "description": "Ever wanted to get drunk in the shower? Now you can!",
+      "categoryId": 1,
+      "price": 24.99,
+      "createdAt": "2021-11-19 20:39:36",
+      "updatedAt": "2021-11-19 20:39:36"
+    }
+    ```
+
+* Error Response: Body validation error
+  * Status Code: 400
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+    ```json
+    {
+      "message": "Validation Error",
+      "statusCode": 400,
+      "errors": {
+        "title": "Title is required",
+        "description": "Description is required",
+        "categoryId": "Category ID is required",
+        "price": "Price is required",
+      }
+    }
+    ```
+
+* Error response: Couldn't find a Spot with the specified id
+  * Status Code: 404
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+    ```json
+    {
+      "message": "Product couldn't be found",
+      "statusCode": 404
+    }
+    ```
+
+### Delete a Product
+
+Deletes an existing product.
+
+* Require Authentication: true
+* Require proper authorization: Product must belong to the current user
+* Request
+  * Method: DELETE
+  * URL: /api/products/:productId
+  * Body: none
+
+* Successful Response
+  * Status Code: 200
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+    ```json
+    {
+      "message": "Successfully deleted",
+      "statusCode": 200
+    }
+    ```
+
+* Error response: Couldn't find a Product with the specified id
+  * Status Code: 404
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+    ```json
+    {
+      "message": "Product couldn't be found",
+      "statusCode": 404
+    }
+    ```
