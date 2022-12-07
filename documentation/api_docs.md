@@ -620,6 +620,8 @@ Adds an item to a cart by the cart's id and returns the cart.
 * Request
   * Method: POST
   * URL: /api/users/:cartId
+  * Headers:
+    * Content-Type: application/json
   * Body:
 
     ```json
@@ -710,6 +712,8 @@ Updates and returns a cart item by the cart item's id.
 * Request
   * Method: PUT
   * URL: /api/users/:cartItemId
+  * Headers:
+    * Content-Type: application/json
   * Body:
 
     ```json
@@ -885,6 +889,109 @@ Deletes a cart item by the cart item's id.
     ```json
     {
       "message": "Cart Item couldn't be found",
+      "statusCode": 404
+    }
+    ```
+
+## Product Images
+
+### Update Product Image URL
+
+Updates the URL of a product image by its id.
+
+* Require Authentication: true
+* Require proper authorization: Image must belong to a product that belongs to the current user
+* Request
+  * Method: PUT
+  * URL: /api/productImages/:productImageId
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+    ```json
+    {
+      "url": "image url"
+    }
+    ```
+
+* Successful Response
+  * Status Code: 200
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+    ```json
+    {
+      "id": 1,
+      "productId": 1,
+      "url": "image url",
+      "createdAt": "2021-11-19 20:39:36",
+      "updatedAt": "2021-11-19 20:39:36"
+    }
+    ```
+    
+* Error response: Body validation errors
+  * Status Code: 400
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+    ```json
+    {
+      "message": "Validation error",
+      "statusCode": 400,
+      "errors": {
+        "url": "Image URL is required"
+      }
+    }
+    ```
+
+* Error response: Couldn't find a Product Image with the specified id
+  * Status Code: 404
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+    ```json
+    {
+      "message": "Product Image couldn't be found",
+      "statusCode": 404
+    }
+    ```
+
+### Delete a Product Image
+
+Delete an existing image for a Product.
+
+* Require Authentication: true
+* Require proper authorization: Image must belong to a product that belongs to the current user
+* Request
+  * Method: DELETE
+  * URL: /api/productImages/:productImageId
+  * Body: none
+
+* Successful Response
+  * Status Code: 200
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+    ```json
+    {
+      "message": "Successfully deleted",
+      "statusCode": 200
+    }
+    ```
+
+* Error response: Couldn't find a Product Image with the specified id
+  * Status Code: 404
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+    ```json
+    {
+      "message": "Product Image couldn't be found",
       "statusCode": 404
     }
     ```
