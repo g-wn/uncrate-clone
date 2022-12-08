@@ -995,3 +995,162 @@ Delete an existing image for a Product.
       "statusCode": 404
     }
     ```
+
+## Favorites
+
+### Get Current User's Favorite Products
+
+Returns the Current User's favorited Products.
+
+* Require Authentication: true
+* Request
+  * Method: GET
+  * URL: /api/favorites/current
+  * Body: none
+
+* Successful Response
+  * Status Code: 200
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+    ```json
+    {
+      "Favorites": [
+        {
+          "id": 1,
+          "title": "Whiskey-flavored Soap",
+          "description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy.",
+          "categoryId": 1,
+          "price": 24.99,
+          "previewImgId": 1,
+          "createdAt": "2021-11-19 20:39:36",
+          "updatedAt": "2021-11-19 20:39:36",
+        },
+        {
+          "id": 2,
+          "title": "Whiskey-flavored Shampoo",
+          "description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse your hair from root to tip. Smelling like an alcoholic has never been so classy.",
+          "categoryId": 1,
+          "price": 29.99,
+          "previewImgId": 2,
+          "createdAt": "2021-11-19 20:39:36",
+          "updatedAt": "2021-11-19 20:39:36",
+        }
+      ]
+    }
+    ```
+    
+### Add a Favorite to Current User's Favorite Products
+
+Adds a product to the current user's favorites by the product's id.
+
+* Require Authentication: true
+* Request
+  * Method: POST
+  * URL: /api/favorites/current/:productId
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+    ```json
+    {
+      "product_id": 3
+    }
+    ```
+
+* Successful Response
+  * Status Code: 201
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+     ```json
+    {
+      "Favorites": [
+        {
+          "id": 1,
+          "title": "Whiskey-flavored Soap",
+          "description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy.",
+          "categoryId": 1,
+          "price": 24.99,
+          "previewImgId": 1,
+          "createdAt": "2021-11-19 20:39:36",
+          "updatedAt": "2021-11-19 20:39:36",
+        },
+        {
+          "id": 2,
+          "title": "Whiskey-flavored Shampoo",
+          "description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse your hair from root to tip. Smelling like an alcoholic has never been so classy.",
+          "categoryId": 1,
+          "price": 29.99,
+          "previewImgId": 2,
+          "createdAt": "2021-11-19 20:39:36",
+          "updatedAt": "2021-11-19 20:39:36",
+        },
+        {
+          "id": 3,
+          "title": "Whiskey-flavored Conditioner",
+          "description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse your hair from root to tip. Smelling like an alcoholic has never been so classy.",
+          "categoryId": 1,
+          "price": 29.99,
+          "previewImgId": 3,
+          "createdAt": "2021-11-19 20:39:36",
+          "updatedAt": "2021-11-19 20:39:36",
+        },
+      ]
+    }
+    ```
+
+* Error Response: Body validation error
+  * Status Code: 400
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+    ```json
+    {
+      "message": "Validation Error",
+      "statusCode": 400,
+      "errors": {
+        "product_id": "Product ID is required.",
+      }
+    }
+    ```
+    
+### Remove a Favorite From Current User's Favorite Products
+
+Deletes an existing product from the current user's favorites.
+
+* Require Authentication: true
+* Require proper authorization: Favorite must belong to the current user
+* Request
+  * Method: DELETE
+  * URL: /api/favorites/current/:productId
+  * Body: none
+
+* Successful Response
+  * Status Code: 200
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+    ```json
+    {
+      "message": "Successfully removed",
+      "statusCode": 200
+    }
+    ```
+
+* Error response: Couldn't find a Favorite with the specified id
+  * Status Code: 404
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+    ```json
+    {
+      "message": "Favorite couldn't be found",
+      "statusCode": 404
+    }
+    ```
