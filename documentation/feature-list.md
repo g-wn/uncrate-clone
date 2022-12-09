@@ -1,4 +1,4 @@
-## CART - MVP
+## CART (Core Feature)
 
 ### C:
 
@@ -20,7 +20,7 @@
 - If cart is empty, delete the cart.
 
 
-## PRODUCT POSTS - MVP
+## PRODUCT POSTS (Core Feature)
 
 ### C:
 
@@ -40,8 +40,25 @@
 
 - A user can remove their own posted listing.
 
+## PRODUCT IMAGES (Core Feature)
 
-## FAVORITES
+### C:
+
+- A logged in user who owns a product listing can add an image to the listing.
+
+### R:
+
+- A site visitor can view a product's images.
+
+### U:
+
+- A logged in user who owns a product listing can edit its image(s).
+
+### D:
+
+- A logged in user who owns a product listing can delete any given image.
+
+## FAVORITES (Bonus Feature)
 
 ### C:
 
@@ -56,7 +73,7 @@
 
 - Remove a favorited item. --> MVP DELETE
 
-## SEARCH:
+## SEARCH (Core Feature):
 
 ### C:
 
@@ -75,7 +92,7 @@
 - A user can remove all or some search filters.
 
 
-## ACCESSIBILITY FEATURES:
+## ACCESSIBILITY FEATURES (Bonus Feature):
 
 ### C:
 
@@ -96,7 +113,7 @@
 
 
 
-## EXTRA FEATURES:
+## ADDITIONAL / FUTURE BONUS FEATURES:
 
 ### PROFILE PAGE
 ### ABOUT LINKS

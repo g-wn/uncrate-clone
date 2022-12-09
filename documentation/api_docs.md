@@ -554,14 +554,14 @@ Deletes an existing product.
 
 ## CARTS
 
-### Get Cart by User's Cart id
+### Get Cart by User id
 
-Returns the user's cart specified by the cart id.
+Returns the user's cart specified by the User's id.
 
 * Require Authentication: true
 * Request
   * Method: GET
-  * URL: /api/users/:cart_id
+  * URL: /api/users/cart
   * Body: none
 
 * Successful Response
@@ -610,7 +610,7 @@ Adds an item to a cart by the cart's id and returns the cart.
 * Require Authentication: true
 * Request
   * Method: POST
-  * URL: /api/users/:cart_id
+  * URL: /api/users/cart
   * Headers:
     * Content-Type: application/json
   * Body:
@@ -692,7 +692,7 @@ Updates and returns a cart item by the cart item's id.
 * Require proper authorization: Cart must belong to the current user
 * Request
   * Method: PUT
-  * URL: /api/users/:cartItemId
+  * URL: /api/users/carts/:cart_item_id
   * Headers:
     * Content-Type: application/json
   * Body:

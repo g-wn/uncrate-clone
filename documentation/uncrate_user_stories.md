@@ -38,7 +38,7 @@
     * I can log out of my account and be redirected to a page displaying recent FauxTweets.
       * So that I can easily log out to keep my information secure.
 
-## Uncrate Cart
+## Uncrate Cart (Core Feature)
 
 ### Add an item to a cart
 
@@ -64,7 +64,7 @@
     * I can click "Delete" to permanently delete an item in my cart.
       * So that when I realize I don't want to purchase something, it won't be included at checkout.
 
-## Uncrate Product Posts
+## Uncrate Product Posts (Core Feature)
 
 ### List a product on the site
 
@@ -90,14 +90,35 @@
     * I can click "Delete listing" to remove it permanently from the site
         * So that I can opt out of selling or promoting the product as wanted
 
-## Uncrate Search
+## Product Images (Core Feature)
+
+### Add a product image to a listing
+
+* As a logged in user _and_ owner of the product listing, I can add a product image to the listing
+  * I can click "add a new image" to add one permanently to the listing
+      * So that I ensure the product is represented accurately and is current
+
+### Edit a product image on a listing
+* As a logged in user _and_ owner of the product listing, I can update a product image on a listing
+
+### View a product's images
+* As a site visitor, I can view a product's images
+  * I can view one or a set of images for any product on its details page
+      * So that I can get a complete visual sense of the product offering 
+
+### Delete a product image
+* As a logged in user _and_ owner of the product listing, I can delete a product image for a given listing
+  * I can click "delete image" to permanently remove it from the listing
+    * So that I can remove an image that poorly represents the product's value
+
+## Uncrate Search (Core Feature)
 
 ### Search for products on the site
 
 * As a logged in user _or_ logged out user, I can search keywords by clicking into the search icon
     * So that I can curate viewed products to match my shopping intent.
 
-## Favorites
+## Favorites (Bonus Feature)
 
 ## Add an item to favorites
 
@@ -117,7 +138,7 @@
 
 * As a logged in user, I can remove a favorited item permanently from my list
 
-## Accessibility modal
+## Accessibility modal (Bonus Feature)
 
 * As a site visitor with an impairment or disabliity, I can click on a suitable accessibility option to improve my site experience
 
