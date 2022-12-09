@@ -14,8 +14,9 @@ class Product(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(255), nullable=False)
     description = db.Column(db.String(2000))
+    detailed_description = db.Column(db.String(5000))
     category_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod(("categories.id"))), nullable=False)
-    owner_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod(("users.id"))), nullable=False) #! --> NEED TO ADD THIS TO DB SCHEMA <-- !#
+    owner_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod(("users.id"))), nullable=False)
     price = db.Column(db.DECIMAL(2), nullable=False)
     preview_img_id = db.Column(db.Integer, nullable=False)
 
