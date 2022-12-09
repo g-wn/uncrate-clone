@@ -247,7 +247,8 @@ Returns all the products.
         {
           "id": 1,
           "title": "Whiskey-flavored Soap",
-          "description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy.",
+          "description": "Clean your bits with soap that smells (and tastes) like whiskey!",
+          "detailed_description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy.",
           "category_id": 1,
           "price": 24.99,
           "preview_img_id": 1,
@@ -278,7 +279,8 @@ Returns all the products listed (created) by the current user.
         {
           "id": 1,
           "title": "Whiskey-flavored Soap",
-          "description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy.",
+          "description": "Clean your bits with soap that smells (and tastes) like whiskey!",
+          "detailed_description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy.",
           "category_id": 1,
           "price": 24.99,
           "preview_img_id": 1,
@@ -307,7 +309,8 @@ Returns the details of a product specified by its id.
     {
       "id": 1,
       "title": "Whiskey-flavored Soap",
-      "description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy.",
+      "description": "Clean your bits with soap that smells (and tastes) like whiskey!",
+      "detailed_description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy.",
       "category_id": 1,
       "price": 24.99,
       "preview_img_id": 1,
@@ -352,7 +355,8 @@ Creates and returns a new product.
     ```json
     {
       "title": "Whiskey-flavored Soap",
-      "description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy.",
+      "description": "Clean your bits with soap that smells (and tastes) like whiskey!",
+      "detailed_description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy.",
       "category_id": 1,
       "price": 24.99
     }
@@ -367,7 +371,8 @@ Creates and returns a new product.
     ```json
     {
       "title": "Whiskey-flavored Soap",
-      "description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy.",
+      "description": "Clean your bits with soap that smells (and tastes) like whiskey!",
+      "detailed_description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy.",
       "category_id": 1,
       "price": 24.99
     }
@@ -386,8 +391,9 @@ Creates and returns a new product.
       "errors": {
         "title": "Title is required",
         "description": "Description is required",
+        "detailed_description": "Detailed description is required",
         "category_id": "Category ID is required",
-        "price": "Price is required",
+        "price": "Price is required"
       }
     }
     ```
@@ -453,7 +459,8 @@ Updates and returns an existing product.
     ```json
     {
       "title": "Whiskey-flavored Soap",
-      "description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy.",
+      "description": "Clean your bits with soap that smells (and tastes) like whiskey!",
+      "detailed_description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy.",
       "category_id": 1,
       "price": 24.99
     }
@@ -468,7 +475,8 @@ Updates and returns an existing product.
     ```json
     {
       "title": "Whiskey-flavored Soap",
-      "description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy.",
+      "description": "Clean your bits with soap that smells (and tastes) like whiskey!",
+      "detailed_description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy.",
       "category_id": 1,
       "price": 24.99
     }
@@ -487,8 +495,9 @@ Updates and returns an existing product.
       "errors": {
         "title": "Title is required",
         "description": "Description is required",
+        "detailed_description": "Detailed description is required",
         "category_id": "Category ID is required",
-        "price": "Price is required",
+        "price": "Price is required"
       }
     }
     ```
@@ -989,7 +998,8 @@ Returns the Current User's favorited Products.
         {
           "id": 1,
           "title": "Whiskey-flavored Soap",
-          "description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy.",
+          "description": "Clean your bits with soap that smells (and tastes) like whiskey!",
+          "detailed_description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy."
           "category_id": 1,
           "price": 24.99,
           "preview_img_id": 1,
@@ -997,7 +1007,8 @@ Returns the Current User's favorited Products.
         {
           "id": 2,
           "title": "Whiskey-flavored Shampoo",
-          "description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse your hair from root to tip. Smelling like an alcoholic has never been so classy.",
+          "description": "Clean your bits with soap that smells (and tastes) like whiskey!",
+          "detailed_description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy."
           "category_id": 1,
           "price": 29.99,
           "preview_img_id": 2,
@@ -1036,7 +1047,8 @@ Adds a product to the current user's favorites by the product's id.
         {
           "id": 1,
           "title": "Whiskey-flavored Soap",
-          "description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy.",
+          "description": "Clean your bits with soap that smells (and tastes) like whiskey!",
+          "detailed_description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy."
           "category_id": 1,
           "price": 24.99,
           "preview_img_id": 1,
@@ -1044,7 +1056,8 @@ Adds a product to the current user's favorites by the product's id.
         {
           "id": 2,
           "title": "Whiskey-flavored Shampoo",
-          "description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse your hair from root to tip. Smelling like an alcoholic has never been so classy.",
+          "description": "Clean your bits with soap that smells (and tastes) like whiskey!",
+          "detailed_description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy."
           "category_id": 1,
           "price": 29.99,
           "preview_img_id": 2,
@@ -1052,7 +1065,8 @@ Adds a product to the current user's favorites by the product's id.
         {
           "id": 3,
           "title": "Whiskey-flavored Conditioner",
-          "description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse your hair from root to tip. Smelling like an alcoholic has never been so classy.",
+          "description": "Clean your bits with soap that smells (and tastes) like whiskey!",
+          "detailed_description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy."
           "category_id": 1,
           "price": 29.99,
           "preview_img_id": 3,
