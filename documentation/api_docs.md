@@ -692,7 +692,7 @@ Updates and returns a cart item by the cart item's id.
 * Require proper authorization: Cart must belong to the current user
 * Request
   * Method: PUT
-  * URL: /api/users/carts/:cart_item_id
+  * URL: /api/users/cart/:cart_item_id
   * Headers:
     * Content-Type: application/json
   * Body:
@@ -755,12 +755,13 @@ Updates a cart's purchased status and returns the cart.
 * Require proper authorization: Cart must belong to the current user
 * Request
   * Method: PUT
-  * URL: /api/users/:cart_id
+  * URL: /api/users/cart
   * Body:
 
     ```json
     {
-      "purchased": true
+      "purchased": true,
+      "purchase_date": "1969-06-19"
     }
     ```
 
@@ -833,7 +834,7 @@ Deletes a cart item by the cart item's id.
 * Require proper authorization: Cart must belong to the current user
 * Request
   * Method: DELETE
-  * URL: /api/users/cart/:cartItemId
+  * URL: /api/users/cart/:cart_item_id
   * Body: none
 
 * Successful Response
@@ -872,7 +873,7 @@ Updates the URL of a product image by its id.
 * Require proper authorization: Image must belong to a product that belongs to the current user
 * Request
   * Method: PUT
-  * URL: /api/Product_Images/:productImageId
+  * URL: /api/Product_Images/:product_image_id
   * Headers:
     * Content-Type: application/json
   * Body:
@@ -934,7 +935,7 @@ Delete an existing image for a Product.
 * Require proper authorization: Image must belong to a product that belongs to the current user
 * Request
   * Method: DELETE
-  * URL: /api/Product_Images/:productImageId
+  * URL: /api/Product_Images/:product_image_id
   * Body: none
 
 * Successful Response
@@ -1046,7 +1047,7 @@ Adds a product to the current user's favorites by the product's id.
           "id": 2,
           "title": "Whiskey-flavored Shampoo",
           "description": "Clean your bits with soap that smells (and tastes) like whiskey!",
-          "detailed_description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy."
+          "detailed_description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy.",
           "category_id": 1,
           "price": 29.99,
           "preview_img_id": 2,
@@ -1055,7 +1056,7 @@ Adds a product to the current user's favorites by the product's id.
           "id": 3,
           "title": "Whiskey-flavored Conditioner",
           "description": "Clean your bits with soap that smells (and tastes) like whiskey!",
-          "detailed_description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy."
+          "detailed_description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy.",
           "category_id": 1,
           "price": 29.99,
           "preview_img_id": 3,
