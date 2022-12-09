@@ -251,8 +251,6 @@ Returns all the products.
           "category_id": 1,
           "price": 24.99,
           "preview_img_id": 1,
-          "created_at": "2021-11-19 20:39:36",
-          "updated_at": "2021-11-19 20:39:36",
         }
       ]
     }
@@ -284,8 +282,6 @@ Returns all the products listed (created) by the current user.
           "category_id": 1,
           "price": 24.99,
           "preview_img_id": 1,
-          "created_at": "2021-11-19 20:39:36",
-          "updated_at": "2021-11-19 20:39:36",
         }
       ]
     }
@@ -315,8 +311,6 @@ Returns the details of a product specified by its id.
       "category_id": 1,
       "price": 24.99,
       "preview_img_id": 1,
-      "created_at": "2021-11-19 20:39:36",
-      "updated_at": "2021-11-19 20:39:36",
       "Product_Images": [
         {
           "id": 1,
@@ -375,9 +369,7 @@ Creates and returns a new product.
       "title": "Whiskey-flavored Soap",
       "description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy.",
       "category_id": 1,
-      "price": 24.99,
-      "created_at": "2021-11-19 20:39:36",
-      "updated_at": "2021-11-19 20:39:36"
+      "price": 24.99
     }
     ```
 
@@ -478,9 +470,7 @@ Updates and returns an existing product.
       "title": "Whiskey-flavored Soap",
       "description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy.",
       "category_id": 1,
-      "price": 24.99,
-      "created_at": "2021-11-19 20:39:36",
-      "updated_at": "2021-11-19 20:39:36"
+      "price": 24.99
     }
     ```
 
@@ -579,32 +569,27 @@ Returns the user's cart specified by the cart id.
           "used_id": 1,
           "total": 92.43,
           "purchased": false,
-          "created_at": "2021-11-19 20:39:36",
-          "updated_at": "2021-11-19 20:39:36",
           "Cart_Items": [
             {
               "id": 1,
               "cart_id": 1,
               "product_id": 5,
               "quantity": 1,
-              "created_at": "2021-11-19 20:39:36",
-              "updated_at": "2021-11-19 20:39:36"
+
             },
             {
               "id": 2,
               "cart_id": 1,
               "product_id": 12,
               "quantity": 1,
-              "created_at": "2021-11-19 20:39:36",
-              "updated_at": "2021-11-19 20:39:36"
+
             },
             {
               "id": 3,
               "cart_id": 1,
               "product_id": 17,
               "quantity": 1,
-              "created_at": "2021-11-19 20:39:36",
-              "updated_at": "2021-11-19 20:39:36"
+
             }
           ]
         }
@@ -645,40 +630,34 @@ Adds an item to a cart by the cart's id and returns the cart.
           "usedId": 1,
           "total": 134.67,
           "purchased": false,
-          "created_at": "2021-11-19 20:39:36",
-          "updated_at": "2021-11-19 20:39:36",
           "Cart_Items": [
             {
               "id": 1,
               "cart_id": 1,
               "product_id": 5,
               "quantity": 1,
-              "created_at": "2021-11-19 20:39:36",
-              "updated_at": "2021-11-19 20:39:36"
+
             },
             {
               "id": 2,
               "cart_id": 1,
               "product_id": 12,
               "quantity": 1,
-              "created_at": "2021-11-19 20:39:36",
-              "updated_at": "2021-11-19 20:39:36"
+
             },
             {
               "id": 3,
               "cart_id": 1,
               "product_id": 17,
               "quantity": 1,
-              "created_at": "2021-11-19 20:39:36",
-              "updated_at": "2021-11-19 20:39:36"
+
             },
             {
               "id": 4,
               "cart_id": 1,
               "product_id": 18,
               "quantity": 1,
-              "created_at": "2021-11-19 20:39:36",
-              "updated_at": "2021-11-19 20:39:36"
+
             }
           ]
         }
@@ -733,9 +712,7 @@ Updates and returns a cart item by the cart item's id.
       "id": 1,
       "cart_id": 1,
       "product_id": 5,
-      "quantity": 2,
-      "created_at": "2021-11-19 20:39:36",
-      "updated_at": "2021-11-19 20:39:36"
+      "quantity": 2
     }
     ```
 
@@ -799,40 +776,34 @@ Updates a cart's purchased status and returns the cart.
           "user_id": 1,
           "total": 134.67,
           "purchased": true,
-          "created_at": "2021-11-19 20:39:36",
-          "updated_at": "2021-11-19 20:39:36",
           "Cart_Items": [
             {
               "id": 1,
               "cart_id": 1,
               "product_id": 5,
               "quantity": 1,
-              "created_at": "2021-11-19 20:39:36",
-              "updated_at": "2021-11-19 20:39:36"
+
             },
             {
               "id": 2,
               "cart_id": 1,
               "product_id": 12,
               "quantity": 1,
-              "created_at": "2021-11-19 20:39:36",
-              "updated_at": "2021-11-19 20:39:36"
+
             },
             {
               "id": 3,
               "cart_id": 1,
               "product_id": 17,
               "quantity": 1,
-              "created_at": "2021-11-19 20:39:36",
-              "updated_at": "2021-11-19 20:39:36"
+
             },
             {
               "id": 4,
               "cart_id": 1,
               "product_id": 18,
               "quantity": 1,
-              "created_at": "2021-11-19 20:39:36",
-              "updated_at": "2021-11-19 20:39:36"
+
             }
           ]
         }
@@ -924,9 +895,7 @@ Updates the URL of a product image by its id.
     {
       "id": 1,
       "product_id": 1,
-      "url": "image url",
-      "created_at": "2021-11-19 20:39:36",
-      "updated_at": "2021-11-19 20:39:36"
+      "url": "image url"
     }
     ```
     
@@ -1024,8 +993,6 @@ Returns the Current User's favorited Products.
           "category_id": 1,
           "price": 24.99,
           "preview_img_id": 1,
-          "created_at": "2021-11-19 20:39:36",
-          "updated_at": "2021-11-19 20:39:36"
         },
         {
           "id": 2,
@@ -1034,8 +1001,6 @@ Returns the Current User's favorited Products.
           "category_id": 1,
           "price": 29.99,
           "preview_img_id": 2,
-          "created_at": "2021-11-19 20:39:36",
-          "updated_at": "2021-11-19 20:39:36"
         }
       ]
     }
@@ -1075,8 +1040,6 @@ Adds a product to the current user's favorites by the product's id.
           "category_id": 1,
           "price": 24.99,
           "preview_img_id": 1,
-          "created_at": "2021-11-19 20:39:36",
-          "updated_at": "2021-11-19 20:39:36"
         },
         {
           "id": 2,
@@ -1085,8 +1048,6 @@ Adds a product to the current user's favorites by the product's id.
           "category_id": 1,
           "price": 29.99,
           "preview_img_id": 2,
-          "created_at": "2021-11-19 20:39:36",
-          "updated_at": "2021-11-19 20:39:36"
         },
         {
           "id": 3,
@@ -1095,8 +1056,6 @@ Adds a product to the current user's favorites by the product's id.
           "category_id": 1,
           "price": 29.99,
           "preview_img_id": 3,
-          "created_at": "2021-11-19 20:39:36",
-          "updated_at": "2021-11-19 20:39:36"
         },
       ]
     }
