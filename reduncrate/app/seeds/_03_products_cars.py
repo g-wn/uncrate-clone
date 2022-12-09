@@ -1,4 +1,4 @@
-[
+products_cars = [
     {
       "id": 23,
       "title": "MUNRO MK_1 ELECTRIC SUV",

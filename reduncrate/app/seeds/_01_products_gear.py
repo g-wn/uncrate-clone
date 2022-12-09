@@ -1,4 +1,4 @@
-[
+products_gear = [
     {
       "id": 1,
       "title": "A-TECH AIRTAG MULTI TOOL",
