@@ -104,31 +104,31 @@
 
 """
 
-product12_image1_url1: https://uncrate.com/assets_c/2022/10/rze-ascentus-gmt-watch-thumb-960xauto-152584.jpg
+product12_image1: https://uncrate.com/assets_c/2022/10/rze-ascentus-gmt-watch-thumb-960xauto-152584.jpg
 
-product12_image2_url2: https://uncrate.com/assets_c/2022/11/rze-orange-thumb-960xauto-153706.jpg
+product12_image2: https://uncrate.com/assets_c/2022/11/rze-orange-thumb-960xauto-153706.jpg
 
-product12_image3_url3: https://uncrate.com/assets_c/2022/11/rze-white-thumb-960xauto-153707.jpg
+product12_image3: https://uncrate.com/assets_c/2022/11/rze-white-thumb-960xauto-153707.jpg
 
-product12_image4_url4: https://uncrate.com/assets_c/2022/11/rze-black-thumb-960xauto-153708.jpg
+product12_image4: https://uncrate.com/assets_c/2022/11/rze-black-thumb-960xauto-153708.jpg
 
-product12_image5_url5: https://uncrate.com/assets_c/2022/11/rze-green-thumb-960xauto-153709.jpg
+product12_image5: https://uncrate.com/assets_c/2022/11/rze-green-thumb-960xauto-153709.jpg
 
 product13_image1: https://uncrate.com/assets_c/2022/12/solios-black-curve-solar-watch-thumb-960xauto-155272.jpg
 
-product14_image1_url1: https://uncrate.com/assets_c/2022/12/sunspel-fleeceback-sweatpants-white-melange-2-thumb-960xauto-155258.jpg
+product14_image1: https://uncrate.com/assets_c/2022/12/sunspel-fleeceback-sweatpants-white-melange-2-thumb-960xauto-155258.jpg
 
-product14_image2_url2: https://uncrate.com/assets_c/2022/12/sunspel-fleeceback-sweatpants-white-melange-3-thumb-960xauto-155259.jpg
+product14_image2: https://uncrate.com/assets_c/2022/12/sunspel-fleeceback-sweatpants-white-melange-3-thumb-960xauto-155259.jpg
 
-product14_image3_url3: https://cdn.shopify.com/s/files/1/0248/6216/products/sunspel-fleeceback-sweatpants-white-melange-5.jpg?v=1670351583
+product14_image3: https://cdn.shopify.com/s/files/1/0248/6216/products/sunspel-fleeceback-sweatpants-white-melange-5.jpg?v=1670351583
 
-product14_image4_url4: https://uncrate.com/assets_c/2022/12/sunspel-fleeceback-sweatpants-white-melange-1a-thumb-960xauto-155257.jpg
+product14_image4: https://uncrate.com/assets_c/2022/12/sunspel-fleeceback-sweatpants-white-melange-1a-thumb-960xauto-155257.jpg
 
-product15_image1_url1: https://uncrate.com/assets_c/2022/12/london-sock-co-simply-satorical-thumb-960xauto-155132.jpg
+product15_image1: https://uncrate.com/assets_c/2022/12/london-sock-co-simply-satorical-thumb-960xauto-155132.jpg
 
-product16_image1_url1: https://uncrate.com/assets_c/2022/12/holden-puffy-slides-black-1-thumb-960xauto-155217.jpg
+product16_image1: https://uncrate.com/assets_c/2022/12/holden-puffy-slides-black-1-thumb-960xauto-155217.jpg
 
-product16_image2_url2: https://uncrate.com/assets_c/2022/12/holden-puffy-slides-black-2-thumb-960xauto-155216.jpg
+product16_image2: https://uncrate.com/assets_c/2022/12/holden-puffy-slides-black-2-thumb-960xauto-155216.jpg
 
 product16_image3: https://uncrate.com/assets_c/2022/12/holden-puffy-slides-black-3-thumb-960xauto-155218.jpg
 
