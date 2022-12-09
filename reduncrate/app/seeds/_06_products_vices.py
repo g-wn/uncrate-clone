@@ -8,7 +8,7 @@ products_vices = [
     Width: 15.75\" / Height: 8.25\" / Depth: 9.8\"""",
     "category_id": 6,
     "price": 300.00,
-    "product_img_id": 56,
+    "preview_img_id": 56,
   },
   {
     "id": 57,
@@ -27,7 +27,7 @@ products_vices = [
     Combine all ingredients in a mixing glass and stir for 25-30 seconds, or until well chilled. Strain into a coupe, top with club soda, and garnish with an orange twist.""",
     "category_id": 6,
     "price": 0,
-    "product_img_id": 57,
+    "preview_img_id": 57,
   },
   {
     "id": 58,
@@ -38,7 +38,7 @@ products_vices = [
     Diameter: 4.73\" / Height: 1.77\"""",
     "category_id": 6,
     "price": 125.00,
-    "product_img_id": 58,
+    "preview_img_id": 58,
   },
   {
     "id": 59,
@@ -56,7 +56,7 @@ products_vices = [
     Combine all ingredients into a cocktail shaker and shake vigorously, or until frosty on the outside. Strain into a coupe and garnish with a lemon twist.""",
     "category_id": 6,
     "price": 0,
-    "product_img_id": 59,
+    "preview_img_id": 59,
   },
   {
     "id": 60,
@@ -67,7 +67,7 @@ products_vices = [
     Height: 2.17\" / Width: 4\" / Depth: 5.8\"""",
     "category_id": 6,
     "price": 77.00,
-    "product_img_id": 60,
+    "preview_img_id": 60,
   },
   {
     "id": 61,
@@ -78,7 +78,7 @@ products_vices = [
     Height: 1.375\" / Diameter: 5.89\"""",
     "category_id": 6,
     "price": 77.00,
-    "product_img_id": 61,
+    "preview_img_id": 61,
   },
   {
     "id": 62,
@@ -87,7 +87,7 @@ products_vices = [
     "detailed_description": "It looks like the kind of pipe your granddad (or maybe great-grandad) might have smoked. Yet this model from Hemson hides modern convenience. The American ash wood body is carved by hand into a timeless silhouette, but fitted with a removable glazed ceramic bowl and filter screen for easier cleaning and a more enjoyable smoke. The body undergoes a multi-step polishing, tinting, and waxing process that gives it a handsome, durable black finish that will develop a unique patina over time. Finished with a removable, co-injected acrylic/nylon mouthpiece.",
     "category_id": 6,
     "price": 90.00,
-    "product_img_id": 62,
+    "preview_img_id": 62,
   },
   {
     "id": 63,
@@ -98,7 +98,7 @@ products_vices = [
     Height: 7.75\" / Diameter: 2\"""",
     "category_id": 6,
     "price": 75.00,
-    "product_img_id": 63,
+    "preview_img_id": 63,
   },
   {
     "id": 64,
@@ -107,7 +107,7 @@ products_vices = [
     "detailed_description": "A fine cigar deserves better than being hauled around in a plastic wrapper, or worse, yet, nothing at all. Made from stainless steel with a black carbon fiber finish, this is an upscale carry option. Measuring 7.0\" long and 1\" in diameter, it can accommodate a wide range of sizes and shapes.",
     "category_id": 6,
     "price": 75.00,
-    "product_img_id": 64,
+    "preview_img_id": 64,
   },
   {
     "id": 65,
@@ -118,7 +118,7 @@ products_vices = [
     Dimensions: 9.25\" x 8.0\" x 2.0\"""",
     "category_id": 6,
     "price": 225.00,
-    "product_img_id": 65,
+    "preview_img_id": 65,
   },
   {
     "id": 66,
@@ -136,7 +136,7 @@ products_vices = [
     Combine all ingredients in a shaker. Shake, strain, and serve up with a picked cherry and/or a lemon peel.""",
     "category_id": 6,
     "price": 0,
-    "product_img_id": 66,
+    "preview_img_id": 66,
   },
 ]
 
