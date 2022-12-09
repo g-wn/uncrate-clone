@@ -1,4 +1,4 @@
-from .db import db
+from .db import db, environment, SCHEMA, add_prefix_for_prod
 from .joins import favorites
 
 
@@ -8,11 +8,14 @@ from .joins import favorites
 class Product(db.Model):
     __tablename__ = "products"
 
+    if environment == "production":
+        __table_args__ = {'schema': SCHEMA}
+
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(255), nullable=False)
     description = db.Column(db.String(2000))
-    category_id = db.Column(db.Integer, db.ForeignKey("categories.id"), nullable=False)
-    owner_id = db.Column(db.Integer, db.ForeignKey("users.id"), nullable=False) #! --> NEED TO ADD THIS TO DB SCHEMA <-- !#
+    category_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod(("categories.id"))), nullable=False)
+    owner_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod(("users.id"))), nullable=False) #! --> NEED TO ADD THIS TO DB SCHEMA <-- !#
     price = db.Column(db.DECIMAL(2), nullable=False)
     preview_img_id = db.Column(db.Integer, nullable=False)
 
@@ -52,6 +55,9 @@ class Product(db.Model):
 class Category(db.Model):
     __tablename__ = "categories"
 
+    if environment == "production":
+        __table_args__ = {'schema': SCHEMA}
+
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(255), nullable=False)
 
@@ -72,8 +78,11 @@ class Category(db.Model):
 class ProductImage(db.Model):
     __tablename__ = "product_images"
 
+    if environment == "production":
+        __table_args__ = {'schema': SCHEMA}
+
     id = db.Column(db.Integer, primary_key=True)
-    product_id = db.Column(db.Integer, db.ForeignKey("products.id"), nullable=False)
+    product_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod(("products.id"))), nullable=False)
     url = db.Column(db.String(255), nullable=False)
 
     # RELATIONSHIPS:

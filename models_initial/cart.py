@@ -1,4 +1,4 @@
-from .db import db
+from .db import db, environment, SCHEMA, add_prefix_for_prod
 
 
 #############
@@ -7,9 +7,12 @@ from .db import db
 class Cart(db.Model):
     __tablename__ = "carts"
 
+    if environment == "production":
+        __table_args__ = {'schema': SCHEMA}
+
     id = db.Column(db.Integer, primary_key=True)
-    user_id = db.Column(db.Integer, nullable=False)  # FOREIGN KEY EVEN THOUGH 1:1?
-    total = db.Column(db.DECIMAL(2), nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod(("users.id"))), nullable=False)  # FOREIGN KEY EVEN THOUGH 1:1?
+    total = db.Column(db.Float(2), nullable=False)
     purchased = db.Column(db.Boolean, default=False)
 
     # RELATIONSHIPS:
@@ -37,8 +40,11 @@ class Cart(db.Model):
 class CartItem(db.Model):
     __tablename__ = "cart_items"
 
+    if environment == "production":
+        __table_args__ = {'schema': SCHEMA}
+
     id = db.Column(db.Integer, primary_key=True)
-    cart_id = db.Column(db.Integer, db.ForeignKey("carts.id"), nullable=False)
+    cart_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod(("carts.id"))), nullable=False)
     product_id = db.Column(db.Integer, nullable=False)  # FOREIGN KEY EVEN THOUGH 1:1?
     quantity = db.Column(db.Integer, nullable=False)
 
