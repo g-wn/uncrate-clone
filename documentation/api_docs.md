@@ -16,7 +16,7 @@ All endpoints that require a current user to be logged in.
     ```json
     {
       "message": "Authentication required",
-      "statusCode": 401
+      "status_code": 401
     }
     ```
 
@@ -35,7 +35,7 @@ correct role(s) or permission(s).
     ```json
     {
       "message": "Forbidden",
-      "statusCode": 403
+      "status_code": 403
     }
     ```
 
@@ -58,8 +58,8 @@ Returns the information about the current user that is logged in.
     ```json
     {
       "id": 1,
-      "firstName": "John",
-      "lastName": "Smith",
+      "first_name": "John",
+      "last_name": "Smith",
       "email": "john.smith@gmail.com",
       "username": "JohnSmith"
     }
@@ -94,8 +94,8 @@ information.
     ```json
     {
       "id": 1,
-      "firstName": "John",
-      "lastName": "Smith",
+      "first_name": "John",
+      "last_name": "Smith",
       "email": "john.smith@gmail.com",
       "username": "JohnSmith",
       "token": ""
@@ -111,7 +111,7 @@ information.
     ```json
     {
       "message": "Invalid credentials",
-      "statusCode": 401
+      "status_code": 401
     }
     ```
 
@@ -124,7 +124,7 @@ information.
     ```json
     {
       "message": "Validation error",
-      "statusCode": 400,
+      "status_code": 400,
       "errors": {
         "credential": "Email or username is required",
         "password": "Password is required"
@@ -147,8 +147,8 @@ user's information.
 
     ```json
     {
-      "firstName": "John",
-      "lastName": "Smith",
+      "first_name": "John",
+      "last_name": "Smith",
       "email": "john.smith@gmail.com",
       "username": "JohnSmith",
       "password": "secret password"
@@ -164,8 +164,8 @@ user's information.
     ```json
     {
       "id": 1,
-      "firstName": "John",
-      "lastName": "Smith",
+      "first_name": "John",
+      "last_name": "Smith",
       "email": "john.smith@gmail.com",
       "username": "JohnSmith",
       "token": ""
@@ -181,7 +181,7 @@ user's information.
     ```json
     {
       "message": "User already exists",
-      "statusCode": 403,
+      "status_code": 403,
       "errors": {
         "email": "User with that email already exists"
       }
@@ -197,7 +197,7 @@ user's information.
     ```json
     {
       "message": "User already exists",
-      "statusCode": 403,
+      "status_code": 403,
       "errors": {
         "username": "User with that username already exists"
       }
@@ -213,12 +213,12 @@ user's information.
     ```json
     {
       "message": "Validation error",
-      "statusCode": 400,
+      "status_code": 400,
       "errors": {
         "email": "Invalid email",
         "username": "Username is required",
-        "firstName": "First Name is required",
-        "lastName": "Last Name is required"
+        "first_name": "First Name is required",
+        "last_name": "Last Name is required"
       }
     }
     ```
@@ -247,12 +247,11 @@ Returns all the products.
         {
           "id": 1,
           "title": "Whiskey-flavored Soap",
-          "description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy.",
-          "categoryId": 1,
+          "description": "Clean your bits with soap that smells (and tastes) like whiskey!",
+          "detailed_description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy.",
+          "category_id": 1,
           "price": 24.99,
-          "previewImgId": 1,
-          "createdAt": "2021-11-19 20:39:36",
-          "updatedAt": "2021-11-19 20:39:36",
+          "preview_img_id": 1,
         }
       ]
     }
@@ -280,12 +279,11 @@ Returns all the products listed (created) by the current user.
         {
           "id": 1,
           "title": "Whiskey-flavored Soap",
-          "description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy.",
-          "categoryId": 1,
+          "description": "Clean your bits with soap that smells (and tastes) like whiskey!",
+          "detailed_description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy.",
+          "category_id": 1,
           "price": 24.99,
-          "previewImgId": 1,
-          "createdAt": "2021-11-19 20:39:36",
-          "updatedAt": "2021-11-19 20:39:36",
+          "preview_img_id": 1,
         }
       ]
     }
@@ -298,7 +296,7 @@ Returns the details of a product specified by its id.
 * Require Authentication: false
 * Request
   * Method: GET
-  * URL: /api/products/:productId
+  * URL: /api/products/:product_id
   * Body: none
 
 * Successful Response
@@ -311,13 +309,12 @@ Returns the details of a product specified by its id.
     {
       "id": 1,
       "title": "Whiskey-flavored Soap",
-      "description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy.",
-      "categoryId": 1,
+      "description": "Clean your bits with soap that smells (and tastes) like whiskey!",
+      "detailed_description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy.",
+      "category_id": 1,
       "price": 24.99,
-      "previewImgId": 1,
-      "createdAt": "2021-11-19 20:39:36",
-      "updatedAt": "2021-11-19 20:39:36",
-      "ProductImages": [
+      "preview_img_id": 1,
+      "Product_Images": [
         {
           "id": 1,
           "url": "image url",
@@ -339,7 +336,7 @@ Returns the details of a product specified by its id.
     ```json
     {
       "message": "Product couldn't be found",
-      "statusCode": 404
+      "status_code": 404
     }
     ```
     
@@ -358,8 +355,9 @@ Creates and returns a new product.
     ```json
     {
       "title": "Whiskey-flavored Soap",
-      "description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy.",
-      "categoryId": 1,
+      "description": "Clean your bits with soap that smells (and tastes) like whiskey!",
+      "detailed_description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy.",
+      "category_id": 1,
       "price": 24.99
     }
     ```
@@ -373,11 +371,10 @@ Creates and returns a new product.
     ```json
     {
       "title": "Whiskey-flavored Soap",
-      "description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy.",
-      "categoryId": 1,
-      "price": 24.99,
-      "createdAt": "2021-11-19 20:39:36",
-      "updatedAt": "2021-11-19 20:39:36"
+      "description": "Clean your bits with soap that smells (and tastes) like whiskey!",
+      "detailed_description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy.",
+      "category_id": 1,
+      "price": 24.99
     }
     ```
 
@@ -390,12 +387,13 @@ Creates and returns a new product.
     ```json
     {
       "message": "Validation Error",
-      "statusCode": 400,
+      "status_code": 400,
       "errors": {
         "title": "Title is required",
         "description": "Description is required",
-        "categoryId": "Category ID is required",
-        "price": "Price is required",
+        "detailed_description": "Detailed description is required",
+        "category_id": "Category ID is required",
+        "price": "Price is required"
       }
     }
     ```
@@ -408,7 +406,7 @@ Create and return a new image for a product specified by id.
 * Require proper authorization: Product must belong to the current user
 * Request
   * Method: POST
-  * URL: /api/products/:productId/images
+  * URL: /api/products/:product_id/images
   * Headers:
     * Content-Type: application/json
   * Body:
@@ -441,7 +439,7 @@ Create and return a new image for a product specified by id.
     ```json
     {
       "message": "Product couldn't be found",
-      "statusCode": 404
+      "status_code": 404
     }
     ```
     
@@ -453,7 +451,7 @@ Updates and returns an existing product.
 * Require proper authorization: Product must belong to the current user
 * Request
   * Method: PUT
-  * URL: /api/products/:productId
+  * URL: /api/products/:product_id
   * Headers:
     * Content-Type: application/json
   * Body:
@@ -461,8 +459,9 @@ Updates and returns an existing product.
     ```json
     {
       "title": "Whiskey-flavored Soap",
-      "description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy.",
-      "categoryId": 1,
+      "description": "Clean your bits with soap that smells (and tastes) like whiskey!",
+      "detailed_description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy.",
+      "category_id": 1,
       "price": 24.99
     }
     ```
@@ -476,11 +475,10 @@ Updates and returns an existing product.
     ```json
     {
       "title": "Whiskey-flavored Soap",
-      "description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy.",
-      "categoryId": 1,
-      "price": 24.99,
-      "createdAt": "2021-11-19 20:39:36",
-      "updatedAt": "2021-11-19 20:39:36"
+      "description": "Clean your bits with soap that smells (and tastes) like whiskey!",
+      "detailed_description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy.",
+      "category_id": 1,
+      "price": 24.99
     }
     ```
 
@@ -493,12 +491,13 @@ Updates and returns an existing product.
     ```json
     {
       "message": "Validation Error",
-      "statusCode": 400,
+      "status_code": 400,
       "errors": {
         "title": "Title is required",
         "description": "Description is required",
-        "categoryId": "Category ID is required",
-        "price": "Price is required",
+        "detailed_description": "Detailed description is required",
+        "category_id": "Category ID is required",
+        "price": "Price is required"
       }
     }
     ```
@@ -512,7 +511,7 @@ Updates and returns an existing product.
     ```json
     {
       "message": "Product couldn't be found",
-      "statusCode": 404
+      "status_code": 404
     }
     ```
 
@@ -524,7 +523,7 @@ Deletes an existing product.
 * Require proper authorization: Product must belong to the current user
 * Request
   * Method: DELETE
-  * URL: /api/products/:productId
+  * URL: /api/products/:product_id
   * Body: none
 
 * Successful Response
@@ -536,7 +535,7 @@ Deletes an existing product.
     ```json
     {
       "message": "Successfully deleted",
-      "statusCode": 200
+      "status_code": 200
     }
     ```
 
@@ -549,6 +548,582 @@ Deletes an existing product.
     ```json
     {
       "message": "Product couldn't be found",
-      "statusCode": 404
+      "status_code": 404
+    }
+    ```
+
+## CARTS
+
+### Get Cart by User's Cart id
+
+Returns the user's cart specified by the cart id.
+
+* Require Authentication: true
+* Request
+  * Method: GET
+  * URL: /api/users/:cart_id
+  * Body: none
+
+* Successful Response
+  * Status Code: 200
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+    ```json
+    {
+      "Cart": [
+        {
+          "id": 1,
+          "used_id": 1,
+          "total": 92.43,
+          "purchased": false,
+          "Cart_Items": [
+            {
+              "id": 1,
+              "cart_id": 1,
+              "product_id": 5,
+              "quantity": 1,
+
+            },
+            {
+              "id": 2,
+              "cart_id": 1,
+              "product_id": 12,
+              "quantity": 1,
+
+            },
+            {
+              "id": 3,
+              "cart_id": 1,
+              "product_id": 17,
+              "quantity": 1,
+
+            }
+          ]
+        }
+      ]
+    }
+    ```
+
+### Add an Item to a Cart
+
+Adds an item to a cart by the cart's id and returns the cart.
+
+* Require Authentication: true
+* Request
+  * Method: POST
+  * URL: /api/users/:cart_id
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+    ```json
+    {
+      "product_id": 18,
+      "quantity": 1
+    }
+    ```
+    
+* Successful Response
+  * Status Code: 201
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+    ```json
+    {
+      "Cart": [
+        {
+          "id": 1,
+          "usedId": 1,
+          "total": 134.67,
+          "purchased": false,
+          "Cart_Items": [
+            {
+              "id": 1,
+              "cart_id": 1,
+              "product_id": 5,
+              "quantity": 1,
+
+            },
+            {
+              "id": 2,
+              "cart_id": 1,
+              "product_id": 12,
+              "quantity": 1,
+
+            },
+            {
+              "id": 3,
+              "cart_id": 1,
+              "product_id": 17,
+              "quantity": 1,
+
+            },
+            {
+              "id": 4,
+              "cart_id": 1,
+              "product_id": 18,
+              "quantity": 1,
+
+            }
+          ]
+        }
+      ]
+    }
+    ```
+    
+* Error Response: Body validation error
+  * Status Code: 400
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+    ```json
+    {
+      "message": "Validation Error",
+      "status_code": 400,
+      "errors": {
+        "product_id": "Product id is required",
+        "quantity": "Quantity is required",
+      }
+    }
+    ```
+    
+### Edit a Cart Item
+
+Updates and returns a cart item by the cart item's id.
+
+* Require Authentication: true
+* Require proper authorization: Cart must belong to the current user
+* Request
+  * Method: PUT
+  * URL: /api/users/:cartItemId
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+    ```json
+    {
+      "quantity": 2,
+    }
+    ```
+
+* Successful Response
+  * Status Code: 200
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+    ```json
+    {
+      "id": 1,
+      "cart_id": 1,
+      "product_id": 5,
+      "quantity": 2
+    }
+    ```
+
+* Error Response: Body validation error
+  * Status Code: 400
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+    ```json
+    {
+      "message": "Validation Error",
+      "status_code": 400,
+      "errors": {
+        "quantity": "Quantity is required",
+      }
+    }
+    ```
+    
+* Error response: Couldn't find a Cart Item with the specified id
+  * Status Code: 404
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+    ```json
+    {
+      "message": "Cart Item couldn't be found",
+      "status_code": 404
+    }
+    ```
+    
+### Edit a Cart's Purchased Status
+
+Updates a cart's purchased status and returns the cart.
+
+* Require Authentication: true
+* Require proper authorization: Cart must belong to the current user
+* Request
+  * Method: PUT
+  * URL: /api/users/:cart_id
+  * Body:
+
+    ```json
+    {
+      "purchased": true
+    }
+    ```
+
+* Successful Response
+  * Status Code: 200
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+    ```json
+    {
+      "Cart": [
+        {
+          "id": 1,
+          "user_id": 1,
+          "total": 134.67,
+          "purchased": true,
+          "Cart_Items": [
+            {
+              "id": 1,
+              "cart_id": 1,
+              "product_id": 5,
+              "quantity": 1,
+
+            },
+            {
+              "id": 2,
+              "cart_id": 1,
+              "product_id": 12,
+              "quantity": 1,
+
+            },
+            {
+              "id": 3,
+              "cart_id": 1,
+              "product_id": 17,
+              "quantity": 1,
+
+            },
+            {
+              "id": 4,
+              "cart_id": 1,
+              "product_id": 18,
+              "quantity": 1,
+
+            }
+          ]
+        }
+      ]
+    }
+    ```
+
+* Error Response: Body validation error
+  * Status Code: 400
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+    ```json
+    {
+      "message": "Validation Error",
+      "status_code": 400,
+      "errors": {
+        "purchased": "Purchased status is required",
+      }
+    }
+    ```
+    
+### Remove a Cart Item
+
+Deletes a cart item by the cart item's id.
+
+* Require Authentication: true
+* Require proper authorization: Cart must belong to the current user
+* Request
+  * Method: DELETE
+  * URL: /api/users/cart/:cartItemId
+  * Body: none
+
+* Successful Response
+  * Status Code: 200
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+    ```json
+    {
+      "message": "Successfully deleted",
+      "status_code": 200
+    }
+    ```
+
+* Error response: Couldn't find a Cart Item with the specified id
+  * Status Code: 404
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+    ```json
+    {
+      "message": "Cart Item couldn't be found",
+      "status_code": 404
+    }
+    ```
+
+## Product Images
+
+### Update Product Image URL
+
+Updates the URL of a product image by its id.
+
+* Require Authentication: true
+* Require proper authorization: Image must belong to a product that belongs to the current user
+* Request
+  * Method: PUT
+  * URL: /api/Product_Images/:productImageId
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+    ```json
+    {
+      "url": "image url"
+    }
+    ```
+
+* Successful Response
+  * Status Code: 200
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+    ```json
+    {
+      "id": 1,
+      "product_id": 1,
+      "url": "image url"
+    }
+    ```
+    
+* Error response: Body validation errors
+  * Status Code: 400
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+    ```json
+    {
+      "message": "Validation error",
+      "status_code": 400,
+      "errors": {
+        "url": "Image URL is required"
+      }
+    }
+    ```
+
+* Error response: Couldn't find a Product Image with the specified id
+  * Status Code: 404
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+    ```json
+    {
+      "message": "Product Image couldn't be found",
+      "status_code": 404
+    }
+    ```
+
+### Delete a Product Image
+
+Delete an existing image for a Product.
+
+* Require Authentication: true
+* Require proper authorization: Image must belong to a product that belongs to the current user
+* Request
+  * Method: DELETE
+  * URL: /api/Product_Images/:productImageId
+  * Body: none
+
+* Successful Response
+  * Status Code: 200
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+    ```json
+    {
+      "message": "Successfully deleted",
+      "status_code": 200
+    }
+    ```
+
+* Error response: Couldn't find a Product Image with the specified id
+  * Status Code: 404
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+    ```json
+    {
+      "message": "Product Image couldn't be found",
+      "status_code": 404
+    }
+    ```
+
+## Favorites
+
+### Get Current User's Favorite Products
+
+Returns the Current User's favorited Products.
+
+* Require Authentication: true
+* Request
+  * Method: GET
+  * URL: /api/favorites/current
+  * Body: none
+
+* Successful Response
+  * Status Code: 200
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+    ```json
+    {
+      "Favorites": [
+        {
+          "id": 1,
+          "title": "Whiskey-flavored Soap",
+          "description": "Clean your bits with soap that smells (and tastes) like whiskey!",
+          "detailed_description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy."
+          "category_id": 1,
+          "price": 24.99,
+          "preview_img_id": 1,
+        },
+        {
+          "id": 2,
+          "title": "Whiskey-flavored Shampoo",
+          "description": "Clean your bits with soap that smells (and tastes) like whiskey!",
+          "detailed_description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy."
+          "category_id": 1,
+          "price": 29.99,
+          "preview_img_id": 2,
+        }
+      ]
+    }
+    ```
+    
+### Add a Favorite to Current User's Favorite Products
+
+Adds a product to the current user's favorites by the product's id.
+
+* Require Authentication: true
+* Request
+  * Method: POST
+  * URL: /api/favorites/current/:product_id
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+    ```json
+    {
+      "product_id": 3
+    }
+    ```
+
+* Successful Response
+  * Status Code: 201
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+     ```json
+    {
+      "Favorites": [
+        {
+          "id": 1,
+          "title": "Whiskey-flavored Soap",
+          "description": "Clean your bits with soap that smells (and tastes) like whiskey!",
+          "detailed_description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy."
+          "category_id": 1,
+          "price": 24.99,
+          "preview_img_id": 1,
+        },
+        {
+          "id": 2,
+          "title": "Whiskey-flavored Shampoo",
+          "description": "Clean your bits with soap that smells (and tastes) like whiskey!",
+          "detailed_description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy."
+          "category_id": 1,
+          "price": 29.99,
+          "preview_img_id": 2,
+        },
+        {
+          "id": 3,
+          "title": "Whiskey-flavored Conditioner",
+          "description": "Clean your bits with soap that smells (and tastes) like whiskey!",
+          "detailed_description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy."
+          "category_id": 1,
+          "price": 29.99,
+          "preview_img_id": 3,
+        },
+      ]
+    }
+    ```
+
+* Error Response: Body validation error
+  * Status Code: 400
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+    ```json
+    {
+      "message": "Validation Error",
+      "status_code": 400,
+      "errors": {
+        "product_id": "Product ID is required."
+      }
+    }
+    ```
+    
+### Remove a Favorite From Current User's Favorite Products
+
+Deletes an existing product from the current user's favorites.
+
+* Require Authentication: true
+* Require proper authorization: Favorite must belong to the current user
+* Request
+  * Method: DELETE
+  * URL: /api/favorites/current/:product_id
+  * Body: none
+
+* Successful Response
+  * Status Code: 200
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+    ```json
+    {
+      "message": "Successfully removed",
+      "status_code": 200
+    }
+    ```
+
+* Error response: Couldn't find a Favorite with the specified id
+  * Status Code: 404
+  * Headers:
+    * Content-Type: application/json
+  * Body:
+
+    ```json
+    {
+      "message": "Favorite couldn't be found",
+      "status_code": 404
     }
     ```
