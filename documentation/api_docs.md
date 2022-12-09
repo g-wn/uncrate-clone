@@ -584,21 +584,18 @@ Returns the user's cart specified by the cart id.
               "cart_id": 1,
               "product_id": 5,
               "quantity": 1,
-
             },
             {
               "id": 2,
               "cart_id": 1,
               "product_id": 12,
               "quantity": 1,
-
             },
             {
               "id": 3,
               "cart_id": 1,
               "product_id": 17,
               "quantity": 1,
-
             }
           ]
         }
@@ -645,28 +642,24 @@ Adds an item to a cart by the cart's id and returns the cart.
               "cart_id": 1,
               "product_id": 5,
               "quantity": 1,
-
             },
             {
               "id": 2,
               "cart_id": 1,
               "product_id": 12,
               "quantity": 1,
-
             },
             {
               "id": 3,
               "cart_id": 1,
               "product_id": 17,
               "quantity": 1,
-
             },
             {
               "id": 4,
               "cart_id": 1,
               "product_id": 18,
               "quantity": 1,
-
             }
           ]
         }
@@ -791,28 +784,24 @@ Updates a cart's purchased status and returns the cart.
               "cart_id": 1,
               "product_id": 5,
               "quantity": 1,
-
             },
             {
               "id": 2,
               "cart_id": 1,
               "product_id": 12,
               "quantity": 1,
-
             },
             {
               "id": 3,
               "cart_id": 1,
               "product_id": 17,
               "quantity": 1,
-
             },
             {
               "id": 4,
               "cart_id": 1,
               "product_id": 18,
               "quantity": 1,
-
             }
           ]
         }
