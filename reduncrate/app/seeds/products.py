@@ -20,21 +20,56 @@ def seed_products():
         price = product["price"],
         preview_img_id = product["preview_img_id"]
     ) for product in products_gear]
-    style = Product(
 
-    )
-    cars = Product(
+    style = [Product(
+        id = product["id"],
+        title = product["title"],
+        description = product["description"],
+        detailed_description = product["detailed_description"],
+        category_id = product["category_id"],
+        price = product["price"],
+        preview_img_id = product["preview_img_id"]
+    ) for product in products_style]
 
-    )
-    tech = Product(
+    cars = [Product(
+        id = product["id"],
+        title = product["title"],
+        description = product["description"],
+        detailed_description = product["detailed_description"],
+        category_id = product["category_id"],
+        price = product["price"],
+        preview_img_id = product["preview_img_id"]
+    ) for product in products_cars]
 
-    )
-    vices = Product(
+    tech = [Product(
+        id = product["id"],
+        title = product["title"],
+        description = product["description"],
+        detailed_description = product["detailed_description"],
+        category_id = product["category_id"],
+        price = product["price"],
+        preview_img_id = product["preview_img_id"]
+    ) for product in products_tech]
 
-    )
-    etc = Product(
+    vices = [Product(
+        id = product["id"],
+        title = product["title"],
+        description = product["description"],
+        detailed_description = product["detailed_description"],
+        category_id = product["category_id"],
+        price = product["price"],
+        preview_img_id = product["preview_img_id"]
+    ) for product in products_vices]
 
-    )
+    etc = [Product(
+        id = product["id"],
+        title = product["title"],
+        description = product["description"],
+        detailed_description = product["detailed_description"],
+        category_id = product["category_id"],
+        price = product["price"],
+        preview_img_id = product["preview_img_id"]
+    ) for product in products_etc]
 
     db.session.add(gear)
     db.session.add(style)
@@ -46,7 +81,7 @@ def seed_products():
 
     def undo_products():
         if environment == "production":
-            db.session.execute(f"TRUNCATE table {SCHEMA}.products RESTARD IDENTITY CASCADE;")
+            db.session.execute(f"TRUNCATE table {SCHEMA}.products RESTART IDENTITY CASCADE;")
         else:
             db.session.execute("DELETE FROM products")
 
