@@ -1,49 +1,23 @@
 ## CART - MVP
 
-### CREATE:
+### C:
 
 - Start a new cart.
 - Add an item to the cart.
 
-### READ:
+### R:
 
 - Look at our cart.
 
-### UPDATE:
+### U:
 
 - Change the contents of the cart.
 - Change the quantity of the items in the cart.
 
-### DELETE:
+### D:
 
 - Remove an item from the cart.
 - If cart is empty, delete the cart.
-
-
-## FAVORITES
-
-### C:
-
-- Add an item to a users list of favorites. --> MVP CREATE
-- Create a note about a favorite item.
-- Create categories within favorites.
-
-### R:
-
-- View a list of all favorited items. --> MVP READ
-- View one favorited item.
-- View favorites by category.
-
-### U:
-
-- Edit a favorite item note.
-- Edit categories within favorites.
-
-### D:
-
-- Remove a favorited item. --> MVP DELETE
-- Remove a favorite item note.
-- Remove a category within favorites.
 
 
 ## PRODUCT POSTS - MVP
@@ -66,6 +40,21 @@
 
 - A user can remove their own posted listing.
 
+
+## FAVORITES
+
+### C:
+
+- Add an item to a users list of favorites. --> MVP CREATE
+
+### R:
+
+- View a list of all favorited items. --> MVP READ
+- View one favorited item.
+
+### D:
+
+- Remove a favorited item. --> MVP DELETE
 
 ## SEARCH:
 
@@ -112,4 +101,5 @@
 ### PROFILE PAGE
 ### ABOUT LINKS
 ### PURCHASE HISTORY
-### EMAIL SIGNUP
+### EMAIL NEWSLETTER SIGNUP
+### FAVORITES CATEGORIES/NOTES
