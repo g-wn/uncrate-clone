@@ -25,7 +25,7 @@ class Product(db.Model):
     product_owner = db.relationship("User", back_populates="user_products")
 
     # users_who_favorited <-- favorites --> user_favorites
-    users_who_favorited = db.relationship("User", secondary=favorites, lazy="joined")
+    users_who_favorited = db.relationship("User", back_populates="user_favorites", secondary=favorites, lazy="joined")
 
     # cart_item <--> product
     cart_item = db.relationship("CartItem", back_populates="product")
@@ -41,6 +41,7 @@ class Product(db.Model):
             "id": self.id,
             "title": self.title,
             "description": self.description,
+            "detailed_description": self.detailed_description,
             "categoryId": self.category_id,
             "price": self.price,
             "previewImgId": self.preview_img_id,

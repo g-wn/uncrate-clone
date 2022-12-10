@@ -1,3 +1,5 @@
+from random import randint
+
 products_tech = [
   {
     "id": 34,
@@ -7,6 +9,7 @@ products_tech = [
 
     Drivers: Two ScanSpeak Discovery 18 cm Mid woofers, three ScanSpeak Discovery 8.9 cm Fullrange / Frequency Response: Smooth (±3 dB) from 30 Hz to 20 kHz / Connectivity: Airplay 2, Spotify Connect, Tidal Connect / Wireless: 2.4/5 GHz Simultaneous Dual Band Wi-Fi IEEE 802.11a/b/g/n/ac, Bluetooth 5.0""",
     "category_id": 4,
+    "owner_id": randint(1,3),
     "price": 1200.00,
     "preview_img_id": 34,
   },
@@ -18,6 +21,7 @@ products_tech = [
 
     Weight: 12.5 lb / W&F: 0.125% / S/N ratio: -79 dBA / Rumble: -63 dBA / Input voltage: 115V/60Hz""",
     "category_id": 4,
+    "owner_id": randint(1,3),
     "price": 399.00,
     "preview_img_id": 35,
   },
@@ -27,6 +31,7 @@ products_tech = [
     "description": "Domed charging station turns the Apple Watch into a full-sized alarm clock. $69.",
     "detailed_description": "Apple Watches are loaded with features, but when charging, they're mostly just taking up space on the nightstand. The NightWatch Magnifying Apple Watch Dock adds another layer to its functionality by transforming the dormant timepiece into an alarm clock. Made from a single piece of solid lucite, your watch slides perfectly behind the domed base. Its curved design magnifies the watch's face and displays it like a bedside clock. While docked, patented tap functions allow owners to wake up the watch with a single touch, while built-in sound channels amplify alarms to keep you running on time. Lastly, your existing Apple Watch magnetic charging cable neatly fits in to the back of the dock so your watch automatically begins charging once placed in the dock, and you're done fumbling around with finding your cord behind the nightstand for good. Horological ahfficiando's will appreciate that the design of NightWatch is based on a collectors item called the \"eye of time\" produced by an anonymous watch maker in Regency, London, making this the only ball clock made for the Apple Watch.",
     "category_id": 4,
+    "owner_id": randint(1,3),
     "price": 69.00,
     "preview_img_id": 36,
   },
@@ -36,6 +41,7 @@ products_tech = [
     "description": "Master & Dynamic enhances their excellent MW08 earphones with a Kevlar case and water resistance. $219.",
     "detailed_description": "Master & Dynamic's standard MW08 earphones are quite good, with 11mm beryllium drivers for accurate, powerful sound and Hybrid Active Noise-Cancellation with six microphones for both effective sound-blocking and clear calls. The MW08 Sport earphones offer the same features in a workout-friendly package. Instead of ceramic, their jewel-like exteriors are made from shatter-resistant sapphire glass, while the charging case is made from Kevlar and has an IPX4 water resistance rating. They use Bluetooth 5.2 with aptX, AAC, and SBC support for a strong wireless connection and run for up to 10 hours per charge with ANC on, combining with the aforementioned case for a total playtime of 40 hours.",
     "category_id": 4,
+    "owner_id": randint(1,3),
     "price": 219.00,
     "preview_img_id": 37,
   },
@@ -49,6 +55,7 @@ products_tech = [
 
     Tonearm: Pro-ject / Cartridge: Ortofon OM10 / 33rpm & 45rpm""",
     "category_id": 4,
+    "owner_id": randint(1,3),
     "price": 545.00,
     "preview_img_id": 38,
   },
@@ -61,6 +68,7 @@ products_tech = [
     Specifications
     Cell: 21700 Li-ion Batteries / Capacity: 594Wh (10.8V, 55Ah) (165000mAh) / DC Input: 14.4V-26V, up to 10A (160W max) / AC Output: 110V~2.75A 60Hz, Pure Sine Wave, 300W, 600W surge / Cig Lighter Port: 12V⎓10A; DC Output: 12V⎓10A (Total 120W max) / USB Output: 5V⎓2.4A, 12W max each port / USB QC Output: 5V⎓2.4A , 9V⎓2A 18W max / USB-C Output: 5V⎓3A , 9V⎓3A , 12V⎓3A , 15V⎓3A , 20V⎓3A 60W max / Operating Temperature: 14~104℉""",
     "category_id": 4,
+    "owner_id": randint(1,3),
     "price": 900.00,
     "preview_img_id": 39,
   },
@@ -74,6 +82,7 @@ products_tech = [
 
     Width: 4.64\" / Height: 3.30\" / Depth: 1.31\" / Weight: 5.36 oz.""",
     "category_id": 4,
+    "owner_id": randint(1,3),
     "price": 120.00,
     "preview_img_id": 40,
   },
@@ -87,6 +96,7 @@ products_tech = [
 
     Height: 4.58\" / Width: 2\" / Thickness: 0.6\" / Weight: 3.1oz""",
     "category_id": 4,
+    "owner_id": randint(1,3),
     "price": 350.00,
     "preview_img_id": 41,
   },
@@ -96,6 +106,7 @@ products_tech = [
     "description": "Take notes and charge nearly any device wirelessly or wired with this slick notebook. $120.",
     "detailed_description": "Taking notes the old-fashioned way — by putting pen to paper — isn't quite dead yet. But no one is giving up their devices either. KeySmart's wireless charging notebook brings the manual and the digital together in one smartly designed package that includes wireless and wired charging. A slim 8,000mAh battery integrated into the front cover wirelessly charges iPhone, Andriod, and tablet devices and has a secret USB flash drive in the magnetic clasp. A six-ring binder, dedicated wired charging cable storage, and multiple pockets will satisfy any obsessive organizer.",
     "category_id": 4,
+    "owner_id": randint(1,3),
     "price": 120.00,
     "preview_img_id": 42,
   },
@@ -109,6 +120,7 @@ products_tech = [
 
     Note: This is a USA 110V version.""",
     "category_id": 4,
+    "owner_id": randint(1,3),
     "price": 440.00,
     "preview_img_id": 43,
   },
@@ -120,6 +132,7 @@ products_tech = [
 
     Height: 6\" / Width: 3.6\" / Depth: 4.7\" / Weight: 1.75 lb.""",
     "category_id": 4,
+    "owner_id": randint(1,3),
     "price": 219.00,
     "preview_img_id": 44,
   }

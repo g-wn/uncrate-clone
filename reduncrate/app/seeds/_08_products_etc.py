@@ -1,3 +1,5 @@
+from random import randint
+
 products_etc = [
   {
     "id": 78,
@@ -7,7 +9,8 @@ products_etc = [
 
     Small: Height: 6\" / Width: 22\" / Depth: 22\"
     Large: Height: 7\" / Width: 26\" / Depth: 26\"""",
-    "category_id": 6,
+    "category_id": 8,
+    "owner_id": randint(1,3),
     "price": 90.00,
     "preview_img_id": 78,
   },
@@ -17,6 +20,7 @@ products_etc = [
     "description": "Over 50 pieces, 10 challenges, and illustrated instructions make this STEM kit ideal for kids 8+. $65.",
     "detailed_description": "Get the younglings in your life a gift that will occupy their time as well as their brain with this kit from Tinkering Labs. It includes over 50 wooden parts, connectors, and motors, as well as a storage bag, safety goggles, and batteries. 10 challenge cards give kids specific things to try and build, while the 21-page guide provides step-by-step instructions for younger builders. Suitable for ages 8 and up.",
     "category_id": 8,
+    "owner_id": randint(1,3),
     "price": 65.00,
     "preview_img_id": 79,
   },
@@ -26,6 +30,7 @@ products_etc = [
     "description": "Written by experts with pricing info gleaned from Sotheby's, this reference covers 385 Rolex models. $95.",
     "detailed_description": "The value of watches has exploded in recent years, leading many to explore vintage examples as investment vehicles. Investing in Wristwatches: Rolex is an excellent intro for anyone looking to start buying into the Crown. It covers the most popular and important Rolex references, with each description accompanied by a photo and sales history — the latter compiled with help from Sotheby's. Written by experts Osvaldo Patrizzi and Mara Cappelletti, it covers 385 models in total, with an introduction from Daryn F. Schnipper, Chairman of Sotheby's International Watch Division.",
     "category_id": 8,
+    "owner_id": randint(1,3),
     "price": 95.00,
     "preview_img_id": 80,
   },
@@ -37,6 +42,7 @@ products_etc = [
 
     Height: 12.25\" / Width: 9\" / 592 pages""",
     "category_id": 8,
+    "owner_id": randint(1,3),
     "price": 90.00,
     "preview_img_id": 81,
   },
@@ -48,6 +54,7 @@ products_etc = [
 
     14.1 oz / 10 servings""",
     "category_id": 8,
+    "owner_id": randint(1,3),
     "price": 24.00,
     "preview_img_id": 82,
   },
@@ -59,6 +66,7 @@ products_etc = [
 
     Each order includes 3, 2-packs of popcorn on the cob, for a total of 6 cobs. 6 popping bags included.""",
     "category_id": 8,
+    "owner_id": randint(1,3),
     "price": 25.00,
     "preview_img_id": 83,
   },
@@ -70,6 +78,7 @@ products_etc = [
 
     Shampoo:16 oz / Conditioner: 16 oz / Spray: 4 fl oz""",
     "category_id": 8,
+    "owner_id": randint(1,3),
     "price": 70.00,
     "preview_img_id": 84,
   },
@@ -95,6 +104,7 @@ products_etc = [
 
     Height: 9.5\" / Width: 11\" / Depth: 6.5\" / Weight: 20 lbs""",
     "category_id": 8,
+    "owner_id": randint(1,3),
     "price": 475.00,
     "preview_img_id": 85,
   },
@@ -106,6 +116,7 @@ products_etc = [
 
     11.75\" x 12.26\" x 1.97\" / 5.51 lbs.""",
     "category_id": 8,
+    "owner_id": randint(1,3),
     "price": 135.00,
     "preview_img_id": 86,
   },
@@ -117,6 +128,7 @@ products_etc = [
 
     Width: 10.25\" / Height: 12.5\" / 280 pages""",
     "category_id": 8,
+    "owner_id": randint(1,3),
     "price": 75.00,
     "preview_img_id": 87,
   },
@@ -128,6 +140,7 @@ products_etc = [
 
     19.9\" x 25.6\" / Skeleton Height: 5' 9\"""",
     "category_id": 8,
+    "owner_id": randint(1,3),
     "price": 40.00,
     "preview_img_id": 8,
   }

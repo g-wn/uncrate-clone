@@ -18,6 +18,7 @@ def seed_products():
             description=product["description"],
             detailed_description=product["detailed_description"],
             category_id=product["category_id"],
+            owner_id=product["owner_id"],
             price=product["price"],
             preview_img_id=product["preview_img_id"],
         )
@@ -31,6 +32,7 @@ def seed_products():
             description=product["description"],
             detailed_description=product["detailed_description"],
             category_id=product["category_id"],
+            owner_id=product["owner_id"],
             price=product["price"],
             preview_img_id=product["preview_img_id"],
         )
@@ -44,6 +46,7 @@ def seed_products():
             description=product["description"],
             detailed_description=product["detailed_description"],
             category_id=product["category_id"],
+            owner_id=product["owner_id"],
             price=product["price"],
             preview_img_id=product["preview_img_id"],
         )
@@ -57,6 +60,7 @@ def seed_products():
             description=product["description"],
             detailed_description=product["detailed_description"],
             category_id=product["category_id"],
+            owner_id=product["owner_id"],
             price=product["price"],
             preview_img_id=product["preview_img_id"],
         )
@@ -70,6 +74,7 @@ def seed_products():
             description=product["description"],
             detailed_description=product["detailed_description"],
             category_id=product["category_id"],
+            owner_id=product["owner_id"],
             price=product["price"],
             preview_img_id=product["preview_img_id"],
         )
@@ -83,18 +88,20 @@ def seed_products():
             description=product["description"],
             detailed_description=product["detailed_description"],
             category_id=product["category_id"],
+            owner_id=product["owner_id"],
             price=product["price"],
             preview_img_id=product["preview_img_id"],
         )
         for product in products_etc
     ]
 
-    db.session.add(gear)
-    db.session.add(style)
-    db.session.add(cars)
-    db.session.add(tech)
-    db.session.add(vices)
-    db.session.add(etc)
+    [db.session.add(product) for product in gear]
+    [db.session.add(product) for product in style]
+    [db.session.add(product) for product in cars]
+    [db.session.add(product) for product in tech]
+    [db.session.add(product) for product in vices]
+    [db.session.add(product) for product in etc]
+
     db.session.commit()
 
 
