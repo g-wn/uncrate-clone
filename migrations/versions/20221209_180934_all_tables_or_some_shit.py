@@ -1,7 +1,7 @@
 """all tables or some shit
 
 Revision ID: 5b0c46368fba
-Revises: 
+Revises:
 Create Date: 2022-12-09 18:09:34.342966
 
 """
@@ -49,7 +49,7 @@ def upgrade():
     sa.Column('detailed_description', sa.String(length=5000), nullable=True),
     sa.Column('category_id', sa.Integer(), nullable=False),
     sa.Column('owner_id', sa.Integer(), nullable=False),
-    sa.Column('price', sa.DECIMAL(precision=2), nullable=False),
+    sa.Column('price', sa.Float(precision=2), nullable=False),
     sa.Column('preview_img_id', sa.Integer(), nullable=False),
     sa.ForeignKeyConstraint(['category_id'], ['categories.id'], ),
     sa.ForeignKeyConstraint(['owner_id'], ['users.id'], ),
