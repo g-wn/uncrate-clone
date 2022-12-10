@@ -18,7 +18,7 @@ products_gear = [
         "detailed_description": "Not everyone wants or needs a large, offset game improvement iron. For those with better ball-striking skills but without the need for maximum shot-shaping versatility, TaylorMade has revamped their P·770 irons. They feature a smaller body, less offset, and a thinner top line than the P·790s, but still offer the forgiveness that comes with hollow-body construction. FLTD CG tungsten weighting moves the center of gravity gradually through the irons to optimize trajectory, and a mix of brushed and polished surfaces makes sure they look great even when they're not in play. They're joined in the lineup by new versions of the Tour-proven P·7MC and P·7MB models.",
         "category_id": 1,
         "owner_id": randint(1, 3),
-        "price": 1299,
+        "price": 12,
         "preview_img_id": 2,
     },
     # {
