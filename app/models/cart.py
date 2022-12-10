@@ -12,7 +12,7 @@ class Cart(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod(("users.id"))), nullable=False)  # FOREIGN KEY EVEN THOUGH 1:1?
-    total = db.Column(db.Integer, nullable=False)
+    total = db.Column(db.NUMERIC(10, 0), nullable=False)
     purchased = db.Column(db.Boolean, default=False)
 
     # RELATIONSHIPS:
