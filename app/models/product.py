@@ -17,7 +17,7 @@ class Product(db.Model):
     detailed_description = db.Column(db.String(5000))
     category_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod(("categories.id"))), nullable=False)
     owner_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod(("users.id"))), nullable=False)
-    price = db.Column(db.NUMERIC(10, 0), nullable=False)
+    price = db.Column(db.Integer, nullable=False)
     preview_img_id = db.Column(db.Integer, nullable=False)
 
     # RELATIONSHIPS:
