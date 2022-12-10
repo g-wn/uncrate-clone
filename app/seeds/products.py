@@ -112,12 +112,12 @@ def seed_products():
     ]
 
     [db.session.add(product) for product in gear]
-    [db.session.add(product) for product in style]
-    [db.session.add(product) for product in cars]
-    [db.session.add(product) for product in tech]
-    [db.session.add(product) for product in vices]
-    [db.session.add(product) for product in body]
-    [db.session.add(product) for product in etc]
+    # [db.session.add(product) for product in style]
+    # [db.session.add(product) for product in cars]
+    # [db.session.add(product) for product in tech]
+    # [db.session.add(product) for product in vices]
+    # [db.session.add(product) for product in body]
+    # [db.session.add(product) for product in etc]
 
     db.session.commit()
 
