@@ -5,7 +5,7 @@ products_vices = [
     "id": 56,
     "title": "KLARO MILITARY EDITION HUMIDOR",
     "description": "Store your best sticks in style with this cedar-lined, military-inspired matte black humidor. $300.",
-    "detailed_description": """Not all humidors need to have classic wooden exteriors. This Military Edition Humidor from adopts a more modern look with a sleek matte black exterior and custom gunmetal hardware and handles. The interior is clad in thick 100% Spanish cedar, and outfitted with a recessed hydro system to keep sticks fresh, a sliding, removable storage tray for organization, and rubber gaskets for a tight seal. A digital hygrometer on the front lets you know when it\'s time to add more water, and a drawer on the bottom keeps lighters, cutters, and other accessories conveniently at hand.
+    "detailed_description": """Not all humidors need to have classic wooden exteriors. This Military Edition Humidor from adopts a more modern look with a sleek matte black exterior and custom gunmetal hardware and handles. The interior is clad in thick 100% Spanish cedar, and outfitted with a recessed hydro system to keep sticks fresh, a sliding, removable storage tray for organization, and rubber gaskets for a tight seal. A digital hygrometer on the front lets you know when it''s time to add more water, and a drawer on the bottom keeps lighters, cutters, and other accessories conveniently at hand.
 
     Width: 15.75\" / Height: 8.25\" / Depth: 9.8\"""",
     "category_id": 6,
@@ -37,7 +37,7 @@ products_vices = [
     "id": 58,
     "title": "ALESSI SPIRALE ASHTRAY",
     "description": "Created in 1970 by Italian designer Achille Castiglioni, the Spirale has a cig-holding metal spiral. $125.",
-    "detailed_description": """Smoking was far more common when Italian designer Achille Castiglioni came up with the Spirale Ashtray in 1970, yet its design endures. It\'s crafted from 18/10 stainless steel and named for the signature spiral that goes around the inner edge and holds cigarettes for \"absent-minded\" smokers like its creator. The spiral can also be lifted out for cleaning, which also allows the object to serve as a catch-all tray for small items like change, keys, or earphones. Made in Italy.
+    "detailed_description": """Smoking was far more common when Italian designer Achille Castiglioni came up with the Spirale Ashtray in 1970, yet its design endures. It''s crafted from 18/10 stainless steel and named for the signature spiral that goes around the inner edge and holds cigarettes for \"absent-minded\" smokers like its creator. The spiral can also be lifted out for cleaning, which also allows the object to serve as a catch-all tray for small items like change, keys, or earphones. Made in Italy.
 
     Diameter: 4.73\" / Height: 1.77\"""",
     "category_id": 6,
@@ -68,7 +68,7 @@ products_vices = [
     "id": 60,
     "title": "NUDE FUMO CIGAR ASHTRAY",
     "description": "Capable of handling ash and small trinkets alike, this handmade ashtray is a worthwhile addition. $77.",
-    "detailed_description": """Carved from solid crystalline glass, Nude\'s Fumo ashtray is equally suited to accommodating cigars or trinkets. It\'s made by hand, giving each piece an artisan look. The deep groove keeps favorite sticks from moving around, while the generous bowl keeps ash intact, avoiding the dreaded split.
+    "detailed_description": """Carved from solid crystalline glass, Nude''s Fumo ashtray is equally suited to accommodating cigars or trinkets. It''s made by hand, giving each piece an artisan look. The deep groove keeps favorite sticks from moving around, while the generous bowl keeps ash intact, avoiding the dreaded split.
 
     Height: 2.17\" / Width: 4\" / Depth: 5.8\"""",
     "category_id": 6,
@@ -80,7 +80,7 @@ products_vices = [
     "id": 61,
     "title": "NUDE ALTRUIST CIGAR ASHTRAY",
     "description": "Designed to be placed between two chairs, this sleek ashtray has dual slots that face each other. $77.",
-    "detailed_description": """A fine cigar can be an enjoyable indulgence. Even more so when the experience is shared. Nude\'s Altruist Cigar Ashtray is made to accommodate two sticks at once, making it perfect for dual chair, relaxed conversations. It\'s handmade from lead-free crystal with a refined circular shape, two placement grooves that face each other, and generous ash bowls.
+    "detailed_description": """A fine cigar can be an enjoyable indulgence. Even more so when the experience is shared. Nude''s Altruist Cigar Ashtray is made to accommodate two sticks at once, making it perfect for dual chair, relaxed conversations. It''s handmade from lead-free crystal with a refined circular shape, two placement grooves that face each other, and generous ash bowls.
 
     Height: 1.375\" / Diameter: 5.89\"""",
     "category_id": 6,
@@ -124,7 +124,7 @@ products_vices = [
     "id": 65,
     "title": "CARBON FIBER HUMIDOR",
     "description": "Protect a small supply of your best sticks in style with this carbon fiber-covered humidor. $225.",
-    "detailed_description": """Well-curated cigar collections deserve equally well-considered storage. While not sized to house a full collection, this model certainly looks the part. It\'s made from wood with and given a veneer of carbon fiber, with a checkered weave pattern on the base and a high gloss black finish on the top. A hygrometer and humidifying sponge are included for keeping ideal interior conditions, and the size is just right for use in a vehicle or as part of your gear for an extended trip.
+    "detailed_description": """Well-curated cigar collections deserve equally well-considered storage. While not sized to house a full collection, this model certainly looks the part. It''s made from wood with and given a veneer of carbon fiber, with a checkered weave pattern on the base and a high gloss black finish on the top. A hygrometer and humidifying sponge are included for keeping ideal interior conditions, and the size is just right for use in a vehicle or as part of your gear for an extended trip.
 
     Dimensions: 9.25\" x 8.0\" x 2.0\"""",
     "category_id": 6,
