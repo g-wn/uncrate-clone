@@ -88,7 +88,7 @@ products_style = [
         "detailed_description": "Designed to be reliable and versatile enough for wear in most scenarios, New Balance's 574 is perhaps the company's most recognizable shoe. While these 574H hikers don't reinvent the wheel, they do make some notable changes in the name of ruggedness. Most notable is the mid-cut silhouette, rendered with a black leather and Cordura upper. Lightweight EVA foam in the midsole and heel provides comfort on the trail, while the polyurethane rim of the Encap midsole delivers support. At the base, the rubber sole has pronounced lugs for added traction, adding to the outdoorsy look that's finished with bold red and yellow boot-style laces.",
         "category_id": 2,
         "owner_id": randint(1, 3),
-        "price": 130,
+        "price": 13,
         "preview_img_id": 20,
     },
     {
