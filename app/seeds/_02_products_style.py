@@ -113,6 +113,65 @@ products_style = [
     },
 ]
 
+
+products_style_imgs = [
+    {
+        'id': 12,
+        'product_id': 12,
+        'url': "https://uncrate.com/assets_c/2022/10/rze-ascentus-gmt-watch-thumb-960xauto-152584.jpg"
+    },
+    {
+        'id': 13,
+        'product_id': 13,
+        'url': "https://uncrate.com/assets_c/2022/12/solios-black-curve-solar-watch-thumb-960xauto-155272.jpg"
+    },
+    {
+        'id': 14,
+        'product_id': 14,
+        'url': "https://uncrate.com/assets_c/2022/12/sunspel-fleeceback-sweatpants-white-melange-2-thumb-960xauto-155258.jpg"
+    },
+    {
+        'id': 15,
+        'product_id': 15,
+        'url': "https://uncrate.com/assets_c/2022/12/london-sock-co-simply-satorical-thumb-960xauto-155132.jpg"
+    },
+    {
+        'id': 16,
+        'product_id': 16,
+        'url': "https://uncrate.com/assets_c/2022/12/holden-puffy-slides-black-1-thumb-960xauto-155217.jpg"
+    },
+    {
+        'id': 17,
+        'product_id': 17,
+        'url': "https://uncrate.com/assets_c/2022/12/filling-pieces-hightop-sneakers-1-thumb-960xauto-155190.jpg"
+    },
+    {
+        'id': 18,
+        'product_id': 18,
+        'url': "https://uncrate.com/assets_c/2022/10/faherty-black-sweater-shirt-23-thumb-960xauto-153423.jpg"
+    },
+    {
+        'id': 19,
+        'product_id': 19,
+        'url': "https://uncrate.com/assets_c/2022/11/mobyfox-nasa-apple-watch-bands-thumb-960xauto-154815.jpg"
+    },
+    {
+        'id': 20,
+        'product_id': 20,
+        'url': "https://uncrate.com/assets_c/2022/12/new-balance-974h-hikers-1-thumb-960xauto-155098.jpg"
+    },
+    {
+        'id': 21,
+        'product_id': 21,
+        'url': "https://uncrate.com/assets_c/2021/11/onsen-bath-robe-1-thumb-960xauto-140166.jpg"
+    },
+    {
+        'id': 22,
+        'product_id': 22,
+        'url': "https://uncrate.com/assets_c/2020/11/reigning-champ-terry-joggers-1-thumb-960xauto-124675.jpg"
+    }
+]
+
 """
 
 product12_image1: https://uncrate.com/assets_c/2022/10/rze-ascentus-gmt-watch-thumb-960xauto-152584.jpg

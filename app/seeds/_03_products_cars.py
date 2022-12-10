@@ -101,6 +101,75 @@ products_cars = [
         "price": 3000000,
         "preview_img_id": 32,
     },
+    {
+        "id": 33,
+        "title": "FERRARI VISION GRAN TURISMO CONCEPT",
+        "description": "Ferrari looks to prototypes of the past for the design of this 1,337hp virtual Gran Turismo racer.",
+        "detailed_description": "Gran Turismo's realistic gameplay makes it a favorite of serious SIM drivers. It also lets companies try out outlandish designs that would likely never make it off the drawing board. As Maranello's first concept car created specifically for the virtual world, the single-seat Ferrari Vision Gran Turismo pushes the boundaries of real-world performance. It's powered by the same 3.0L turbo V6 architecture as the 499P race car but tuned to deliver more power and paired with a trio of electric motors for an all-wheel drive setup delivering 1,337 hp and a top speed of 217. The body is inspired by the Prancing Horse's Sports Prototypes of the 1960s and 70s, with plenty of aero tricks to make it stick firmly to the track. The car launches in the game on December 23rd, while a full-scale design study will be on display at the Ferrari Museum in Maranello from December 15th to March 2023.",
+        "category_id": 3,
+        "owner_id": randint(1, 3),
+        "price": 3000000,
+        "preview_img_id": 33,
+    },
+]
+
+
+products_cars_imgs = [
+    {
+        "id": 23,
+        "product_id": 23,
+        "url": "https://uncrate.com/p/2022/12/murno-ev-suv-1.jpg",
+    },
+    {
+        "id": 24,
+        "product_id": 24,
+        "url": "https://uncrate.com/p/2022/12/canoo-light-tactical-vehicle-1.jpg",
+    },
+    {
+        "id": 25,
+        "product_id": 25,
+        "url": "https://uncrate.com/assets_c/2022/12/mercedes-amg-s63e-1-thumb-960xauto-155239.jpg",
+    },
+    {
+        "id": 26,
+        "product_id": 26,
+        "url": "https://uncrate.com/p/2022/12/land-rover-lightweight-88-1.jpg",
+    },
+    {
+        "id": 27,
+        "product_id": 27,
+        "url": "https://uncrate.com/p/2022/12/bentley-surgeon-flying-spur-1.jpg",
+    },
+    {
+        "id": 28,
+        "product_id": 28,
+        "url": "https://uncrate.com/p/2022/06/lightyear-0-1.jpg",
+    },
+    {
+        "id": 29,
+        "product_id": 29,
+        "url": "https://uncrate.com/p/2022/12/praga-bohema-1.jpg",
+    },
+    {
+        "id": 30,
+        "product_id": 30,
+        "url": "https://uncrate.com/p/2022/12/hookie-cake-osa-flex-1.jpg",
+    },
+    {
+        "id": 31,
+        "product_id": 31,
+        "url": "https://uncrate.com/p/2022/11/lamborghini-urraco-1.jpg",
+    },
+    {
+        "id": 32,
+        "product_id": 32,
+        "url": "https://uncrate.com/p/2022/11/de-tomaso-p900-1.jpg",
+    },
+    {
+        "id": 33,
+        "product_id": 33,
+        "url": "https://uncrate.com/assets_c/2022/11/ferrari-vision-gran-turismo-1-thumb-960xauto-154920.jpg",
+    },
 ]
 
 

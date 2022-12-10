@@ -1,12 +1,13 @@
 from app.models import db, Product, environment, SCHEMA
 
 # make sure Product import is working correctly // paste in Gray's model into models directory?
-from ._01_products_gear import products_gear
-from ._02_products_style import products_style
-from ._03_products_cars import products_cars
-from ._04_products_tech import products_tech
-from ._06_products_vices import products_vices
-from ._08_products_etc import products_etc
+from ._01_products_gear import products_gear, products_gear_imgs
+from ._02_products_style import products_style, products_style_imgs
+from ._03_products_cars import products_cars, products_cars_imgs
+from ._04_products_tech import products_tech, products_tech_imgs
+from ._06_products_vices import products_vices, product_vices_imgs
+from ._07_products_body import products_body, products_body_imgs
+from ._08_products_etc import products_etc, product_etc_imgs
 
 
 # add 05_shelter & 07_body
@@ -81,6 +82,20 @@ def seed_products():
         for product in products_vices
     ]
 
+    body = [
+        Product(
+            id=product["id"],
+            title=product["title"],
+            description=product["description"],
+            detailed_description=product["detailed_description"],
+            category_id=product["category_id"],
+            owner_id=product["owner_id"],
+            price=product["price"],
+            preview_img_id=product["preview_img_id"],
+        )
+        for product in products_body
+    ]
+
     etc = [
         Product(
             id=product["id"],
@@ -100,6 +115,7 @@ def seed_products():
     [db.session.add(product) for product in cars]
     [db.session.add(product) for product in tech]
     [db.session.add(product) for product in vices]
+    [db.session.add(product) for product in body]
     [db.session.add(product) for product in etc]
 
     db.session.commit()

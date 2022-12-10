@@ -105,13 +105,69 @@ products_etc = [
         "id": 88,
         "title": "BUILD YOUR OWN SKELETON",
         "description": "This self-explanatory title gives you the precut pieces and instructions needed to build a life-size skeleton. $40.",
-        "detailed_description": """It's appropriate Halloween decor, to be sure, but the rack of bones that comes out of Build Your Own Skeleton is useful for more than just decoration. Each life-size piece is precut, so all that's needed to assemble the skeleton is some folding and instruction-following. The joints are bendable, the parts are anatomically labeled in both English and Latin, and the result is a full-size human ready for posing, staging, or study.
-
-    19.9\" x 25.6\" / Skeleton Height: 5' 9\"""",
+        "detailed_description": "It's appropriate Halloween decor, to be sure, but the rack of bones that comes out of Build Your Own Skeleton is useful for more than just decoration. Each life-size piece is precut, so all that's needed to assemble the skeleton is some folding and instruction-following. The joints are bendable, the parts are anatomically labeled in both English and Latin, and the result is a full-size human ready for posing, staging, or study.",
         "category_id": 8,
         "owner_id": randint(1, 3),
         "price": 40,
         "preview_img_id": 8,
+    },
+]
+
+product_etc_imgs = [
+    {
+        "id": 78,
+        "product_id": 78,
+        "url": "https://uncrate.com/assets_c/2022/12/vintage-tent-fabric-pet-bed-1-thumb-960xauto-155229.jpg",
+    },
+    {
+        "id": 79,
+        "product_id": 79,
+        "url": "https://uncrate.com/assets_c/2020/11/tinkering-labs-electric-motor-catalyst-3-thumb-960xauto-124743.jpg",
+    },
+    {
+        "id": 80,
+        "product_id": 80,
+        "url": "https://uncrate.com/assets_c/2021/12/investing-in-wristwatches-1-thumb-960xauto-141082.jpg",
+    },
+    {
+        "id": 81,
+        "product_id": 81,
+        "url": "https://uncrate.com/assets_c/2022/11/phaidon-1000-design-classics-1-thumb-960xauto-155043.jpg",
+    },
+    {
+        "id": 82,
+        "product_id": 82,
+        "url": "https://uncrate.com/assets_c/2021/11/thomas-keller-hot-chocolate-1-thumb-960xauto-139813.jpg",
+    },
+    {
+        "id": 83,
+        "product_id": 83,
+        "url": "https://uncrate.com/assets_c/2021/05/petersens-microwavable-corn-cob-5-thumb-960xauto-132106.jpg",
+    },
+    {
+        "id": 84,
+        "product_id": 84,
+        "url": "https://uncrate.com/assets_c/2021/11/Pride-and-Groom-Shedder-Shampoo-1-thumb-960xauto-140118.jpg",
+    },
+    {
+        "id": 85,
+        "product_id": 85,
+        "url": "https://uncrate.com/assets_c/2020/03/hemingway-custom-book-set-1-thumb-960xauto-112802.jpg",
+    },
+    {
+        "id": 86,
+        "product_id": 86,
+        "url": "https://uncrate.com/assets_c/2022/11/porsche-959-book-1-thumb-960xauto-154560.jpg",
+    },
+    {
+        "id": 87,
+        "product_id": 87,
+        "url": "https://uncrate.com/assets_c/2022/11/shingles-and-stones-1-thumb-960xauto-154519.jpg",
+    },
+    {
+        "id": 88,
+        "product_id": 88,
+        "url": "https://uncrate.com/assets_c/2019/10/build-your-own-skeleton-21-thumb-960xauto-106488.jpg",
     },
 ]
 

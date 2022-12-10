@@ -113,6 +113,65 @@ products_tech = [
     },
 ]
 
+
+products_tech_imgs = [
+    {
+        "id": 34,
+        "product_id": 34,
+        "url": "https://uncrate.com/assets_c/2022/12/nocs-monolith-speaker-1-thumb-960xauto-155293.jpg",
+    },
+    {
+        "id": 35,
+        "product_id": 35,
+        "url": "https://uncrate.com/assets_c/2020/11/uturn-orbit-pro-1-thumb-960xauto-123582.jpg",
+    },
+    {
+        "id": 36,
+        "product_id": 36,
+        "url": "https://uncrate.com/assets_c/2021/07/nightwatch-magnifying-apple-watch-dock-1-thumb-960xauto-134881.jpg",
+    },
+    {
+        "id": 37,
+        "product_id": 37,
+        "url": "https://uncrate.com/assets_c/2022/01/master-dynamic-mw08-black-1-thumb-960xauto-142471.jpg",
+    },
+    {
+        "id": 38,
+        "product_id": 38,
+        "url": "https://uncrate.com/assets_c/2020/01/gear-box-turntable-1-thumb-960xauto-110560.jpg",
+    },
+    {
+        "id": 39,
+        "product_id": 39,
+        "url": "https://uncrate.com/assets_c/2021/06/nitecore-nps600-powerstation-1-thumb-960xauto-132693.jpg",
+    },
+    {
+        "id": 40,
+        "product_id": 40,
+        "url": "https://uncrate.com/assets_c/2021/02/its-ok-cassette-player-black-1-thumb-960xauto-127301.jpg",
+    },
+    {
+        "id": 41,
+        "product_id": 41,
+        "url": "https://uncrate.com/assets_c/2019/07/punkt-mp02-11-thumb-960xauto-102296.jpg",
+    },
+    {
+        "id": 42,
+        "product_id": 42,
+        "url": "https://uncrate.com/assets_c/2022/11/keysmart-chargebook-7-thumb-960xauto-154178.jpg",
+    },
+    {
+        "id": 43,
+        "product_id": 43,
+        "url": "https://uncrate.com/assets_c/2018/07/barisiuer-coffee-clock-1-thumb-960xauto-87530.jpg",
+    },
+    {
+        "id": 44,
+        "product_id": 44,
+        "url": "https://uncrate.com/assets_c/2022/06/tivoli-audio-portable-radio-1-thumb-960xauto-148651.jpg",
+    },
+]
+
 """
 product34_image1: https://uncrate.com/assets_c/2022/12/nocs-monolith-speaker-1-thumb-960xauto-155293.jpg
 

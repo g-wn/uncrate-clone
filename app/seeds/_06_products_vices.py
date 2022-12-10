@@ -113,6 +113,64 @@ products_vices = [
     },
 ]
 
+product_vices_imgs = [
+    {
+        "id": 56,
+        "product_id": 56,
+        "url": "https://uncrate.com/assets_c/2022/11/military-edition-humidor-1-thumb-960xauto-154713.jpg",
+    },
+    {
+        "id": 57,
+        "product_id": 57,
+        "url": "https://uncrate.com/assets_c/2022/11/sharpie-mustache-cocktail-thumb-960xauto-154570.jpg",
+    },
+    {
+        "id": 58,
+        "product_id": 58,
+        "url": "https://uncrate.com/assets_c/2022/11/alessi-ashtray-1-thumb-960xauto-154382.jpg",
+    },
+    {
+        "id": 59,
+        "product_id": 59,
+        "url": "https://uncrate.com/assets_c/2022/10/20th-century-cocktail-thumb-960xauto-153114.jpg",
+    },
+    {
+        "id": 60,
+        "product_id": 60,
+        "url": "https://uncrate.com/assets_c/2022/10/nude-cigar-tray-single-clear-glass-5-thumb-960xauto-152668.jpg",
+    },
+    {
+        "id": 61,
+        "product_id": 61,
+        "url": "https://uncrate.com/assets_c/2022/10/nude-glass-black-double-cigar-tray-2-thumb-960xauto-152620.jpg",
+    },
+    {
+        "id": 62,
+        "product_id": 62,
+        "url": "https://uncrate.com/assets_c/2022/01/hemson-black-pipe-2-thumb-960xauto-142902.jpg",
+    },
+    {
+        "id": 63,
+        "product_id": 63,
+        "url": "https://uncrate.com/assets_c/2022/03/brouk-and-co-humidor-canister-1-thumb-960xauto-144274.jpg",
+    },
+    {
+        "id": 64,
+        "product_id": 64,
+        "url": "https://uncrate.com/assets_c/2022/03/brouk-and-co-single-humidor-1-thumb-960xauto-144175.jpg",
+    },
+    {
+        "id": 65,
+        "product_id": 65,
+        "url": "https://uncrate.com/assets_c/2022/03/broku-co-cf-humidor-1-thumb-960xauto-144141.jpg",
+    },
+    {
+        "id": 66,
+        "product_id": 66,
+        "url": "https://uncrate.com/assets_c/2022/01/final-ward-cocktail-thumb-960xauto-142361.jpg",
+    },
+]
+
 """
 product56_image1: https://uncrate.com/assets_c/2022/11/military-edition-humidor-1-thumb-960xauto-154713.jpg
 
