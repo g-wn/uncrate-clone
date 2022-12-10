@@ -8,7 +8,7 @@ products_style = [
     "detailed_description": "RZE introduces a rugged four-hander with the ability to track three time zones simultaneously. It's adventure-ready Ascentus GMT is powered by a reliable TimeModule SII NH34 automatic movement, offering a more accessible option for the popular GMT complication. It's housed in a 40mm bead-blasted Grade 2 titanium case and treated with an UltraHex Coating to provide up to 1200Hv hardness. Available in four colors, the grain-textured dial features a color-matched date wheel and baron markers filled with Swiss Super-LumiNova, while the unidirectional, 24H titanium bezel allows for precise timekeeping at a glance during mountain scents or ocean dives. The watch is finished with a Hex-Link bracelet coated with UltraHex, producing the lightest, most comfortable bracelet ever.",
     "category_id": 2,
     "owner_id": randint(1,3),
-    "price": 549.00,
+    "price": 549,
     "preview_img_id": 12,
   },
   {
@@ -18,7 +18,7 @@ products_style = [
     "detailed_description": "Forget about winding, wearing, or batteries — just a couple of hours of light exposure is enough to power the Solios Black Curve Solar Watch for months. Its solar-powered quartz movement is highly accurate and has a six-month power reserve, powering hour, minute, and seconds hands, as well as a date window at 4 o'clock, all protected by a double-curved infinity sapphire crystal. It sits inside a 40mm recycled stainless steel case, held in place with an eco-friendly vegan leather strap, and for each watch sold, Solios will restore an acre of rainforest, making this an even more planet-friendly purchase.",
     "category_id": 2,
     "owner_id": randint(1,3),
-    "price": 329.00,
+    "price": 329,
     "preview_img_id": 13,
   },
   {
@@ -28,7 +28,7 @@ products_style = [
     "detailed_description": "Vintage details and a softer, heavier fabric enhance this athleisure favorite. The Sunspel Fleeceback joggers are made from the brand's extra-soft loopback fabric that's given a brushed finish for enhanced comfort and warmth. Inspired by old-school varsity sweats, it's cut with a relaxed fit and features vintage details, including self-fabric elasticated hem, deeper rib and hem cuffs, and a wider natural ecru drawcord. Complete the look with the matching Sunspel Fleeceback Hoodie.",
     "category_id": 2,
     "owner_id": randint(1,3),
-    "price": 169.00,
+    "price": 169,
     "preview_img_id": 14,
   },
   {
@@ -38,7 +38,7 @@ products_style = [
     "detailed_description": "Elevate your sock drawer with over two weeks worth of fresh options. The London Sock Co. Simply Sartorial Collection includes 15 pairs of premium socks to upgrade outfits with bold and refined colors. They're crafted from the brand's signature stretch-fit cotton blend, combining Scottish Lisle cotton, polyamide, and elastane for comfort and security. To produce socks that last longer and look better, each pair is made using advanced knitting methods and is hand-finished, ensuring 100% sock satisfaction.",
     "category_id": 2,
     "owner_id": randint(1,3),
-    "price": 298.00,
+    "price": 298,
     "preview_img_id": 15,
   },
   {
@@ -48,7 +48,7 @@ products_style = [
     "detailed_description": "Holden is known for their puffy outdoor wear. With these slides, they bring it inside. The upper is made from 100% quilted nylon with a water-resistant coating, packed full of recycled insulation for the colder months. It's filled with recycled insulation, which works with the PU-recycled midsole and recycled Lycra lining to keep your feet warm and stink-free. Teeth-like tread on the outsole provides sure footing should you need to make a quick venture outside.",
     "category_id": 2,
     "owner_id": randint(1,3),
-    "price": 85.00,
+    "price": 85,
     "preview_img_id": 16,
   },
   {
@@ -60,7 +60,7 @@ products_style = [
     Sizing Note: These sneakers run slightly large; we recommend taking one size down from your regular size.""",
     "category_id": 2,
     "owner_id": randint(1,3),
-    "price": 245.00,
+    "price": 245,
     "preview_img_id": 17,
   },
   {
@@ -70,7 +70,7 @@ products_style = [
     "detailed_description": "Made with Faherty's proprietary fabric, the Legend Quarter Zip enhances a classic casual basic. The sweater is cut from the brand's signature blend of cotton, polyester, viscose, and elastane to deliver a mid-layer that has the softness of cashmere with the four-way stretch of your favorite athleisure wear. Its relaxed fit is tailored with a fitted him, while a stand collar with a quarter-zip gives the pull-over an elevated appearance for versatile wear.",
     "category_id": 2,
     "owner_id": randint(1,3),
-    "price": 98.00,
+    "price": 98,
     "preview_img_id": 18,
   },
   {
@@ -80,7 +80,7 @@ products_style = [
     "detailed_description": "The Apple Watch has been to the ISS, but it's never been outside the confines of the station. Nonetheless, it provides an ideal blank canvas for the bands and matching faces of MobyFox's NASA collection. Seven options are available, featuring the popular Worm logo, the circular Meatball logo, as well as orange flight suit-, Space Shuttle-, and Graphics Standards Manual-inspired bands. Each one comes with a code that unlocks 20 officially-licensed faces in the MobyFace app, with additional faces also available. They're compatible with all current Apple Watch models, as well as Android-based smartwatches with a 22mm pin, and secure with a stainless steel pin-and-tuck buckle.",
     "category_id": 2,
     "owner_id": randint(1,3),
-    "price": 40.00,
+    "price": 40,
     "preview_img_id": 19,
   },
   {
@@ -90,7 +90,7 @@ products_style = [
     "detailed_description": "Designed to be reliable and versatile enough for wear in most scenarios, New Balance's 574 is perhaps the company's most recognizable shoe. While these 574H hikers don't reinvent the wheel, they do make some notable changes in the name of ruggedness. Most notable is the mid-cut silhouette, rendered with a black leather and Cordura upper. Lightweight EVA foam in the midsole and heel provides comfort on the trail, while the polyurethane rim of the Encap midsole delivers support. At the base, the rubber sole has pronounced lugs for added traction, adding to the outdoorsy look that's finished with bold red and yellow boot-style laces.",
     "category_id": 2,
     "owner_id": randint(1,3),
-    "price": 130.00,
+    "price": 130,
     "preview_img_id": 20,
   },
   {
@@ -100,7 +100,7 @@ products_style = [
     "detailed_description": "Onsen has applied its signature weave to a hooded bathrobe. Like their one-of-a-kind towels, the robe is made with American-grown Supima cotton — one of the finest in the world — constructed in a unique waffle pattern. The combination delivers an incredibly plush texture with breathable comfort and moisture-trapping properties for unrivaled absorption. Presented in special edition black, Its overside fit is ideal for lounging, while its deep pockets hold essential items, and its hood doubles as a hairdryer.",
     "category_id": 2,
     "owner_id": randint(1,3),
-    "price": 195.00,
+    "price": 195,
     "preview_img_id": 21,
   },
   {
@@ -110,7 +110,7 @@ products_style = [
     "detailed_description": "Handmade in Vancouver, Canada using premium Midweight Terry cotton, these sweatpants are made for comfort. Each pair has a slim-fit silhouette, jersey-lined pockets, and low abrasion flatlock seams with 100% cotton rib at the cuffs and waist. A perfect choice for lounging around the house, hitting the gym, or a low-key shopping excursion, they're topped with a drawstring-cinched flat elastic waistband and taper slightly towards the ankles. Available in tonal staples of black, grey, or navy.",
     "category_id": 2,
     "owner_id": randint(1,3),
-    "price": 120.00,
+    "price": 120,
     "preview_img_id": 22,
   },
 ]
