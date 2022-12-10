@@ -1,4 +1,4 @@
-"""all tables or some shit
+"""all table
 
 Revision ID: 5b0c46368fba
 Revises:
