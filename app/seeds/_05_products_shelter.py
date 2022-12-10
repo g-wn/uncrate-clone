@@ -19,7 +19,7 @@ products_shelter = [
         "detailed_description": "Over the last 30+ years, sneakers have gone from humble foot coverings to pop culture artifacts. Problem is, most of us aren't leaving shoeboxes out in our living areas for guests to enjoy. The Hypelev allows sneakers to be displayed and enjoyed like the works of art they are. A powerful magnet slides into the shoe against the heel, while the C-shaped levitator manipulates magnetic currents to suspend the shoe in mi-air, and a small air hole causes it to slowly spin. For added drama, white LEDs provide illumination to highlight small details and enable nighttime viewing. Available in black or white, it works with shoes up to size 15 with a weight up to 2.2 pounds.",
         "category_id": 5,
         "owner_id": randint(1, 3),
-        "price": 249,
+        "price": 24,
         "preview_img_id": 46,
     },
     {
@@ -29,7 +29,7 @@ products_shelter = [
         "detailed_description": "Reigning Champ enlists the expertise of Pendleton for a cold-weather accessory. The limited-edition stadium blanket fuses the ethos of both brands, using the historic craftsmanship of the six-generation American mill and the signature colorway of the Canadian athletic brand. Made from a premium virgin wool/cotton blend, the twin-size blanket features an ombre stripe pattern in black, gray, and navy, a felt wool binding, and a napped finish for added softness. A co-branding logo is stitched to the corner to slate the collaboration.",
         "category_id": 5,
         "owner_id": randint(1, 3),
-        "price": 400,
+        "price": 40,
         "preview_img_id": 47,
     },
     {
@@ -39,7 +39,7 @@ products_shelter = [
         "detailed_description": "George Nelson designed the Nelson® Fireplace Tool Set in 1951 with the principle that everything is there for a reason. The four-piece set includes all the items needed to command the flames from start to finish. Made to last, the poker, shovel, arenga-fiber brush, and floor stand are forged from powder-coated steel and finished with walnut handles. Pairs well with the Nelson® Fireplace Caddy.",
         "category_id": 5,
         "owner_id": randint(1, 3),
-        "price": 395,
+        "price": 39,
         "preview_img_id": 48,
     },
     {
@@ -47,7 +47,7 @@ products_shelter = [
         "title": "PORSCHE 356 NOSE FRAMED PRINT",
         "description": "A black and white photo of a vintage Porsche 356 front end is ideal decor for motoring enthusists. $269.",
         "owner_id": randint(1, 3),
-        "price": 269,
+        "price": 26,
         "preview_img_id": 49,
     },
     {
@@ -57,7 +57,7 @@ products_shelter = [
         "detailed_description": "At stadiums, campsites, and fireside sofas, a blanket is the ideal fall accessory. The Filson Mackinaw Wool Blanket keeps the cool off inside or out. It's made from 100% virgin wool sourced from the USA and provides a soft layer of insulation that is naturally water-repellent. Finished with serged edges, it won't fray and will withstand years of use.",
         "category_id": 5,
         "owner_id": randint(1, 3),
-        "price": 295,
+        "price": 29,
         "preview_img_id": 50,
     },
     {
@@ -67,7 +67,7 @@ products_shelter = [
         "detailed_description": "Ursula Andress is famous for being the first Bond girl, setting a precedent as she came out of the water. As such, she was hired on for the forgettable parody adaptation of Casino Royale. This photo shows her in a scene from the film, laying back on a roulette table surrounded by money and markers. Printed to order on Fuji crystal archive paper, numbered and certified, and comes encased inside a hand-made solid wood black that's ready to hang. Limited edition of 495.",
         "category_id": 5,
         "owner_id": randint(1, 3),
-        "price": 269,
+        "price": 26,
         "preview_img_id": 51,
     },
     {
@@ -77,7 +77,7 @@ products_shelter = [
         "detailed_description": "Sean Connery famously played a round of golf with notorious villain Goldfinger in the 1964 Bond film. But his skills weren't just for show. The original 007 was an avid golfer off-screen, also. His love for the game is captured in this picture taken at a course near his home in Acton in 1962. The photo is printed on Fuji crystal archive paper, numbered and certified, and comes encased inside a hand-made solid wood white or black frame that's ready to hang. Limited edition of 495.",
         "category_id": 5,
         "owner_id": randint(1, 3),
-        "price": 269,
+        "price": 26,
         "preview_img_id": 52,
     },
     {
@@ -87,7 +87,7 @@ products_shelter = [
         "detailed_description": "Andy Warhol is one of the most iconic artists of the 20th century and pioneered the Pop Art era with his paintings of Campbell's soup cans and celebrities like Marilyn Monroe and Elvis Presley. In this pint, photographer Graziano Arici captures the legend at a cafe in Venice in 1977. The photo is printed on Fuji crystal archive paper, numbered and certified, and comes encased inside a hand-made solid wood white or black frame that's ready to hang. Limited edition of 495.",
         "category_id": 5,
         "owner_id": randint(1, 3),
-        "price": 269,
+        "price": 26,
         "preview_img_id": 53,
     },
     {
@@ -97,7 +97,7 @@ products_shelter = [
         "detailed_description": "Steve McQueen was married to actress Neile Adams for 16 years. This photo was taken of the couple in 1963 during a trip to Big Sur, California as they relax in Esalen's famous clothing optional sulfur baths with cigarettes and a bottle of wine. Printed to order on Fuji crystal archive paper, numbered and certified, and comes encased inside a hand-made solid wood black frame that's ready to hang. Limited edition of 495.",
         "category_id": 5,
         "owner_id": randint(1, 3),
-        "price": 269,
+        "price": 26,
         "preview_img_id": 54,
     },
     {
@@ -107,7 +107,7 @@ products_shelter = [
         "detailed_description": "On February 11, 2011, the space shuttle Discovery lifted off on its final mission, STS-133. It was Discovery's 39th launch, with the orbiter spending exactly 365 days in space over its 27-year career. Captured at the moment of lift-off, this full-color print shows Discovery racing for the stars on that final flight. Printed on Fuji crystal paper and mounted in a hand-made black or white wooden frame.",
         "category_id": 5,
         "owner_id": randint(1, 3),
-        "price": 269,
+        "price": 26,
         "preview_img_id": 55,
     },
 ]

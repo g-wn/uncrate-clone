@@ -8,7 +8,7 @@ products_vices = [
         "detailed_description": "Not all humidors need to have classic wooden exteriors. This Military Edition Humidor from adopts a more modern look with a sleek matte black exterior and custom gunmetal hardware and handles. The interior is clad in thick 100% Spanish cedar, and outfitted with a recessed hydro system to keep sticks fresh, a sliding, removable storage tray for organization, and rubber gaskets for a tight seal. A digital hygrometer on the front lets you know when it's time to add more water, and a drawer on the bottom keeps lighters, cutters, and other accessories conveniently at hand.",
         "category_id": 6,
         "owner_id": randint(1, 3),
-        "price": 300,
+        "price": 30,
         "preview_img_id": 56,
     },
     {
@@ -28,7 +28,7 @@ products_vices = [
         "detailed_description": "Smoking was far more common when Italian designer Achille Castiglioni came up with the Spirale Ashtray in 1970, yet its design endures. It's crafted from 18/10 stainless steel and named for the signature spiral that goes around the inner edge and holds cigarettes for absent-minded smokers like its creator. The spiral can also be lifted out for cleaning, which also allows the object to serve as a catch-all tray for small items like change, keys, or earphones. Made in Italy.",
         "category_id": 6,
         "owner_id": randint(1, 3),
-        "price": 125,
+        "price": 12,
         "preview_img_id": 58,
     },
     {
@@ -98,7 +98,7 @@ products_vices = [
         "detailed_description": "Well-curated cigar collections deserve equally well-considered storage. While not sized to house a full collection, this model certainly looks the part. It's made from wood with and given a veneer of carbon fiber, with a checkered weave pattern on the base and a high gloss black finish on the top. A hygrometer and humidifying sponge are included for keeping ideal interior conditions, and the size is just right for use in a vehicle or as part of your gear for an extended trip.",
         "category_id": 6,
         "owner_id": randint(1, 3),
-        "price": 225,
+        "price": 22,
         "preview_img_id": 65,
     },
     {

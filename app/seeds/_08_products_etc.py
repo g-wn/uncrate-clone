@@ -78,7 +78,7 @@ products_etc = [
         "detailed_description": "One of the greatest novelists of the 20th Century, Ernest Hemingway's straightforward, no-nonsense style paved the way for a generation of writers who followed in his footsteps. This Uncrate-only ten-volume collection, updated to now include Hemingway's arguably most classic work, The Old Man and The Sea, is designed with the author's iconic signature and all black jackets that are sure to stand out on any bookshelf. Each book is from Scribner Classics, Hemingway's publisher while he was alive and publisher's of the best editions of his works to this day.",
         "category_id": 8,
         "owner_id": randint(1, 3),
-        "price": 475,
+        "price": 47,
         "preview_img_id": 85,
     },
     {
@@ -88,7 +88,7 @@ products_etc = [
         "detailed_description": "It started as a Group B rally car. It became the world's fastest street-legal production car. The Porsche 959 is one of the Stuttgart-based firm's finest achievements, and it's celebrated in this set of three books. Penned by journalist Jürgen Lewandowski, each covers a separate topic. One covers technical data, like the specs of the twin-turbo flat-six engine and all-wheel-drive system, while another concerns its history, including its development, win at the Paris-Dakar rally, and production run. Those are joined by a large-format illustrated book packed with photos of its genesis, all its various derivatives, and one of the most well-preserved examples.",
         "category_id": 8,
         "owner_id": randint(1, 3),
-        "price": 135,
+        "price": 13,
         "preview_img_id": 86,
     },
     {
