@@ -57,11 +57,6 @@ def post_product():
             preview_img_url=data["preview_img_url"]
         )
 
-        # ???
-        # new_product.preview_img_id = new_image.id
-        # new_product["preview_img_id"] = new_image["id"]
-        # ???
-
         db.session.add(new_product)
         db.session.commit()
         return new_product.to_dict()

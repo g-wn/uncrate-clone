@@ -10,7 +10,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 31.2%;
+    max-width: 960px;
+    margin: 0 auto;
     font-size: 13px;
     font-weight: 500;
     letter-spacing: 0.5px;
@@ -18,7 +19,6 @@
 
 .header-top-bar {
     padding: 13px 0;
-    width: 100%;
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid white;
@@ -31,7 +31,8 @@
 .header-bottom-bar {
     display: flex;
     justify-content: space-between;
-    margin: 0 31.2%;
+    max-width: 960px;
+    margin: 0 auto;
 }
 
 .header-logo {
@@ -53,13 +54,15 @@
     justify-content: space-evenly;
     font-family: 'Oswald', sans-serif;
     font-size: 24px;
-    margin: 0 37.5%;
+    max-width: 660px;
+    margin: 0 auto;
     padding-top: 6px;
     padding-bottom: 10px;
 }
 
 .nav-bar-categories-border {
-    margin: 0 31.2%;
+    max-width: 960px;
+    margin: 0 auto;
     border-bottom: 3px solid black;
     margin-bottom: 2px;
 }
@@ -67,7 +70,8 @@
 .nav-bar-subcategories {
     display: flex;
     justify-content: space-evenly;
-    margin: 0 37.5%;
+    max-width: 620px;
+    margin: 0 auto;
     font-family: 'Roboto', sans-serif;
     color: #AE9E85;
     font-size: 13px;
@@ -77,6 +81,7 @@
 }
 
 .nav-bar-subcategories-border {
-    margin: 0 31.2%;
+    max-width: 960px;
+    margin: 0 auto;
     border-bottom: 1px solid black;
 }
