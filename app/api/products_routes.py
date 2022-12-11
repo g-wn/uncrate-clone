@@ -9,7 +9,7 @@ products_routes = Blueprint("products", __name__)
 # ------------------------------ PRODUCT ROUTES ------------------------------#
 
 
-@products_routes.route("")
+@products_routes.route("/")
 def get_products():
     """
     Query for all products and returns them in a list of product dictionaries.
@@ -55,3 +55,12 @@ def post_product():
         db.session.commit()
         return new_product.to_dict()
     # CHECK AND ADD ERROR HANDLING
+
+@products_routes.route("/product_images")
+def get_product_images():
+    """
+    Query for all product images and returns them in a list of product image dictionaries.
+    """
+
+    product_images = ProductImage.query.all()
+    return {"Product_Images": [product_image.to_dict() for product_image in product_images]}
