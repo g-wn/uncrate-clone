@@ -42,7 +42,7 @@ products_shelter = [
         "price": 39,
         "preview_img_id": 48,
     },
-    {
+{
         "id": 49,
         "title": "PORSCHE 356 NOSE FRAMED PRINT",
         "description": "A black and white photo of a vintage Porsche 356 front end is ideal decor for motoring enthusists. $269.",

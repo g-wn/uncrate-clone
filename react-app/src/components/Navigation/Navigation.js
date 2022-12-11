@@ -28,7 +28,7 @@ function Navigation() {
                     <div className='header-logo'>
                         <img src='https://uncrate.com/img/uncrate-lights.png'></img>
                     </div>
-                    <div className='header-icons'>
+                    <div className='splash-header-icons'>
                         <i class="fa-solid fa-magnifying-glass"></i>
                         <i class="fa-sharp fa-solid fa-box"></i>
                     </div>
