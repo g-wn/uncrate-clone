@@ -1,1 +1,10 @@
 /* TODO Add site wide styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* font-family: 'Arimo', sans-serif;
+font-family: 'Domine', serif;
+font-family: 'Oswald', sans-serif; */
