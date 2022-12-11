@@ -149,7 +149,10 @@ products_gear_imgs = [
         "product_id": 7,
         "url": "https://uncrate.com/p/2022/12/valo-hyperfoil-1.jpg",
     },
-    {"id": 8, "product_id": 8, "url": "https://uncrate.com/p/2022/12/edc-burgundy.jpg"},
+    {
+        "id": 8,
+        "product_id": 8,
+        "url": "https://uncrate.com/p/2022/12/edc-burgundy.jpg"},
     {
         "id": 9,
         "product_id": 9,

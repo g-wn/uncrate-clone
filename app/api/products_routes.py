@@ -9,7 +9,7 @@ products_routes = Blueprint("products", __name__)
 # ------------------------------ PRODUCT ROUTES ------------------------------#
 
 
-@products_routes.route("")
+@products_routes.route("/")
 def get_products():
     """
     Query for all products and returns them in a list of product dictionaries.
@@ -29,7 +29,7 @@ def get_one_product(id):
     return product.to_dict()
 
 
-@products_routes.route("", methods=["POST"])
+@products_routes.route("/", methods=["POST"])
 @login_required
 def post_product():
     """
