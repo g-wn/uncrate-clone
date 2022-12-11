@@ -55,3 +55,11 @@ def post_product():
         db.session.commit()
         return new_product.to_dict()
     # CHECK AND ADD ERROR HANDLING
+
+
+@products_routes.route("/<int:id>")
+def delete_product(id):
+    """
+    Query for a single product id and delete the product if authorized.
+    """
+    
