@@ -8,7 +8,7 @@ const SingleProduct = () => {
     const dispatch = useDispatch();
     const { id } = useParams();
     const singleProduct = useSelector(state => state.product[id])
-    const productImages = useSelector(state => Object.values(state.product_images))
+    // const productImages = useSelector(state => Object.values(state.product_images))
 
     useEffect(() => {
         dispatch(getSingleProduct(id));
@@ -18,7 +18,7 @@ const SingleProduct = () => {
 
     return (
         <div className='single-product'>
-            <img src={productImages[singleProduct.previewImgId].url}></img>
+            <img src={singleProduct.product_images[singleProduct.previewImgId].url}></img>
             <h1>{singleProduct.title}</h1>
             <p>{singleProduct.detailed_description}</p>
         </div>

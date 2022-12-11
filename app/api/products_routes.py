@@ -1,6 +1,6 @@
 from flask import Blueprint, jsonify
 from flask_login import login_required, current_user
-from app.models import Product, ProductImage
+from app.models import Product, ProductImage, db
 
 
 products_routes = Blueprint("products", __name__)
@@ -16,17 +16,8 @@ def get_products():
     """
 
     products = Product.query.all()
+    print([product.to_dict() for product in products])
     return {"Products": [product.to_dict() for product in products]}
-
-
-@products_routes.route("/product_images")
-def get_product_images():
-    """
-    Query for all product images and returns them in a list of product image dictionaries.
-    """
-
-    product_images = ProductImage.query.all()
-    return {"Product_Images": [product_image.to_dict() for product_image in product_images]}
 
 
 @products_routes.route("/<int:id>")
@@ -58,8 +49,18 @@ def post_product():
             category_id=data["category_id"],
             owner_id=current_user["id"],  # DOUBLE CHECK THIS
             price=data["price"],
-            preview_img_id=data["preview_img_id"],
+            preview_img_id=new_image["id"]
         )
+
+        new_image = ProductImage(
+            product_id=new_product["id"],
+            preview_img_url=data["preview_img_url"]
+        )
+
+        # ???
+        # new_product.preview_img_id = new_image.id
+        # new_product["preview_img_id"] = new_image["id"]
+        # ???
 
         db.session.add(new_product)
         db.session.commit()
