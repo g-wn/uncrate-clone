@@ -1,0 +1,39 @@
+.suggested-products {
+  max-width: 960px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  border: 1px solid #c7c7c7;
+  margin-top: 20px;
+}
+
+.suggested-products a {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 21%;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  font-family: "Arimo", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+}
+
+.suggested-products img {
+  max-width: 68%;
+  width: 100%;
+  margin: 10px auto 5px auto;
+  height: auto;
+}
+
+.suggested-products span {
+  display: block;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  padding: 0 20px;
+}

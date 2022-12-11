@@ -2,6 +2,7 @@ from flask import Blueprint, jsonify, render_template, request, redirect
 from flask_login import login_required, current_user
 from app.models import db, Product, ProductImage
 from app.forms import ProductForm
+from app.models import Product, ProductImage, db
 
 
 products_routes = Blueprint("products", __name__)
@@ -10,13 +11,14 @@ products_routes = Blueprint("products", __name__)
 # ------------------------------ PRODUCT ROUTES ------------------------------#
 
 
-@products_routes.route("")
+@products_routes.route("/")
 def get_products():
     """
     Query for all products and returns them in a list of product dictionaries.
     """
 
     products = Product.query.all()
+    print([product.to_dict() for product in products])
     return {"Products": [product.to_dict() for product in products]}
 
 
@@ -30,7 +32,7 @@ def get_one_product(id):
     return product.to_dict()
 
 
-@products_routes.route("/new", methods=["GET", "POST"])
+@products_routes.route("", methods=["POST"])
 @login_required
 def post_product():
     """
@@ -49,7 +51,7 @@ def post_product():
             category_id=data["category_id"],
             owner_id=current_user.get_id(),
             price=data["price"],
-            preview_img_id=1,
+            preview_img_id=data["preview_img_id"],
         )
 
         db.session.add(new_product)
@@ -69,3 +71,12 @@ def post_product():
         return redirect(f"/api/products/{new_product.to_dict()['id']}")
     return render_template("test_form.html", form=form)
     # CHECK AND ADD ERROR HANDLING
+
+@products_routes.route("/product_images")
+def get_product_images():
+    """
+    Query for all product images and returns them in a list of product image dictionaries.
+    """
+
+    product_images = ProductImage.query.all()
+    return {"Product_Images": [product_image.to_dict() for product_image in product_images]}
