@@ -113,7 +113,7 @@ products_vices = [
     },
 ]
 
-product_vices_imgs = [
+products_vices_imgs = [
     {
         "id": 56,
         "product_id": 56,
