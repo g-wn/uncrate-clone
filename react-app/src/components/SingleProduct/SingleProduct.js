@@ -3,6 +3,10 @@ import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import { getSingleProduct } from "../../store/one_product";
 import "./SingleProduct.css";
+import ImageCarousel from "./ImageCarousel/ImageCarousel";
+import SuggestedProducts from "./SuggestedProducts/SuggestedProducts";
+import SupplyNavBar from "./SupplyNavBar/SupplyNavBar";
+import Carousel from "./ImageCarousel/Carousel";
 
 const SingleProduct = () => {
   const dispatch = useDispatch();
@@ -19,10 +23,33 @@ const SingleProduct = () => {
   if (!singleProduct) return null;
 
   return (
-    <div className="single-product">
-      <img src={productImages[singleProduct.previewImgId].url}></img>
-      <h1>{singleProduct.title}</h1>
-      <p>{singleProduct.detailed_description}</p>
+    <div className="single-product-page">
+      <SupplyNavBar />
+      <div className="single-product">
+        <ImageCarousel
+          previewImg={productImages[singleProduct.previewImgId].url}
+        />
+        <div className="single-product-details">
+          <h1>
+            {singleProduct.title.toUpperCase()} / ${singleProduct.price}
+          </h1>
+          <p className="single-product-detailed-description">
+            {singleProduct.detailed_description}
+          </p>
+          <p className="single-product-details-greentxt">
+            IN STOCK AND SHIPS FREE WITH EASY RETURNS.
+          </p>
+          <div className="single-product-details-btns">
+            <button className="single-product-details-btn btn-add-cart">
+              ADD TO CART
+            </button>
+            <button className="single-product-details-btn btn-stash-later">
+              STASH FOR LATER
+            </button>
+          </div>
+        </div>
+        <SuggestedProducts productImages={productImages} />
+      </div>
     </div>
   );
 };

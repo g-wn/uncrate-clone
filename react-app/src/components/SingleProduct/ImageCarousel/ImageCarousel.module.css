@@ -1,0 +1,75 @@
+.DisplayFrame {
+  touch-action: none;
+  width: 100%;
+  max-width: 960px;
+  overflow-x: auto;
+  white-space: nowrap;
+  z-index: 1;
+  caret-color: transparent;
+  margin: auto;
+  text-align: center;
+  background-color: rgb(245, 245, 245);
+  border: 1px solid #c7c7c7;
+}
+
+.DisplayFrame::-webkit-scrollbar {
+  display: none;
+}
+
+.LeftArrow,
+.RightArrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 30px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  text-align: center;
+  color: white;
+}
+
+.LeftArrow {
+  position: absolute;
+  left: 1px;
+  top: 45%;
+  user-select: none;
+  z-index: 2;
+}
+
+.RightArrow {
+  position: absolute;
+  right: 1px;
+  top: 45%;
+  user-select: none;
+  z-index: 2;
+}
+
+.Container {
+  position: relative;
+  display: flex;
+  vertical-align: middle;
+  overflow: hidden;
+  width: 100%;
+  margin: auto;
+  align-items: center;
+  transition: 0.5s ease;
+}
+
+.CarouselItem {
+  touch-action: none;
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+  vertical-align: top;
+  object-fit: cover;
+}
+
+.CarouselItem img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: 0.5s ease;
+}
