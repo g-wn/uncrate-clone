@@ -19,6 +19,16 @@ def get_products():
     return {"Products": [product.to_dict() for product in products]}
 
 
+@products_routes.route("/product_images")
+def get_product_images():
+    """
+    Query for all product images and returns them in a list of product image dictionaries.
+    """
+
+    product_images = ProductImage.query.all()
+    return {"Product_Images": [product_image.to_dict() for product_image in product_images]}
+
+
 @products_routes.route("/<int:id>")
 def get_one_product(id):
     """
