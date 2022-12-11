@@ -45,6 +45,7 @@ class Product(db.Model):
             "categoryId": self.category_id,
             "price": self.price,
             "previewImgId": self.preview_img_id,
+            "productOwner": self.product_owner.to_dict()
         }
 
     def __repr__(self):
