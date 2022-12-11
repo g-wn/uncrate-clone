@@ -46,6 +46,8 @@ products_shelter = [
         "id": 49,
         "title": "PORSCHE 356 NOSE FRAMED PRINT",
         "description": "A black and white photo of a vintage Porsche 356 front end is ideal decor for motoring enthusists. $269.",
+        "detailed_description": "Produced from 1948 to 1965, the Porsche 356 put the brand on the map and set the standard for what a rear-engine, rear-wheel-drive sports car could be. While not as iconic as its successor, the 911, the 356 was no slouch in the style department, as evidenced in this photo of a 356 front-end, taken by Huseyin Erturk in Los Angeles in 2017. The photo is printed on Fuji crystal archive paper, numbered and certified, and comes encased inside a hand-made solid wood white or black frame that's ready to hang. Limited edition of 495.",
+        "category_id": 5,
         "owner_id": randint(1, 3),
         "price": 26,
         "preview_img_id": 49,
