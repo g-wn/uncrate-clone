@@ -1,5 +1,5 @@
-import React, { Children, useState, useEffect } from 'react';
-import classes from './Carousel.module.css';
+import React, { Children, useState, useEffect } from "react";
+import classes from "./Carousel.module.css";
 
 const widthSpan = 100;
 
@@ -14,7 +14,7 @@ export default function Carousel(props) {
   const [mouseClicked, setMouseClicked] = useState(false);
   const [mouseSwiped, setMouseSwiped] = useState(false);
 
-  const { children, infinite } = props;
+  const { children, infinite, imageLength } = props;
 
   // Slide Handlers
   const prevSlideHandler = () => {
@@ -23,7 +23,7 @@ export default function Carousel(props) {
     if (newPosition > 0) {
       newPosition = newPosition - 1;
     } else if (infinite) {
-      newPosition = children.length - 1;
+      newPosition = imageLength - 1;
     }
 
     translateFullSlides(newPosition);
@@ -32,7 +32,7 @@ export default function Carousel(props) {
 
   const nextSlideHandler = () => {
     let newPosition = sliderPosition;
-    if (newPosition < children.length - 1) {
+    if (newPosition < imageLength - 1) {
       newPosition = newPosition + 1;
     } else if (infinite) {
       newPosition = 0;
@@ -42,7 +42,7 @@ export default function Carousel(props) {
     setSliderPosition(newPosition);
   };
 
-  const jumpToSlideHandler = id => {
+  const jumpToSlideHandler = (id) => {
     let toTranslate = id;
     translateFullSlides(toTranslate);
     setSliderPosition(id);
@@ -58,15 +58,15 @@ export default function Carousel(props) {
   };
 
   // KeyPress Handler
-  const keyPressHandler = e => {
-    if (e.key === 'ArrowLeft') {
+  const keyPressHandler = (e) => {
+    if (e.key === "ArrowLeft") {
       e.preventDefault();
       e.stopPropagation();
       prevSlideHandler();
       return;
     }
 
-    if (e.key === 'ArrowRight') {
+    if (e.key === "ArrowRight") {
       e.preventDefault();
       e.stopPropagation();
       nextSlideHandler();
@@ -76,38 +76,39 @@ export default function Carousel(props) {
 
   // Animation Speed
   const speedUpAnimation = () => {
-    for (let i = 0; i < children.length; i++) {
+    for (let i = 0; i < imageLength; i++) {
       let elem = document.getElementById(`carouselitem` + i);
       elem.classList.add(classes.FastAnimation);
     }
   };
 
   const slowDownAnimation = () => {
-    for (let i = 0; i < children.length; i++) {
+    for (let i = 0; i < imageLength; i++) {
       let elem = document.getElementById(`carouselitem` + i);
       elem.classList.remove(classes.FastAnimation);
     }
   };
 
   // Touch Handlers
-  const touchStartHandler = e => {
+  const touchStartHandler = (e) => {
     speedUpAnimation();
     setTouchStartPosition(e.targetTouches[0].clientX);
     setTouchEndPosition(e.targetTouches[0].clientX);
     setTouched(true);
   };
 
-  const touchMoveHandler = e => {
+  const touchMoveHandler = (e) => {
     setTouchEndPosition(e.targetTouches[0].clientX);
-    const frameWidth = document.getElementById('DisplayFrame').offsetWidth;
-    const translateDist = ((touchEndPosition - touchStartPosition) / frameWidth) * 100;
+    const frameWidth = document.getElementById("DisplayFrame").offsetWidth;
+    const translateDist =
+      ((touchEndPosition - touchStartPosition) / frameWidth) * 100;
     translatePartialSlides(translateDist);
     if (touched === true) {
       setSwiped(true);
     }
   };
 
-  const touchEndHandler = e => {
+  const touchEndHandler = (e) => {
     if (swiped) {
       slowDownAnimation();
       if (touchStartPosition - touchEndPosition > 75) {
@@ -123,7 +124,7 @@ export default function Carousel(props) {
   };
 
   // Mouse Handlers
-  const mouseStartHandler = e => {
+  const mouseStartHandler = (e) => {
     e.preventDefault();
     speedUpAnimation();
     setMouseStartPosition(e.clientX);
@@ -131,18 +132,19 @@ export default function Carousel(props) {
     setMouseClicked(true);
   };
 
-  const mouseMoveHandler = e => {
+  const mouseMoveHandler = (e) => {
     e.preventDefault();
-    var frameWidth = document.getElementById('DisplayFrame').offsetWidth;
+    var frameWidth = document.getElementById("DisplayFrame").offsetWidth;
     if (mouseClicked) {
       setMouseEndPosition(e.clientX);
-      let translateDist = ((mouseEndPosition - mouseStartPosition) / frameWidth) * 100;
+      let translateDist =
+        ((mouseEndPosition - mouseStartPosition) / frameWidth) * 100;
       translatePartialSlides(translateDist);
       setMouseSwiped(true);
     }
   };
 
-  const mouseEndHandler = e => {
+  const mouseEndHandler = (e) => {
     slowDownAnimation();
     if (mouseSwiped === true) {
       if (mouseStartPosition - mouseEndPosition > 100) {
@@ -158,71 +160,78 @@ export default function Carousel(props) {
   };
 
   // Translate slides
-  const translatePartialSlides = toTranslate => {
+  const translatePartialSlides = (toTranslate) => {
     let currentTranslation = -sliderPosition * widthSpan;
     let totalTranslation = currentTranslation + toTranslate;
-    for (let i = 0; i < children.length; i++) {
+    for (let i = 0; i < imageLength; i++) {
       let elem = document.getElementById(`carouselitem` + i);
       elem.style.transform = `translateX(` + totalTranslation + `%)`;
     }
   };
 
-  const translateFullSlides = newPosition => {
+  const translateFullSlides = (newPosition) => {
     let toTranslate = -widthSpan * newPosition;
-    for (var i = 0; i < children.length; i++) {
+    for (var i = 0; i < imageLength; i++) {
       let elem = document.getElementById(`carouselitem` + i);
       elem.style.transform = `translateX(` + toTranslate + `%)`;
     }
   };
 
   const displayItems = Children.map(children, (child, index) => (
-    <div
-      className={classes.CarouselItem}
-      id={`carouselitem` + index}
-    >
+    <div className={classes.CarouselItem} id={`carouselitem` + index}>
       {child}
     </div>
   ));
 
   useEffect(() => {
-    window.addEventListener('keydown', keyPressHandler);
+    window.addEventListener("keydown", keyPressHandler);
     return () => {
-      window.removeEventListener('keydown', keyPressHandler);
+      window.removeEventListener("keydown", keyPressHandler);
     };
   });
 
   return (
     <div>
-      <div
-        className={classes.Container}
-        onClick={nextClickHandler}
-      >
-        <div
-          className={classes.LeftArrow}
-          onClick={prevClickHandler}
-        >
-          <i className='fa-solid fa-chevron-left'></i>
+      {imageLength > 1 ? (
+        <div className={classes.ContainerCursor}>
+          <div className={classes.LeftArrow} onClick={prevClickHandler}>
+            <i className="fa-solid fa-chevron-left"></i>
+          </div>
+          <div
+            onClick={nextClickHandler}
+            id="DisplayFrame"
+            className={classes.DisplayFrame}
+            onTouchStart={(e) => touchStartHandler(e)}
+            onTouchMove={(e) => touchMoveHandler(e)}
+            onTouchEnd={(e) => touchEndHandler(e)}
+            onMouseDown={(e) => mouseStartHandler(e)}
+            onMouseMove={(e) => mouseMoveHandler(e)}
+            onMouseUp={(e) => mouseEndHandler(e)}
+            onMouseLeave={(e) => mouseEndHandler(e)}
+          >
+            {displayItems}
+          </div>
+          <div className={classes.RightArrow} onClick={nextClickHandler}>
+            <i className="fa-solid fa-chevron-right"></i>
+          </div>
         </div>
-        <div
-          id='DisplayFrame'
-          className={classes.DisplayFrame}
-          onTouchStart={e => touchStartHandler(e)}
-          onTouchMove={e => touchMoveHandler(e)}
-          onTouchEnd={e => touchEndHandler(e)}
-          onMouseDown={e => mouseStartHandler(e)}
-          onMouseMove={e => mouseMoveHandler(e)}
-          onMouseUp={e => mouseEndHandler(e)}
-          onMouseLeave={e => mouseEndHandler(e)}
-        >
-          {displayItems}
+      ) : (
+        <div className={classes.Container}>
+          <div
+            id="DisplayFrame"
+            className={classes.DisplayFrame}
+            onTouchStart={(e) => touchStartHandler(e)}
+            onTouchMove={(e) => touchMoveHandler(e)}
+            onTouchEnd={(e) => touchEndHandler(e)}
+            onMouseDown={(e) => mouseStartHandler(e)}
+            onMouseMove={(e) => mouseMoveHandler(e)}
+            onMouseUp={(e) => mouseEndHandler(e)}
+            onMouseLeave={(e) => mouseEndHandler(e)}
+          >
+            {displayItems}
+          </div>
         </div>
-        <div
-          className={classes.RightArrow}
-          onClick={nextClickHandler}
-        >
-          <i className='fa-solid fa-chevron-right'></i>
-        </div>
-      </div>
+      )}
     </div>
   );
 }

@@ -109,7 +109,7 @@ products_etc = [
         "category_id": 8,
         "owner_id": randint(1, 3),
         "price": 40,
-        "preview_img_id": 8,
+        "preview_img_id": 88,
     },
 ]
 
