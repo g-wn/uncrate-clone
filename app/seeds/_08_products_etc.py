@@ -113,7 +113,7 @@ products_etc = [
     },
 ]
 
-product_etc_imgs = [
+products_etc_imgs = [
     {
         "id": 78,
         "product_id": 78,

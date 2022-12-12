@@ -149,7 +149,10 @@ products_gear_imgs = [
         "product_id": 7,
         "url": "https://uncrate.com/p/2022/12/valo-hyperfoil-1.jpg",
     },
-    {"id": 8, "product_id": 8, "url": "https://uncrate.com/p/2022/12/edc-burgundy.jpg"},
+    {
+        "id": 8,
+        "product_id": 8,
+        "url": "https://uncrate.com/p/2022/12/edc-burgundy.jpg"},
     {
         "id": 9,
         "product_id": 9,
@@ -165,47 +168,154 @@ products_gear_imgs = [
         "product_id": 11,
         "url": "https://uncrate.com/p/2022/12/rimowa-pine-raspberry-1.jpg",
     },
+    {
+        "id": 89,
+        "product_id": 1,
+        "url": "https://uncrate.com/p/2022/12/atech-airtag-7-tool-multitool-21.jpg"
+    },
+    {
+        "id": 90,
+        "product_id": 1,
+        "url": "https://uncrate.com/p/2022/12/atech-airtag-7-tool-multitool-2.jpg"
+    },
+    {
+        "id": 91,
+        "product_id": 1,
+        "url": "https://uncrate.com/p/2022/12/atech-airtag-7-tool-multitool-6.jpg"
+    },
+    {
+        "id": 92,
+        "product_id": 1,
+        "url": "https://uncrate.com/p/2022/12/atech-airtag-7-tool-multitool-5.jpg"
+    },
+    {
+        "id": 93,
+        "product_id": 2,
+        "url": "https://uncrate.com/p/2022/12/2023-taylormade-p770-irons-1.jpg"
+    },
+    {
+        "id": 94,
+        "product_id": 2,
+        "url": "https://uncrate.com/p/2022/12/2023-taylormade-p770-irons-2.jpg"
+    },
+    {
+        "id": 95,
+        "product_id": 3,
+        "url": "https://uncrate.com/p/2022/12/edc-pass-down.jpg"
+    },
+    {
+        "id": 96,
+        "product_id": 4,
+        "url": "https://uncrate.com/p/2020/11/powerup-4-remote-plane-11.jpg"
+    },
+    {
+        "id": 97,
+        "product_id": 4,
+        "url": "https://uncrate.com/p/2020/11/powerup-4-remote-plane-2.jpg"
+    },
+    {
+        "id": 98,
+        "product_id": 4,
+        "url": "https://uncrate.com/p/2020/11/powerup-4-remote-plane-4.jpg"
+    },
+    {
+        "id": 99,
+        "product_id": 4,
+        "url": "https://cdn.shopify.com/s/files/1/0248/6216/products/powerup-4-remote-plane-6.jpg?v=1606234163"
+    },
+    {
+        "id": 100,
+        "product_id": 5,
+        "url": "https://uncrate.com/p/2021/03/trova-go-plus-2.jpg"
+    },
+    {
+        "id": 101,
+        "product_id": 5,
+        "url": "https://uncrate.com/p/2021/03/trova-go-plus-1.jpg"
+    },
+    {
+        "id": 102,
+        "product_id": 5,
+        "url": "https://uncrate.com/p/2021/03/trova-go-plus-3.jpg"
+    },
+    {
+        "id": 103,
+        "product_id": 5,
+        "url": "https://uncrate.com/p/2021/03/trova-go-plus-4.jpg"
+    },
+    {
+        "id": 104,
+        "product_id": 6,
+        "url": "https://uncrate.com/assets_c/2022/12/james-brand-kline-thumb-960xauto-155212.jpg"
+    },
+    {
+        "id": 105,
+        "product_id": 7,
+        "url": "https://uncrate.com/p/2022/12/valo-hyperfoil-1.jpg"
+    },
+    {
+        "id": 106,
+        "product_id": 8,
+        "url": "https://uncrate.com/p/2022/12/edc-burgundy.jpg"
+    },
+    {
+        "id": 107,
+        "product_id": 9,
+        "url": "https://uncrate.com/p/2022/12/elvis-lockheed-1329-1.jpg"
+    },
+    {
+        "id": 108,
+        "product_id": 9,
+        "url": "https://uncrate.com/p/2022/12/elvis-lockheed-1329-2.jpg"
+    },
+    {
+        "id": 109,
+        "product_id": 9,
+        "url": "https://uncrate.com/p/2022/12/elvis-lockheed-1329-4.jpg"
+    },
+    {
+        "id": 110,
+        "product_id": 9,
+        "url": "https://uncrate.com/p/2022/12/elvis-lockheed-1329-5.jpg"
+    },
+    {
+        "id": 111,
+        "product_id": 10,
+        "url": "https://uncrate.com/p/2020/05/canvas-firewood-carrier-10.jpg"
+    },
+    {
+        "id": 112,
+        "product_id": 10,
+        "url": "https://uncrate.com/p/2020/05/canvas-firewood-carrier-11.jpg"
+    },
+    {
+        "id": 113,
+        "product_id": 10,
+        "url": "https://uncrate.com/p/2020/05/canvas-firewood-carrier-12.jpg"
+    },
+    {
+        "id": 114,
+        "product_id": 10,
+        "url": "https://cdn.shopify.com/s/files/1/0248/6216/products/canvas-firewood-carrier-13.jpg?v=1589385240"
+    },
+    {
+        "id": 115,
+        "product_id": 11,
+        "url": "https://uncrate.com/p/2022/12/rimowa-pine-raspberry-1.jpg"
+    },
+    {
+        "id": 116,
+        "product_id": 11,
+        "url": "https://uncrate.com/p/2022/12/rimowa-pine-raspberry-2.jpg"
+    },
+    {
+        "id": 117,
+        "product_id": 11,
+        "url": "https://uncrate.com/p/2022/12/rimowa-pine-raspberry-3.jpg"
+    },
+    {
+        "id": 118,
+        "product_id": 11,
+        "url": "https://uncrate.com/p/2022/12/rimowa-pine-raspberry-4.jpg"
+    },
 ]
-
-#   product1_image1_url1: https://uncrate.com/p/2022/12/atech-airtag-7-tool-multitool-1.jpg
-#   product1_image2_url2: https://uncrate.com/p/2022/12/atech-airtag-7-tool-multitool-21.jpg
-#   product1_image3_url3: https://uncrate.com/p/2022/12/atech-airtag-7-tool-multitool-2.jpg
-#   product1_image4_url4: https://uncrate.com/p/2022/12/atech-airtag-7-tool-multitool-6.jpg
-#   product1_image5_url5: https://uncrate.com/p/2022/12/atech-airtag-7-tool-multitool-5.jpg
-
-#   product2_image1_url1: https://uncrate.com/p/2022/12/2023-taylormade-p770-irons-1.jpg
-#   product2_image2_url2: https://uncrate.com/p/2022/12/2023-taylormade-p770-irons-2.jpg
-
-#   product3_image1_url: https://uncrate.com/p/2022/12/edc-pass-down.jpg
-
-#   product_4_image1_url: https://uncrate.com/p/2020/11/powerup-4-remote-plane-11.jpg
-#   product_4_image2_url: https://uncrate.com/p/2020/11/powerup-4-remote-plane-2.jpg
-#   product_4_image3_url: https://uncrate.com/p/2020/11/powerup-4-remote-plane-4.jpg
-#   product_4_image4_url: https://cdn.shopify.com/s/files/1/0248/6216/products/powerup-4-remote-plane-6.jpg?v=1606234163
-
-#   product_5_image1_url: https://uncrate.com/p/2021/03/trova-go-plus-2.jpg
-#   product_5_image2_url: https://uncrate.com/p/2021/03/trova-go-plus-1.jpg
-#   product_5_image3_url: https://uncrate.com/p/2021/03/trova-go-plus-3.jpg
-#   product_5_image4_url: https://uncrate.com/p/2021/03/trova-go-plus-4.jpg
-
-#   product_6_image1_url: https://uncrate.com/assets_c/2022/12/james-brand-kline-thumb-960xauto-155212.jpg
-
-#   product_7_image1_url: https://uncrate.com/p/2022/12/valo-hyperfoil-1.jpg
-
-#   product_8_image1_url: https://uncrate.com/p/2022/12/edc-burgundy.jpg
-
-#   product_9_image1_url: https://uncrate.com/p/2022/12/elvis-lockheed-1329-1.jpg
-#   product_9_image2_url: https://uncrate.com/p/2022/12/elvis-lockheed-1329-2.jpg
-#   product_9_image3_url: https://uncrate.com/p/2022/12/elvis-lockheed-1329-4.jpg
-#   product_9_image4_url: https://uncrate.com/p/2022/12/elvis-lockheed-1329-5.jpg
-#   product_9_image5_url: https://uncrate.com/p/2022/12/elvis-lockheed-1329-6.jpg
-
-#   product_10_image1_url: https://uncrate.com/p/2020/05/canvas-firewood-carrier-10.jpg
-#   product_10_image2_url: https://uncrate.com/p/2020/05/canvas-firewood-carrier-11.jpg
-#   product_10_image3_url: https://uncrate.com/p/2020/05/canvas-firewood-carrier-12.jpg
-#   product_10_image4_url: https://cdn.shopify.com/s/files/1/0248/6216/products/canvas-firewood-carrier-13.jpg?v=1589385240
-
-#   product_11_image1_url: https://uncrate.com/p/2022/12/rimowa-pine-raspberry-1.jpg
-#   product_11_image2_url: https://uncrate.com/p/2022/12/rimowa-pine-raspberry-2.jpg
-#   product_11_image3_url: https://uncrate.com/p/2022/12/rimowa-pine-raspberry-3.jpg
-#   product_11_image4_url: https://uncrate.com/p/2022/12/rimowa-pine-raspberry-4.jpg

@@ -37,14 +37,18 @@ class Product(db.Model):
     product_images = db.relationship("ProductImage", back_populates="image_product", cascade="all, delete")
 
     def to_dict(self):
+        # print(self.product_images[0].to_dict()["id"])
         return {
             "id": self.id,
             "title": self.title,
             "description": self.description,
-            "detailed_description": self.detailed_description,
+            "detailedDescription": self.detailed_description,
             "categoryId": self.category_id,
             "price": self.price,
             "previewImgId": self.preview_img_id,
+            "productOwner": self.product_owner.to_dict(),
+            "productCategory": self.product_category.to_dict(),
+            "productImages": {image.to_dict()["id"]: image.to_dict() for image in self.product_images}
         }
 
     def __repr__(self):
