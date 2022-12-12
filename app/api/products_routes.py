@@ -1,6 +1,6 @@
-from flask import Blueprint, jsonify
+from flask import Blueprint, jsonify, redirect, url_for
 from flask_login import login_required, current_user
-from app.models import Product, ProductImage
+from app.models import Product, ProductImage, db
 
 
 products_routes = Blueprint("products", __name__)
@@ -55,4 +55,34 @@ def post_product():
         db.session.commit()
         return new_product.to_dict()
     # CHECK AND ADD ERROR HANDLING
+
+
+@products_routes.route("/<int:id>", methods=["DELETE"])
+def delete_product(id):
+    """
+    Query for a single product id and delete the product if authorized.
+    """
+    product = Product.query.get(id)
+    db.session.delete(product)
+    db.session.commit()
+    return {
+        'message': 'Successfully deleted',
+        'status_code': 200
+    }
+    
+@products_routes.route("/images/<int:id>", methods=["DELETE"])
+def delete_product_img(id):
+    """
+    Query for a single product id and delete the associated product's image.
+    """
+    product_image = ProductImage.query.get(id)
+    print(product_image, '***********product image -->')
+    db.session.delete(product_image)
+    db.session.commit()
+    return {
+        'message': 'Successfully deleted',
+        'status_code': 200
+    }
+
+
 

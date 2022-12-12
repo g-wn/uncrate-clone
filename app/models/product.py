@@ -42,12 +42,13 @@ class Product(db.Model):
             "id": self.id,
             "title": self.title,
             "description": self.description,
-            "detailed_description": self.detailed_description,
+            "detailedDescription": self.detailed_description,
             "categoryId": self.category_id,
             "price": self.price,
             "previewImgId": self.preview_img_id,
-            "product_category": self.product_category.to_dict(),
-            "product_images": {image.to_dict()["id"]: image.to_dict() for image in self.product_images}
+            "productCategory": self.product_category.to_dict(),
+            "productImages": {image.to_dict()["id"]: image.to_dict() for image in self.product_images},
+            "productOwner": self.product_owner.to_dict()
         }
 
     def __repr__(self):

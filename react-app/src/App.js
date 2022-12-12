@@ -28,6 +28,7 @@ function App() {
 
     return (
         <BrowserRouter>
+        <NavBar />
             <Switch>
                 <Route exact path='/'>
                     <ProductIndex />

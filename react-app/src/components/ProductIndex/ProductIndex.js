@@ -24,7 +24,7 @@ const ProductIndex = () => {
             <div className='all-products-index'>
                 <div className='featured-product'>
                     <NavLink className='product-link' to={`/products/${products[0].id}`}>
-                        <img className='featured-product-image' src={products[0].product_images[products[0].previewImgId].url}></img>
+                        <img className='featured-product-image' src={products[0].productImages[products[0].previewImgId].url}></img>
                         <div className='featured-product-text'>
                             <h6 className='featured-product-category'>GEAR / SPORTS</h6>
                             <h1 className='featured-product-title'>{products[0].title}</h1>
@@ -37,7 +37,7 @@ const ProductIndex = () => {
                     {products.slice(1, 35).map((product) => (
                         <div key={product.id} className='all-other-products-one-product'>
                             <NavLink className='product-link' to={`/products/${product.id}`}>
-                                <img className='all-other-products-image' src={product.product_images[product.previewImgId].url}></img>
+                                <img className='all-other-products-image' src={product.productImages[product.previewImgId].url}></img>
                                 <div className='all-other-products-text'>
                                     <h6 className='featured-product-category'>GEAR / SPORTS</h6>
                                     <h1 className='all-other-products-title'>{product.title}</h1>
