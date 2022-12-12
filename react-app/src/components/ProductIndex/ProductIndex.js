@@ -36,7 +36,7 @@ const ProductIndex = () => {
                             <h6 className='featured-product-category'>GEAR / SPORTS</h6>
                             <h1 className='featured-product-title'>{products[0].title}</h1>
                             <p className='featured-product-description'>{products[0].description}</p>
-                            <a className='featured-product-buy-link'>Buy From Uncrate Supply</a>
+                            <span className='featured-product-buy-link'>Buy From Uncrate Supply</span>
                         </div>
                     </NavLink>
                 </div>
@@ -59,7 +59,7 @@ const ProductIndex = () => {
                                     <h6 className='featured-product-category'>GEAR / SPORTS</h6>
                                     <h1 className='all-other-products-title'>{product.title}</h1>
                                     <p className='all-other-products-description'>{product.description}</p>
-                                    <a className='featured-product-buy-link'>Buy From Uncrate Supply</a>
+                                    <span className='featured-product-buy-link'>Buy From Uncrate Supply</span>
                                 </div>
                             </NavLink>
                         </div>
