@@ -29,7 +29,7 @@ products_body = [
         "detailed_description": "Finding your balance takes time. For Jack Henry, it took four years of development. The Balance fragrance was carefully formulated in-house and combines organic ingredients to evoke a sense of optimism, tranquility, and vitality. It blends a base of amber, patchouli, and musk with heart notes of cedarwood, jasmine, and vetiver, topped with bergamot, mandarin, and aqua resulting in an intriguing aroma that evolves throughout the day. Bottled in southern California, the scent is cruelty-free, vegan, and non-toxic and is housed in sustainable and fully-recycled packaging. Balance is currently available for pre-order with shipping on December 15, 2022.",
         "category_id": 7,
         "owner_id": randint(1, 3),
-        "price": 12,
+        "price": 125,
         "preview_img_id": 69,
     },
     {
@@ -39,7 +39,7 @@ products_body = [
         "detailed_description": "Uncrate has assembled Tooletries Ultimate Shower Set. The exclusive selection of the brand's grooming and organizing tools includes bathroom essentials to enhance the efficiency of your morning routine. To keep you clean, it comes with the Body Scrubber & Hook, an antimicrobial silicone deep-cleaning exfoliating body scrubber with a rust-free, waterproof storage hook, while the Scalp Massager & Hook controls flakes and boosts blood flow for stronger, thicker hair. The Mason Razor Holder offers a dedicated space to store your trusted shaving go-to, and The Archer Magnet Mount keeps tweezers, clippers, and scissors in one place. Each item is easy to attach to any smooth surface in your bathroom using Tooletries patent silicone-grip technology.",
         "category_id": 7,
         "owner_id": randint(1, 3),
-        "price": 65,
+        "price": 7,
         "preview_img_id": 70,
     },
     {
@@ -49,7 +49,7 @@ products_body = [
         "detailed_description": "Whether it's valuables, cash and cards, or items in need of more clandestine transportation, they'll be safe inside this box. CNC'd from stout aluminum alloy, it uses Bluetooth to access a smartphone's biometric authentication, preventing unwanted access. In the meantime, it's designed to be unassuming while offering enough room inside for watches, rings, pipes, or anything else that needs to be hidden away.",
         "category_id": 7,
         "owner_id": randint(1, 3),
-        "price": 24,
+        "price": 65,
         "preview_img_id": 71,
     },
     {
@@ -59,7 +59,7 @@ products_body = [
         "detailed_description": "Turn the 12 days of Christmas into 12 days of pleasure with this sexy advent calendar from Lovehoney. Leading the way in the box is Blowmotion's Dual-Entrance Real-Feel Vibrator, ideal for solo play. It's joined by a textured stroker, rechargeable bullet vibrator, and a host of massagers, rings, plugs, and other goodies. Overall, it offers $240 in value and can be purchased from Lovehoney, the world's biggest online retailer for all things pleasure. Until November 30th, the retailer is offering discounts of up to 60% as part of its Black Friday/Cyber Monday sale.",
         "category_id": 7,
         "owner_id": randint(1, 3),
-        "price": 12,
+        "price": 120,
         "preview_img_id": 72,
     },
     {
@@ -79,7 +79,7 @@ products_body = [
         "detailed_description": "The award-winning FORME Studio with Lift is the most immersive and aesthetically distinct all-in-one home gym. The Lift is a sleek, stowable add-on to the FORME Studio that allows members to enhance their strength-training experience with electromagnetic resistance cable workouts. With Lift, members can choose from a wide variety of custom trainer-designed planned sessions & self-guided workouts to do on demand. It comes equipped with 6 premium attachments that power hundreds of exercises, and accommodates up to 200lbs of smooth-pull resistance. The Lift also seamlessly integrates into FORME's Live 1:1 Personal Training service, allowing members to meet with top trainers all over the country from the comfort of their home or on-the-go with the FORME app.",
         "category_id": 7,
         "owner_id": randint(1, 3),
-        "price": 14,
+        "price": 149,
         "preview_img_id": 74,
     },
     {
