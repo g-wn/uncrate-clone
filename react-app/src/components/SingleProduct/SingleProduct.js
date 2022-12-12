@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { useParams } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 import { getSingleProduct } from "../../store/one_product";
+import { deleteProduct, deleteProductImage } from "../../store/one_product";
 import "./SingleProduct.css";
 import ImageCarousel from "./ImageCarousel/ImageCarousel";
 import SuggestedProducts from "./SuggestedProducts/SuggestedProducts";
@@ -11,7 +12,10 @@ import Carousel from "./ImageCarousel/Carousel";
 const SingleProduct = () => {
     const dispatch = useDispatch();
     const { id } = useParams();
+    const user = useSelector(state => state.session.user)
     const singleProduct = useSelector((state) => state.product[id]);
+    console.log('single product -->', singleProduct)
+    const history = useHistory()
 
     useEffect(() => {
         dispatch(getSingleProduct(id));
@@ -43,6 +47,27 @@ const SingleProduct = () => {
                         <button className="single-product-details-btn btn-stash-later">
                             STASH FOR LATER
                         </button>
+
+                        {user && user.id === singleProduct.productOwner.id && (
+                        <button className="delete-product-btn" onClick={(e) => {
+                            e.preventDefault()
+                            dispatch(deleteProduct(singleProduct.id))
+                            history.push('/')
+                        }}>
+                            REMOVE MY LISTING
+                        </button>
+                        )}
+
+                        {/* {user && user.id === singleProduct.productOwner.id && (
+                            <button className="delete-product-img-btn" onClick={(e) => {
+                                console.log('hello from component')
+                                e.preventDefault()
+                                dispatch(deleteProductImage(singleProduct.previewImgId))
+                                history.push('/')
+                            }}>
+                                REMOVE LISTING IMAGE
+                            </button>
+                        )} */}
                     </div>
                 </div>
                 <SuggestedProducts productImages={singleProduct.productImages[singleProduct.previewImgId].url} />

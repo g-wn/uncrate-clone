@@ -70,11 +70,33 @@ def post_product():
     return render_template("test_form.html", form=form)
     # CHECK AND ADD ERROR HANDLING
 
-@products_routes.route("/product_images")
-def get_product_images():
-    """
-    Query for all product images and returns them in a list of product image dictionaries.
-    """
 
-    product_images = ProductImage.query.all()
-    return {"Product_Images": [product_image.to_dict() for product_image in product_images]}
+@products_routes.route("/<int:id>", methods=["DELETE"])
+def delete_product(id):
+    """
+    Query for a single product id and delete the product if authorized.
+    """
+    product = Product.query.get(id)
+    db.session.delete(product)
+    db.session.commit()
+    return {
+        'message': 'Successfully deleted',
+        'status_code': 200
+    }
+    
+@products_routes.route("/images/<int:id>", methods=["DELETE"])
+def delete_product_img(id):
+    """
+    Query for a single product id and delete the associated product's image.
+    """
+    product_image = ProductImage.query.get(id)
+    print(product_image, '***********product image -->')
+    db.session.delete(product_image)
+    db.session.commit()
+    return {
+        'message': 'Successfully deleted',
+        'status_code': 200
+    }
+
+
+
