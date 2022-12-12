@@ -213,30 +213,19 @@ product85_image2: https://uncrate.com/assets_c/2020/03/hemingway-custom-book-set
 product85_image3: https://uncrate.com/assets_c/2020/03/hemingway-custom-book-set-12-thumb-960xauto-112812.jpg
 
 product86_image1: https://uncrate.com/assets_c/2022/11/porsche-959-book-1-thumb-960xauto-154560.jpg
-
 product86_image2: https://uncrate.com/assets_c/2022/11/porsche-959-book-2-thumb-960xauto-154561.jpg
-
 product86_image3: https://uncrate.com/assets_c/2022/11/porsche-959-book-3-thumb-960xauto-154562.jpg
-
 product86_image4: https://uncrate.com/assets_c/2022/11/porsche-959-book-4-thumb-960xauto-154563.jpg
-
 product86_image5: https://uncrate.com/assets_c/2022/11/porsche-959-book-5-thumb-960xauto-154564.jpg
 
 product87_image1: https://uncrate.com/assets_c/2022/11/shingles-and-stones-1-thumb-960xauto-154519.jpg
-
 product87_image2: https://uncrate.com/assets_c/2022/11/shingles-and-stones-2-thumb-960xauto-154520.jpg
-
 product87_image3: https://uncrate.com/assets_c/2022/11/shingles-and-stones-3-thumb-960xauto-154521.jpg
-
 product87_image4: https://uncrate.com/assets_c/2022/11/shingles-and-stones-4-thumb-960xauto-154522.jpg
 
 product88_image1: https://uncrate.com/assets_c/2019/10/build-your-own-skeleton-21-thumb-960xauto-106488.jpg
-
 product88_image2: https://uncrate.com/assets_c/2019/10/build-your-own-skeleton-1-thumb-960xauto-106467.jpg
-
 product88_image3: https://uncrate.com/assets_c/2019/10/build-your-own-skeleton-3-thumb-960xauto-106468.jpg
-
 product88_image4: https://uncrate.com/assets_c/2019/10/build-your-own-skeleton-4-thumb-960xauto-106469.jpg
-
 product88_image5: https://uncrate.com/assets_c/2019/10/build-your-own-skeleton-5-thumb-960xauto-106471.jpg
 """
