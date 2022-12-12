@@ -2,14 +2,11 @@
   touch-action: none;
   width: 100%;
   max-width: 960px;
-  overflow-x: auto;
+  height: 640px;
+  margin: 0 auto;
   white-space: nowrap;
+  overflow: hidden;
   z-index: 1;
-  caret-color: transparent;
-  margin: auto;
-  text-align: center;
-  background-color: rgb(245, 245, 245);
-  border: 1px solid #c7c7c7;
 }
 
 .DisplayFrame::-webkit-scrollbar {
@@ -18,6 +15,12 @@
 
 .LeftArrow,
 .RightArrow {
+  user-select: none;
+  position: absolute;
+  top: 45%;
+  cursor: pointer;
+  z-index: 2;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -32,19 +35,11 @@
 }
 
 .LeftArrow {
-  position: absolute;
   left: 1px;
-  top: 45%;
-  user-select: none;
-  z-index: 2;
 }
 
 .RightArrow {
-  position: absolute;
   right: 1px;
-  top: 45%;
-  user-select: none;
-  z-index: 2;
 }
 
 .Container {
@@ -53,9 +48,8 @@
   vertical-align: middle;
   overflow: hidden;
   width: 100%;
-  margin: auto;
   align-items: center;
-  transition: 0.5s ease;
+  cursor: pointer;
 }
 
 .CarouselItem {
@@ -64,12 +58,15 @@
   width: 100%;
   display: inline-block;
   vertical-align: top;
-  object-fit: cover;
+  transition: all 300ms ease-out;
+}
+
+.FastAnimation {
+  transition: all 50ms linear;
 }
 
 .CarouselItem img {
   height: 100%;
-  width: 100%;
-  object-fit: cover;
-  transition: 0.5s ease;
+  max-width: 100%;
+  background-color: none;
 }
