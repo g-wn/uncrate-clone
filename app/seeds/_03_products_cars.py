@@ -171,26 +171,6 @@ products_cars_imgs = [
         "url": "https://uncrate.com/assets_c/2022/11/ferrari-vision-gran-turismo-1-thumb-960xauto-154920.jpg",
     },
     {
-        "id": 154,
-        "product_id": 23,
-        "url": "https://uncrate.com/p/2022/12/murno-ev-suv-1.jpg",
-    },
-    {
-        "id": 155,
-        "product_id": 24,
-        "url": "https://uncrate.com/p/2022/12/canoo-light-tactical-vehicle-1.jpg",
-    },
-    {
-        "id": 156,
-        "product_id": 25,
-        "url": "https://uncrate.com/assets_c/2022/12/mercedes-amg-s63e-1-thumb-960xauto-155239.jpg",
-    },
-    {
-        "id": 157,
-        "product_id": 26,
-        "url": "https://uncrate.com/p/2022/12/land-rover-lightweight-88-1.jpg",
-    },
-    {
         "id": 158,
         "product_id": 26,
         "url": "https://uncrate.com/p/2022/12/land-rover-lightweight-88-2.jpg",
@@ -204,11 +184,6 @@ products_cars_imgs = [
         "id": 160,
         "product_id": 26,
         "url": "https://uncrate.com/p/2022/12/land-rover-lightweight-88-4.jpg",
-    },
-    {
-        "id": 161,
-        "product_id": 27,
-        "url": "https://uncrate.com/p/2022/12/bentley-surgeon-flying-spur-1.jpg",
     },
     {
         "id": 162,
@@ -231,11 +206,6 @@ products_cars_imgs = [
         "url": "https://uncrate.com/p/2022/12/bentley-surgeon-flying-spur-5.jpg",
     },
     {
-        "id": 166,
-        "product_id": 28,
-        "url": "https://uncrate.com/p/2022/06/lightyear-0-1.jpg",
-    },
-    {
         "id": 167,
         "product_id": 28,
         "url": "https://uncrate.com/p/2022/06/lightyear-0-2.jpg",
@@ -246,16 +216,6 @@ products_cars_imgs = [
         "url": "https://uncrate.com/p/2022/06/lightyear-0-3.jpg",
     },
     {
-        "id": 169,
-        "product_id": 29,
-        "url": "https://uncrate.com/p/2022/12/praga-bohema-1.jpg",
-    },
-    {
-        "id": 170,
-        "product_id": 30,
-        "url": "https://uncrate.com/p/2022/12/hookie-cake-osa-flex-1.jpg",
-    },
-    {
         "id": 171,
         "product_id": 30,
         "url": "https://uncrate.com/p/2022/12/hookie-cake-osa-flex-2.jpg",
@@ -264,11 +224,6 @@ products_cars_imgs = [
         "id": 172,
         "product_id": 30,
         "url": "https://uncrate.com/p/2022/12/hookie-cake-osa-flex-3.jpg",
-    },
-    {
-        "id": 173,
-        "product_id": 31,
-        "url": "https://uncrate.com/p/2022/11/lamborghini-urraco-1.jpg",
     },
     {
         "id": 174,
@@ -284,11 +239,6 @@ products_cars_imgs = [
         "id": 176,
         "product_id": 31,
         "url": "https://uncrate.com/p/2022/11/lamborghini-urraco-3.jpg",
-    },
-    {
-        "id": 177,
-        "product_id": 32,
-        "url": "https://uncrate.com/p/2022/11/de-tomaso-p900-1.jpg",
     },
     {
         "id": 178,
