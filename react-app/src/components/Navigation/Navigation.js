@@ -20,9 +20,9 @@ function Navigation() {
                             <span>FOLLOW @ UNCRATE</span>
                         </div>
                         <div className='header-top-bar-center'>
-                            <a>UNCRATE.COM</a>
-                            <a>UNCRATE.SUPPLY</a>
-                            <a>UNCRATE.TV</a>
+                            <a href='#hi'>UNCRATE.COM</a>
+                            <a href='#hi'>UNCRATE.SUPPLY</a>
+                            <a href='#hi'>UNCRATE.TV</a>
                         </div>
                         {!user ? <div>
                             <button className='login-button' onClick={() => setShowLoginModal(true)}>LOG IN</button> | {" "}
@@ -40,7 +40,7 @@ function Navigation() {
                 <div className='header-bottom-bar'>
                     <div></div>
                     <div className='header-logo'>
-                        <img src='https://uncrate.com/img/uncrate-lights.png'></img>
+                        <img src='https://uncrate.com/img/uncrate-lights.png' alt='header-logo'></img>
                     </div>
                     <div className='splash-header-icons'>
                         <i className="fa-solid fa-magnifying-glass"></i>
@@ -50,25 +50,25 @@ function Navigation() {
             </header>
             <nav className='nav'>
                 <div className='nav-bar-categories'>
-                    <a>GEAR</a>
-                    <a>STYLE</a>
-                    <a>CARS</a>
-                    <a>TECH</a>
-                    <a>SHELTER</a>
-                    <a>VICES</a>
-                    <a>BODY</a>
-                    <a>ETC</a>
+                    <a href='#hi'>GEAR</a>
+                    <a href='#hi'>STYLE</a>
+                    <a href='#hi'>CARS</a>
+                    <a href='#hi'>TECH</a>
+                    <a href='#hi'>SHELTER</a>
+                    <a href='#hi'>VICES</a>
+                    <a href='#hi'>BODY</a>
+                    <a href='#hi'>ETC</a>
                 </div>
                 <div className='nav-bar-categories-border' />
                 <div className='nav-bar-subcategories-border' />
                 <div className='nav-bar-subcategories'>
-                    <a>SHOP</a>
-                    <a>MAGAZINE</a>
-                    <a>IPHONE APP</a>
-                    <a>ANDROID APP</a>
-                    <a>MOST WANTED</a>
-                    <a>BLACK LIST</a>
-                    <a>STASH</a>
+                    <a href='#hi'>SHOP</a>
+                    <a href='#hi'>MAGAZINE</a>
+                    <a href='#hi'>IPHONE APP</a>
+                    <a href='#hi'>ANDROID APP</a>
+                    <a href='#hi'>MOST WANTED</a>
+                    <a href='#hi'>BLACK LIST</a>
+                    <a href='#hi'>STASH</a>
                 </div>
                 <div className='nav-bar-subcategories-border' />
             </nav>
