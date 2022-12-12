@@ -18,7 +18,7 @@ products_gear = [
         "detailed_description": "Not everyone wants or needs a large, offset game improvement iron. For those with better ball-striking skills but without the need for maximum shot-shaping versatility, TaylorMade has revamped their P·770 irons. They feature a smaller body, less offset, and a thinner top line than the P·790s, but still offer the forgiveness that comes with hollow-body construction. FLTD CG tungsten weighting moves the center of gravity gradually through the irons to optimize trajectory, and a mix of brushed and polished surfaces makes sure they look great even when they're not in play. They're joined in the lineup by new versions of the Tour-proven P·7MC and P·7MB models.",
         "category_id": 1,
         "owner_id": randint(1, 3),
-        "price": 12,
+        "price": 1299,
         "preview_img_id": 2,
     },
     {
@@ -28,7 +28,7 @@ products_gear = [
         "detailed_description": "NVague Watch Co. Every-One Automatic Watch / $495. 1950 Italian Scarperia Pocket Knife / $64. 1945 WWII Three Barrel Zippo Lighter / $200. BillyKirk Small Trucker Wallet / $195.",
         "category_id": 1,
         "owner_id": randint(1, 3),
-        "price": 95,
+        "price": 950,
         "preview_img_id": 3,
     },
     {
@@ -48,7 +48,7 @@ products_gear = [
         "detailed_description": "Whether it's valuables, cash and cards, or items in need of more clandestine transportation, they'll be safe inside this box. CNC'd from stout aluminum alloy, it uses Bluetooth to access a smartphone's biometric authentication, preventing unwanted access. In the meantime, it's designed to be unassuming while offering enough room inside for watches, rings, pipes, or anything else that needs to be hidden away.",
         "category_id": 1,
         "owner_id": randint(1, 3),
-        "price": 24,
+        "price": 249,
         "preview_img_id": 5,
     },
     {
@@ -58,7 +58,7 @@ products_gear = [
         "detailed_description": "Whether it's valuables, cash and cards, or items in need of more clandestine transportation, they'll be safe inside this box. CNC'd from stout aluminum alloy, it uses Bluetooth to access a smartphone's biometric authentication, preventing unwanted access. In the meantime, it's designed to be unassuming while offering enough room inside for watches, rings, pipes, or anything else that needs to be hidden away.",
         "category_id": 1,
         "owner_id": randint(1, 3),
-        "price": 24,
+        "price": 249,
         "preview_img_id": 6,
     },
     {
@@ -68,7 +68,7 @@ products_gear = [
         "detailed_description": "Advances in composite materials, computer-aided design, and manufacturing techniques have seen the hydrofoil make inroads into the consumer watercraft space. Based in San Francisco, Valo has developed the Hyperfoil, a jetski that can carry two people two feet above the waves on retractable carbon fiber foils. The Hyperfoil is powered by a 108-horsepower electric motor and can hit up to 58 MPH with over an hour and a half of wave running between charges. Valo's Skyride software package provides active stability to make anyone a competent pilot. The Hyperfoil will begin limited deliveries in 2023.",
         "category_id": 1,
         "owner_id": randint(1, 3),
-        "price": 59,
+        "price": 59000,
         "preview_img_id": 7,
     },
     {
@@ -78,7 +78,7 @@ products_gear = [
         "detailed_description": "Matsuda Tortoiseshell Acetate Sunglasses / $675. BillyKirk Keyring / $24. Vintage Rolex Oyster Perpetual Date Ref. 1500 Watch / $3,800. Vintage Cartier Wallet / $100.",
         "category_id": 1,
         "owner_id": randint(1, 3),
-        "price": 46,
+        "price": 4600,
         "preview_img_id": 8,
     },
     {
@@ -88,7 +88,7 @@ products_gear = [
         "detailed_description": "A jet fit for a king — or, in this case, the King. Elvis Presley bought this 1962 Lockheed 1329 JetStar in 1976, his second JetStar and third private jet, including the four-engine Convair 880, an early jet airliner that competed with the Boeing 707 and Douglas DC-8. A fleet of jets were neccessary to transport Elvis and his crew across the country and the world on tours and travel. Elvis owned this JetStar for just over a year before selling it. The jet was owned by a Saudi company before being retired to Roswell International Air Center in Roswell, New Mexico, where it's been in storage for decades. The interior features overstuffed, crushed-velvet swivel seats, a microwave, tape deck stereo, and TV — although don't expect to fly away to Graceland. The four pod-mounted engines and flight instruments have been removed, and the overall condition could be described as poor. A time capsule of a bygone era, this JetStar will go up for auction at Mecum's 2023 Kissimmee event in January.",
         "category_id": 1,
         "owner_id": randint(1, 3),
-        "price": 4,
+        "price": 46000000,
         "preview_img_id": 9,
     },
     {
@@ -108,7 +108,7 @@ products_gear = [
         "detailed_description": "In 1950, Rimowa has been known for its sleek, brushed aluminum luggage the world over. The company introduced a line of polycarbonate luggage in 2008 with the same style and quality under the Essential line. Now travelers have two new colors to take with them — Pine Green and Raspberry. Pine Green is exclusive to the Essential line, with black wheels and monochromatic hardware. The hue is available across the entire Essential line, from the compact 21-inch tall Cabin to the massive 31.5-inch Trunk Plus for those extended stays. Like Rimowa's aluminum line, the Essentials have the same five-year warranty and unparalleled build quality.",
         "category_id": 1,
         "owner_id": randint(1, 3),
-        "price": 20,
+        "price": 200,
         "preview_img_id": 11,
     },
 ]

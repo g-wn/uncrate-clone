@@ -8,7 +8,7 @@ products_tech = [
         "detailed_description": "Over two years in development, Nocs' Monolith is a hand-built speaker of the highest quality. It starts with local birch plywood, which is precisely CNC'd and then treated with oil and wax for a deep matte black finish. Custom-tuned Scan-Speak drivers — two woofers and three full-range — are then added, augmented by a newly-invented vent design inspired by car exhaust systems that increases bass response while reducing distortion. The resulting speaker is powerful and detailed, with display-worthy looks and the convenience of ​Spotify Connect & Tidal Connect support, Bluetooth 5.0, upcoming AirPlay 2 support, and optional multi-room playback, linking together up to eight units. Proudly designed and crafted in Sweden, it arrives with stainless steel floor stands.",
         "category_id": 4,
         "owner_id": randint(1, 3),
-        "price": 12,
+        "price": 1200,
         "preview_img_id": 34,
     },
     {
@@ -18,7 +18,7 @@ products_tech = [
         "detailed_description": "Turntables that bring to mind vinyl's heyday are special, but most of the time we prefer a modern, minimalist deck like this one. The Orbit Plus from U-Turn keeps it simple, with a new acrylic platter for improved speed consistency and clearer, more detailed playback. Each one comes with a precision OA2 gimbal tonearm for accurate tracking and low distortion, while the external belt drive eliminates noise and keeps speeds right where you need them. Available in black or white, the Orbit Plus arrives with a built-in Pluto preamp to connect directly and an Ortofon OM5E cartridge for a balanced and neutral sound profile.",
         "category_id": 4,
         "owner_id": randint(1, 3),
-        "price": 39,
+        "price": 399,
         "preview_img_id": 35,
     },
     {
@@ -38,7 +38,7 @@ products_tech = [
         "detailed_description": "Master & Dynamic's standard MW08 earphones are quite good, with 11mm beryllium drivers for accurate, powerful sound and Hybrid Active Noise-Cancellation with six microphones for both effective sound-blocking and clear calls. The MW08 Sport earphones offer the same features in a workout-friendly package. Instead of ceramic, their jewel-like exteriors are made from shatter-resistant sapphire glass, while the charging case is made from Kevlar and has an IPX4 water resistance rating. They use Bluetooth 5.2 with aptX, AAC, and SBC support for a strong wireless connection and run for up to 10 hours per charge with ANC on, combining with the aforementioned case for a total playtime of 40 hours.",
         "category_id": 4,
         "owner_id": randint(1, 3),
-        "price": 21,
+        "price": 219,
         "preview_img_id": 37,
     },
     {
@@ -48,7 +48,7 @@ products_tech = [
         "detailed_description": "Drawing inspiration from Dieter Rams' iconic 1955 Braun PC 3 SV record player, Gearbox's MKII turntable brings back the compact, transparent aesthetic that helped their previous model stand out, but adds an upgraded belt drive with an aluminum pulley for better speed stability as well as upgraded electronics throughout for a performance boost. The plug and play table is made with a high-fidelity built-in phono stage which is specifically designed for cartridges like the included Ortofon OM10 that's pre-fitted to an ultra-low-mass tonearm. Each MKII also includes a wireless transmitter that allows you to stream vinyl songs to Bluetooth speakers, as well as on-board music recognition tech that can identify and add tracks from your vinyl collection to your Spotify playlist.",
         "category_id": 4,
         "owner_id": randint(1, 3),
-        "price": 54,
+        "price": 545,
         "preview_img_id": 38,
     },
     {
@@ -58,7 +58,7 @@ products_tech = [
         "detailed_description": "Portable battery stations can be used as backup power during an outage or emergency, for off-grid living, or just for short camping trips. Nitecore's NPS600 a sensible choice for any of those. It has a 594Wh capacity and a pure sine wave output of 300W with support for surges of 600W, or in layman's terms, enough to power a 200W blender for two hours, a 40W fan for 12.5 hours, or recharge an iPhone 12 Pro 51 times. Charging options include 110V AC, 4x USB-A with one QC 3.0, PD USB-C port, 12V DC, and 12V cigarette lighter outputs, while it can recharge via an AC adapter, car charger, or by solar panel via a dedicated port. A real-time backlit LCD display makes checking on its status easy even at night, and multiple safety measures guard against overcharging, overcurrent, short circuits, and over-discharge. Its ABS and aluminum shell is fireproof and is easy to move about thanks to a robust built-in handle.",
         "category_id": 4,
         "owner_id": randint(1, 3),
-        "price": 90,
+        "price": 900,
         "preview_img_id": 39,
     },
     {
@@ -68,7 +68,7 @@ products_tech = [
         "detailed_description": "Inspired by the darkness of night, It's OK's latest cassette player is a sleek way to enjoy your legacy media. Bluetooth 5.0 support lets it play nice with modern wireless headphones and speakers, while a built-in mic lets you record your thoughts to the included blank tape. Alongside the playback controls, you'll find a physical volume wheel, sliding power switch, and 3.5mm headphone jack, as well as a detachable belt clip and a transparent black cover to offer a view of the currently playing selection.",
         "category_id": 4,
         "owner_id": randint(1, 3),
-        "price": 12,
+        "price": 120,
         "preview_img_id": 40,
     },
     {
@@ -78,7 +78,7 @@ products_tech = [
         "detailed_description": "The Punkt MP-01 phone made offline the new luxury. Now, the minimalist communication tool from Punkt is back as the MP-02 Gen 2 — still without apps, GPS, and everything that distracts — while adding a few important upgrades. One of the most significant changes is the 4G LTE modem, a bump up from the 2G offering from the first generation, which is being phased out across the globe. The Punkt MP-02 also adds tethering support, so you can use it as a hotspot for your laptop or tablet when you need it, and has BlackBerry's security suite to keep everything secure when it's in hotspot mode. The security also keeps the Android 8.1 operating system protected. The design is essentially the same as the MP-01: sleek and straightforward with a 2-inch LCD display reinforced with Gorilla Glass and finished with a tough, abrasion-resistant coating. It only needs to be charged every couple of weeks and is an ideal choice for vacations, date nights, and even movie sets where smart phones are banned. A far cry from the improper dumb phone tag, it's now available in compatible versions for North America, Japan, and Europe.",
         "category_id": 4,
         "owner_id": randint(1, 3),
-        "price": 35,
+        "price": 350,
         "preview_img_id": 41,
     },
     {
@@ -88,7 +88,7 @@ products_tech = [
         "detailed_description": "Taking notes the old-fashioned way — by putting pen to paper — isn't quite dead yet. But no one is giving up their devices either. KeySmart's wireless charging notebook brings the manual and the digital together in one smartly designed package that includes wireless and wired charging. A slim 8,000mAh battery integrated into the front cover wirelessly charges iPhone, Andriod, and tablet devices and has a secret USB flash drive in the magnetic clasp. A six-ring binder, dedicated wired charging cable storage, and multiple pockets will satisfy any obsessive organizer.",
         "category_id": 4,
         "owner_id": randint(1, 3),
-        "price": 12,
+        "price": 120,
         "preview_img_id": 42,
     },
     {
@@ -98,7 +98,7 @@ products_tech = [
         "detailed_description": "Having a warm cup of coffee or tea sitting on your nightstand the moment your eyes open sounds more like a dream than a wake-up call. This machine lures you into consciousness with the aroma of a fresh brew and the sound of bubbling water. Using induction heating and stainless steel ball bearings, water boils and is siphoned over grounds or leaves to drip into the included cup while you sleep. The wood and steel base also houses a cooler for cream or milk that's activated by an infrared sensor so as to not waste power if there's nothing inside. The brewer components are crafted from stainless steel and laboratory-grade borosilicate glass, a material befitting its chemistry kit aesthetic. A complimentary, matching wireless device charging is also included with each purchase.",
         "category_id": 4,
         "owner_id": randint(1, 3),
-        "price": 44,
+        "price": 440,
         "preview_img_id": 43,
     },
     {
@@ -108,7 +108,7 @@ products_tech = [
         "detailed_description": "Tivoli Audio is known for its classically-styled radios. The Pal BT distills that same design sense down into a portable package. As one would expect, it has a robust AM/FM radio built in, as well as Bluetooth for modern streaming services and a pair of 3.5mm jacks for input/headphones. It's controlled with just three knobs, with nary a screen to be seen, and the rechargeable battery lasts at least 16 hours between charges. None of that matters if it doesn't sound good, so its 2.5 inch full-range speaker works with the compact cabinet to create surprisingly full sound, and its weather-resistant body means it's up to outdoor use, as well.",
         "category_id": 4,
         "owner_id": randint(1, 3),
-        "price": 21,
+        "price": 219,
         "preview_img_id": 44,
     },
 ]
