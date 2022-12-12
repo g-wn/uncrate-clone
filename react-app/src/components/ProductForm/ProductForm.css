@@ -1,0 +1,90 @@
+/* HIDE NUMBER INPUT SPINNERS */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* HIDE NUMBER INPUT SPINNERS - FIREFOX */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.category-input {
+    color: #777;
+    text-align: left;
+}
+
+.detailed-description-input {
+    resize: none;
+    height: 5em;
+    overflow-y: hidden;
+}
+
+.detailed-description-input::placeholder {
+    padding: 1.6em 0;
+}
+
+.inputs-container {
+    display: flex;
+    flex-direction: column;
+    margin: 1em 0;
+    row-gap: .75em;
+}
+
+.product-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.product-form-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-form-submit {
+    background-color: #000;
+    border: none;
+    color: #fff;
+    padding: 1em;
+}
+
+.title-container,
+.description-container,
+.detailed-description-container,
+.category-container,
+.price-container,
+.preview-img-container {
+    align-items: center;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.title-input,
+.description-input,
+.detailed-description-input,
+.category-input,
+.price-input,
+.preview-img-input {
+    border: none;
+    width: 50%;
+}
+
+.title-input:focus,
+.description-input:focus,
+.detailed-description-input:focus,
+.category-input:focus,
+.price-input:focus,
+.preview-img-input:focus {
+    outline: none;
+    width: 50%;
+}
+
+label {
+    font-weight: 500;
+}
