@@ -8,21 +8,21 @@ def seed_users():
         last_name="doughlop1",
         username="Demo",
         email="demo@aa.io",
-        hashed_password="password",
+        password="password",
     )
     marnie = User(
         first_name="sara2",
         last_name="doughlop2",
         username="marnie",
         email="marnie@aa.io",
-        hashed_password="password",
+        password="password",
     )
     bobbie = User(
         first_name="sara3",
         last_name="doughlop3",
         username="bobbie",
         email="bobbie@aa.io",
-        hashed_password="password",
+        password="password",
     )
 
     db.session.add(demo)

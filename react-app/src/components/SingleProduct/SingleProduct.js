@@ -24,14 +24,14 @@ const SingleProduct = () => {
             <SupplyNavBar />
             <div className="single-product">
                 <ImageCarousel
-                    previewImg={singleProduct.product_images[singleProduct.previewImgId].url}
+                    previewImg={singleProduct.productImages[singleProduct.previewImgId].url}
                 />
                 <div className="single-product-details">
                     <h1>
                         {singleProduct.title.toUpperCase()} / ${singleProduct.price}
                     </h1>
                     <p className="single-product-detailed-description">
-                        {singleProduct.detailed_description}
+                        {singleProduct.detailedDescription}
                     </p>
                     <p className="single-product-details-greentxt">
                         IN STOCK AND SHIPS FREE WITH EASY RETURNS.
@@ -45,7 +45,7 @@ const SingleProduct = () => {
                         </button>
                     </div>
                 </div>
-                <SuggestedProducts productImages={singleProduct.product_images[singleProduct.previewImgId].url} />
+                <SuggestedProducts productImages={singleProduct.productImages[singleProduct.previewImgId].url} />
             </div>
         </div>
     );
