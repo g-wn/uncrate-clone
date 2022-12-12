@@ -173,62 +173,41 @@ products_etc_imgs = [
 
 """
 product78_image1: https://uncrate.com/assets_c/2022/12/vintage-tent-fabric-pet-bed-1-thumb-960xauto-155229.jpg
-
 product78_image2: https://uncrate.com/assets_c/2022/12/vintage-tent-fabric-pet-bed-4-thumb-960xauto-155232.jpg
-
 product78_image3: https://uncrate.com/assets_c/2022/12/vintage-tent-fabric-pet-bed-2-thumb-960xauto-155230.jpg
-
 product78_image4: https://uncrate.com/assets_c/2022/12/vintage-tent-fabric-pet-bed-3-thumb-960xauto-155231.jpg
 
 product79_image1: https://uncrate.com/assets_c/2020/11/tinkering-labs-electric-motor-catalyst-3-thumb-960xauto-124743.jpg
-
 product79_image2: https://uncrate.com/assets_c/2020/11/tinkering-labs-electric-motor-catalyst-4-thumb-960xauto-124742.jpg
-
 product79_image3: https://uncrate.com/assets_c/2020/11/tinkering-labs-electric-motor-catalyst-2-thumb-960xauto-124741.jpg
-
 product79_image4: https://uncrate.com/assets_c/2020/11/tinkering-labs-electric-motor-catalyst-1-thumb-960xauto-124740.jpg
 
 product80_image1: https://uncrate.com/assets_c/2021/12/investing-in-wristwatches-1-thumb-960xauto-141082.jpg
-
 product80_image2: https://uncrate.com/assets_c/2021/12/investing-in-wristwatches-3-thumb-960xauto-141085.jpg
-
 product80_image3: https://uncrate.com/assets_c/2021/12/investing-in-wristwatches-4-thumb-960xauto-141084.jpg
-
 product80_image4: https://uncrate.com/assets_c/2021/12/investing-in-wristwatches-2-thumb-960xauto-141083.jpg
 
 product81_image1: https://uncrate.com/assets_c/2022/11/phaidon-1000-design-classics-1-thumb-960xauto-155043.jpg
-
 product81_image2: https://uncrate.com/assets_c/2022/11/phaidon-1000-design-classics-2-thumb-960xauto-155044.jpg
-
 product81_image3: https://uncrate.com/assets_c/2022/11/phaidon-1000-design-classics-3-thumb-960xauto-155046.jpg
-
 product81_image4: https://uncrate.com/assets_c/2022/11/phaidon-1000-design-classics-4-thumb-960xauto-155047.jpg
 
 product82_image1: https://uncrate.com/assets_c/2021/11/thomas-keller-hot-chocolate-1-thumb-960xauto-139813.jpg
-
 product82_image2: https://uncrate.com/assets_c/2021/11/thomas-keller-hot-chocolate-2-thumb-960xauto-139814.jpg
 
 product83_image1: https://uncrate.com/assets_c/2021/05/petersens-microwavable-corn-cob-5-thumb-960xauto-132106.jpg
-
 product83_image2: https://uncrate.com/assets_c/2021/05/petersens-microwavable-corn-cob-2-thumb-960xauto-132105.jpg
-
 product83_image3: https://uncrate.com/assets_c/2021/05/petersens-microwavable-corn-cob-6-thumb-960xauto-132107.jpg
-
 product83_image4: https://uncrate.com/assets_c/2021/05/petersens-microwavable-corn-cob-3-thumb-960xauto-132103.jpg
-
 product83_image5: https://uncrate.com/assets_c/2021/05/petersens-microwavable-corn-cob-4-thumb-960xauto-132104.jpg
 
 product84_image1: https://uncrate.com/assets_c/2021/11/Pride-and-Groom-Shedder-Shampoo-1-thumb-960xauto-140118.jpg
-
 product84_image2: https://uncrate.com/assets_c/2021/11/Pride-and-Groom-non-Shedder-Shampoo-1-thumb-960xauto-140120.jpg
-
 product84_image3: https://uncrate.com/assets_c/2021/11/Pride-and-Groom-Shedder-Shampoo-2-thumb-960xauto-140117.jpg
-
 product84_image4: https://uncrate.com/assets_c/2021/11/Pride-and-Groom-non-Shedder-Shampoo-2-thumb-960xauto-140119.jpg
 
 
 product85_image1: https://uncrate.com/assets_c/2020/03/hemingway-custom-book-set-1-thumb-960xauto-112802.jpg
-
 product85_image2: https://uncrate.com/assets_c/2020/03/hemingway-custom-book-set-2-thumb-960xauto-112801.jpg
 
 product85_image3: https://uncrate.com/assets_c/2020/03/hemingway-custom-book-set-12-thumb-960xauto-112812.jpg
