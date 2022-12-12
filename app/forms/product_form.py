@@ -30,3 +30,16 @@ class ProductForm(FlaskForm):
     price = IntegerField("Price", validators=[DataRequired()])
     preview_img_url = StringField("Preview Image URL", validators=[DataRequired()])
     submit = SubmitField("Submit")
+
+
+class ProductUpdateForm(FlaskForm):
+    title = StringField("Title", validators=[DataRequired()])
+    description = StringField("Description", validators=[DataRequired()])
+    detailed_description = TextAreaField("Detailed Description")
+    category_id = SelectField(
+        "Category",
+        choices=[(k, v) for k, v in categories.items()],
+        validators=[DataRequired()],
+    )
+    price = IntegerField("Price", validators=[DataRequired()])
+    submit = SubmitField("Submit")

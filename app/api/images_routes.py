@@ -50,7 +50,6 @@ def update_product_image(id):
     """
     product_image = ProductImage.query.get(id)
     product_image_dict = product_image.to_dict()
-    print("PRODUCT IMAGE DICTIONARY -------------------------->", product_image_dict)
 
     form = ImageForm(url=product_image_dict["url"])
 

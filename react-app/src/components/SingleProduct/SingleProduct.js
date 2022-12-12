@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { useParams, useHistory } from 'react-router-dom';
+import { useParams, useHistory, NavLink } from 'react-router-dom';
 import { getSingleProduct } from '../../store/one_product';
 import { deleteProduct } from '../../store/one_product';
 import './SingleProduct.css';
@@ -13,7 +13,6 @@ const SingleProduct = () => {
   const { id } = useParams();
   const user = useSelector(state => state.session.user);
   const singleProduct = useSelector(state => state.product[id]);
-  console.log('single product -->', singleProduct);
   const history = useHistory();
 
   useEffect(() => {
@@ -57,6 +56,7 @@ const SingleProduct = () => {
           <div className='single-product-details-btns'>
             <button className='single-product-details-btn btn-add-cart'>ADD TO CART</button>
             <button className='single-product-details-btn btn-stash-later'>STASH FOR LATER</button>
+            <NavLink to={`/products/${singleProduct.id}/update`}>Update</NavLink>
 
             {user && user.id === singleProduct.productOwner.id && (
               <button

@@ -1,7 +1,7 @@
 from flask import Blueprint, jsonify, render_template, request, redirect
 from flask_login import login_required, current_user
 from app.models import db, Product, ProductImage
-from app.forms import ProductForm
+from app.forms import ProductUpdateForm, ProductForm
 
 
 products_routes = Blueprint("products", __name__)
@@ -76,7 +76,7 @@ def post_product():
 
 # UPDATE A SINGLE PRODUCT:
 @products_routes.route("/<int:id>/update", methods=["GET", "PUT", "POST"])
-# @login_required
+@login_required
 def update_product(id):
     """
     Query for a single product by id and update the product if authorized.
@@ -84,13 +84,12 @@ def update_product(id):
     product = Product.query.get(id)
     product_dict = product.to_dict()
 
-    form = ProductForm(
+    form = ProductUpdateForm(
         title=product_dict["title"],
         description=product_dict["description"],
         detailed_description=product_dict["detailedDescription"],
         category_id=product_dict["categoryId"],
         price=product_dict["price"],
-        preview_img_url=product_dict["previewImgId"],
     )
 
     form["csrf_token"].data = request.cookies["csrf_token"]
@@ -102,7 +101,6 @@ def update_product(id):
         setattr(product, "detailed_description", data["detailed_description"])
         setattr(product, "category_id", data["category_id"])
         setattr(product, "price", data["price"])
-        setattr(product, "preview_img_url", data["preview_img_url"])
 
         db.session.commit()
         return redirect(f"/api/products/{product_dict['id']}")
