@@ -10,6 +10,7 @@ images_routes = Blueprint("images", __name__)
 # ------------------------------ IMAGES ROUTES ------------------------------#
 
 
+# GET ALL IMAGES:
 @images_routes.route("")
 def get_images():
     """
@@ -20,6 +21,7 @@ def get_images():
     return {"Images": [image.to_dict() for image in images]}
 
 
+# CREATE A NEW IMAGE:
 @images_routes.route("/<int:product_id>/new", methods=["GET", "POST"])
 def create_image(product_id):
     """
@@ -37,3 +39,40 @@ def create_image(product_id):
 
         return redirect(f"/api/products/{product_id}")
     return render_template("test_image_form.html", form=form, product_id=product_id)
+
+
+# UPDATE A SINGLE IMAGE URL:
+@images_routes.route("<int:id>/update", methods=["GET", "PUT", "POST"])
+# @login_required
+def update_product_image(id):
+    """
+    Query for a single product image by id and update the image's URL.
+    """
+    product_image = ProductImage.query.get(id)
+    product_image_dict = product_image.to_dict()
+    print("PRODUCT IMAGE DICTIONARY -------------------------->", product_image_dict)
+
+    form = ImageForm(url=product_image_dict["url"])
+
+    form["csrf_token"].data = request.cookies["csrf_token"]
+    if form.validate_on_submit():
+        data = form.data
+
+        setattr(product_image, "url", data["url"])
+
+        db.session.commit()
+        return redirect(f"/api/products/{product_image_dict['productId']}")
+    return render_template("test_update_image.html", form=form, id=id)
+
+
+# DELETE A SINGLE PRODUCT IMAGE:
+@images_routes.route("/<int:id>", methods=["DELETE"])
+def delete_product_img(id):
+    """
+    Query for a single product id and delete the associated product's image.
+    """
+    product_image = ProductImage.query.get(id)
+    print(product_image, "***********product image -->")
+    db.session.delete(product_image)
+    db.session.commit()
+    return {"message": "Successfully deleted", "status_code": 200}
