@@ -5,7 +5,6 @@ import LoginForm from './components/auth/LoginForm';
 import SignUpForm from './components/auth/SignUpForm';
 import ProductForm from "./components/ProductForm/ProductForm"
 import ImageForm from "./components/ImageForm/ImageForm"
-import NavBar from './components/NavBar';
 import ProtectedRoute from './components/auth/ProtectedRoute';
 import UsersList from './components/UsersList';
 import User from './components/User';
@@ -30,7 +29,6 @@ function App() {
 
     return (
         <BrowserRouter>
-        <NavBar ></NavBar>
             <Switch>
                 <Route exact path='/'>
                     <ProductIndex />

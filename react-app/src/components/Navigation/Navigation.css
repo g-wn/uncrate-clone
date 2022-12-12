@@ -18,6 +18,7 @@
 }
 
 .header-top-bar {
+    width: 100%;
     padding: 13px 0;
     display: flex;
     justify-content: space-between;
@@ -26,6 +27,26 @@
 
 .header-top-bar-center a{
     padding: 0 15px;
+}
+
+.login-button,
+.signup-button {
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.logout-button {
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    margin-left: -13px;
 }
 
 .header-bottom-bar {

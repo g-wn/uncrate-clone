@@ -1,9 +1,15 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import { useSelector } from 'react-redux';
 import './Navigation.css';
+import { Modal } from '../../context/Modal';
+import LoginForm from '../auth/LoginForm';
+import SignUpForm from '../auth/SignUpForm';
+import { useSelector } from 'react-redux';
+import LogoutButton from '../auth/LogoutButton';
 
 function Navigation() {
+    const [showLoginModal, setShowLoginModal] = useState(false)
+    const [showSignupModal, setShowSignupModal] = useState(false)
+    const user = useSelector(state => state.session.user);
 
     return (
         <>
@@ -18,9 +24,17 @@ function Navigation() {
                             <a>UNCRATE.SUPPLY</a>
                             <a>UNCRATE.TV</a>
                         </div>
-                        <div>
-                            <span>LANGUAGE: ENGLISH</span>
-                        </div>
+                        {!user ? <div>
+                            <button className='login-button' onClick={() => setShowLoginModal(true)}>LOG IN</button> | {" "}
+                            <button className='signup-button' onClick={() => setShowSignupModal(true)}>SIGN UP</button>
+                            {showLoginModal && <Modal onClose={() => setShowLoginModal(false)}><LoginForm setShowLoginModal={setShowLoginModal} /></Modal>}
+                            {showSignupModal && <Modal onClose={() => setShowSignupModal(false)}><SignUpForm /></Modal>}
+                        </div> :
+                            <div>
+                                <LogoutButton setShowLoginModal={setShowLoginModal} /> | {" "}
+                                <button className='signup-button'>PROFILE</button>
+                            </div>
+                        }
                     </div>
                 </div>
                 <div className='header-bottom-bar'>
