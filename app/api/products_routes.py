@@ -103,7 +103,9 @@ def update_product(id):
         setattr(product, "price", data["price"])
 
         db.session.commit()
-        return redirect(f"/api/products/{product_dict['id']}")
+        print("PRODUCT ------------>", product.to_dict())
+        return product.to_dict()
+    print("FORM DIDN'T VALIDATE")
     return render_template("test_update_product.html", form=form, id=id)
 
 

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory, useParams } from 'react-router-dom';
 
-import { getSingleProduct, updateSingleProduct } from '../../store/one_product';
+import { getSingleProduct, putSingleProduct } from '../../store/one_product';
 import ProductForm from './ProductForm';
 import SupplyNavBar from '../SingleProduct/SupplyNavBar/SupplyNavBar';
 import { useEffect } from 'react';
@@ -32,20 +32,20 @@ const ProductUpdateForm = () => {
     setErrors([]);
 
     const updatedProduct = await dispatch(
-      updateSingleProduct({
+      putSingleProduct({
+        id: product.id,
         title,
         description,
         detailed_description,
         category_id,
         price,
-        preview_img_url
       })
-    )/* .catch(async res => {
+    ).catch(async res => {
       const data = await res.json();
       if (data && data.errors) setErrors(Object.values(data.errors));
-    }); */
+    });
 
-    if (updatedProduct) history.push(`/products/${updatedProduct.id}`);
+    if (updatedProduct) history.push(`/products/${product.id}`);
   };
 
   if (!product) return null;

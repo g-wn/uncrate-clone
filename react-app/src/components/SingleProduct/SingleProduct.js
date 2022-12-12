@@ -391,6 +391,7 @@ const SingleProduct = () => {
             <button className="single-product-details-btn btn-add-cart">
               ADD TO CART
             </button>
+            <NavLink to={`/products/${singleProduct.id}/update`}>Update</NavLink>
             <button className="single-product-details-btn btn-stash-later">
               STASH FOR LATER
             </button>

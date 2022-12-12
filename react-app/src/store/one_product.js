@@ -38,11 +38,11 @@ export const getSingleProduct = productId => async dispatch => {
 };
 
 export const putSingleProduct = product => async dispatch => {
-  const { title, description, detailed_description, category_id, price, preview_img_url } = product;
-  const response = await fetch(`/api/products/${product.id}`, {
+  const { title, description, detailed_description, category_id, price } = product;
+  const response = await fetch(`/api/products/${product.id}/update`, {
     method: 'PUT',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ title, description, detailed_description, category_id, price, preview_img_url })
+    body: JSON.stringify({ title, description, detailed_description, category_id, price })
   });
 
   if (response.ok) {
