@@ -40,7 +40,7 @@ function Navigation() {
                 <div className='header-bottom-bar'>
                     <div></div>
                     <div className='header-logo'>
-                        <img src='https://uncrate.com/img/uncrate-lights.png' alt='header-logo'></img>
+                        <img src='/images/reduncrate-white2.png' className='reduncrate-logo' alt='header-logo'></img>
                     </div>
                     <div className='splash-header-icons'>
                         <i className="fa-solid fa-magnifying-glass"></i>
