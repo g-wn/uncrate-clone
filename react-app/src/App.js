@@ -3,6 +3,8 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import LoginForm from './components/auth/LoginForm';
 import SignUpForm from './components/auth/SignUpForm';
+import ProductForm from "./components/ProductForm/ProductForm"
+import ImageForm from "./components/ImageForm/ImageForm"
 import NavBar from './components/NavBar';
 import ProtectedRoute from './components/auth/ProtectedRoute';
 import UsersList from './components/UsersList';
@@ -28,12 +30,19 @@ function App() {
 
     return (
         <BrowserRouter>
+        <NavBar ></NavBar>
             <Switch>
                 <Route exact path='/'>
                     <ProductIndex />
                 </Route>
+                <Route path='/products/new'>
+                    <ProductForm />
+                </Route>
                 <Route path='/products/:id'>
                     <SingleProduct />
+                </Route>
+                <Route path='/images/new'>
+                    <ImageForm />
                 </Route>
                 <Route path='/login' exact={true}>
                     <LoginForm />

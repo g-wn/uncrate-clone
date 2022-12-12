@@ -11,7 +11,7 @@ products_routes = Blueprint("products", __name__)
 # ------------------------------ PRODUCT ROUTES ------------------------------#
 
 
-@products_routes.route("/")
+@products_routes.route("")
 def get_products():
     """
     Query for all products and returns them in a list of product dictionaries.
@@ -32,7 +32,7 @@ def get_one_product(id):
     return product.to_dict()
 
 
-@products_routes.route("", methods=["POST"])
+@products_routes.route("", methods=["GET", "POST"])
 @login_required
 def post_product():
     """
@@ -49,9 +49,9 @@ def post_product():
             description=data["description"],
             detailed_description=data["detailed_description"],
             category_id=data["category_id"],
-            owner_id=current_user.get_id(),
+            owner_id= current_user.get_id(),
             price=data["price"],
-            preview_img_id=data["preview_img_id"],
+            preview_img_id=0,
         )
 
         db.session.add(new_product)
