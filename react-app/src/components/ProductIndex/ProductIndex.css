@@ -1,90 +1,90 @@
 .all-products-index {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 20px;
 }
 
 .featured-product {
-    display: grid;
-    grid-template-columns: auto;
-    max-width: 960px;
-    border: 1px solid #c7c7c7;
-    margin-bottom: 35px;
+  display: grid;
+  grid-template-columns: auto;
+  max-width: 960px;
+  border: 1px solid #c7c7c7;
+  margin-bottom: 35px;
 }
 
 .featured-product-image {
-    height: 641px;
-    width: 960px;
+  height: 641px;
+  width: 960px;
 }
 
 .featured-product-text {
-    height: 200px;
+  height: 200px;
 }
 
 .featured-product-category {
-    font-family: 'Roboto', sans-serif;
-    color: #989898;
-    font-size: 13px;
-    padding: 12px 0;
-    font-weight: 500;
-    letter-spacing: 0.5px;
+  font-family: "Roboto", sans-serif;
+  color: #989898;
+  font-size: 13px;
+  padding: 12px 0;
+  font-weight: 500;
+  letter-spacing: 0.5px;
 }
 
 .featured-product-title {
-    font-family: 'Oswald', sans-serif;
-    font-size: 27px;
+  font-family: "Oswald", sans-serif;
+  font-size: 27px;
 }
 
 .featured-product-description {
-    font-family: 'Domine', serif;
-    font-size: 15px;
-    margin: 0 220px;
-    padding-bottom: 20px;
-    line-height: 25px;
+  font-family: "Domine", serif;
+  font-size: 15px;
+  margin: 0 220px;
+  padding-bottom: 20px;
+  line-height: 25px;
 }
 
 .featured-product-buy-link {
-    font-family: 'Domine', serif;
-    border-bottom: 1px solid #AE9E85;
-    color: #AE9E85;
+  font-family: "Domine", serif;
+  border-bottom: 1px solid #ae9e85;
+  color: #ae9e85;
 }
 
 .all-other-products {
-    display: grid;
-    grid-template-columns: auto auto;
-    max-width: 980px;
+  display: grid;
+  grid-template-columns: auto auto;
+  max-width: 980px;
 }
 
 .all-other-products-one-product {
-    border: 1px solid #c7c7c7;
-    margin: 10px;
+  border: 1px solid #c7c7c7;
+  margin: 10px;
 }
 
 .all-other-products-image {
-    width: 468px;
-    height: 313px;
+  width: 468px;
+  height: 313px;
 }
 
 .all-other-products-text {
-    height: 210px;
+  height: 210px;
 }
 
 .all-other-products-title {
-    font-family: 'Oswald', sans-serif;
-    font-size: 23px;
+  font-family: "Oswald", sans-serif;
+  font-size: 23px;
 }
 
 .all-other-products-description {
-    font-family: 'Domine', serif;
-    font-size: 15px;
-    margin: 0 20px;
-    padding-bottom: 20px;
-    line-height: 25px;
+  font-family: "Domine", serif;
+  font-size: 15px;
+  margin: 0 20px;
+  padding-bottom: 20px;
+  line-height: 25px;
 }
 
 .product-link {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }

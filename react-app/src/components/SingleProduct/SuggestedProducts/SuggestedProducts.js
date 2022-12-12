@@ -4,12 +4,13 @@ import SuggestedProduct from "./SuggestedProduct";
 
 export default function SuggestedProducts() {
   const randomPicks = [];
-  for (let i = 0; i < 8; i++) {
-    randomPicks.push({
-      url: `/products/${i}`,
-      img: i,
-    });
-  }
+  // for (let i = 0; i < 8; i++) {
+  //   let randomInt = Math.random(1 * )
+  //   randomPicks.push({
+  //     url: `/products/${i}`,
+  //     img: i,
+  //   });
+  // }
   const products = [];
   const imgUrls = [
     {
