@@ -50,6 +50,7 @@ input[type=number] {
     border: none;
     color: #fff;
     padding: 1em;
+    margin-top: .75em;
 }
 
 .title-container,

@@ -2,7 +2,6 @@ from flask import Blueprint, jsonify, render_template, request, redirect
 from flask_login import login_required, current_user
 from app.models import db, Product, ProductImage
 from app.forms import ProductForm
-from app.models import Product, ProductImage, db
 
 
 products_routes = Blueprint("products", __name__)
@@ -18,7 +17,6 @@ def get_products():
     """
 
     products = Product.query.all()
-    print([product.to_dict() for product in products])
     return {"Products": [product.to_dict() for product in products]}
 
 

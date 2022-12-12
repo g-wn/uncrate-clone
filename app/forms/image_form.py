@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField
+from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired
 
 
@@ -8,3 +8,4 @@ from wtforms.validators import DataRequired
 
 class ImageForm(FlaskForm):
     url = StringField("Image URL", validators=[DataRequired()])
+    submit = SubmitField("Submit")
