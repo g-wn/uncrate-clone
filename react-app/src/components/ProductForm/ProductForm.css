@@ -18,11 +18,14 @@ input[type=number] {
 .detailed-description-input {
     resize: none;
     height: 5em;
-    overflow-y: hidden;
 }
 
 .detailed-description-input::placeholder {
     padding: 1.6em 0;
+}
+
+.detailed-description-input::-webkit-scrollbar {
+    display: none;
 }
 
 .inputs-container {
@@ -30,6 +33,10 @@ input[type=number] {
     flex-direction: column;
     margin: 1em 0;
     row-gap: .75em;
+}
+
+.product-images-container {
+    border: 1px solid red;
 }
 
 .product-form-container {

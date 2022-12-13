@@ -39,12 +39,12 @@ function App() {
                 >
                     <ProductIndex />
                 </Route>
-                <Route path='/products/new'>
+                <ProtectedRoute path='/products/new'>
                     <ProductCreateForm />
-                </Route>
-                <Route path='/products/:id/update'>
+                </ProtectedRoute>
+                <ProtectedRoute path='/products/:id/update'>
                     <ProductUpdateForm />
-                </Route>
+                </ProtectedRoute>
                 <Route path='/products/:id'>
                     <SingleProduct />
                 </Route>
@@ -54,9 +54,9 @@ function App() {
                 >
                     <UserProfile />
                 </ProtectedRoute>
-                <Route path='/images/new'>
+                <ProtectedRoute path='/:id/images/add-edit'>
                     <ImageForm />
-                </Route>
+                </ProtectedRoute>
                 <Route
                     path='/login'
                     exact={true}

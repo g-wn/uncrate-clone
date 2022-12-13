@@ -2,29 +2,30 @@ import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory, useParams } from 'react-router-dom';
 
-import { getSingleProduct, putSingleProduct } from '../../store/one_product';
+import { putSingleProduct } from '../../store/one_product';
 import ProductForm from './ProductForm';
 import SupplyNavBar from '../SingleProduct/SupplyNavBar/SupplyNavBar';
 import { useEffect } from 'react';
+import { getProducts } from '../../store/all_products';
 
 const ProductUpdateForm = () => {
   const history = useHistory();
   const dispatch = useDispatch();
   const { id } = useParams();
-  const product = useSelector(state => state.products[id]);
-  console.log("PRODUCT --------->", product)
+  const products = useSelector(state => state.products);
+  const product = products[id];
 
   useEffect(() => {
-    dispatch(getSingleProduct(id));
+    dispatch(getProducts());
   }, [dispatch, id]);
 
-  const [title, setTitle] = useState(product.title);
-  const [description, setDescription] = useState(product.description);
-  const [detailed_description, set_detailed_description] = useState(product.detailedDescription);
-  const [category_id, set_category_id] = useState(product.categoryId);
-  const [price, setPrice] = useState(product.price);
+  const [title, setTitle] = useState(product?.title);
+  const [description, setDescription] = useState(product?.description);
+  const [detailed_description, set_detailed_description] = useState(product?.detailedDescription);
+  const [category_id, set_category_id] = useState(product?.categoryId);
+  const [price, setPrice] = useState(product?.price);
   const [preview_img_url, set_preview_img_url] = useState(
-    JSON.stringify(product.productImages[product.previewImgId].url)
+    JSON.stringify(product?.productImages[product.previewImgId].url)
   );
   const [errors, setErrors] = useState([]);
 
@@ -39,7 +40,7 @@ const ProductUpdateForm = () => {
         description,
         detailed_description,
         category_id,
-        price,
+        price
       })
     ).catch(async res => {
       const data = await res.json();
@@ -49,13 +50,15 @@ const ProductUpdateForm = () => {
     if (updatedProduct) history.push(`/${product.productOwner.id}/profile`);
   };
 
-  if (!product) return null;
+  if (!products) return null;
 
   return (
     <>
       <SupplyNavBar />
       {product && (
         <ProductForm
+          product={product}
+          formType={'update'}
           handleSubmit={handleSubmit}
           title={title}
           setTitle={setTitle}

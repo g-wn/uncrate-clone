@@ -1,7 +1,8 @@
 import './ProductForm.css';
 
 const ProductForm = ({
-  createForm,
+  product,
+  formType,
   handleSubmit,
   title,
   setTitle,
@@ -108,7 +109,7 @@ const ProductForm = ({
                 value={price}
               />
             </div>
-            {createForm && (
+            {formType === 'create' && (
               <div className='preview-img-container'>
                 <label htmlFor='preview-img-input'>MAIN IMAGE</label>
                 <input
@@ -121,6 +122,18 @@ const ProductForm = ({
                 />
               </div>
             )}
+            {/* {formType === 'update' && (
+              <div className='product-images-container'>
+                {product &&
+                  Object.values(product.productImages).map((image, idx) => (
+                    <img
+                      src={image.url}
+                      alt='img'
+                      key={idx}
+                    />
+                  ))}
+              </div>
+            )} */}
             <button
               className='product-form-submit'
               type='submit'
@@ -133,5 +146,4 @@ const ProductForm = ({
     </>
   );
 };
-
 export default ProductForm;

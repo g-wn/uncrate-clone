@@ -42,7 +42,7 @@ const ProductCreateForm = () => {
     <>
       <SupplyNavBar />
       <ProductForm
-        createForm={true}
+        formType={'create'}
         handleSubmit={handleSubmit}
         title={title}
         setTitle={setTitle}
