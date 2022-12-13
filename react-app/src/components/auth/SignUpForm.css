@@ -1,73 +1,73 @@
 .signup-form {
-    padding: 40px 80px 60px 80px;
-    border: 2px solid black;
-    border-radius: 5px;
+  padding: 40px 80px 60px 80px;
+  border: 2px solid black;
+  border-radius: 5px;
 }
 
 .signup-form-title {
-    font-family: 'Oswald', sans-serif;
-    font-size: 32px;
-    text-align: center;
-    margin-bottom: 20px;
+  font-family: "Oswald", sans-serif;
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .signup-form-field-top {
-    display: flex;
-    align-items: center;
-    border-top: 1px solid black;
-    border-right: 1px solid black;
-    border-left: 1px solid black;
-    height: 57px;
-    width: 468px;
-    padding: 16px;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  height: 57px;
+  width: 468px;
+  padding: 16px;
 }
 
 .signup-form-field {
-    display: flex;
-    align-items: center;
-    border: 1px solid black;
-    height: 57px;
-    width: 468px;
-    padding: 16px;
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+  height: 57px;
+  width: 468px;
+  padding: 16px;
 }
 
 .signup-form-label {
-    font-family: 'Roboto', sans-serif;
-    font-size: 13px;
-    font-weight: 500;
-    padding-right: 40px;
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  padding-right: 40px;
 }
 
 .signup-form-field-top input {
-    font-family: 'Roboto', sans-serif;
-    font-size: 15px;
-    font-weight: 400;
-    border: none;
-    margin-left: 50px;
-    width: 200px;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  border: none;
+  margin-left: 50px;
+  width: 200px;
 }
 
 .signup-form-field input {
-    font-family: 'Roboto', sans-serif;
-    font-size: 15px;
-    font-weight: 400;
-    border: none;
-    margin-left: 20px;
-    width: 300px;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  border: none;
+  margin-left: 20px;
+  width: 300px;
 }
 
 .signup-form-input:focus {
-    outline: none;
+  outline: none;
 }
 
 .signup-errors {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 10px;
-    color: red;
-    font-family: 'Roboto', sans-serif;
-    font-size: 15px;
-    font-weight: 400;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+  color: red;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
 }
 
 .signup-submit {
@@ -79,7 +79,8 @@
   color: white;
   font-weight: 700;
   border: none;
-  font-family: "Arimo", sans-serif;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: -0.5px;
   height: 36px;
   line-height: 1;
   background-color: black;
@@ -89,6 +90,6 @@
 .signup-form-input:-webkit-autofill,
 .signup-form-input:-webkit-autofill:hover,
 .signup-form-input:-webkit-autofill:focus,
-.signup-form-input:-webkit-autofill:active{
-    -webkit-box-shadow: 0 0 0 30px white inset !important;
+.signup-form-input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
 }

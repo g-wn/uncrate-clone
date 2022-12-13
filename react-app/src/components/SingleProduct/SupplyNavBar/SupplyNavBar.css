@@ -17,7 +17,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: "Arimo", sans-serif;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: -0.5px;
   height: 100%;
   font-size: 12px;
   font-weight: 900;

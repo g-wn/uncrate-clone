@@ -14,12 +14,12 @@
   text-align: center;
   text-decoration: none;
   color: black;
-  font-family: "Arimo", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   line-height: 1.5;
-  letter-spacing: 0.5px;
+  letter-spacing: -0.5px;
   margin-bottom: 20px;
 }
 

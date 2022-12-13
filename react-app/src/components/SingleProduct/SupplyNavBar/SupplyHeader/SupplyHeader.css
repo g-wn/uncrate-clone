@@ -15,6 +15,10 @@
   right: 0;
 }
 
+.fa-magnifying-glass {
+  margin-right: 30px;
+}
+
 sup {
   font-size: 15px;
   position: absolute;
