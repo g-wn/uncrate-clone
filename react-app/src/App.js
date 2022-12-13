@@ -12,6 +12,7 @@ import ProductIndex from './components/ProductIndex/ProductIndex';
 import SingleProduct from './components/SingleProduct/SingleProduct';
 import ProductUpdateForm from './components/ProductForm/UpdateProduct';
 import ProductCreateForm from './components/ProductForm/CreateProduct';
+import UserProfile from './components/UserProfile/UserProfile';
 
 function App() {
   const [loaded, setLoaded] = useState(false);
@@ -46,6 +47,12 @@ function App() {
         <Route path='/products/:id'>
           <SingleProduct />
         </Route>
+        <ProtectedRoute
+          path='/:userId/profile'
+          exact={true}
+        >
+          <UserProfile />
+        </ProtectedRoute>
         <Route path='/images/new'>
           <ImageForm />
         </Route>

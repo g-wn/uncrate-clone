@@ -29,8 +29,16 @@
     padding: 0 15px;
 }
 
-.login-button,
-.signup-button {
+.login-button {
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.profile-button {
     font-family: 'Roboto', sans-serif;
     font-size: 13px;
     font-weight: 500;
