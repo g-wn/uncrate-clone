@@ -11,7 +11,8 @@ const ProductUpdateForm = () => {
   const history = useHistory();
   const dispatch = useDispatch();
   const { id } = useParams();
-  const product = useSelector(state => state.product[id]);
+  const product = useSelector(state => state.products[id]);
+  console.log("PRODUCT --------->", product)
 
   useEffect(() => {
     dispatch(getSingleProduct(id));
@@ -20,7 +21,7 @@ const ProductUpdateForm = () => {
   const [title, setTitle] = useState(product.title);
   const [description, setDescription] = useState(product.description);
   const [detailed_description, set_detailed_description] = useState(product.detailedDescription);
-  const [category_id, set_category_id] = useState(product.category_id);
+  const [category_id, set_category_id] = useState(product.categoryId);
   const [price, setPrice] = useState(product.price);
   const [preview_img_url, set_preview_img_url] = useState(
     JSON.stringify(product.productImages[product.previewImgId].url)
@@ -45,7 +46,7 @@ const ProductUpdateForm = () => {
       if (data && data.errors) setErrors(Object.values(data.errors));
     });
 
-    if (updatedProduct) history.push(`/products/${product.id}`);
+    if (updatedProduct) history.push(`/${product.productOwner.id}/profile`);
   };
 
   if (!product) return null;

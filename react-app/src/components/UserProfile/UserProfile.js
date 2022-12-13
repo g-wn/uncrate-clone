@@ -20,18 +20,18 @@ const UserProfile = () => {
     }, [dispatch]);
 
     if (!allProducts || allProducts.length === 0) return null;
-    
+
     return (
         <>
         <Navigation />
         <div className="user-products">
            <div className="my-listings">
            My Listings
-            </div> 
+            </div>
            {allProducts.map(product => (
             product.productOwner.id === user.id &&
                 <div className="product-details">
-                <img 
+                <img
                     alt='product-main-img'
                     className="product-preview-img"
                     src={product.productImages[product.previewImgId].url}
@@ -43,11 +43,11 @@ const UserProfile = () => {
                     Edit Product Details
                     </button>
                 <button className="delete-listing">Yeet From Reduncrate</button>
-                </div> 
+                </div>
            ))}
         </div>
-        
-        
+
+
         </>
     )
 }
