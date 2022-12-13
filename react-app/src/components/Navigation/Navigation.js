@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import './Navigation.css';
 import { Modal } from '../../context/Modal';
 import LoginForm from '../auth/LoginForm';
@@ -10,6 +11,7 @@ function Navigation() {
     const [showLoginModal, setShowLoginModal] = useState(false)
     const [showSignupModal, setShowSignupModal] = useState(false)
     const user = useSelector(state => state.session.user);
+    const history = useHistory();
 
     return (
         <>
@@ -32,7 +34,9 @@ function Navigation() {
                         </div> :
                             <div>
                                 <LogoutButton setShowLoginModal={setShowLoginModal} /> | {" "}
-                                <button className='signup-button'>PROFILE</button>
+                                <button className='profile-button' onClick={() => 
+                                history.push(`/${user.id}/profile`)
+                                }>PROFILE</button>
                             </div>
                         }
                     </div>

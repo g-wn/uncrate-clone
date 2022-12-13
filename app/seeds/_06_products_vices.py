@@ -169,77 +169,176 @@ products_vices_imgs = [
         "product_id": 66,
         "url": "https://uncrate.com/assets_c/2022/01/final-ward-cocktail-thumb-960xauto-142361.jpg",
     },
+    {
+        "id": 252,
+        "product_id": 56,
+        "url": "https://uncrate.com/assets_c/2022/11/military-edition-humidor-1-thumb-960xauto-154713.jpg",
+    },
+    {
+        "id": 253,
+        "product_id": 56,
+        "url": "https://uncrate.com/assets_c/2022/11/military-edition-humidor-3-thumb-960xauto-154715.jpg",
+    },
+    {
+        "id": 254,
+        "product_id": 56,
+        "url": "https://uncrate.com/assets_c/2022/11/military-edition-humidor-2-thumb-960xauto-154714.jpg"
+    },
+    {
+        "id": 255,
+        "product_id": 56,
+        "url": "https://uncrate.com/assets_c/2022/11/military-edition-humidor-5-thumb-960xauto-154717.jpg",
+    },
+    {
+        "id": 256,
+        "product_id": 57,
+        "url": "https://uncrate.com/assets_c/2022/11/sharpie-mustache-cocktail-thumb-960xauto-154570.jpg",
+    },
+    {
+        "id": 257,
+        "product_id": 58,
+        "url": "https://uncrate.com/assets_c/2022/11/alessi-ashtray-1-thumb-960xauto-154382.jpg"
+    },
+    {
+        "id": 258,
+        "product_id": 58,
+        "url": "https://uncrate.com/assets_c/2022/11/alessi-ashtray-3-thumb-960xauto-154383.jpg",
+    },
+    {
+        "id": 259,
+        "product_id": 58,
+        "url": "https://uncrate.com/assets_c/2022/11/alessi-ashtray-2-thumb-960xauto-154381.jpg",
+    },
+    {
+        "id": 260,
+        "product_id": 59,
+        "url": "https://uncrate.com/assets_c/2022/10/20th-century-cocktail-thumb-960xauto-153114.jpg",
+    },
+    {
+        "id": 261,
+        "product_id": 60,
+        "url": "https://uncrate.com/assets_c/2022/10/nude-cigar-tray-single-clear-glass-5-thumb-960xauto-152668.jpg",
+    },
+    {
+        "id": 262,
+        "product_id": 60,
+        "url": "https://uncrate.com/assets_c/2022/10/cigar-lifestyle-shots-1-thumb-960xauto-152669.jpg"
+    },
+    {
+        "id": 263,
+        "product_id": 60,
+        "url": "https://uncrate.com/assets_c/2022/10/nude-cigar-tray-single-clear-glass-1-thumb-960xauto-152671.jpg",
+    },
+    {
+        "id": 264,
+        "product_id": 60,
+        "url": "https://uncrate.com/assets_c/2022/10/nude-cigar-tray-single-clear-glass-2-thumb-960xauto-152672.jpg",
+    },
+    {
+        "id": 265,
+        "product_id": 60,
+        "url": "https://uncrate.com/assets_c/2022/10/nude-cigar-tray-single-clear-glass-3-thumb-960xauto-152674.jpg",
+    },
+    {
+        "id": 266,
+        "product_id": 61,
+        "url": "https://uncrate.com/assets_c/2022/10/nude-glass-black-double-cigar-tray-2-thumb-960xauto-152620.jpg",
+    },
+    {
+        "id": 267,
+        "product_id": 61,
+        "url": "https://uncrate.com/assets_c/2022/10/cigar-lifestyle-shots-5-thumb-960xauto-152637.jpg"
+    },
+    {
+        "id": 268,
+        "product_id": 61,
+        "url": "https://uncrate.com/assets_c/2022/10/nude-glass-black-double-cigar-tray-1-thumb-960xauto-152621.jpg",
+    },
+    {
+        "id": 269,
+        "product_id": 61,
+        "url": "https://uncrate.com/assets_c/2022/10/nude-glass-black-double-cigar-tray-4-thumb-960xauto-152625.jpg",
+    },
+    {
+        "id": 270,
+        "product_id": 61,
+        "url": "https://uncrate.com/assets_c/2022/10/nude-glass-black-double-cigar-tray-3-thumb-960xauto-152624.jpg",
+    },
+    {
+        "id": 271,
+        "product_id": 62,
+        "url": "https://uncrate.com/assets_c/2022/01/hemson-black-pipe-2-thumb-960xauto-142902.jpg",
+    },
+    {
+        "id": 272,
+        "product_id": 62,
+        "url": "https://uncrate.com/assets_c/2022/01/hemson-black-pipe-3-thumb-960xauto-142903.jpg",
+    },
+    {
+        "id": 273,
+        "product_id": 62,
+        "url": "https://uncrate.com/assets_c/2022/01/hemson-black-pipe-1-thumb-960xauto-142901.jpg",
+    },
+    {
+        "id": 274,
+        "product_id": 63,
+        "url": "https://uncrate.com/assets_c/2022/03/brouk-and-co-humidor-canister-1-thumb-960xauto-144274.jpg",
+    },
+    {
+        "id": 275,
+        "product_id": 63,
+        "url": "https://uncrate.com/assets_c/2022/03/brouk-and-co-humidor-canister-3-thumb-960xauto-144276.jpg",
+    },
+    {
+        "id": 276,
+        "product_id": 63,
+        "url": "https://uncrate.com/assets_c/2022/03/brouk-and-co-humidor-canister-2-thumb-960xauto-144275.jpg",
+    },
+    {
+        "id": 277,
+        "product_id": 64,
+        "url": "https://uncrate.com/assets_c/2022/03/brouk-and-co-single-humidor-1-thumb-960xauto-144175.jpg",
+    },
+    {
+        "id": 278,
+        "product_id": 64,
+        "url": "https://uncrate.com/assets_c/2022/03/brouk-and-co-single-humidor-2-thumb-960xauto-144176.jpg",
+    },
+    {
+        "id": 279,
+        "product_id": 64,
+        "url": "https://uncrate.com/assets_c/2022/03/brouk-and-co-single-humidor-3-thumb-960xauto-144177.jpg",
+    },
+    {
+        "id": 280,
+        "product_id": 65,
+        "url": "https://uncrate.com/assets_c/2022/03/broku-co-cf-humidor-1-thumb-960xauto-144141.jpg",
+    },
+    {
+        "id": 281,
+        "product_id": 65,
+        "url": "https://uncrate.com/assets_c/2022/03/broku-co-cf-humidor-3-thumb-960xauto-144142.jpg",
+    },
+    {
+        "id": 282,
+        "product_id": 65,
+        "url": "https://uncrate.com/assets_c/2022/03/broku-co-cf-humidor-4-thumb-960xauto-144143.jpg",
+    },
+    {
+        "id": 283,
+        "product_id": 65,
+        "url": "https://uncrate.com/assets_c/2022/03/broku-co-cf-humidor-5-thumb-960xauto-144144.jpg",
+    },
+    {
+        "id": 284,
+        "product_id": 65,
+        "url": "https://uncrate.com/assets_c/2022/03/broku-co-cf-humidor-6-thumb-960xauto-144145.jpg",
+    },
+    {
+        "id": 285,
+        "product_id": 66,
+        "url": "https://uncrate.com/assets_c/2022/01/final-ward-cocktail-thumb-960xauto-142361.jpg",
+    },
 ]
 
-"""
-product56_image1: https://uncrate.com/assets_c/2022/11/military-edition-humidor-1-thumb-960xauto-154713.jpg
 
-product56_image2: https://uncrate.com/assets_c/2022/11/military-edition-humidor-8-thumb-960xauto-154720.jpg
-
-product56_image3: https://uncrate.com/assets_c/2022/11/military-edition-humidor-3-thumb-960xauto-154715.jpg
-
-product56_image4: https://uncrate.com/assets_c/2022/11/military-edition-humidor-2-thumb-960xauto-154714.jpg
-
-product56_image5: https://uncrate.com/assets_c/2022/11/military-edition-humidor-5-thumb-960xauto-154717.jpg
-
-product57_image1: https://uncrate.com/assets_c/2022/11/sharpie-mustache-cocktail-thumb-960xauto-154570.jpg
-
-product58_image1: https://uncrate.com/assets_c/2022/11/alessi-ashtray-1-thumb-960xauto-154382.jpg
-
-product58_image2: https://uncrate.com/assets_c/2022/11/alessi-ashtray-3-thumb-960xauto-154383.jpg
-
-product58_image3: https://uncrate.com/assets_c/2022/11/alessi-ashtray-2-thumb-960xauto-154381.jpg
-
-product59_image1: https://uncrate.com/assets_c/2022/10/20th-century-cocktail-thumb-960xauto-153114.jpg
-
-product60_image1: https://uncrate.com/assets_c/2022/10/nude-cigar-tray-single-clear-glass-5-thumb-960xauto-152668.jpg
-
-product60_image2: https://uncrate.com/assets_c/2022/10/cigar-lifestyle-shots-1-thumb-960xauto-152669.jpg
-
-product60_image3: https://uncrate.com/assets_c/2022/10/nude-cigar-tray-single-clear-glass-1-thumb-960xauto-152671.jpg
-
-product60_image4: https://uncrate.com/assets_c/2022/10/nude-cigar-tray-single-clear-glass-2-thumb-960xauto-152672.jpg
-
-product60_image5: https://uncrate.com/assets_c/2022/10/nude-cigar-tray-single-clear-glass-3-thumb-960xauto-152674.jpg
-
-product61_image1: https://uncrate.com/assets_c/2022/10/nude-glass-black-double-cigar-tray-2-thumb-960xauto-152620.jpg
-
-product61_image2: https://uncrate.com/assets_c/2022/10/cigar-lifestyle-shots-5-thumb-960xauto-152637.jpg
-
-product61_image3: https://uncrate.com/assets_c/2022/10/nude-glass-black-double-cigar-tray-1-thumb-960xauto-152621.jpg
-
-product61_image4: https://uncrate.com/assets_c/2022/10/nude-glass-black-double-cigar-tray-4-thumb-960xauto-152625.jpg
-
-product61_image5: https://uncrate.com/assets_c/2022/10/nude-glass-black-double-cigar-tray-3-thumb-960xauto-152624.jpg
-
-product62_image1: https://uncrate.com/assets_c/2022/01/hemson-black-pipe-2-thumb-960xauto-142902.jpg
-
-product62_image2: https://uncrate.com/assets_c/2022/01/hemson-black-pipe-3-thumb-960xauto-142903.jpg
-
-product62_image3; https://uncrate.com/assets_c/2022/01/hemson-black-pipe-1-thumb-960xauto-142901.jpg
-
-product63_image1: https://uncrate.com/assets_c/2022/03/brouk-and-co-humidor-canister-1-thumb-960xauto-144274.jpg
-
-product63_image2: https://uncrate.com/assets_c/2022/03/brouk-and-co-humidor-canister-3-thumb-960xauto-144276.jpg
-
-product63_image3: https://uncrate.com/assets_c/2022/03/brouk-and-co-humidor-canister-2-thumb-960xauto-144275.jpg
-
-product64_image1: https://uncrate.com/assets_c/2022/03/brouk-and-co-single-humidor-1-thumb-960xauto-144175.jpg
-
-product64_image2: https://uncrate.com/assets_c/2022/03/brouk-and-co-single-humidor-2-thumb-960xauto-144176.jpg
-
-product64_image3: https://uncrate.com/assets_c/2022/03/brouk-and-co-single-humidor-3-thumb-960xauto-144177.jpg
-
-product65_image1: https://uncrate.com/assets_c/2022/03/broku-co-cf-humidor-1-thumb-960xauto-144141.jpg
-
-product65_image2: https://uncrate.com/assets_c/2022/03/broku-co-cf-humidor-3-thumb-960xauto-144142.jpg
-
-product65_image3: https://uncrate.com/assets_c/2022/03/broku-co-cf-humidor-4-thumb-960xauto-144143.jpg
-
-product65_image4: https://uncrate.com/assets_c/2022/03/broku-co-cf-humidor-5-thumb-960xauto-144144.jpg
-
-product65_image5: https://uncrate.com/assets_c/2022/03/broku-co-cf-humidor-6-thumb-960xauto-144145.jpg
-
-product66_image1: https://uncrate.com/assets_c/2022/01/final-ward-cocktail-thumb-960xauto-142361.jpg
-
-"""

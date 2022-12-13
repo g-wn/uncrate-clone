@@ -11,6 +11,7 @@ import User from './components/User';
 import { authenticate } from './store/session';
 import ProductIndex from './components/ProductIndex/ProductIndex';
 import SingleProduct from './components/SingleProduct/SingleProduct';
+import UserProfile from './components/UserProfile/UserProfile'
 
 function App() {
     const [loaded, setLoaded] = useState(false);
@@ -53,6 +54,9 @@ function App() {
                 </ProtectedRoute>
                 <ProtectedRoute path='/users/:userId' exact={true} >
                     <User />
+                </ProtectedRoute>
+                <ProtectedRoute path='/:userId/profile' exact={true}>
+                    <UserProfile />
                 </ProtectedRoute>
                 <Route path='/' exact={true} >
                     <h1>My Home Page</h1>
