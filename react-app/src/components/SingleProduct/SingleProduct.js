@@ -334,7 +334,6 @@ const SingleProduct = () => {
   console.log("single product -->", singleProduct);
   const history = useHistory();
 
-
   useEffect(() => {
     dispatch(getSingleProduct(id));
   }, [dispatch, id]);
