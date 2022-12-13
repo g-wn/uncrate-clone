@@ -69,6 +69,12 @@ function App() {
                 >
                     <SignUpForm />
                 </Route>
+                <Route
+                    path='/cart'
+                    exact={true}
+                >
+                    <Cart />
+                </Route>
                 <ProtectedRoute
                     path='/users'
                     exact={true}

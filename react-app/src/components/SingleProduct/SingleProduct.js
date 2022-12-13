@@ -8,6 +8,7 @@ import "./SingleProduct.css";
 import Carousel from "./ImageCarousel/Carousel";
 import SuggestedProducts from "./SuggestedProducts/SuggestedProducts";
 import SupplyNavBar from "./SupplyNavBar/SupplyNavBar";
+import { postCartItem } from "../../store/cart_items";
 
 const availableProducts = [
     {
@@ -329,60 +330,82 @@ const availableProducts = [
 const SingleProduct = () => {
     const dispatch = useDispatch();
     const { id } = useParams();
-    const user = useSelector(state => state.session.user);
-    const singleProduct = useSelector(state => state.product[id]);
-    console.log('single product -->', singleProduct);
+    const user = useSelector((state) => state.session.user);
+    const singleProduct = useSelector((state) => state.product[id]);
+    console.log("single product -->", singleProduct);
     const history = useHistory();
 
     useEffect(() => {
         dispatch(getSingleProduct(id));
     }, [dispatch, id]);
 
+    let productList = [];
+    const shuffled = availableProducts.sort(() => 0.5 - Math.random());
+
+    // Get sub-array of first n elements after shuffled
+    let selected = shuffled.slice(0, 8);
+    productList.push(selected);
+
+    console.log(productList);
+
+    let imgList = [];
+
+    if (singleProduct) {
+        for (let id in singleProduct.productImages) {
+            if (singleProduct.productImages[id].productId === singleProduct.id) {
+                imgList.push(singleProduct.productImages[id].url);
+            }
+            console.log(imgList);
+        }
+    }
+
     if (!singleProduct) return null;
 
     return (
-        <div className='single-product-page'>
+        <div className="single-product-page">
             <SupplyNavBar />
-            <div className='single-product'>
-                <Carousel infinite>
+            <div className="single-product">
+                <Carousel infinite imageLength={imgList.length}>
                     <img
                         src={singleProduct.productImages[singleProduct.previewImgId].url}
-                        alt='single-product'
+                        alt="single-product"
                     />
-                    <img
-                        src={singleProduct.productImages[singleProduct.previewImgId].url}
-                        alt='single-product'
-                    />
-                    <img
-                        src={singleProduct.productImages[singleProduct.previewImgId].url}
-                        alt='single-product'
-                    />
-                    <img
-                        src={singleProduct.productImages[singleProduct.previewImgId].url}
-                        alt='single-product'
-                    />
-                    <img
-                        src={singleProduct.productImages[singleProduct.previewImgId].url}
-                        alt='single-product'
-                    />
+                    {imgList[1] ? <img src={imgList[1]} alt="single-product" /> : ""}
+                    {imgList[2] ? <img src={imgList[2]} alt="single-product" /> : ""}
+                    {imgList[3] ? <img src={imgList[3]} alt="single-product" /> : ""}
+                    {imgList[4] ? <img src={imgList[4]} alt="single-product" /> : ""}
+
+                    {/* {imgList[0] ? <img src={imgList[0]} alt="single-product" /> : ""} */}
                 </Carousel>
-                <div className='single-product-details'>
+                <div className="single-product-details">
                     <h1>
                         {singleProduct.title.toUpperCase()} / ${singleProduct.price}
                     </h1>
-                    <p className='single-product-detailed-description'>{singleProduct.detailedDescription}</p>
-                    <p className='single-product-details-greentxt'>IN STOCK AND SHIPS FREE WITH EASY RETURNS.</p>
-                    <div className='single-product-details-btns'>
-                        <button className='single-product-details-btn btn-add-cart'>ADD TO CART</button>
-                        <button className='single-product-details-btn btn-stash-later'>STASH FOR LATER</button>
+                    <p className="single-product-detailed-description">
+                        {singleProduct.detailedDescription}
+                    </p>
+                    <p className="single-product-details-greentxt">
+                        IN STOCK AND SHIPS FREE WITH EASY RETURNS.
+                    </p>
+                    <div className="single-product-details-btns">
+                        <button className="single-product-details-btn btn-add-cart" onClick={async (e) => {
+                            e.preventDefault()
+                            await dispatch(postCartItem(singleProduct.id))
+                            history.push('/cart')
+                        }}>
+                            ADD TO CART
+                        </button>
+                        <button className="single-product-details-btn btn-stash-later">
+                            STASH FOR LATER
+                        </button>
 
                         {user && user.id === singleProduct.productOwner.id && (
                             <button
-                                className='delete-product-btn'
-                                onClick={e => {
+                                className="delete-product-btn"
+                                onClick={(e) => {
                                     e.preventDefault();
                                     dispatch(deleteProduct(singleProduct.id));
-                                    history.push('/');
+                                    history.push("/");
                                 }}
                             >
                                 REMOVE MY LISTING
@@ -390,7 +413,12 @@ const SingleProduct = () => {
                         )}
                     </div>
                 </div>
-                <SuggestedProducts productImages={singleProduct.productImages[singleProduct.previewImgId].url} />
+                <SuggestedProducts
+                    productList={selected}
+                    productImages={
+                        singleProduct.productImages[singleProduct.previewImgId].url
+                    }
+                />
             </div>
         </div>
     );

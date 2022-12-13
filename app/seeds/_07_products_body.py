@@ -171,66 +171,66 @@ products_body_imgs = [
         "product_id": 77,
         "url": "https://uncrate.com/assets_c/2022/10/nue-co-water-therapy-thumb-960xauto-153245.jpg",
     },
-    # {
-    #     "id": 286,
-    #     "product_id": 67,
-    #     "url": "https://uncrate.com/assets_c/2022/12/daneson-every-blend-pack-2-thumb-960xauto-155375.jpg",
-    # },
-    # {
-    #     "id": ,
-    #     "product_id": 67,
-    #     "url": "https://uncrate.com/assets_c/2022/12/daneson-every-blend-pack-3-thumb-960xauto-155378.jpg",
-    # },
-    # {
-    #     "id": ,
-    #     "product_id": 67,
-    #     "url": "https://uncrate.com/assets_c/2022/12/daneson-every-blend-pack-4-thumb-960xauto-155377.jpg",
-    # },
-    # {
-    #     "id": ,
-    #     "product_id": 71,
-    #     "url": "https://uncrate.com/assets_c/2022/12/tooletries-shower-set-2-thumb-960xauto-155138.jpg",
-    # },
-    # {
-    #     "id": ,
-    #     "product_id": 71,
-    #     "url": "https://uncrate.com/assets_c/2022/12/tooletries-shower-set-3-thumb-960xauto-155140.jpg",
-    # },
-    # {
-    #     "id": ,
-    #     "product_id": 71,
-    #     "url": "https://uncrate.com/assets_c/2022/12/tooletries-shower-set-4-thumb-960xauto-155141.jpg",
-    # },
-    # {
-    #     "id": ,
-    #     "product_id": 71,
-    #     "url": "https://uncrate.com/assets_c/2022/12/tooletries-shower-set-5-thumb-960xauto-155142.jpg",
-    # },
-    # {
-    #     "id": ,
-    #     "product_id": 74,
-    #     "url": "https://uncrate.com/assets_c/2020/06/forme-life-fitness-mirror-lead-thumb-960xauto-117232.jpg",
-    # },
-    # {
-    #     "id": ,
-    #     "product_id": 74,
-    #     "url": "https://uncrate.com/assets_c/2020/06/forme-life-fitness-mirror-2-thumb-960xauto-117046.jpg",
-    # },
-    # {
-    #     "id": ,
-    #     "product_id": 74,
-    #     "url": "https://uncrate.com/assets_c/2020/04/forme-fitness-mirror-1-thumb-960xauto-113923.jpg",
-    # },
-    # {
-    #     "id": ,
-    #     "product_id": 75,
-    #     "url": "https://uncrate.com/assets_c/2018/08/marvis-licorice-toothpaste-2-thumb-960xauto-88019.jpg",
-    # },
-    # {
-    #     "id": ,
-    #     "product_id": 75,
-    #     "url": "https://uncrate.com/assets_c/2018/08/marvis-licorice-toothpaste-3-thumb-960xauto-88020.jpg",
-    # },
+    {
+        "id": 286,
+        "product_id": 67,
+        "url": "https://uncrate.com/assets_c/2022/12/daneson-every-blend-pack-2-thumb-960xauto-155375.jpg",
+    },
+    {
+        "id": 287,
+        "product_id": 67,
+        "url": "https://uncrate.com/assets_c/2022/12/daneson-every-blend-pack-3-thumb-960xauto-155378.jpg",
+    },
+    {
+        "id": 288,
+        "product_id": 67,
+        "url": "https://uncrate.com/assets_c/2022/12/daneson-every-blend-pack-4-thumb-960xauto-155377.jpg",
+    },
+    {
+        "id": 289,
+        "product_id": 71,
+        "url": "https://uncrate.com/assets_c/2022/12/tooletries-shower-set-2-thumb-960xauto-155138.jpg",
+    },
+    {
+        "id": 290,
+        "product_id": 71,
+        "url": "https://uncrate.com/assets_c/2022/12/tooletries-shower-set-3-thumb-960xauto-155140.jpg",
+    },
+    {
+        "id": 291,
+        "product_id": 71,
+        "url": "https://uncrate.com/assets_c/2022/12/tooletries-shower-set-4-thumb-960xauto-155141.jpg",
+    },
+    {
+        "id": 292,
+        "product_id": 71,
+        "url": "https://uncrate.com/assets_c/2022/12/tooletries-shower-set-5-thumb-960xauto-155142.jpg",
+    },
+    {
+        "id": 293,
+        "product_id": 74,
+        "url": "https://uncrate.com/assets_c/2020/06/forme-life-fitness-mirror-lead-thumb-960xauto-117232.jpg",
+    },
+    {
+        "id": 294,
+        "product_id": 74,
+        "url": "https://uncrate.com/assets_c/2020/06/forme-life-fitness-mirror-2-thumb-960xauto-117046.jpg",
+    },
+    {
+        "id": 295,
+        "product_id": 74,
+        "url": "https://uncrate.com/assets_c/2020/04/forme-fitness-mirror-1-thumb-960xauto-113923.jpg",
+    },
+    {
+        "id": 296,
+        "product_id": 75,
+        "url": "https://uncrate.com/assets_c/2018/08/marvis-licorice-toothpaste-2-thumb-960xauto-88019.jpg",
+    },
+    {
+        "id": 297,
+        "product_id": 75,
+        "url": "https://uncrate.com/assets_c/2018/08/marvis-licorice-toothpaste-3-thumb-960xauto-88020.jpg",
+    },
 ]
 
 
