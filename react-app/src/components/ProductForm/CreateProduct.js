@@ -38,29 +38,29 @@ const ProductCreateForm = () => {
         if (new_product) history.push(`/products/${new_product.id}`);
     };
 
-    return (
-        <>
-            <SupplyNavBar />
-            <ProductForm
-                createForm={true}
-                handleSubmit={handleSubmit}
-                title={title}
-                setTitle={setTitle}
-                description={description}
-                setDescription={setDescription}
-                detailed_description={detailed_description}
-                category_id={category_id}
-                set_category_id={set_category_id}
-                set_detailed_description={set_detailed_description}
-                price={price}
-                setPrice={setPrice}
-                preview_img_url={preview_img_url}
-                set_preview_img_url={set_preview_img_url}
-                errors={errors}
-                setErrors={setErrors}
-            />
-        </>
-    );
+  return (
+    <>
+      <SupplyNavBar />
+      <ProductForm
+        formType={'create'}
+        handleSubmit={handleSubmit}
+        title={title}
+        setTitle={setTitle}
+        description={description}
+        setDescription={setDescription}
+        detailed_description={detailed_description}
+        category_id={category_id}
+        set_category_id={set_category_id}
+        set_detailed_description={set_detailed_description}
+        price={price}
+        setPrice={setPrice}
+        preview_img_url={preview_img_url}
+        set_preview_img_url={set_preview_img_url}
+        errors={errors}
+        setErrors={setErrors}
+      />
+    </>
+  );
 };
 
 export default ProductCreateForm;
