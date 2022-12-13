@@ -6,6 +6,7 @@ import LoginForm from '../auth/LoginForm';
 import SignUpForm from '../auth/SignUpForm';
 import { useSelector } from 'react-redux';
 import LogoutButton from '../auth/LogoutButton';
+import { NavLink } from 'react-router-dom';
 
 function Navigation() {
     const [showLoginModal, setShowLoginModal] = useState(false)
@@ -34,8 +35,8 @@ function Navigation() {
                         </div> :
                             <div>
                                 <LogoutButton setShowLoginModal={setShowLoginModal} /> | {" "}
-                                <button className='profile-button' onClick={() => 
-                                history.push(`/${user.id}/profile`)
+                                <button className='profile-button' onClick={() =>
+                                    history.push(`/${user.id}/profile`)
                                 }>PROFILE</button>
                             </div>
                         }
@@ -44,11 +45,18 @@ function Navigation() {
                 <div className='header-bottom-bar'>
                     <div></div>
                     <div className='header-logo'>
-                        <img src='https://uncrate.com/img/uncrate-lights.png' alt='header-logo'></img>
+                        <img src='/images/reduncrate-white2.png' className='reduncrate-logo' alt='header-logo'></img>
                     </div>
                     <div className='splash-header-icons'>
                         <i className="fa-solid fa-magnifying-glass"></i>
-                        <i className="fa-sharp fa-solid fa-box"></i>
+                        {user ?
+                            <NavLink className='nav-bar-crate' to='/cart'>
+                                <i className="fa-sharp fa-solid fa-box"></i>
+                            </NavLink>
+                            :
+                            <NavLink className='nav-bar-crate' to='' onClick={() => setShowLoginModal(true)}>
+                                <i className="fa-sharp fa-solid fa-box"></i>
+                            </NavLink>}
                     </div>
                 </div>
             </header>
