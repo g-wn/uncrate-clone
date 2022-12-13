@@ -188,6 +188,7 @@ products_gear_imgs = [
         "product_id": 1,
         "url": "https://uncrate.com/p/2022/12/atech-airtag-7-tool-multitool-5.jpg"
     },
+
     {
         "id": 94,
         "product_id": 2,

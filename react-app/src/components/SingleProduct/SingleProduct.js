@@ -366,16 +366,9 @@ const SingleProduct = () => {
       <SupplyNavBar />
       <div className="single-product">
         <Carousel infinite imageLength={imgList.length}>
-          <img
-            src={singleProduct.productImages[singleProduct.previewImgId].url}
-            alt="single-product"
-          />
-          {imgList[1] ? <img src={imgList[1]} alt="single-product" /> : ""}
-          {imgList[2] ? <img src={imgList[2]} alt="single-product" /> : ""}
-          {imgList[3] ? <img src={imgList[3]} alt="single-product" /> : ""}
-          {imgList[4] ? <img src={imgList[4]} alt="single-product" /> : ""}
-
-          {/* {imgList[0] ? <img src={imgList[0]} alt="single-product" /> : ""} */}
+          {imgList.map((img, idx) => (
+            <img src={imgList[idx]} alt="single-product" />
+          ))}
         </Carousel>
         <div className="single-product-details">
           <p className="single-product-category">
