@@ -2,7 +2,6 @@
 
 const LOAD_SINGLE_PRODUCT = 'products/LOAD_SINGLE';
 const UPDATE_SINGLE_PRODUCT = 'products/UPDATE_SINGLE';
-const DELETE_PRODUCT = '/products/delete';
 
 export const loadSingleProduct = product => {
     return {
@@ -15,13 +14,6 @@ export const updateSingleProduct = updatedProduct => {
     return {
         type: UPDATE_SINGLE_PRODUCT,
         updatedProduct
-    };
-};
-
-export const removeProduct = productId => {
-    return {
-        type: DELETE_PRODUCT,
-        productId
     };
 };
 
@@ -74,20 +66,6 @@ export const putSingleProduct = product => async dispatch => {
 
 export const getProductById = id => state => state.products[id];
 
-export const deleteProduct = productId => async dispatch => {
-    const response = await fetch(`/api/products/${productId}`, {
-        method: 'DELETE',
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    });
-
-    if (response.ok) {
-        const deletedMsg = await response.json();
-        dispatch(removeProduct(productId));
-        return deletedMsg;
-    }
-};
 
 /* ------------------------- REDUCER ------------------------- */
 
@@ -105,10 +83,6 @@ const singleProductReducer = (state = initialState, action) => {
                 ...state,
                 [action.updatedProduct.id]: { ...action.updatedProduct }
             };
-        case DELETE_PRODUCT:
-            const newState = { ...state };
-            delete newState[action.productId];
-            return newState;
         default:
             return state;
     }
