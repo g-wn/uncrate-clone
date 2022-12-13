@@ -39,6 +39,7 @@
     background-color: black;
     color: white;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .logout-button {
@@ -117,4 +118,8 @@
     max-width: 960px;
     margin: 0 auto;
     border-bottom: 1px solid black;
+}
+
+.nav-bar-crate {
+    color: white;
 }

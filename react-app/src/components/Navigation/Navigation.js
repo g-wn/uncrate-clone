@@ -5,6 +5,7 @@ import LoginForm from '../auth/LoginForm';
 import SignUpForm from '../auth/SignUpForm';
 import { useSelector } from 'react-redux';
 import LogoutButton from '../auth/LogoutButton';
+import { NavLink } from 'react-router-dom';
 
 function Navigation() {
     const [showLoginModal, setShowLoginModal] = useState(false)
@@ -32,7 +33,7 @@ function Navigation() {
                         </div> :
                             <div>
                                 <LogoutButton setShowLoginModal={setShowLoginModal} /> | {" "}
-                                <button className='signup-button'>PROFILE</button>
+                                <button className='signup-button'><NavLink className='signup-button' to='/profile'>PROFILE</NavLink></button>
                             </div>
                         }
                     </div>
@@ -44,7 +45,14 @@ function Navigation() {
                     </div>
                     <div className='splash-header-icons'>
                         <i className="fa-solid fa-magnifying-glass"></i>
-                        <i className="fa-sharp fa-solid fa-box"></i>
+                        {user ?
+                            <NavLink className='nav-bar-crate' to='/cart'>
+                                <i className="fa-sharp fa-solid fa-box"></i>
+                            </NavLink>
+                            :
+                            <NavLink className='nav-bar-crate' to='' onClick={() => setShowLoginModal(true)}>
+                                <i className="fa-sharp fa-solid fa-box"></i>
+                            </NavLink>}
                     </div>
                 </div>
             </header>

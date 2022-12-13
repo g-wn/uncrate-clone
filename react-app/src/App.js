@@ -11,6 +11,7 @@ import User from './components/User';
 import { authenticate } from './store/session';
 import ProductIndex from './components/ProductIndex/ProductIndex';
 import SingleProduct from './components/SingleProduct/SingleProduct';
+import Cart from './components/Cart/Cart';
 
 function App() {
     const [loaded, setLoaded] = useState(false);
@@ -47,6 +48,9 @@ function App() {
                 </Route>
                 <Route path='/sign-up' exact={true}>
                     <SignUpForm />
+                </Route>
+                <Route path='/cart' exact={true}>
+                    <Cart />
                 </Route>
                 <ProtectedRoute path='/users' exact={true} >
                     <UsersList />
