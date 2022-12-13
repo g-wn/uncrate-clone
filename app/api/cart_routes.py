@@ -120,7 +120,7 @@ def purchase_cart():
     Query for the current user's current cart and set the cart's purchased status to True.
     """
     cart = Cart.query \
-        .filter(Cart.user_id == 1) \
+        .filter(Cart.user_id == current_user.get_id()) \
         .filter(Cart.purchased == False)
     setattr(cart, "purchased", True)
     db.session.commit()
