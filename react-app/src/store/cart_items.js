@@ -37,10 +37,8 @@ export const postCartItem = (product_id) => async dispatch => {
     };
 };
 
-export const editCartItem = (cartItem, payload) => async dispatch => {
-    const { quantity } = payload;
-
-    const response = await fetch(`/api/spots/${cartItem.id}`, {
+export const editCartItem = (cartItem, quantity) => async dispatch => {
+    const response = await fetch(`/api/carts/${cartItem.id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ 'quantity': quantity })
@@ -48,7 +46,7 @@ export const editCartItem = (cartItem, payload) => async dispatch => {
 
     if (response.ok) {
         const updatedCartItem = await response.json();
-        dispatch(updateCartItem(cartItem));
+        dispatch(updateCartItem(updatedCartItem));
         return updatedCartItem;
     };
 };

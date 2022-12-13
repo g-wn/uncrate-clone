@@ -48,7 +48,7 @@ function Navigation() {
                         <img src='/images/reduncrate-white2.png' className='reduncrate-logo' alt='header-logo'></img>
                     </div>
                     <div className='splash-header-icons'>
-                        <i className="fa-solid fa-magnifying-glass"></i>
+                        <i className="fa-solid fa-magnifying-glass header-magnifying-glass"></i>
                         {user ?
                             <NavLink className='nav-bar-crate' to='/cart'>
                                 <i className="fa-sharp fa-solid fa-box"></i>
