@@ -71,19 +71,36 @@ const ProductIndex = () => {
               className="featured-product-image"
               src={products[0].productImages[products[0].previewImgId].url}
             ></img>
-            <div className="featured-product-text">
-              <h6 className="featured-product-category">
-                {products[0].category}
-              </h6>
-              <h1 className="featured-product-title">{products[0].title}</h1>
-              <p className="featured-product-description">
-                {products[0].description}
-              </p>
-              <span className="featured-product-buy-link">
-                Buy From Uncrate Supply
-              </span>
-            </div>
           </NavLink>
+          <div className="featured-product-text">
+            <h6 className="featured-product-category">
+              {products[0].category}
+            </h6>
+            <h1 className="featured-product-title">
+              <NavLink
+                className="product-link"
+                to={`/products/${products[0].id}`}
+              >
+                {products[0].title}
+              </NavLink>
+            </h1>
+            <p className="featured-product-description">
+              <NavLink
+                className="product-link"
+                to={`/products/${products[0].id}`}
+              >
+                {products[0].description}
+              </NavLink>
+            </p>
+            <span className="featured-product-buy-link">
+              <NavLink
+                className="product-link"
+                to={`/products/${products[0].id}`}
+              >
+                Buy From Uncrate Supply
+              </NavLink>
+            </span>
+          </div>
         </div>
         <div className="all-other-products">
           {products.slice(1, 35).map((product) => (
@@ -94,19 +111,36 @@ const ProductIndex = () => {
                   className="all-other-products-image"
                   src={product.productImages[product.previewImgId].url}
                 ></img>
-                <div className="all-other-products-text">
-                  <h6 className="featured-product-category">
-                    {product.productCategory.name.toUpperCase()}
-                  </h6>
-                  <h1 className="all-other-products-title">{product.title}</h1>
-                  <p className="all-other-products-description">
-                    {product.description}
-                  </p>
-                  <span className="featured-product-buy-link">
-                    Buy From Uncrate Supply
-                  </span>
-                </div>
               </NavLink>
+              <div className="all-other-products-text">
+                <h6 className="featured-product-category">
+                  {product.productCategory.name.toUpperCase()}
+                </h6>
+                <h1 className="all-other-products-title">
+                  <NavLink
+                    className="product-link"
+                    to={`/products/${product.id}`}
+                  >
+                    {product.title}
+                  </NavLink>
+                </h1>
+                <p className="all-other-products-description">
+                  <NavLink
+                    className="product-link"
+                    to={`/products/${product.id}`}
+                  >
+                    {product.description}
+                  </NavLink>
+                </p>
+                <span className="featured-product-buy-link">
+                  <NavLink
+                    className="product-link"
+                    to={`/products/${product.id}`}
+                  >
+                    Buy From Uncrate Supply
+                  </NavLink>
+                </span>
+              </div>
             </div>
           ))}
         </div>
