@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useParams, useHistory, NavLink } from "react-router-dom";
 import { getSingleProduct } from "../../store/one_product";
 import { getProducts } from "../../store/all_products";
+import { addToFavorites } from "../../store/favorites";
 import "./SingleProduct.css";
 import Carousel from "./ImageCarousel/Carousel";
 import SuggestedProducts from "./SuggestedProducts/SuggestedProducts";
@@ -393,7 +394,10 @@ const SingleProduct = () => {
             >
               ADD TO CART
             </button>
-            <button className="single-product-details-btn btn-stash-later">
+            <button className="single-product-details-btn btn-stash-later" onClick={async (e) => {
+              e.preventDefault();
+              await dispatch(addToFavorites(singleProduct.id))
+            }}>
               STASH FOR LATER
             </button>
           </div>
