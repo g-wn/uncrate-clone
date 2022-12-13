@@ -59,6 +59,12 @@ sup {
   justify-content: center;
 }
 
+.categorybar-bottom li:hover,
+.categorybar-top li:hover,
+.fa-solid:hover {
+  cursor: pointer;
+}
+
 .categorybar-top {
   width: 100%;
   max-width: 960px;

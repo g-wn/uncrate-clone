@@ -191,11 +191,6 @@ products_style_imgs = [
         'url': "https://uncrate.com/assets_c/2022/11/rze-green-thumb-960xauto-153709.jpg"
     },
     {
-        'id': 126,
-        'product_id': 14,
-        'url': "https://uncrate.com/assets_c/2022/11/rze-black-thumb-960xauto-153708.jpg"
-    },
-    {
         'id': 127,
         'product_id': 14,
         'url': "https://uncrate.com/assets_c/2022/12/sunspel-fleeceback-sweatpants-white-melange-3-thumb-960xauto-155259.jpg"

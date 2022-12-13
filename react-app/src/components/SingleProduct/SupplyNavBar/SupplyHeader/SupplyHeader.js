@@ -15,6 +15,7 @@ export default function SupplyHeader() {
         <div className="header-icons">
           <i className="fa-solid fa-magnifying-glass"></i>
           <i className="fa-solid fa-box crate-icon"></i>
+          <span className="cart-badge"></span>
         </div>
       </div>
       <div className="supply-header-categories">
