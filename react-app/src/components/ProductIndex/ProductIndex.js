@@ -121,7 +121,7 @@ const ProductIndex = () => {
                     className="product-link"
                     to={`/products/${product.id}`}
                   >
-                    {product.title}
+                    {product.title.toUpperCase()}
                   </NavLink>
                 </h1>
                 <p className="all-other-products-description">
