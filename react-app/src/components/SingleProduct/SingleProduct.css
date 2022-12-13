@@ -23,6 +23,23 @@
   border: 1px solid #c7c7c7;
 }
 
+.single-product-details-btns button:hover {
+  cursor: pointer;
+}
+
+.single-product-category a {
+  font-family: "Arimo", sans-serif;
+  text-transform: uppercase;
+  color: #989898;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.single-product-category {
+  margin-top: 20px;
+}
+
 .single-product-detailed-description {
   font-family: "Domine", serif;
   font-size: 16px;
@@ -52,7 +69,8 @@
   line-height: 1;
 }
 
-.delete-product-btn, .delete-product-img-btn {
+.delete-product-btn,
+.delete-product-img-btn {
   width: 500px;
   padding: 12px 7px;
   text-transform: uppercase;
@@ -65,11 +83,11 @@
   line-height: 1;
 }
 
-.delete-product-btn, .delete-product-img-btn {
+.delete-product-btn,
+.delete-product-img-btn {
   background-color: rgba(255, 0, 0, 0.298);
   margin-top: 20px;
 }
-
 
 .btn-add-cart {
   background-color: black;

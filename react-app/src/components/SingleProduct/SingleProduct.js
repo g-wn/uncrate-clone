@@ -378,6 +378,9 @@ const SingleProduct = () => {
           {/* {imgList[0] ? <img src={imgList[0]} alt="single-product" /> : ""} */}
         </Carousel>
         <div className="single-product-details">
+          <p className="single-product-category">
+            <a href="#hi">{singleProduct.productCategory.name}</a>
+          </p>
           <h1>
             {singleProduct.title.toUpperCase()} / ${singleProduct.price}
           </h1>
