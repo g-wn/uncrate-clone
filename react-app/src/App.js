@@ -10,85 +10,92 @@ import User from './components/User';
 import { authenticate } from './store/session';
 import ProductIndex from './components/ProductIndex/ProductIndex';
 import SingleProduct from './components/SingleProduct/SingleProduct';
+import Cart from './components/Cart/Cart';
 import ProductUpdateForm from './components/ProductForm/UpdateProduct';
 import ProductCreateForm from './components/ProductForm/CreateProduct';
 import UserProfile from './components/UserProfile/UserProfile';
 
 function App() {
-  const [loaded, setLoaded] = useState(false);
-  const dispatch = useDispatch();
+    const [loaded, setLoaded] = useState(false);
+    const dispatch = useDispatch();
 
-  useEffect(() => {
-    (async () => {
-      await dispatch(authenticate());
-      setLoaded(true);
-    })();
-  }, [dispatch]);
+    useEffect(() => {
+        (async () => {
+            await dispatch(authenticate());
+            setLoaded(true);
+        })();
+    }, [dispatch]);
 
-  if (!loaded) {
-    return null;
-  }
+    if (!loaded) {
+        return null;
+    }
 
-  return (
-    <BrowserRouter>
-      <Switch>
-        <Route
-          exact
-          path='/'
-        >
-          <ProductIndex />
-        </Route>
-        <Route path='/products/new'>
-          <ProductCreateForm />
-        </Route>
-        <Route path='/products/:id/update'>
-          <ProductUpdateForm />
-        </Route>
-        <Route path='/products/:id'>
-          <SingleProduct />
-        </Route>
-        <ProtectedRoute
-          path='/:userId/profile'
-          exact={true}
-        >
-          <UserProfile />
-        </ProtectedRoute>
-        <Route path='/images/new'>
-          <ImageForm />
-        </Route>
-        <Route
-          path='/login'
-          exact={true}
-        >
-          <LoginForm />
-        </Route>
-        <Route
-          path='/sign-up'
-          exact={true}
-        >
-          <SignUpForm />
-        </Route>
-        <ProtectedRoute
-          path='/users'
-          exact={true}
-        >
-          <UsersList />
-        </ProtectedRoute>
-        <ProtectedRoute
-          path='/users/:userId'
-          exact={true}
-        >
-          <User />
-        </ProtectedRoute>
-        <Route
-          path='/'
-          exact={true}
-        >
-          <h1>My Home Page</h1>
-        </Route>
-      </Switch>
-    </BrowserRouter>
-  );
+    return (
+        <BrowserRouter>
+            <Switch>
+                <Route
+                    exact
+                    path='/'
+                >
+                    <ProductIndex />
+                </Route>
+                <Route path='/products/new'>
+                    <ProductCreateForm />
+                </Route>
+                <Route path='/products/:id/update'>
+                    <ProductUpdateForm />
+                </Route>
+                <Route path='/products/:id'>
+                    <SingleProduct />
+                </Route>
+                <ProtectedRoute
+                    path='/:userId/profile'
+                    exact={true}
+                >
+                    <UserProfile />
+                </ProtectedRoute>
+                <Route path='/images/new'>
+                    <ImageForm />
+                </Route>
+                <Route
+                    path='/login'
+                    exact={true}
+                >
+                    <LoginForm />
+                </Route>
+                <Route
+                    path='/sign-up'
+                    exact={true}
+                >
+                    <SignUpForm />
+                </Route>
+                <Route
+                    path='/cart'
+                    exact={true}
+                >
+                    <Cart />
+                </Route>
+                <ProtectedRoute
+                    path='/users'
+                    exact={true}
+                >
+                    <UsersList />
+                </ProtectedRoute>
+                <ProtectedRoute
+                    path='/users/:userId'
+                    exact={true}
+                >
+                    <User />
+                </ProtectedRoute>
+                <Route
+                    path='/'
+                    exact={true}
+                >
+                    <h1>My Home Page</h1>
+                </Route>
+            </Switch>
+        </BrowserRouter>
+    );
 }
 
 export default App;

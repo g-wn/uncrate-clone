@@ -6,8 +6,8 @@ import './SignUpForm.css';
 
 const SignUpForm = () => {
     const [errors, setErrors] = useState([]);
-    const [firstName, setFirstName] = useState('');
-    const [lastName, setLastName] = useState('');
+    const [first_name, setFirstName] = useState('');
+    const [last_name, setLastName] = useState('');
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -18,7 +18,7 @@ const SignUpForm = () => {
     const onSignUp = async (e) => {
         e.preventDefault();
         if (password === repeatPassword) {
-            const data = await dispatch(signUp(username, email, password));
+            const data = await dispatch(signUp(first_name, last_name, username, email, password));
             if (data) {
                 setErrors(data)
             }
@@ -66,9 +66,9 @@ const SignUpForm = () => {
                 <input
                     className='signup-form-input'
                     type='text'
-                    name='firstName'
+                    name='first_name'
                     onChange={updateFirstName}
-                    value={firstName}
+                    value={first_name}
                 ></input>
             </div>
             <div className='signup-form-field-top'>
@@ -76,9 +76,9 @@ const SignUpForm = () => {
                 <input
                     className='signup-form-input'
                     type='text'
-                    name='lastName'
+                    name='last_name'
                     onChange={updateLastName}
-                    value={lastName}
+                    value={last_name}
                 ></input>
             </div>
             <div className='signup-form-field-top'>

@@ -8,6 +8,7 @@ import "./SingleProduct.css";
 import Carousel from "./ImageCarousel/Carousel";
 import SuggestedProducts from "./SuggestedProducts/SuggestedProducts";
 import SupplyNavBar from "./SupplyNavBar/SupplyNavBar";
+import { postCartItem } from "../../store/cart_items";
 
 const availableProducts = [
   {
@@ -387,7 +388,14 @@ const SingleProduct = () => {
             IN STOCK AND SHIPS FREE WITH EASY RETURNS.
           </p>
           <div className="single-product-details-btns">
-            <button className="single-product-details-btn btn-add-cart">
+            <button
+              className="single-product-details-btn btn-add-cart"
+              onClick={async (e) => {
+                e.preventDefault();
+                await dispatch(postCartItem(singleProduct.id));
+                history.push("/cart");
+              }}
+            >
               ADD TO CART
             </button>
             <button className="single-product-details-btn btn-stash-later">
