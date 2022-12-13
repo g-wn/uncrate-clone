@@ -28,7 +28,7 @@ class Product(db.Model):
     users_who_favorited = db.relationship("User", back_populates="user_favorites", secondary=favorites, lazy="joined")
 
     # cart_item <--> product
-    cart_item = db.relationship("CartItem", back_populates="product")
+    cart_item = db.relationship("CartItem", back_populates="product", cascade="all, delete")
 
     # product_category <--> category_products
     product_category = db.relationship("Category", back_populates="category_products")

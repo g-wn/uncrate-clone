@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { useHistory } from "react-router-dom";
-import { getProducts } from "../../store/all_products";
+import { NavLink, useHistory } from "react-router-dom";
+import { getProducts, deleteProduct } from "../../store/all_products";
 import Navigation  from '../Navigation/Navigation'
 import './UserProfile.css'
 
@@ -12,8 +12,6 @@ const UserProfile = () => {
     const user = useSelector((state) => state.session.user);
 
     const allProducts = useSelector((state) => Object.values(state.products))
-    console.log('all products -->', allProducts)
-
 
     useEffect(() => {
         dispatch(getProducts());
@@ -26,23 +24,33 @@ const UserProfile = () => {
         <Navigation />
         <div className="user-products">
            <div className="my-listings">
-           My Listings
+           {`${user.first_name}'s Listings`}
             </div>
            {allProducts.map(product => (
             product.productOwner.id === user.id &&
                 <div className="product-details">
+                <NavLink className="image" to={`/products/${product.id}`}>
                 <img
                     alt='product-main-img'
                     className="product-preview-img"
                     src={product.productImages[product.previewImgId].url}
                 ></img>
+                </NavLink>
                 {product.title}
                 <button className="edit-listing" onClick={() => {
                     {history.push(`/products/${product.id}/update`)}
                 }}>
                     Edit Product Details
                     </button>
-                <button className="delete-listing">Yeet From Reduncrate</button>
+       
+                <button className="delete-listing"
+                onClick={async (e) => {
+                    e.preventDefault();
+                    await dispatch(deleteProduct(product.id));
+                    dispatch(getProducts())
+                }}
+                >Yeet From Reduncrate</button>
+               
                 </div>
            ))}
         </div>

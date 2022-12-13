@@ -2,6 +2,8 @@
 
 const LOAD_PRODUCTS = 'products/LOAD';
 const CREATE_PRODUCT = 'products/NEW';
+const DELETE_PRODUCT = 'products/DELETE';
+
 
 export const loadProducts = products => {
     return {
@@ -14,6 +16,13 @@ export const createProduct = product => {
     return {
         type: CREATE_PRODUCT,
         product
+    };
+};
+
+export const removeProduct = productId => {
+    return {
+        type: DELETE_PRODUCT,
+        productId
     };
 };
 
@@ -46,6 +55,22 @@ export const postProduct = payload => async dispatch => {
     return response;
 };
 
+export const deleteProduct = productId => async dispatch => {
+    console.log('product id -->', productId)
+    const response = await fetch(`/api/products/${productId}`, {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
+
+    if (response.ok) {
+        const deletedMsg = await response.json();
+        dispatch(removeProduct(productId));
+        return deletedMsg;
+    }
+};
+
 /* ------------------------- GETTERS ------------------------- */
 
 export const getAllProducts = state => Object.values(state.products);
@@ -65,6 +90,11 @@ const allProductsReducer = (state = initialState, action) => {
             return { ...state, [action.product.id]: action.product };
         default:
             return state;
+        case DELETE_PRODUCT:
+            const newState = { ...state };
+            delete newState[action.productId];
+            console.log('new state -->', newState)
+            return newState;
     };
 };
 

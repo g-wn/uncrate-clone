@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from "react-redux";
 import { useParams, useHistory, NavLink } from "react-router-dom";
 import { getSingleProduct } from "../../store/one_product";
 import { getProducts } from "../../store/all_products";
-import { deleteProduct } from "../../store/one_product";
 import "./SingleProduct.css";
 import Carousel from "./ImageCarousel/Carousel";
 import SuggestedProducts from "./SuggestedProducts/SuggestedProducts";
@@ -397,19 +396,6 @@ const SingleProduct = () => {
             <button className="single-product-details-btn btn-stash-later">
               STASH FOR LATER
             </button>
-
-            {user && user.id === singleProduct.productOwner.id && (
-              <button
-                className="delete-product-btn"
-                onClick={(e) => {
-                  e.preventDefault();
-                  dispatch(deleteProduct(singleProduct.id));
-                  history.push("/");
-                }}
-              >
-                REMOVE MY LISTING
-              </button>
-            )}
           </div>
         </div>
         <SuggestedProducts
