@@ -50,6 +50,14 @@ const UserProfile = () => {
                   Edit Product Details
                 </button>
                 <button
+                  className='edit-listing'
+                  onClick={() => {
+                    history.push(`/${product.id}/images/add-edit`);
+                  }}
+                >
+                  Add/Edit Images
+                </button>
+                <button
                   className='delete-listing'
                   onClick={async e => {
                     e.preventDefault();

@@ -35,16 +35,12 @@ input[type=number] {
     row-gap: .75em;
 }
 
-.product-images-container {
-    border: 1px solid red;
-}
 
 .product-form-container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 
 .product-form-header {
     display: flex;

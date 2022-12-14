@@ -37,7 +37,7 @@ def create_image(product_id):
         db.session.add(new_img)
         db.session.commit()
 
-        return redirect(f"/api/products/{product_id}")
+        return new_img.to_dict()
     return render_template("test_image_form.html", form=form, product_id=product_id)
 
 
@@ -60,7 +60,7 @@ def update_product_image(id):
         setattr(product_image, "url", data["url"])
 
         db.session.commit()
-        return redirect(f"/api/products/{product_image_dict['productId']}")
+        return product_image.to_dict()
     return render_template("test_update_image.html", form=form, id=id)
 
 
@@ -71,7 +71,6 @@ def delete_product_img(id):
     Query for a single product id and delete the associated product's image.
     """
     product_image = ProductImage.query.get(id)
-    print(product_image, "***********product image -->")
     db.session.delete(product_image)
     db.session.commit()
     return {"message": "Successfully deleted", "status_code": 200}

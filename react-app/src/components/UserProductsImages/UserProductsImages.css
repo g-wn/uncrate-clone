@@ -1,0 +1,104 @@
+.add-edit-image-header,
+.image-form-header {
+    align-items: center;
+    column-gap: 1em;
+    display: flex;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    justify-content: center;
+    padding-bottom: 10px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.add-edit-image-form {
+    margin: 0 auto;
+    padding: 1em;
+    width: 93%;
+}
+
+.image-form {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    row-gap: 1em;
+    width: 25em;
+}
+
+.image-submit-btn {
+    background-color: #000;
+    border: none;
+    color: #fff;
+    padding: 1em;
+    margin-top: .75em;
+}
+
+.delete-btn,
+.edit-btn,
+.add-image-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.delete-icon,
+.edit-icon {
+    color: #c7c7c7;
+    transition: all 0.2s ease;
+}
+
+.delete-icon:hover {
+    color: rgba(255, 10, 0, .5);
+}
+
+.edit-icon:hover {
+    color: rgba(10, 0, 255, .5);
+}
+
+.main-image {
+    aspect-ratio: 2/1.334;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .25);
+    width: 100%;
+    margin: 2em auto;
+}
+
+.product-images-container {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: auto auto;
+    margin: 2em auto;
+    width: 100%;
+}
+
+.single-image-container {
+    aspect-ratio: 2/1.334;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .25);
+    color: white;
+    padding-top: .25em;
+    width: 100%;
+}
+
+.url-container {
+    align-items: center;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.url-input {
+    border: none;
+    width: 70%;
+}
+
+.url-input:focus {
+    outline: none;
+    width: 70%;
+}
