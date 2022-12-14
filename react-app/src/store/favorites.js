@@ -58,10 +58,10 @@ export const getFavorites = (userId) => async dispatch => {
 
 const initialState = {};
 
-const allFavoritesReducer = (state = initialState, action) => {
-    switch (action.type) {
-        case LOAD_FAVORITES:
-            return action.
-    }
-}
+// const allFavoritesReducer = (state = initialState, action) => {
+//     switch (action.type) {
+//         case LOAD_FAVORITES:
+//             return action.favorites.
+//     }
+// }
 
