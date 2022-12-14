@@ -14,6 +14,7 @@ import Cart from './components/Cart/Cart';
 import ProductUpdateForm from './components/ProductForm/UpdateProduct';
 import ProductCreateForm from './components/ProductForm/CreateProduct';
 import UserProfile from './components/UserProfile/UserProfile';
+import Favorites from './components/Favorites/Favorites';
 
 function App() {
     const [loaded, setLoaded] = useState(false);
@@ -86,6 +87,12 @@ function App() {
                     exact={true}
                 >
                     <User />
+                </ProtectedRoute>
+                <ProtectedRoute
+                    path='/favorites/:userId'
+                    exact={true}
+                >
+                    <Favorites />
                 </ProtectedRoute>
                 <Route
                     path='/'

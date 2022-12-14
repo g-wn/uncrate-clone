@@ -35,4 +35,33 @@ export const addToFavorites = (productId) => async dispatch => {
             productId: productId,
         })
     })
+
+    if (response.ok) {
+        const data = await response.json();
+        dispatch(createFavorite(data));
+        return data;
+    };
+    return response;
 }
+
+export const getFavorites = (userId) => async dispatch => {
+    const response = await fetch(`api/favorites/${userId}`);
+
+    if (response.ok) {
+        const favorites = await response.json();
+        dispatch(loadFavorites(favorites));
+        return favorites;
+    }
+}
+
+/* ------------------------- REDUCER ------------------------- */
+
+const initialState = {};
+
+const allFavoritesReducer = (state = initialState, action) => {
+    switch (action.type) {
+        case LOAD_FAVORITES:
+            return action.
+    }
+}
+
