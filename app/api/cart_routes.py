@@ -22,9 +22,9 @@ def get_cart():
     if has_active_cart:
         cart = Cart.query \
             .filter(Cart.user_id == current_user.get_id()) \
-            .filter(Cart.purchased == False)
+            .filter(Cart.purchased == False).one()
 
-        return cart[0].to_dict()
+        return cart.to_dict()
 
     else:
         cart = Cart(
@@ -52,10 +52,10 @@ def add_cart_item():
     if has_active_cart:
         cart = Cart.query \
         .filter(Cart.user_id == current_user.get_id()) \
-        .filter(Cart.purchased == False)
+        .filter(Cart.purchased == False).one()
 
         new_cart_item = CartItem(
-            cart_id = cart[0].to_dict()["id"],
+            cart_id = cart.to_dict()["id"],
             product_id = request.json['product_id'],
             quantity = 1
         )

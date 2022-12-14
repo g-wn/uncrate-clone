@@ -10,7 +10,6 @@ import User from './components/User';
 import { authenticate } from './store/session';
 import ProductIndex from './components/ProductIndex/ProductIndex';
 import SingleProduct from './components/SingleProduct/SingleProduct';
-import Cart from './components/Cart/Cart';
 import ProductUpdateForm from './components/ProductForm/UpdateProduct';
 import ProductCreateForm from './components/ProductForm/CreateProduct';
 import UserProfile from './components/UserProfile/UserProfile';
@@ -68,12 +67,6 @@ function App() {
                     exact={true}
                 >
                     <SignUpForm />
-                </Route>
-                <Route
-                    path='/cart'
-                    exact={true}
-                >
-                    <Cart />
                 </Route>
                 <ProtectedRoute
                     path='/users'

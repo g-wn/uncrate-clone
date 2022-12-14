@@ -1,18 +1,30 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import "./Navigation.css";
 import { Modal } from "../../context/Modal";
 import LoginForm from "../auth/LoginForm";
 import SignUpForm from "../auth/SignUpForm";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import LogoutButton from "../auth/LogoutButton";
 import { NavLink } from "react-router-dom";
+import Cart from "../Cart/Cart";
+import { getCart } from "../../store/cart";
 
 function Navigation() {
+    const dispatch = useDispatch()
     const [showLoginModal, setShowLoginModal] = useState(false);
     const [showSignupModal, setShowSignupModal] = useState(false);
+    const [showCartModal, setShowCartModal] = useState(false);
     const user = useSelector((state) => state.session.user);
+    const cart = useSelector((state) => state.cart);
     const history = useHistory();
+    let cartItemsNum;
+    if (cart.cartItems) cartItemsNum = Object.keys(cart.cartItems).length
+    if (cart.cartItems) console.log(cartItemsNum)
+
+    useEffect(() => {
+        dispatch(getCart())
+    }, [dispatch])
 
     return (
         <>
@@ -20,12 +32,12 @@ function Navigation() {
                 <div className="splash-page-top-bar-container">
                     <div className="header-top-bar">
                         <div>
-                            <span>FOLLOW @ UNCRATE</span>
+                            <span>FOLLOW @ REDUNCRATE</span>
                         </div>
                         <div className="header-top-bar-center">
-                            <a href="#hi">UNCRATE.COM</a>
-                            <a href="#hi">UNCRATE.SUPPLY</a>
-                            <a href="#hi">UNCRATE.TV</a>
+                            <a href="#hi">REDUNCRATE.COM</a>
+                            <a href="#hi">REDUNCRATE.SUPPLY</a>
+                            <a href="#hi">REDUNCRATE.TV</a>
                         </div>
                         {!user ? (
                             <div>
@@ -37,7 +49,7 @@ function Navigation() {
                                 </button>{" "}
                                 |{" "}
                                 <button
-                                    className="signup-button"
+                                    className="login-button"
                                     onClick={() => setShowSignupModal(true)}
                                 >
                                     SIGN UP
@@ -80,9 +92,9 @@ function Navigation() {
                     <div className="splash-header-icons">
                         <i className="fa-solid fa-magnifying-glass header-magnifying-glass"></i>
                         {user ? (
-                            <NavLink className="nav-bar-crate" to="/cart">
+                            <button className="nav-bar-crate-button" onClick={() => setShowCartModal(true)}>
                                 <i className="fa-sharp fa-solid fa-box"></i>
-                            </NavLink>
+                            </button>
                         ) : (
                             <NavLink
                                 className="nav-bar-crate"
@@ -91,6 +103,11 @@ function Navigation() {
                             >
                                 <i className="fa-sharp fa-solid fa-box"></i>
                             </NavLink>
+                        )}
+                        {showCartModal && (
+                            <Modal onClose={() => setShowCartModal(false)}>
+                                <Cart setShowCartModal={setShowCartModal} />
+                            </Modal>
                         )}
                     </div>
                 </div>
