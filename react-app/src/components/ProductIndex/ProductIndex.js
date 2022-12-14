@@ -72,7 +72,12 @@ const ProductIndex = () => {
               </NavLink>
               <div className="all-other-products-text">
                 <h6 className="featured-product-category">
-                  {product.productCategory.name.toUpperCase()}
+                  <NavLink
+                    className="featured-product-category"
+                    to={`/category/${product.productCategory.name.toLowerCase()}`}
+                  >
+                    {product.productCategory.name.toUpperCase()}
+                  </NavLink>
                 </h6>
                 <h1 className="all-other-products-title">
                   <NavLink

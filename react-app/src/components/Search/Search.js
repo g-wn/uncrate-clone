@@ -1,6 +1,8 @@
 import React, { useState, useMemo, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getProducts } from "../../store/all_products";
+import Navigation from "../Navigation/Navigation";
+import "./Search.css";
 
 export default function Search() {
   const [searchValue, setSearchValue] = useState("");
@@ -36,13 +38,16 @@ export default function Search() {
 
   return (
     <div>
-      <input className="searchbar" type="text" onChange={handleChange} />
-      <button className="submit-search" onClick={handleSubmit}>
-        Submit
-      </button>
-      {filteredJobs.length > 0
-        ? filteredJobs.map((job) => <p>{job.title}</p>)
-        : ""}
+      <Navigation />
+      <div className="search-container">
+        <input className="searchbar" type="text" onChange={handleChange} />
+        <button className="submit-search" onClick={handleSubmit}>
+          Submit
+        </button>
+        {filteredJobs.length > 0
+          ? filteredJobs.map((job) => <p>{job.title}</p>)
+          : ""}
+      </div>
     </div>
   );
 }
