@@ -6,7 +6,6 @@ import { putProductImage, postProductImage } from '../../store/one_product';
 const ImageForm = ({ modalData, setShowEditModal, setShowAddModal, formType }) => {
   const dispatch = useDispatch();
   const [url, setUrl] = useState('');
-  console.log(modalData)
 
   const handleEdit = async e => {
     e.preventDefault();
