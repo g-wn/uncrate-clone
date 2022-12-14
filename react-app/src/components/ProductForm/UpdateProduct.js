@@ -50,7 +50,7 @@ const ProductUpdateForm = () => {
     if (updatedProduct) history.push(`/${product.productOwner.id}/profile`);
   };
 
-  if (!products) return null;
+  if (!product) return null;
 
   return (
     <>
