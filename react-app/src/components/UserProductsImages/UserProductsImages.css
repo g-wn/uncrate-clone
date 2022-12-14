@@ -1,3 +1,13 @@
+.add-image-btn {
+    position: relative;
+    transition: scale 0.35s ease;
+    top: .2em;
+}
+
+.add-image-btn:hover {
+    scale: 1.25;
+}
+
 .add-edit-image-header,
 .image-form-header {
     align-items: center;
@@ -8,7 +18,7 @@
     font-family: 'Oswald', sans-serif;
     justify-content: center;
     padding-bottom: 10px;
-    text-align: center;
+    position: relative;
     text-transform: uppercase;
 }
 
@@ -36,24 +46,39 @@
 
 .delete-btn,
 .edit-btn,
-.add-image-btn {
+.add-image-btn,
+.main-image-edit-btn {
     border: none;
     background: none;
     cursor: pointer;
 }
 
+
+.buttons,
+.main-image-edit-btn {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 40%;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.55s ease;
+}
+
 .delete-icon,
 .edit-icon {
     color: #c7c7c7;
+    text-align: center;
     transition: all 0.2s ease;
+    z-index: 1;
 }
 
 .delete-icon:hover {
-    color: rgba(255, 10, 0, .5);
+    color: rgba(255, 10, 0, .75);
 }
 
 .edit-icon:hover {
-    color: rgba(10, 0, 255, .5);
+    color: rgba(50, 100, 255, .75);
 }
 
 .main-image {
@@ -62,8 +87,19 @@
     background-position: center;
     background-repeat: no-repeat;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, .25);
+    position: relative;
     width: 100%;
     margin: 2em auto;
+}
+
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.5s ease;
 }
 
 .product-images-container {
@@ -82,7 +118,36 @@
     box-shadow: 1px 1px 5px rgba(0, 0, 0, .25);
     color: white;
     padding-top: .25em;
+    position: relative;
     width: 100%;
+}
+
+.single-image-container:hover .overlay,
+.main-image:hover .overlay {
+    display: block;
+    background: rgba(0, 0, 0, .5);
+}
+
+.main-image:hover .title {
+    top: 10px;
+}
+
+.main-image:hover .main-image-edit-btn,
+.single-image-container:hover .buttons {
+    opacity: 1;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 30px;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    top: 50px;
+    transition: top 0.5s ease;
+    width: 100%;
+    z-index: 1;
 }
 
 .url-container {

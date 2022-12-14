@@ -17,7 +17,8 @@ const UserProductsImages = () => {
   const { id } = useParams();
   const products = useSelector(state => state.products);
   const product = products[id];
-  const [showModal, setShowModal] = useState(false);
+  const [showEditModal, setShowEditModal] = useState(false);
+  const [showAddModal, setShowAddModal] = useState(false);
   const [modalData, setModalData] = useState(null);
 
   useEffect(() => {
@@ -43,9 +44,24 @@ const UserProductsImages = () => {
       <div className='add-edit-image-form'>
         <div className='add-edit-image-header'>
           <header>Add or Edit an Image</header>
-          <button className='add-image-btn'>
-            <AiOutlinePlusCircle size={35} />
+          <button
+            className='add-image-btn'
+            onClick={() => {
+              setModalData(product.id);
+              setShowAddModal(true);
+            }}
+          >
+            <AiOutlinePlusCircle size={30} />
           </button>
+          {showAddModal && (
+            <Modal onClose={() => setShowAddModal(false)}>
+              <ImageForm
+                modalData={modalData}
+                formType={'create'}
+                setShowAddModal={setShowAddModal}
+              />
+            </Modal>
+          )}
         </div>
 
         <div
@@ -54,24 +70,26 @@ const UserProductsImages = () => {
             backgroundImage: `url("${product.productImages[product.previewImgId].url}")`
           }}
         >
+          <p className='title'>Main Product Image</p>
+          <div className='overlay'></div>
           <button
-            className='edit-btn'
+            className='main-image-edit-btn'
             onClick={() => {
               setModalData(product.productImages[product.previewImgId].id);
-              setShowModal(true);
+              setShowEditModal(true);
             }}
           >
             <AiTwotoneEdit
-              size={25}
+              size={45}
               className='edit-icon'
             />
           </button>
-          {showModal && (
-            <Modal onClose={() => setShowModal(false)}>
+          {showEditModal && (
+            <Modal onClose={() => setShowEditModal(false)}>
               <ImageForm
                 modalData={modalData}
                 formType={'edit'}
-                setShowModal={setShowModal}
+                setShowEditModal={setShowEditModal}
               />
             </Modal>
           )}
@@ -87,36 +105,39 @@ const UserProductsImages = () => {
                   backgroundImage: `url("${image.url}")`
                 }}
               >
-                <button
-                  className='delete-btn'
-                  onClick={async () => {
-                    await dispatch(deleteProductImage(image.id));
-                    dispatch(getProducts());
-                  }}
-                >
-                  <MdDelete
-                    size={25}
-                    className='delete-icon'
-                  />
-                </button>
-                <button
-                  className='edit-btn'
-                  onClick={() => {
-                    setModalData(image.id);
-                    setShowModal(true);
-                  }}
-                >
-                  <AiTwotoneEdit
-                    size={25}
-                    className='edit-icon'
-                  />
-                </button>
-                {showModal && (
-                  <Modal onClose={() => setShowModal(false)}>
+                <div className='overlay'></div>
+                <div className='buttons'>
+                  <button
+                    className='delete-btn'
+                    onClick={async () => {
+                      await dispatch(deleteProductImage(image.id));
+                      dispatch(getProducts());
+                    }}
+                  >
+                    <MdDelete
+                      size={45}
+                      className='delete-icon'
+                    />
+                  </button>
+                  <button
+                    className='edit-btn'
+                    onClick={() => {
+                      setModalData(image.id);
+                      setShowEditModal(true);
+                    }}
+                  >
+                    <AiTwotoneEdit
+                      size={45}
+                      className='edit-icon'
+                    />
+                  </button>
+                </div>
+                {showEditModal && (
+                  <Modal onClose={() => setShowEditModal(false)}>
                     <ImageForm
                       modalData={modalData}
                       formType={'edit'}
-                      setShowModal={setShowModal}
+                      setShowEditModal={setShowEditModal}
                     />
                   </Modal>
                 )}

@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { getProducts } from '../../store/all_products';
-import { putProductImage } from '../../store/one_product';
+import { putProductImage, postProductImage } from '../../store/one_product';
 
-const ImageForm = ({ modalData, setShowModal, formType }) => {
+const ImageForm = ({ modalData, setShowEditModal, setShowAddModal, formType }) => {
   const dispatch = useDispatch();
   const [url, setUrl] = useState('');
   console.log(modalData)
@@ -12,14 +12,14 @@ const ImageForm = ({ modalData, setShowModal, formType }) => {
     e.preventDefault();
     await dispatch(putProductImage(modalData, url));
     dispatch(getProducts());
-    setShowModal(false);
+    setShowEditModal(false);
   };
 
   const handleCreate = async e => {
     e.preventDefault();
-    await dispatch()
+    await dispatch(postProductImage(modalData, url))
     dispatch(getProducts())
-    setShowModal(false)
+    setShowAddModal(false)
   }
 
   return (
@@ -29,7 +29,7 @@ const ImageForm = ({ modalData, setShowModal, formType }) => {
     >
       {formType === 'create' ? (
         <header className='image-form-header'>Enter an image URL</header>
-      ): (
+      ) : (
       <header className='image-form-header'>Enter a new image URL</header>
       )}
       <div className='url-container'>
@@ -47,7 +47,7 @@ const ImageForm = ({ modalData, setShowModal, formType }) => {
         className='image-submit-btn'
         type='submit'
       >
-        Submit
+        {formType === 'edit' ? 'EDIT IMAGE' : 'ADD IMAGE'}
       </button>
     </form>
   );

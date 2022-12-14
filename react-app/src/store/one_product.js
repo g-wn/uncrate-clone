@@ -34,6 +34,36 @@ export const getSingleProduct = productId => async dispatch => {
   }
 };
 
+export const putSingleProduct = product => async dispatch => {
+  const { title, description, detailed_description, category_id, price } = product;
+  const response = await fetch(`/api/products/${product.id}/update`, {
+    method: 'PUT',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ title, description, detailed_description, category_id, price })
+  });
+
+  if (response.ok) {
+    const data = await response.json();
+    dispatch(updateSingleProduct(data));
+    return data;
+  }
+  return response;
+};
+
+export const postProductImage = (productId, url) => async dispatch => {
+  const response = await fetch(`/api/images/${productId}/new`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ url })
+  });
+
+  if (response.ok) {
+    const data = response.json();
+    return data;
+  }
+  return response;
+};
+
 export const deleteProductImage = productImageId => async dispatch => {
   const response = await fetch(`/api/images/${productImageId}`, {
     method: 'DELETE',
@@ -57,22 +87,6 @@ export const putProductImage = (productImageId, url) => async dispatch => {
 
   if (response.ok) {
     const data = response.json();
-    return data;
-  }
-  return response;
-};
-
-export const putSingleProduct = product => async dispatch => {
-  const { title, description, detailed_description, category_id, price } = product;
-  const response = await fetch(`/api/products/${product.id}/update`, {
-    method: 'PUT',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ title, description, detailed_description, category_id, price })
-  });
-
-  if (response.ok) {
-    const data = await response.json();
-    dispatch(updateSingleProduct(data));
     return data;
   }
   return response;
