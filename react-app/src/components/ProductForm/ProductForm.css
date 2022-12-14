@@ -7,6 +7,7 @@ input::-webkit-inner-spin-button {
 
 /* HIDE NUMBER INPUT SPINNERS - FIREFOX */
 input[type=number] {
+    appearance: textfield;
     -moz-appearance: textfield;
 }
 
@@ -18,11 +19,14 @@ input[type=number] {
 .detailed-description-input {
     resize: none;
     height: 5em;
-    overflow-y: hidden;
 }
 
 .detailed-description-input::placeholder {
     padding: 1.6em 0;
+}
+
+.detailed-description-input::-webkit-scrollbar {
+    display: none;
 }
 
 .inputs-container {
@@ -32,23 +36,28 @@ input[type=number] {
     row-gap: .75em;
 }
 
-.product-form-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.product-form {
+    width: 44%;
 }
 
-
-.product-form-header {
+.product-form-container {
+    align-items: center;
     display: flex;
     justify-content: center;
+}
+
+.product-form-header {
     align-items: center;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
 }
 
 .product-form-submit {
     background-color: #000;
     border: none;
     color: #fff;
+    cursor: pointer;
     padding: 1em;
     margin-top: .75em;
 }

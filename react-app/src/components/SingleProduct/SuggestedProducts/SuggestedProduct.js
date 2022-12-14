@@ -1,13 +1,19 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import "./SuggestedProducts.css";
 
-export default function SuggestedProduct({ imgUrl, productLabel }) {
+export default function SuggestedProduct({ products }) {
+  console.log(products);
   return (
-    <a href="http://localhost:3000/products/38">
-      <img src={imgUrl} alt="Example" />
-      <span className="suggested-products-label">
-        {productLabel} &nbsp;/&nbsp; $280
-      </span>
-    </a>
+    <>
+      {products.map((product) => (
+        <NavLink to={`${product.url}`}>
+          <img src={product.img} alt="Example" />
+          <span className="suggested-products-label">
+            {product.title} &nbsp;/&nbsp; ${product.price}
+          </span>
+        </NavLink>
+      ))}
+    </>
   );
 }

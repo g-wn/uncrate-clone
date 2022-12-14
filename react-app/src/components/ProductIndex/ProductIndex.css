@@ -29,7 +29,7 @@
   font-size: 13px;
   padding: 12px 0;
   font-weight: 500;
-  letter-spacing: 0.5px;
+  letter-spacing: -0.5px;
 }
 
 .featured-product-title {
@@ -87,4 +87,9 @@
 .product-link {
   text-decoration: none;
   color: black;
+}
+
+.product-link-buy {
+    text-decoration: none;
+    color: #ae9e85;
 }

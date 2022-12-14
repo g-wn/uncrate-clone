@@ -10,7 +10,7 @@
 
 <body>
     <h1>HELLO FROM IMAGE FORM</h1>
-    <form method="post" action="{{ url_for('images.create_image', product_id=product_id)}}">
+    <form method="post" action="{{ url_for('images.create_image', product_id=product_id) }}">
         {{ form.csrf_token }}
         {{ form.url.label }}{{ form.url }}
         {{ form.submit }}

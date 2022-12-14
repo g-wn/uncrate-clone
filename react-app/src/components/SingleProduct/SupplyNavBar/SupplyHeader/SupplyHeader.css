@@ -15,6 +15,10 @@
   right: 0;
 }
 
+.fa-magnifying-glass {
+  margin-right: 30px;
+}
+
 sup {
   font-size: 15px;
   position: absolute;
@@ -59,6 +63,12 @@ sup {
   justify-content: center;
 }
 
+.categorybar-bottom li:hover,
+.categorybar-top li:hover,
+.fa-solid:hover {
+  cursor: pointer;
+}
+
 .categorybar-top {
   width: 100%;
   max-width: 960px;
@@ -88,4 +98,10 @@ sup {
 
 .nav-surplus {
   color: #e74e3c !important;
+}
+
+.supply-header-crate-button {
+    background-color: white;
+    border: none;
+    font-size: 16px;
 }

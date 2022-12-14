@@ -188,25 +188,11 @@ products_gear_imgs = [
         "product_id": 1,
         "url": "https://uncrate.com/p/2022/12/atech-airtag-7-tool-multitool-5.jpg"
     },
-    {
-        "id": 93,
-        "product_id": 2,
-        "url": "https://uncrate.com/p/2022/12/2023-taylormade-p770-irons-1.jpg"
-    },
+
     {
         "id": 94,
         "product_id": 2,
         "url": "https://uncrate.com/p/2022/12/2023-taylormade-p770-irons-2.jpg"
-    },
-    {
-        "id": 95,
-        "product_id": 3,
-        "url": "https://uncrate.com/p/2022/12/edc-pass-down.jpg"
-    },
-    {
-        "id": 96,
-        "product_id": 4,
-        "url": "https://uncrate.com/p/2020/11/powerup-4-remote-plane-11.jpg"
     },
     {
         "id": 97,
@@ -224,11 +210,6 @@ products_gear_imgs = [
         "url": "https://cdn.shopify.com/s/files/1/0248/6216/products/powerup-4-remote-plane-6.jpg?v=1606234163"
     },
     {
-        "id": 100,
-        "product_id": 5,
-        "url": "https://uncrate.com/p/2021/03/trova-go-plus-2.jpg"
-    },
-    {
         "id": 101,
         "product_id": 5,
         "url": "https://uncrate.com/p/2021/03/trova-go-plus-1.jpg"
@@ -242,26 +223,6 @@ products_gear_imgs = [
         "id": 103,
         "product_id": 5,
         "url": "https://uncrate.com/p/2021/03/trova-go-plus-4.jpg"
-    },
-    {
-        "id": 104,
-        "product_id": 6,
-        "url": "https://uncrate.com/assets_c/2022/12/james-brand-kline-thumb-960xauto-155212.jpg"
-    },
-    {
-        "id": 105,
-        "product_id": 7,
-        "url": "https://uncrate.com/p/2022/12/valo-hyperfoil-1.jpg"
-    },
-    {
-        "id": 106,
-        "product_id": 8,
-        "url": "https://uncrate.com/p/2022/12/edc-burgundy.jpg"
-    },
-    {
-        "id": 107,
-        "product_id": 9,
-        "url": "https://uncrate.com/p/2022/12/elvis-lockheed-1329-1.jpg"
     },
     {
         "id": 108,
@@ -279,11 +240,6 @@ products_gear_imgs = [
         "url": "https://uncrate.com/p/2022/12/elvis-lockheed-1329-5.jpg"
     },
     {
-        "id": 111,
-        "product_id": 10,
-        "url": "https://uncrate.com/p/2020/05/canvas-firewood-carrier-10.jpg"
-    },
-    {
         "id": 112,
         "product_id": 10,
         "url": "https://uncrate.com/p/2020/05/canvas-firewood-carrier-11.jpg"
@@ -297,11 +253,6 @@ products_gear_imgs = [
         "id": 114,
         "product_id": 10,
         "url": "https://cdn.shopify.com/s/files/1/0248/6216/products/canvas-firewood-carrier-13.jpg?v=1589385240"
-    },
-    {
-        "id": 115,
-        "product_id": 11,
-        "url": "https://uncrate.com/p/2022/12/rimowa-pine-raspberry-1.jpg"
     },
     {
         "id": 116,

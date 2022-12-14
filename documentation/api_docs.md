@@ -989,7 +989,7 @@ Returns the Current User's favorited Products.
           "id": 1,
           "title": "Whiskey-flavored Soap",
           "description": "Clean your bits with soap that smells (and tastes) like whiskey!",
-          "detailed_description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy."
+          "detailed_description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy.",
           "category_id": 1,
           "price": 24.99,
           "preview_img_id": 1,
@@ -998,7 +998,7 @@ Returns the Current User's favorited Products.
           "id": 2,
           "title": "Whiskey-flavored Shampoo",
           "description": "Clean your bits with soap that smells (and tastes) like whiskey!",
-          "detailed_description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy."
+          "detailed_description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy.",
           "category_id": 1,
           "price": 29.99,
           "preview_img_id": 2,
@@ -1038,7 +1038,7 @@ Adds a product to the current user's favorites by the product's id.
           "id": 1,
           "title": "Whiskey-flavored Soap",
           "description": "Clean your bits with soap that smells (and tastes) like whiskey!",
-          "detailed_description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy."
+          "detailed_description": "Let the sultry aroma of triple-distilled Irish whiskey cleanse you from the inside and out. Smelling like an alcoholic has never been so classy.",
           "category_id": 1,
           "price": 24.99,
           "preview_img_id": 1,

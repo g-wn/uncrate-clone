@@ -42,7 +42,7 @@
   right: 1px;
 }
 
-.Container {
+.ContainerCursor {
   position: relative;
   display: flex;
   vertical-align: middle;
@@ -50,6 +50,15 @@
   width: 100%;
   align-items: center;
   cursor: pointer;
+}
+
+.Container {
+  position: relative;
+  display: flex;
+  vertical-align: middle;
+  overflow: hidden;
+  width: 100%;
+  align-items: center;
 }
 
 .CarouselItem {

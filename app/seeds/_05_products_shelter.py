@@ -171,4 +171,120 @@ products_shelter_imgs = [
         "product_id": 55,
         "url": "https://uncrate.com/assets_c/2022/11/nasa-ipwk-rocket-print-black-1-thumb-960xauto-153854.jpg",
     },
+    {
+        "id": 229,
+        "product_id": 45,
+        "url": "https://uncrate.com/assets_c/2022/12/seiko-mai-alarm-clock-black-and-gold-23-thumb-960xauto-155168.jpg"
+    },
+    {
+        "id": 230,
+        "product_id": 45,
+        "url": "https://uncrate.com/assets_c/2022/12/seiko-mai-alarm-clock-black-and-gold-22-thumb-960xauto-155166.jpg"
+    },
+    {
+        "id": 231,
+        "product_id": 45,
+        "url": "https://uncrate.com/assets_c/2022/12/seiko-mai-alarm-clock-black-and-gold-24-thumb-960xauto-155170.jpg"
+    },
+    {
+        "id": 232,
+        "product_id": 45,
+        "url": "https://uncrate.com/assets_c/2022/12/seiko-mai-alarm-clock-blue-24-thumb-960xauto-155171.jpg"
+    },
+    {
+        "id": 233,
+        "product_id": 46,
+        "url": "https://uncrate.com/assets_c/2021/12/hype-lev-levitator-2-thumb-960xauto-141303.jpg"
+    },
+    {
+        "id": 234,
+        "product_id": 46,
+        "url": "https://uncrate.com/assets_c/2021/12/hypelev-white-1-thumb-960xauto-141301.jpg"
+    },
+    {
+        "id": 235,
+        "product_id": 46,
+        "url": "https://uncrate.com/assets_c/2021/12/hypelev-white-2-thumb-960xauto-141304.jpg"
+    },
+    {
+        "id": 236,
+        "product_id": 47,
+        "url": "https://uncrate.com/assets_c/2022/11/reigning-champ-pendleton-stadium-blanket-2-thumb-960xauto-154677.jpg"
+    },
+    {
+        "id": 237,
+        "product_id": 47,
+        "url": "https://uncrate.com/assets_c/2022/11/reigning-champ-pendleton-stadium-blanket-3-thumb-960xauto-154678.jpg"
+    },
+    {
+        "id": 238,
+        "product_id": 47,
+        "url": "https://uncrate.com/assets_c/2022/11/reigning-champ-pendleton-stadium-blanket-4-thumb-960xauto-154679.jpg"
+    },
+    {
+        "id": 239,
+        "product_id": 47,
+        "url": "https://uncrate.com/assets_c/2022/11/reigning-champ-pendleton-stadium-blanket-5-thumb-960xauto-154681.jpg"
+    },
+    {
+        "id": 240,
+        "product_id": 48,
+        "url": "https://uncrate.com/assets_c/2022/10/herman-miller-nelson-fireplace-toolkit-1-thumb-960xauto-152265.jpg"
+    },
+    {
+        "id": 241,
+        "product_id": 48,
+        "url": "https://uncrate.com/assets_c/2022/10/herman-miller-nelson-fireplace-toolkit-3-thumb-960xauto-152267.jpg"
+    },
+        {
+        "id": 242,
+        "product_id": 48,
+        "url": "https://uncrate.com/assets_c/2022/10/herman-miller-nelson-fireplace-toolkit-4-thumb-960xauto-152266.jpg"
+    },
+        {
+        "id": 243,
+        "product_id": 48,
+        "url": "https://uncrate.com/assets_c/2022/10/herman-miller-nelson-fireplace-toolkit-5-thumb-960xauto-152268.jpg"
+    },
+    {
+        "id": 244,
+        "product_id": 49,
+        "url": "https://uncrate.com/assets_c/2022/11/porsche-356-nose-print-white-1-thumb-960xauto-154584.jpg"
+    },
+        {
+        "id": 245,
+        "product_id": 50,
+        "url": "https://uncrate.com/assets_c/2022/10/filson-black-checkered-wool-blanket-1-thumb-960xauto-152357.jpg"
+    },
+        {
+        "id": 246,
+        "product_id": 50,
+        "url": "https://uncrate.com/assets_c/2022/10/filson-black-checkered-wool-blanket-21-thumb-960xauto-152363.jpg"
+    },
+        {
+        "id": 247,
+        "product_id": 50,
+        "url": "https://uncrate.com/assets_c/2022/10/filson-black-checkered-wool-blanket-3-thumb-960xauto-152359.jpg"
+    },
+    {
+        "id": 248,
+        "product_id": 51,
+        "url": "https://uncrate.com/assets_c/2022/11/Ursula-TFSK-bond-print-white-1-thumb-960xauto-154347.jpg"
+    },
+        {
+        "id": 249,
+        "product_id": 52,
+        "url": "https://uncrate.com/assets_c/2022/11/sean-connery-golfing-IPPI-white-1-thumb-960xauto-154316.jpg"
+    },
+        {
+        "id": 250,
+        "product_id": 53,
+        "url": "https://uncrate.com/assets_c/2022/11/warhol-kpzn-print-white-1-thumb-960xauto-154182.jpg"
+    },
+        {
+        "id": 251,
+        "product_id": 55,
+        "url": "https://uncrate.com/assets_c/2022/11/nasa-ipwk-rocket-print-white-1-thumb-960xauto-153855.jpg"
+    }
+
 ]

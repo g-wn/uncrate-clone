@@ -28,6 +28,8 @@ class Cart(db.Model):
             "user_id": self.user_id,
             "total": self.total,
             "purchased": self.purchased,
+            "cartItems": {item.to_dict()["id"]: item.to_dict() for item in self.cart_items},
+            "cartUser": self.cart_user.to_dict()
         }
 
     def __repr__(self):
@@ -61,6 +63,7 @@ class CartItem(db.Model):
             "cartId": self.cart_id,
             "productId": self.product_id,
             "quantity": self.quantity,
+            "product": self.product.to_dict()
         }
 
     def __repr__(self):

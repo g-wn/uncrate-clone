@@ -171,11 +171,6 @@ products_style_imgs = [
         'url': "https://uncrate.com/assets_c/2020/11/reigning-champ-terry-joggers-1-thumb-960xauto-124675.jpg"
     },
     {
-        'id': 119,
-        'product_id': 12,
-        'url': "https://uncrate.com/assets_c/2022/10/rze-ascentus-gmt-watch-thumb-960xauto-152584.jpg"
-    },
-    {
         'id': 120,
         'product_id': 12,
         'url': "https://uncrate.com/assets_c/2022/11/rze-orange-thumb-960xauto-153706.jpg"
@@ -196,21 +191,6 @@ products_style_imgs = [
         'url': "https://uncrate.com/assets_c/2022/11/rze-green-thumb-960xauto-153709.jpg"
     },
     {
-        'id': 124,
-        'product_id': 13,
-        'url': "https://uncrate.com/assets_c/2022/12/solios-black-curve-solar-watch-thumb-960xauto-155272.jpg"
-    },
-    {
-        'id': 125,
-        'product_id': 14,
-        'url': "https://uncrate.com/assets_c/2022/12/sunspel-fleeceback-sweatpants-white-melange-2-thumb-960xauto-155258.jpg"
-    },
-    {
-        'id': 126,
-        'product_id': 14,
-        'url': "https://uncrate.com/assets_c/2022/11/rze-black-thumb-960xauto-153708.jpg"
-    },
-    {
         'id': 127,
         'product_id': 14,
         'url': "https://uncrate.com/assets_c/2022/12/sunspel-fleeceback-sweatpants-white-melange-3-thumb-960xauto-155259.jpg"
@@ -221,16 +201,6 @@ products_style_imgs = [
         'url': "https://uncrate.com/assets_c/2022/12/sunspel-fleeceback-sweatpants-white-melange-1a-thumb-960xauto-155257.jpg"
     },
     {
-        'id': 129,
-        'product_id': 15,
-        'url': "https://uncrate.com/assets_c/2022/12/london-sock-co-simply-satorical-thumb-960xauto-155132.jpg"
-    },
-    {
-        'id': 130,
-        'product_id': 16,
-        'url': "https://uncrate.com/assets_c/2022/12/holden-puffy-slides-black-1-thumb-960xauto-155217.jpg"
-    },
-    {
         'id': 131,
         'product_id': 16,
         'url': "https://uncrate.com/assets_c/2022/12/holden-puffy-slides-black-2-thumb-960xauto-155216.jpg"
@@ -239,11 +209,6 @@ products_style_imgs = [
         'id': 132,
         'product_id': 16,
         'url': "https://uncrate.com/assets_c/2022/12/holden-puffy-slides-black-3-thumb-960xauto-155218.jpg"
-    },
-    {
-        'id': 133,
-        'product_id': 17,
-        'url': "https://uncrate.com/assets_c/2022/12/filling-pieces-hightop-sneakers-1-thumb-960xauto-155190.jpg"
     },
     {
         'id': 134,
@@ -266,11 +231,6 @@ products_style_imgs = [
         'url': "https://uncrate.com/assets_c/2022/12/filling-pieces-hightop-sneakers-5-thumb-960xauto-155194.jpg"
     },
     {
-        'id': 138,
-        'product_id': 18,
-        'url': "https://uncrate.com/assets_c/2022/10/faherty-black-sweater-shirt-23-thumb-960xauto-153423.jpg"
-    },
-    {
         'id': 139,
         'product_id': 18,
         'url': "https://uncrate.com/assets_c/2022/10/faherty-black-sweater-shirt-21-thumb-960xauto-153443.jpg"
@@ -279,16 +239,6 @@ products_style_imgs = [
         'id': 140,
         'product_id': 18,
         'url': "https://uncrate.com/assets_c/2022/10/faherty-black-sweater-shirt-24-thumb-960xauto-153422.jpg"
-    },
-    {
-        'id': 141,
-        'product_id': 19,
-        'url': "https://uncrate.com/assets_c/2022/11/mobyfox-nasa-apple-watch-bands-thumb-960xauto-154815.jpg"
-    },
-    {
-        'id': 142,
-        'product_id': 20,
-        'url': "https://uncrate.com/assets_c/2022/12/new-balance-974h-hikers-1-thumb-960xauto-155098.jpg"
     },
     {
         'id': 143,
@@ -311,11 +261,6 @@ products_style_imgs = [
         'url': "https://uncrate.com/assets_c/2022/12/new-balance-974h-hikers-5-thumb-960xauto-155101.jpg"
     },
     {
-        'id': 147,
-        'product_id': 21,
-        'url': "https://uncrate.com/assets_c/2021/11/onsen-bath-robe-1-thumb-960xauto-140166.jpg"
-    },
-    {
         'id': 148,
         'product_id': 21,
         'url': "https://uncrate.com/assets_c/2021/11/onsen-bath-robe-2-thumb-960xauto-140167.jpg"
@@ -324,11 +269,6 @@ products_style_imgs = [
         'id': 149,
         'product_id': 21,
         'url': "https://uncrate.com/assets_c/2021/11/onsen-bath-robe-3-thumb-960xauto-140168.jpg"
-    },
-    {
-        'id': 150,
-        'product_id': 22,
-        'url': "https://uncrate.com/assets_c/2020/11/reigning-champ-terry-joggers-1-thumb-960xauto-124675.jpg"
     },
     {
         'id': 151,

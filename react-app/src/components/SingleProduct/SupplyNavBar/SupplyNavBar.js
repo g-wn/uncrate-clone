@@ -9,7 +9,14 @@ export default function SupplyNavBar() {
       <div className="topbar-wrapper">
         <div className="topbar">
           <div className="topbar-left">
-            <NavLink to="/">reduncrate</NavLink>
+            <NavLink to="/">
+              {" "}
+              <img
+                src="/images/reduncrate-white2.png"
+                className="reduncrate-logo-mini"
+                alt="header-logo"
+              ></img>
+            </NavLink>
           </div>
           <div className="topbar-middle">
             <ul>
