@@ -18,140 +18,140 @@ import ProductCreateForm from "./components/ProductForm/CreateProduct";
 import UserProfile from "./components/UserProfile/UserProfile";
 
 function App() {
-  const [loaded, setLoaded] = useState(false);
-  const dispatch = useDispatch();
+    const [loaded, setLoaded] = useState(false);
+    const dispatch = useDispatch();
 
-  useEffect(() => {
-    (async () => {
-      await dispatch(authenticate());
-      setLoaded(true);
-    })();
-  }, [dispatch]);
+    useEffect(() => {
+        (async () => {
+            await dispatch(authenticate());
+            setLoaded(true);
+        })();
+    }, [dispatch]);
 
-  if (!loaded) {
-    return null;
-  }
+    if (!loaded) {
+        return null;
+    }
 
-  return (
-    <BrowserRouter>
-      <Switch>
-        <Route
-          exact
-          path='/'
-        >
-          <ProductIndex />
-        </Route>
-        <ProtectedRoute path='/products/new'>
-          <ProductCreateForm />
-        </ProtectedRoute>
-        <ProtectedRoute path='/products/:id/update'>
-          <ProductUpdateForm />
-        </ProtectedRoute>
-        <Route path='/products/:id'>
-          <SingleProduct />
-        </Route>
-        <ProtectedRoute
-          path='/profile'
-          exact={true}
-        >
-          <UserProfile />
-        </ProtectedRoute>
-        <ProtectedRoute path='/:id/images/add-edit'>
-          <UserProductsImages />
-        </ProtectedRoute>
-        <Route
-          path='/login'
-          exact={true}
-        >
-          <LoginForm />
-        </Route>
-        <Route
-          path='/sign-up'
-          exact={true}
-        >
-          <SignUpForm />
-        </Route>
-        <Route
-          path='/search'
-          exact={true}
-        >
-          <Search />
-        </Route>
-        <Route
-          path='/cart'
-          exact={true}
-        >
-          <Cart />
-        </Route>
-        <Route
-          path='/category/gear'
-          exact={true}
-        >
-          <CategoryPage categoryName='gear' />
-        </Route>
-        <Route
-          path='/category/style'
-          exact={true}
-        >
-          <CategoryPage categoryName='style' />
-        </Route>
-        <Route
-          path='/category/cars'
-          exact={true}
-        >
-          <CategoryPage categoryName='cars' />
-        </Route>
-        <Route
-          path='/category/vices'
-          exact={true}
-        >
-          <CategoryPage categoryName='vices' />
-        </Route>
-        <Route
-          path='/category/shelter'
-          exact={true}
-        >
-          <CategoryPage categoryName='shelter' />
-        </Route>
-        <Route
-          path='/category/body'
-          exact={true}
-        >
-          <CategoryPage categoryName='body' />
-        </Route>
-        <Route
-          path='/category/etc'
-          exact={true}
-        >
-          <CategoryPage categoryName='etc' />
-        </Route>
-        <Route
-          path='/category/tech'
-          exact={true}
-        >
-          <CategoryPage categoryName='tech' />
-        </Route>
-        <ProtectedRoute
-          path='/users'
-          exact={true}
-        >
-          <UsersList />
-        </ProtectedRoute>
-        <ProtectedRoute
-          path='/users/:userId'
-          exact={true}
-        >
-          <User />
-        </ProtectedRoute>
-        <Route
-          path='/'
-          exact={true}
-        >
-          <h1>My Home Page</h1>
-        </Route>
-      </Switch>
-    </BrowserRouter>
-  );
+    return (
+        <BrowserRouter>
+            <Switch>
+                <Route
+                    exact
+                    path='/'
+                >
+                    <ProductIndex />
+                </Route>
+                <ProtectedRoute path='/products/new'>
+                    <ProductCreateForm />
+                </ProtectedRoute>
+                <ProtectedRoute path='/products/:id/update'>
+                    <ProductUpdateForm />
+                </ProtectedRoute>
+                <Route path='/products/:id'>
+                    <SingleProduct />
+                </Route>
+                <ProtectedRoute
+                    path='/profile'
+                    exact={true}
+                >
+                    <UserProfile />
+                </ProtectedRoute>
+                <ProtectedRoute path='/:id/images/add-edit'>
+                    <UserProductsImages />
+                </ProtectedRoute>
+                <Route
+                    path='/login'
+                    exact={true}
+                >
+                    <LoginForm />
+                </Route>
+                <Route
+                    path='/sign-up'
+                    exact={true}
+                >
+                    <SignUpForm />
+                </Route>
+                <Route
+                    path='/search'
+                    exact={true}
+                >
+                    <Search />
+                </Route>
+                <Route
+                    path='/cart'
+                    exact={true}
+                >
+                    <Cart />
+                </Route>
+                <Route
+                    path='/category/gear'
+                    exact={true}
+                >
+                    <CategoryPage categoryName='gear' />
+                </Route>
+                <Route
+                    path='/category/style'
+                    exact={true}
+                >
+                    <CategoryPage categoryName='style' />
+                </Route>
+                <Route
+                    path='/category/cars'
+                    exact={true}
+                >
+                    <CategoryPage categoryName='cars' />
+                </Route>
+                <Route
+                    path='/category/vices'
+                    exact={true}
+                >
+                    <CategoryPage categoryName='vices' />
+                </Route>
+                <Route
+                    path='/category/shelter'
+                    exact={true}
+                >
+                    <CategoryPage categoryName='shelter' />
+                </Route>
+                <Route
+                    path='/category/body'
+                    exact={true}
+                >
+                    <CategoryPage categoryName='body' />
+                </Route>
+                <Route
+                    path='/category/etc'
+                    exact={true}
+                >
+                    <CategoryPage categoryName='etc' />
+                </Route>
+                <Route
+                    path='/category/tech'
+                    exact={true}
+                >
+                    <CategoryPage categoryName='tech' />
+                </Route>
+                <ProtectedRoute
+                    path='/users'
+                    exact={true}
+                >
+                    <UsersList />
+                </ProtectedRoute>
+                <ProtectedRoute
+                    path='/users/:userId'
+                    exact={true}
+                >
+                    <User />
+                </ProtectedRoute>
+                <Route
+                    path='/'
+                    exact={true}
+                >
+                    <h1>My Home Page</h1>
+                </Route>
+            </Switch>
+        </BrowserRouter>
+    );
 }
 
 export default App;

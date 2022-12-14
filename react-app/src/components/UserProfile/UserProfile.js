@@ -7,83 +7,81 @@ import Navigation from '../Navigation/Navigation';
 import './UserProfile.css';
 
 const UserProfile = () => {
-  const dispatch = useDispatch();
-  const history = useHistory();
-  const user = useSelector((state) => state.session.user);
+    const dispatch = useDispatch();
+    const history = useHistory();
+    const user = useSelector((state) => state.session.user);
 
-  const allProducts = useSelector(state => Object.values(state.products));
+    const allProducts = useSelector(state => Object.values(state.products));
 
-  useEffect(() => {
-    dispatch(getProducts());
-  }, [dispatch]);
+    useEffect(() => {
+        dispatch(getProducts());
+    }, [dispatch]);
 
-  if (!allProducts || allProducts.length === 0) return null;
+    if (!allProducts || allProducts.length === 0) return null;
 
-  if (!allProducts || allProducts.length === 0) return null;
-
-  return (
-    <>
-      <Navigation />
-      <div className='user-products'>
-        <div className='my-listings'>
-          {`${user.first_name}'s Listings`}
-          <NavLink
-            className='add-product-btn'
-            to={'/products/new'}
-          >
-            <AiOutlinePlusCircle size={30} />
-          </NavLink>
-        </div>
-        {allProducts.map(
-          (product, idx) =>
-            product.productOwner.id === user.id && (
-              <div
-                key={idx}
-                className='product-details'
-              >
+    return (
+        <>
+            <Navigation />
+            <div className='my-listings'>
+                {`${user.first_name}'s Listings`}
                 <NavLink
-                  className='image'
-                  to={`/products/${product.id}`}
+                    className='add-product-btn'
+                    to={'/products/new'}
                 >
-                  <img
-                    alt="product-main-img"
-                    className="product-preview-img"
-                    src={product.productImages[product.previewImgId].url}
-                  ></img>
+                    <AiOutlinePlusCircle size={30} />
                 </NavLink>
-                {product.title}
-                <button
-                  className="edit-listing"
-                  onClick={() => {
-                    history.push(`/products/${product.id}/update`);
-                  }}
-                >
-                  Edit Product Details
-                </button>
-                <button
-                  className='edit-listing'
-                  onClick={() => {
-                    history.push(`/${product.id}/images/add-edit`);
-                  }}
-                >
-                  Add/Edit Images
-                </button>
-                <button
-                  className='delete-listing'
-                  onClick={async e => {
-                    e.preventDefault();
-                    await dispatch(deleteProduct(product.id));
-                    dispatch(getProducts());
-                  }}
-                >
-                  Yeet From Reduncrate
-                </button>
-              </div>
-            )
-        )}
-      </div>
-    </>
-  );
+            </div>
+            <div className='user-products'>
+                {allProducts.map(
+                    (product, idx) =>
+                        product.productOwner.id === user.id && (
+                            <div
+                                key={idx}
+                                className='product-details'
+                            >
+                                <NavLink
+                                    className='image'
+                                    to={`/products/${product.id}`}
+                                >
+                                    <img
+                                        alt="product-main-img"
+                                        className="product-preview-img"
+                                        src={product.productImages[product.previewImgId].url}
+                                    ></img>
+                                </NavLink>
+                                {product.title}
+                                <button
+                                    className="edit-listing"
+                                    onClick={() => {
+                                        history.push(`/products/${product.id}/update`);
+                                    }}
+                                >
+                                    Edit Product Details
+                                </button>
+                                <button
+                                    className='edit-listing'
+                                    onClick={() => {
+                                        history.push(`/${product.id}/images/add-edit`);
+                                    }}
+                                >
+                                    Add/Edit Images
+                                </button>
+                                <button
+                                    className='delete-listing'
+                                    onClick={async e => {
+                                        e.preventDefault();
+                                        await dispatch(deleteProduct(product.id));
+                                        dispatch(getProducts());
+                                    }}
+                                >
+                                    Yeet From Reduncrate
+                                </button>
+                            </div>
+                        )
+                )}
+            </div>
+        </>
+    );
 };
 
 export default UserProfile;

@@ -1,31 +1,21 @@
 import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { NavLink } from 'react-router-dom';
 import { getCart } from '../../store/cart';
-import { editCartItem, removeCartItem } from '../../store/cart_items';
+import { removeCartItem } from '../../store/cart_items';
+import SelectField from '../SelectField/SelectField';
 import './Cart.css';
 
-const Cart = () => {
+const Cart = ({ setShowCartModal }) => {
     const dispatch = useDispatch();
-    const [item, setItem] = useState(null)
-    const [quantity, setQuantity] = useState(1);
-    const [errors, setErrors] = useState([]);
     const cart = useSelector(state => state.cart);
 
     useEffect(() => {
         dispatch(getCart());
     }, [dispatch])
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        setErrors([]);
-        console.log(quantity)
-        await dispatch(editCartItem(item, quantity))
-        // .catch(async res => {
-        //     const data = await res.json();
-        //     if (data && data.errors) setErrors(Object.values(data.errors))
-        // });
-        dispatch(getCart())
-    }
+    const usDollar = Intl.NumberFormat("en-US");
+    let totalPrice = 0;
 
     let cartItems;
     if (cart && cart.cartItems) cartItems = Object.values(cart.cartItems)
@@ -34,15 +24,20 @@ const Cart = () => {
 
     return (
         <div className='cart-container'>
-            <h1 className='cart-title'>YOUR CRATE</h1>
-            <div>
+            <div className='cart-header'>
+                <h1 className='cart-title'>YOUR CRATE</h1>
+                <button className='cart-header-x' onClick={() => setShowCartModal(false)}><i className="fa-sharp fa-solid fa-xmark"></i></button>
+            </div>
+            <div className='cart-item-container'>
                 {cartItems.map(item => (
-                    <div className='cart-item-container' key={item.id}>
-                        <img
-                            className='cart-item-image'
-                            src={item.product.productImages[item.product.previewImgId].url}
-                            alt='cart item'
-                        />
+                    <div className='one-cart-item' key={item.id}>
+                        <NavLink to={`/products/${item.product.id}`}>
+                            <img
+                                className='cart-item-image'
+                                src={item.product.productImages[item.product.previewImgId].url}
+                                alt='cart item'
+                            />
+                        </NavLink>
                         <div className='cart-item-title-and-remove'>
                             {item.product.title}
                             <button className='cart-remove-button' onClick={async (e) => {
@@ -56,46 +51,36 @@ const Cart = () => {
                         </div>
                         <div className='cart-quantity-and-price'>
                             <div className='cart-quantity-container'>
-                                <form onSubmit={handleSubmit}>
-                                    {errors.length > 0 && (
-                                        <ul>
-                                            {errors.map((error, idx) => (
-                                                <li key={idx}>{error}</li>
-                                            ))}
-                                        </ul>
-                                    )}
-                                    <label htmlFor='quantity-input'></label>
-                                    <select
-                                        required
-                                        // onFocus={() => setItem(item)}
-                                        onChange={e => {
-                                            setQuantity(e.target.value)
-                                            // handleSubmit(e)
-                                        }}
-                                        name='quantity-input'
-                                        value={quantity}
-                                    >
-                                        <option value='1'>1</option>
-                                        <option value='2'>2</option>
-                                        <option value='3'>3</option>
-                                        <option value='4'>4</option>
-                                        <option value='5'>5</option>
-                                        <option value='6'>6</option>
-                                        <option value='7'>7</option>
-                                        <option value='8'>8</option>
-                                        <option value='9'>9</option>
-                                        <option value='10'>10</option>
-                                    </select>
-                                    <br />
-                                    <button type='submit' onClick={() => setItem(item)}>Update</button>
-                                </form>
+                                <SelectField currentItem={item} />
                             </div>
                             <div className='cart-price'>
-                                ${item.product.price}
+                                ${usDollar.format(item.product.price * item.quantity)}
+                                {(totalPrice += item.product.price * item.quantity) && false}
                             </div>
                         </div>
                     </div>
                 ))}
+            </div>
+            <div className='cart-checkout-div'>
+                <div className='cart-total-container'>
+                    <span className='cart-total-text'>TOTAL</span>
+                    <span className='cart-total-price'>${usDollar.format(totalPrice)}</span>
+                </div>
+                <div className='cart-checkout-button-container'>
+                    <button className="cart-checkout-button">CHECKOUT</button>
+                </div>
+                <div className='cart-checkout-text-container'>
+                    <p className='cart-checkout-text'>
+                        FREE SHIPPING OVER $200 IN THE U.S.
+                        INTERNATIONAL RATES AT CHECKOUT.
+                    </p>
+                </div>
+                <div className='cart-checkout-text-container'>
+                    <p className='cart-checkout-text'>
+                        WE'RE PROUD TO OFFER A DISCOUNT TO MILITARY,
+                        NURSES, AND FIRST RESPONDERS.
+                    </p>
+                </div>
             </div>
         </div>
     )

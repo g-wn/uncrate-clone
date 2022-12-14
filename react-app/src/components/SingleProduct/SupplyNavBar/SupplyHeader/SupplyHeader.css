@@ -99,3 +99,9 @@ sup {
 .nav-surplus {
   color: #e74e3c !important;
 }
+
+.supply-header-crate-button {
+    background-color: white;
+    border: none;
+    font-size: 16px;
+}
