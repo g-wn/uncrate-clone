@@ -93,22 +93,21 @@ export const getAllProducts = (state) => Object.values(state.products);
 const initialState = {};
 
 const allProductsReducer = (state = initialState, action) => {
-  switch (action.type) {
-    case LOAD_PRODUCTS:
-      return action.products.Products.reduce((products, product) => {
-        products[product.id] = product;
-        return products;
-      }, {});
-    case CREATE_PRODUCT:
-      return { ...state, [action.product.id]: action.product };
-    default:
-      return state;
-    case DELETE_PRODUCT:
-      const newState = { ...state };
-      delete newState[action.productId];
-      console.log("new state -->", newState);
-      return newState;
-  }
+    switch (action.type) {
+        case LOAD_PRODUCTS:
+            return action.products.Products.reduce((products, product) => {
+                products[product.id] = product;
+                return products;
+            }, {});
+        case CREATE_PRODUCT:
+            return { ...state, [action.product.id]: action.product };
+        default:
+            return state;
+        case DELETE_PRODUCT:
+            const newState = { ...state };
+            delete newState[action.productId];
+            return newState;
+    };
 };
 
 export default allProductsReducer;

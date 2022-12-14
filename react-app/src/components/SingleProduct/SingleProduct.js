@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams, useHistory } from "react-router-dom";
 import { getSingleProduct } from "../../store/one_product";
+import { getProducts } from "../../store/all_products";
+import { addToFavorites } from "../../store/favorites";
 import "./SingleProduct.css";
 import Carousel from "./ImageCarousel/Carousel";
 import SuggestedProducts from "./SuggestedProducts/SuggestedProducts";
@@ -331,7 +333,9 @@ const availableProducts = [
 const SingleProduct = () => {
     const dispatch = useDispatch();
     const { id } = useParams();
+    const user = useSelector((state) => state.session.user);
     const singleProduct = useSelector((state) => state.product[id]);
+    const history = useHistory();
     const [showCartModal, setShowCartModal] = useState(false);
 
     const cart = useSelector((state) => state.cart)
@@ -406,7 +410,10 @@ const SingleProduct = () => {
                                 <Cart setShowCartModal={setShowCartModal} />
                             </Modal>
                         )}
-                        <button className="single-product-details-btn btn-stash-later">
+                        <button className="single-product-details-btn btn-stash-later" onClick={async (e) => {
+                            e.preventDefault();
+                            await dispatch(addToFavorites(singleProduct.id))
+                        }}>
                             STASH FOR LATER
                         </button>
                     </div>
