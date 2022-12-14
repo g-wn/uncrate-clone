@@ -47,7 +47,7 @@ const ProductUpdateForm = () => {
       if (data && data.errors) setErrors(Object.values(data.errors));
     });
 
-    if (updatedProduct) history.push(`/${product.productOwner.id}/profile`);
+    if (updatedProduct) history.push(`/profile`);
   };
 
   if (!product) return null;

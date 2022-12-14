@@ -23,6 +23,7 @@ const UserProfile = () => {
         <>
             <Navigation />
             <div className='my-listings'>
+                <div className="hidden-spacer"></div>
                 {`${user.first_name}'s Listings`}
                 <NavLink
                     className='add-product-btn'

@@ -37,6 +37,7 @@ input[type=number] {
 }
 
 .product-form {
+    max-width: 641px;
     width: 44%;
 }
 
@@ -47,9 +48,10 @@ input[type=number] {
 }
 
 .product-form-header {
+    /* border: 1px solid red; */
     align-items: center;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     text-transform: uppercase;
 }
 

@@ -16,7 +16,8 @@
   }
 
 .my-listings {
-    margin-top: 20px;
+    margin: 20px auto auto auto;
+    max-width: 960px;
     padding-bottom: 10px;
     font-size: 24px;
     display: flex;
@@ -24,7 +25,7 @@
     font-weight: bold;
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
-    justify-content: center;
+    justify-content: space-between;
     padding-top: 20px;
     text-decoration: underline;
 }
@@ -32,6 +33,7 @@
 .user-products {
     display: grid;
     grid-template-columns: auto auto;
+    grid-column-gap: 1em;
     padding-top: 40px;
     justify-content: space-evenly;
     margin: 0 22%;

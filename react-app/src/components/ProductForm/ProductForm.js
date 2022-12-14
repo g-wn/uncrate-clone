@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
+import { BiArrowBack } from 'react-icons/bi';
 import './ProductForm.css';
 
 const ProductForm = ({
@@ -20,6 +22,7 @@ const ProductForm = ({
   errors,
   setErrors
 }) => {
+  const history = useHistory();
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
@@ -49,17 +52,36 @@ const ProductForm = ({
             className='product-form'
             onSubmit={handleSubmit}
           >
-            {errors.length > 0 ? (
-              <ul className='product-form-header'>
-                {errors.map((error, idx) => (
-                  <li key={idx}>{error}</li>
-                ))}
-              </ul>
-            ) : formType === 'create' ? (
-              <h2 className='product-form-header'>Provide some details about your product</h2>
-            ) : (
-              <h2 className='product-form-header'>Change any product details</h2>
-            )}
+            {
+              errors.length > 0 ? (
+                <ul className='product-form-header'>
+                  {errors.map((error, idx) => (
+                    <li key={idx}>{error}</li>
+                  ))}
+                </ul>
+              ) : (
+                <div className='product-form-header'>
+                  <button
+                    onClick={() => history.goBack()}
+                    className='back-btn'
+                  >
+                    <BiArrowBack size={25} />
+                  </button>
+                  <h2>{formType === 'create' ? 'Product Details' : 'Change Product Details'}</h2>
+                  <div className='hidden-spacer'></div>
+                </div>
+              )
+
+              // formType === 'create' ? (
+              //   <div className='product-form-header'>
+              //     <div className="hidden-spacer"></div>
+              //     <h2>Product Details</h2>
+              //   </div>
+              // ) : (
+              //   <div className='product-form-header'>
+              //     <h2 className='product-form-header'>Change product details</h2>
+              //   </div>
+            }
 
             <div className='inputs-container'>
               <div className='title-container'>
