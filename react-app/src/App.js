@@ -8,6 +8,7 @@ import ProtectedRoute from "./components/auth/ProtectedRoute";
 import UsersList from "./components/UsersList";
 import User from "./components/User";
 import Search from "./components/Search/Search";
+import CategoryPage from "./components/CategoryPages/CategoryPage";
 import { authenticate } from "./store/session";
 import ProductIndex from "./components/ProductIndex/ProductIndex";
 import SingleProduct from "./components/SingleProduct/SingleProduct";
@@ -46,7 +47,7 @@ function App() {
         <Route path="/products/:id">
           <SingleProduct />
         </Route>
-        <ProtectedRoute path="/:userId/profile" exact={true}>
+        <ProtectedRoute path="/profile" exact={true}>
           <UserProfile />
         </ProtectedRoute>
         <ProtectedRoute path="/:id/images/add-edit">
@@ -63,6 +64,30 @@ function App() {
         </Route>
         <Route path="/cart" exact={true}>
           <Cart />
+        </Route>
+        <Route path="/category/gear" exact={true}>
+          <CategoryPage categoryName="gear" />
+        </Route>
+        <Route path="/category/style" exact={true}>
+          <CategoryPage categoryName="style" />
+        </Route>
+        <Route path="/category/cars" exact={true}>
+          <CategoryPage categoryName="cars" />
+        </Route>
+        <Route path="/category/vices" exact={true}>
+          <CategoryPage categoryName="vices" />
+        </Route>
+        <Route path="/category/shelter" exact={true}>
+          <CategoryPage categoryName="shelter" />
+        </Route>
+        <Route path="/category/body" exact={true}>
+          <CategoryPage categoryName="body" />
+        </Route>
+        <Route path="/category/etc" exact={true}>
+          <CategoryPage categoryName="etc" />
+        </Route>
+        <Route path="/category/tech" exact={true}>
+          <CategoryPage categoryName="tech" />
         </Route>
         <ProtectedRoute path="/users" exact={true}>
           <UsersList />
