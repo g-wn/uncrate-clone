@@ -18,48 +18,6 @@ const ProductIndex = () => {
 
   if (!products || products.length === 0) return null;
 
-  const categoriesList = [
-    "GEAR",
-    "STYLE",
-    "CARS",
-    "TECH",
-    "SHELTER",
-    "VICES",
-    "BODY",
-    "ETC",
-  ];
-
-  const findCategory = (product_id) => {
-    let category;
-    for (let item in products) {
-      if (products[item].id === product_id) {
-        category = products[item].categoryId;
-      }
-    }
-
-    console.log("Category: " + category);
-
-    switch (category) {
-      case 1:
-        return "GEAR";
-      case 2:
-        return "STYLE";
-      case 3:
-        return "CARS";
-      case 4:
-        return "TECH";
-      case 5:
-        return "SHELTER";
-      case 6:
-        return "VICES";
-      case 7:
-        return "BODY";
-      case 8:
-        return "ETC";
-      default:
-        break;
-    }
-  };
   return (
     <>
       <Navigation />

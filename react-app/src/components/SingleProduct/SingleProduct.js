@@ -329,7 +329,6 @@ const availableProducts = [
 const SingleProduct = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
-  const user = useSelector((state) => state.session.user);
   const singleProduct = useSelector((state) => state.product[id]);
   console.log("single product -->", singleProduct);
   const history = useHistory();
