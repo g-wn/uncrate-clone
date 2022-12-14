@@ -1,3 +1,14 @@
+.add-product-btn {
+    color: black;
+    position: relative;
+    top: .15em;
+    transition: scale 0.35s ease;
+}
+
+.add-product-btn:hover {
+    scale: 1.25;
+}
+
 .product-preview-img {
     width: 468px;
     height: 313px;
@@ -8,6 +19,7 @@
     padding-bottom: 10px;
     font-size: 24px;
     display: flex;
+    column-gap: 1em;
     font-weight: bold;
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
@@ -34,6 +46,7 @@
     width: 100%;
     margin-bottom: 20px;
     margin-top: 10px;
+    position: relative;
     border: 1px solid rgb(128, 128, 128, 0.4);
     max-width: 468px;
     font-family: 'Oswald', sans-serif;

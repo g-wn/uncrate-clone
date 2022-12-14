@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { NavLink, useHistory } from 'react-router-dom';
+import { AiOutlinePlusCircle } from 'react-icons/ai';
 import { getProducts, deleteProduct } from '../../store/all_products';
 import Navigation from '../Navigation/Navigation';
 import './UserProfile.css';
@@ -24,7 +25,15 @@ const UserProfile = () => {
     <>
       <Navigation />
       <div className='user-products'>
-        <div className='my-listings'>{`${user.first_name}'s Listings`}</div>
+        <div className='my-listings'>
+          {`${user.first_name}'s Listings`}
+          <NavLink
+            className='add-product-btn'
+            to={'/products/new'}
+          >
+            <AiOutlinePlusCircle size={30} />
+          </NavLink>
+        </div>
         {allProducts.map(
           (product, idx) =>
             product.productOwner.id === user.id && (

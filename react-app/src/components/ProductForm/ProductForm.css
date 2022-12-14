@@ -7,6 +7,7 @@ input::-webkit-inner-spin-button {
 
 /* HIDE NUMBER INPUT SPINNERS - FIREFOX */
 input[type=number] {
+    appearance: textfield;
     -moz-appearance: textfield;
 }
 
@@ -35,23 +36,28 @@ input[type=number] {
     row-gap: .75em;
 }
 
+.product-form {
+    width: 44%;
+}
 
 .product-form-container {
+    align-items: center;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .product-form-header {
+    align-items: center;
     display: flex;
     justify-content: center;
-    align-items: center;
+    text-transform: uppercase;
 }
 
 .product-form-submit {
     background-color: #000;
     border: none;
     color: #fff;
+    cursor: pointer;
     padding: 1em;
     margin-top: .75em;
 }

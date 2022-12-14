@@ -1,8 +1,8 @@
 .add-image-btn,
 .back-btn {
     position: relative;
-    transition: scale 0.35s ease;
     top: .2em;
+    transition: scale 0.35s ease;
 }
 
 .add-image-btn:hover,
