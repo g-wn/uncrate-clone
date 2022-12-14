@@ -1,17 +1,17 @@
-import { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { NavLink, useHistory } from "react-router-dom";
-import { getProducts, deleteProduct } from "../../store/all_products";
-import Navigation from "../Navigation/Navigation";
-import "./UserProfile.css";
+import { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { NavLink, useHistory } from 'react-router-dom';
+import { AiOutlinePlusCircle } from 'react-icons/ai';
+import { getProducts, deleteProduct } from '../../store/all_products';
+import Navigation from '../Navigation/Navigation';
+import './UserProfile.css';
 
 const UserProfile = () => {
   const dispatch = useDispatch();
   const history = useHistory();
   const user = useSelector((state) => state.session.user);
 
-  const allProducts = useSelector((state) => Object.values(state.products));
-  console.log("all products -->", allProducts);
+  const allProducts = useSelector(state => Object.values(state.products));
 
   useEffect(() => {
     dispatch(getProducts());
@@ -24,13 +24,27 @@ const UserProfile = () => {
   return (
     <>
       <Navigation />
-      <div className="user-products">
-        <div className="my-listings">{`${user.first_name}'s Listings`}</div>
+      <div className='user-products'>
+        <div className='my-listings'>
+          {`${user.first_name}'s Listings`}
+          <NavLink
+            className='add-product-btn'
+            to={'/products/new'}
+          >
+            <AiOutlinePlusCircle size={30} />
+          </NavLink>
+        </div>
         {allProducts.map(
-          (product) =>
+          (product, idx) =>
             product.productOwner.id === user.id && (
-              <div className="product-details">
-                <NavLink className="image" to={`/products/${product.id}`}>
+              <div
+                key={idx}
+                className='product-details'
+              >
+                <NavLink
+                  className='image'
+                  to={`/products/${product.id}`}
+                >
                   <img
                     alt="product-main-img"
                     className="product-preview-img"
@@ -47,8 +61,16 @@ const UserProfile = () => {
                   Edit Product Details
                 </button>
                 <button
-                  className="delete-listing"
-                  onClick={async (e) => {
+                  className='edit-listing'
+                  onClick={() => {
+                    history.push(`/${product.id}/images/add-edit`);
+                  }}
+                >
+                  Add/Edit Images
+                </button>
+                <button
+                  className='delete-listing'
+                  onClick={async e => {
                     e.preventDefault();
                     await dispatch(deleteProduct(product.id));
                     dispatch(getProducts());

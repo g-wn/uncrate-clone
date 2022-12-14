@@ -58,7 +58,7 @@ function Navigation() {
                 <LogoutButton setShowLoginModal={setShowLoginModal} /> |{" "}
                 <button
                   className="profile-button"
-                  onClick={() => history.push(`/${user.id}/profile`)}
+                  onClick={() => history.push(`/profile`)}
                 >
                   PROFILE
                 </button>

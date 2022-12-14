@@ -1,8 +1,7 @@
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { useParams, useHistory, NavLink } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 import { getSingleProduct } from "../../store/one_product";
-import { getProducts } from "../../store/all_products";
 import "./SingleProduct.css";
 import Carousel from "./ImageCarousel/Carousel";
 import SuggestedProducts from "./SuggestedProducts/SuggestedProducts";

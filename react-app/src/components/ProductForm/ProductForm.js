@@ -18,22 +18,24 @@ const ProductForm = ({
   errors,
   setErrors
 }) => {
-    return (
-        <>
-            <div className='product-form-container'>
-                <form
-                    className='product-form'
-                    onSubmit={handleSubmit}
-                >
-                    {errors.length > 0 ? (
-                        <ul className='product-form-header'>
-                            {errors.map((error, idx) => (
-                                <li key={idx}>{error}</li>
-                            ))}
-                        </ul>
-                    ) : (
-                        <h2 className='product-form-header'>Provide some details about your product</h2>
-                    )}
+  return (
+    <>
+      <div className='product-form-container'>
+        <form
+          className='product-form'
+          onSubmit={handleSubmit}
+        >
+          {errors.length > 0 ? (
+            <ul className='product-form-header'>
+              {errors.map((error, idx) => (
+                <li key={idx}>{error}</li>
+              ))}
+            </ul>
+          ) : formType === 'create' ? (
+            <h2 className='product-form-header'>Provide some details about your product</h2>
+          ) : (
+            <h2 className='product-form-header'>Change any product details</h2>
+          )}
 
           <div className='inputs-container'>
             <div className='title-container'>

@@ -69,7 +69,7 @@ def post_product():
 
         db.session.commit()
 
-        return redirect(f"/api/products/{new_product.to_dict()['id']}")
+        return new_product.to_dict()
     return render_template("test_form.html", form=form)
     # CHECK AND ADD ERROR HANDLING
 
@@ -103,9 +103,7 @@ def update_product(id):
         setattr(product, "price", data["price"])
 
         db.session.commit()
-        print("PRODUCT ------------>", product.to_dict())
         return product.to_dict()
-    print("FORM DIDN'T VALIDATE")
     return render_template("test_update_product.html", form=form, id=id)
 
 
@@ -116,18 +114,21 @@ def delete_product(id):
     """
     Query for a single product by id and delete the product if authorized.
     """
-    print('''id
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    ''', id)
+    print(
+        """id
+
+
+
+
+
+
+
+
+
+
+    """,
+        id,
+    )
     product = Product.query.get(id)
     db.session.delete(product)
     db.session.commit()

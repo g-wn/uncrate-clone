@@ -27,35 +27,19 @@ export const getSingleProduct = (productId) => async (dispatch) => {
     dispatch(loadSingleProduct(product));
     return product;
   }
-};
-
-export const deleteProductImage = (productImageId) => async (dispatch) => {
-  const response = await fetch(`/api/products/images/${productImageId}`, {
-    method: "DELETE",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
-
   if (response.ok) {
-    const deletedMsg = await response.json();
-    return deletedMsg;
+    const product = await response.json();
+    dispatch(loadSingleProduct(product));
+    return product;
   }
 };
 
-export const putSingleProduct = (product) => async (dispatch) => {
-  const { title, description, detailed_description, category_id, price } =
-    product;
+export const putSingleProduct = product => async dispatch => {
+  const { title, description, detailed_description, category_id, price } = product;
   const response = await fetch(`/api/products/${product.id}/update`, {
-    method: "PUT",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      title,
-      description,
-      detailed_description,
-      category_id,
-      price,
-    }),
+    method: 'PUT',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ title, description, detailed_description, category_id, price })
   });
 
   if (response.ok) {
@@ -66,7 +50,49 @@ export const putSingleProduct = (product) => async (dispatch) => {
   return response;
 };
 
-export const getProductById = (id) => (state) => state.products[id];
+export const postProductImage = (productId, url) => async dispatch => {
+  const response = await fetch(`/api/images/${productId}/new`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ url })
+  });
+
+  if (response.ok) {
+    const data = response.json();
+    return data;
+  }
+  return response;
+};
+
+export const deleteProductImage = productImageId => async dispatch => {
+  const response = await fetch(`/api/images/${productImageId}`, {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  });
+
+  if (response.ok) {
+    const deletedMsg = await response.json();
+    return deletedMsg;
+  }
+};
+
+export const putProductImage = (productImageId, url) => async dispatch => {
+  const response = await fetch(`/api/images/${productImageId}/update`, {
+    method: 'PUT',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ productImageId, url })
+  });
+
+  if (response.ok) {
+    const data = response.json();
+    return data;
+  }
+  return response;
+};
+
+export const getProductById = id => state => state.products[id];
 
 /* ------------------------- REDUCER ------------------------- */
 
@@ -77,12 +103,12 @@ const singleProductReducer = (state = initialState, action) => {
     case LOAD_SINGLE_PRODUCT:
       return {
         ...state,
-        [action.product.id]: { ...action.product },
+        [action.product.id]: { ...action.product }
       };
     case UPDATE_SINGLE_PRODUCT:
       return {
         ...state,
-        [action.updatedProduct.id]: { ...action.updatedProduct },
+        [action.updatedProduct.id]: { ...action.updatedProduct }
       };
     default:
       return state;
