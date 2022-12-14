@@ -37,14 +37,15 @@ def get_user_favorites(id):
     """
     queried_user = User.query.get(id)
 
-    print('favorites --->', favorites)
-    user_favorites = Product.query.join(favorites).filter(queried_user.id == 2).all()
+    # user_favorites = Product.query.join(favorites). \
+    #                  filter(favorites.user_id == queried_user["id"]). \
+    #                  all()
+    
+    favorites = Product.query.join(favorites).all()
 
-# filter(favorites.user_id == queried_user["id"])
-    print('user favorites --->', user_favorites)
-                    
+    user_favorites = queried_user.favorites       
 
-    return "Hello from user favorites"
+    return user_favorites
 
 
 
