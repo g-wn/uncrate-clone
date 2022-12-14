@@ -1,10 +1,12 @@
-.add-image-btn {
+.add-image-btn,
+.back-btn {
     position: relative;
     transition: scale 0.35s ease;
     top: .2em;
 }
 
-.add-image-btn:hover {
+.add-image-btn:hover,
+.back-btn:hover {
     scale: 1.25;
 }
 
@@ -28,6 +30,12 @@
     width: 93%;
 }
 
+.back-btn {
+    align-self: flex-start;
+    position: relative;
+    top: .5em;
+}
+
 .image-form {
     display: flex;
     flex-direction: column;
@@ -47,7 +55,8 @@
 .delete-btn,
 .edit-btn,
 .add-image-btn,
-.main-image-edit-btn {
+.main-image-edit-btn,
+.back-btn {
     border: none;
     background: none;
     cursor: pointer;

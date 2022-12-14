@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
-import { MdDelete } from 'react-icons/md';
+import { useHistory, useParams } from 'react-router-dom';
 import { AiTwotoneEdit } from 'react-icons/ai';
 import { AiOutlinePlusCircle } from 'react-icons/ai';
+import { BiArrowBack } from 'react-icons/bi'
+import { MdDelete } from 'react-icons/md';
 import { getProducts } from '../../store/all_products';
 import { Modal } from '../../context/Modal';
 import ImageForm from './ImageForm';
@@ -13,6 +14,7 @@ import './UserProductsImages.css';
 import { deleteProductImage } from '../../store/one_product';
 
 const UserProductsImages = () => {
+  const history = useHistory()
   const dispatch = useDispatch();
   const { id } = useParams();
   const products = useSelector(state => state.products);
@@ -43,6 +45,9 @@ const UserProductsImages = () => {
       <SupplyNavBar />
       <div className='add-edit-image-form'>
         <div className='add-edit-image-header'>
+          <button onClick={() => history.goBack()} className="back-btn">
+            <BiArrowBack size={25} />
+          </button>
           <header>Add or Edit an Image</header>
           <button
             className='add-image-btn'

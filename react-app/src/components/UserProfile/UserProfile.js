@@ -11,7 +11,6 @@ const UserProfile = () => {
   const user = useSelector(state => state.session.user);
 
   const allProducts = useSelector(state => Object.values(state.products));
-  console.log('all products -->', allProducts);
 
   useEffect(() => {
     dispatch(getProducts());
@@ -27,9 +26,12 @@ const UserProfile = () => {
       <div className='user-products'>
         <div className='my-listings'>{`${user.first_name}'s Listings`}</div>
         {allProducts.map(
-          product =>
+          (product, idx) =>
             product.productOwner.id === user.id && (
-              <div className='product-details'>
+              <div
+                key={idx}
+                className='product-details'
+              >
                 <NavLink
                   className='image'
                   to={`/products/${product.id}`}
