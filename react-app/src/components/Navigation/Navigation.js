@@ -13,6 +13,7 @@ import { getCart } from "../../store/cart";
 function Navigation() {
     const [showLoginModal, setShowLoginModal] = useState(false);
     const [showSignupModal, setShowSignupModal] = useState(false);
+    const [showCartModal, setShowCartModal] = useState(false);
     const user = useSelector((state) => state.session.user);
     const history = useHistory();
 
@@ -82,9 +83,9 @@ function Navigation() {
                     <div className="splash-header-icons">
                         <NavLink to='/search'><i className="fa-solid fa-magnifying-glass header-magnifying-glass"></i></NavLink>
                         {user ? (
-                            <NavLink className="nav-bar-crate" to="/cart">
+                            <button className="nav-bar-crate-button" onClick={() => setShowCartModal(true)}>
                                 <i className="fa-sharp fa-solid fa-box"></i>
-                            </NavLink>
+                            </button>
                         ) : (
                             <NavLink
                                 className="nav-bar-crate"
@@ -93,6 +94,11 @@ function Navigation() {
                             >
                                 <i className="fa-sharp fa-solid fa-box"></i>
                             </NavLink>
+                        )}
+                        {showCartModal && (
+                            <Modal onClose={() => setShowCartModal(false)}>
+                                <Cart setShowCartModal={setShowCartModal} />
+                            </Modal>
                         )}
                     </div>
                 </div>

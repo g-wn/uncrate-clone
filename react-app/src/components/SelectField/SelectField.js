@@ -10,8 +10,8 @@ const SelectField = ({ currentItem }) => {
 
 
     useEffect(async () => {
-        dispatch(getCart())
         await dispatch(editCartItem(currentItem, quantity))
+        dispatch(getCart())
     }, [quantity])
 
     return (
