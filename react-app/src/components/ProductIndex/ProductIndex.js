@@ -1,25 +1,27 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { getProducts } from '../../store/all_products';
 import './ProductIndex.css';
 import Navigation from '../Navigation/Navigation';
+import { getCart } from '../../store/cart';
 
 const ProductIndex = () => {
     const dispatch = useDispatch();
-
+    const [isHovering, setIsHovering] = useState(false);
     const products = useSelector((state) => Object.values(state.products));
 
     useEffect(() => {
         dispatch(getProducts());
+        dispatch(getCart());
     }, [dispatch]);
 
     if (!products || products.length === 0) return null;
 
     return (
         <>
-            <Navigation />
-            <div className='all-products-index'>
+            <Navigation isHovering={isHovering} setIsHovering={setIsHovering} />
+            <div className='all-products-index' onMouseEnter={() => setIsHovering(false)}>
                 <div className='featured-product'>
                     <NavLink
                         className='product-link'

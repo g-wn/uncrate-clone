@@ -1,10 +1,16 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import "./SupplyHeader.css";
 import { Modal } from "../../../../context/Modal";
 import Cart from "../../../Cart/Cart";
+import { useSelector } from "react-redux";
+import LoginForm from "../../../auth/LoginForm";
 
 export default function SupplyHeader() {
     const [showCartModal, setShowCartModal] = useState(false);
+    const [showLoginModal, setShowLoginModal] = useState(false);
+
+    const user = useSelector((state) => state.session.user)
 
     return (
         <div className="supply-header">
@@ -17,13 +23,24 @@ export default function SupplyHeader() {
                     REDUNCRATE.
                 </p>
                 <div className="header-icons">
-                    <i className="fa-solid fa-magnifying-glass"></i>
-                    <button className="supply-header-crate-button" onClick={() => setShowCartModal(true)}>
-                        <i className="fa-solid fa-box crate-icon"></i>
-                    </button>
+                    <NavLink to='/search'><i className="fa-solid fa-magnifying-glass"></i></NavLink>
+                    {user ? (
+                        <button className="supply-header-crate-button" onClick={() => setShowCartModal(true)}>
+                            <i className="fa-solid fa-box crate-icon"></i>
+                        </button>
+                    ) : (
+                        <button className="supply-header-crate-button" onClick={() => setShowLoginModal(true)}>
+                            <i className="fa-solid fa-box crate-icon"></i>
+                        </button>
+                    )}
                     {showCartModal && (
                         <Modal onClose={() => setShowCartModal(false)}>
                             <Cart setShowCartModal={setShowCartModal} />
+                        </Modal>
+                    )}
+                    {showLoginModal && (
+                        <Modal onClose={() => setShowLoginModal(false)}>
+                            <LoginForm setShowCartModal={setShowLoginModal} />
                         </Modal>
                     )}
                     <span className="cart-badge"></span>

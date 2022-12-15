@@ -50,12 +50,12 @@ const Cart = ({ setShowCartModal }) => {
                             </button>
                         </div>
                         <div className='cart-quantity-and-price'>
-                            <div className='cart-quantity-container'>
-                                <SelectField currentItem={item} />
-                            </div>
                             <div className='cart-price'>
                                 ${usDollar.format(item.product.price * item.quantity)}
                                 {(totalPrice += item.product.price * item.quantity) && false}
+                            </div>
+                            <div className='cart-quantity-container'>
+                                <SelectField currentItem={item} />
                             </div>
                         </div>
                     </div>
@@ -67,7 +67,7 @@ const Cart = ({ setShowCartModal }) => {
                     <span className='cart-total-price'>${usDollar.format(totalPrice)}</span>
                 </div>
                 <div className='cart-checkout-button-container'>
-                    <button className="cart-checkout-button">CHECKOUT</button>
+                    <NavLink to="/checkout"><button className="cart-checkout-button">CHECKOUT</button></NavLink>
                 </div>
                 <div className='cart-checkout-text-container'>
                     <p className='cart-checkout-text'>
