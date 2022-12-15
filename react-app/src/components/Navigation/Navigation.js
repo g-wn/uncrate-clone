@@ -14,7 +14,6 @@ function Navigation() {
   const [showLoginModal, setShowLoginModal] = useState(false);
   const [showSignupModal, setShowSignupModal] = useState(false);
   const [showCartModal, setShowCartModal] = useState(false);
-  const [displayModal, setDisplayModal] = useState(false);
   const user = useSelector((state) => state.session.user);
   const history = useHistory();
 
