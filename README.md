@@ -1,148 +1,144 @@
-# Flask React Project
+<p align="center">
+  <a href="https://reduncrate.onrender.com" target="_blank">
+     REDUNCRATE LOGO PLACEHOLDER
+  </a>
 
-This is the starter for the Flask React project.
+  <h1 style="border-bottom:none" align="center">reduncrate</h1>
 
-## Getting started
-1. Clone this repository (only this branch)
+  <p align="center">
+    <a href="https://reduncrate.onrender.com" target="_blank">- Check out the live site -</a>
+  </p>
+    <br />
+    <br />
+    <br />
+</p>
 
-2. Install dependencies
+## Project Information
 
-      ```bash
-      pipenv install -r requirements.txt
-      ```
+<hr />
+<br />
 
-3. Create a **.env** file based on the example with proper settings for your
-   development environment
+<p>
+Reduncrate is a clone of Uncrate.com. It is a site which provides a feed-like experience for highly curated, boutique leaning items. Users can scroll the feed of curated items or filter by category. If a user has something more specific in mind, they can perform a search which will return matches from either the title or the description. A user can add any item to their cart for purchase, update the quantity or remove that item if desired. If a user is not ready to make a purchase right away, they can stash a product away to view later on their profile page. Also available on a user's profile page is a list of all items that they themselves have posted up for sale. From this list, as user can add a new items or edit an existing one. A user has the ability to edit any information they choose about their items, from price to image urls.
+</p>
 
-4. Make sure the SQLite3 database connection URL is in the **.env** file
+<br />
 
-5. This starter organizes all tables inside the `flask_schema` schema, defined
-   by the `SCHEMA` environment variable.  Replace the value for
-   `SCHEMA` with a unique name, **making sure you use the snake_case
-   convention**.
+### Built Using:
+* [React](https://beta.reactjs.org/)
+* [Redux](https://redux.js.org/)
+* [Python](https://www.python.org/)
+* [Flask](https://palletsprojects.com/p/flask/)
+* [SQLAlchemy](https://www.sqlalchemy.org/)
+* [Alembic](https://alembic.sqlalchemy.org/en/latest/)
+* [PostgreSQL](https://www.postgresql.org/docs/)
+* [Sqlite](https://www.sqlite.org/docs.html)
 
-6. Get into your pipenv, migrate your database, seed your database, and run your Flask app
+<br />
 
-   ```bash
-   pipenv shell
-   ```
+## How to Navigate the Site:
 
-   ```bash
-   flask db upgrade
-   ```
+<hr />
+<br />
 
-   ```bash
-   flask seed all
-   ```
+<p>
+  All Users can view a list of all available products, filter them by category, or provide a more specific search query and navigate to a separate detail page for any   single product.
+</p>
 
-   ```bash
-   flask run
-   ```
+<br />
 
-7. To run the React App in development, checkout the [README](./react-app/README.md) inside the `react-app` directory.
+#### PLACEHOLDER FOR INDEX ---> FILTERED BY CATEGORY ---> FILTERED BY SEARCH ---> DETAIL PAGE .gif
 
+<hr />
+<br />
 
-## Deployment through Render.com
+<p>
+  Users can easily create their own account in order to fully explore the site, or they can simply choose to log-in with the provided Demo User account.
+</p>
 
-First, refer to your Render.com deployment articles for more detailed
-instructions about getting started with [Render.com], creating a production
-database, and deployment debugging tips.
+<br />
 
-From the [Dashboard], click on the "New +" button in the navigation bar, and
-click on "Web Service" to create the application that will be deployed.
+#### PLACEHOLDER FOR SIGNUP/LOGIN .gif
 
-Look for the name of the application you want to deploy, and click the "Connect"
-button to the right of the name.
+<hr />
+<br/>
 
-Now, fill out the form to configure the build and start commands, as well as add
-the environment variables to properly deploy the application.
+<p>
+  Logged-in Users can view their profile to have access to their products and stash.
+</p>
 
-### Part A: Configure the Start and Build Commands
+<br/>
 
-Start by giving your application a name.
+#### PLACEHOLDER FOR USER PROFILE .gif
 
-Leave the root directory field blank. By default, Render will run commands from
-the root directory.
+<hr />
+<br />
 
-Make sure the Environment field is set set to "Python 3", the Region is set to
-the location closest to you, and the Branch is set to "main".
+<p>
+  Logged-in Users can choose to add a new product to list for sale from their profile page.
+</p>
 
-Next, add your Build command. This is a script that should include everything
-that needs to happen _before_ starting the server.
+<br/>
 
-For your Flask project, enter the following command into the Build field, all in
-one line:
+#### PLACEHOLDER FOR ADD PRODUCT .gif
 
-```shell
-# build command - enter all in one line
-npm install --prefix react-app &&
-npm run build --prefix react-app &&
-pip install -r requirements.txt &&
-pip install psycopg2 &&
-flask db upgrade &&
-flask seed all
-```
+<hr />
+<br/>
 
-This script will install dependencies for the frontend, and run the build
-command in the __package.json__ file for the frontend, which builds the React
-application. Then, it will install the dependencies needed for the Python
-backend, and run the migration and seed files.
+<p>
+  Logged-in Users can choose to update information on one of their currently listed products.
+</p>
 
-Now, add your start command in the Start field:
+<br/>
 
-```shell
-# start script
-gunicorn app:app
-```
+#### PLACEHOLDER FOR EDIT PRODUCT/IMAGES .gif
 
-_If you are using websockets, use the following start command instead for increased performance:_
+<hr />
+<br/>
 
-`gunicorn --worker-class eventlet -w 1 app:app`
+<p>
+  Logged-in Users can view a list of all of the products that they have added to their stash (favorites) and remove them if desired.
+</p>
 
-### Part B: Add the Environment Variables
+<br/>
 
-Click on the "Advanced" button at the bottom of the form to configure the
-environment variables your application needs to access to run properly. In the
-development environment, you have been securing these variables in the __.env__
-file, which has been removed from source control. In this step, you will need to
-input the keys and values for the environment variables you need for production
-into the Render GUI.
+#### PLACEHOLDER FOR VIEW/DELETE-FROM STASH .gif
 
-Click on "Add Environment Variable" to start adding all of the variables you
-need for the production environment.
+<hr />
+<br/>
 
-Add the following keys and values in the Render GUI form:
+<p>
+  Logged-in Users can add a product to their cart that they wish to purchase, as well as update the quantity or remove the item.
+</p>
 
-- SECRET_KEY (click "Generate" to generate a secure secret for production)
-- FLASK_ENV production
-- FLASK_APP app
-- SCHEMA (your unique schema name, in snake_case)
-- REACT_APP_BASE_URL (use render.com url, located at top of page, similar to
-  https://this-application-name.onrender.com)
+<br/>
 
-In a new tab, navigate to your dashboard and click on your Postgres database
-instance.
+#### PLACEHOLDER FOR ADD TO CART/UPDATE-QUANTITY/REMOVE FROM CART .gif
 
-Add the following keys and values:
+<hr />
+<br/>
 
-- DATABASE_URL (copy value from Internal Database URL field)
+## Challenges During This Project:
+### ADD MAIN CHALLENGES HERE!
 
-_Note: Add any other keys and values that may be present in your local __.env__
-file. As you work to further develop your project, you may need to add more
-environment variables to your local __.env__ file. Make sure you add these
-environment variables to the Render GUI as well for the next deployment._
+<br />
 
-Next, choose "Yes" for the Auto-Deploy field. This will re-deploy your
-application every time you push to main.
+<p>
+  DESCRIBE PROJECT CHALLENGES HERE!
+</p>
 
-Now, you are finally ready to deploy! Click "Create Web Service" to deploy your
-project. The deployment process will likely take about 10-15 minutes if
-everything works as expected. You can monitor the logs to see your build and
-start commands being executed, and see any errors in the build process.
+<br />
 
-When deployment is complete, open your deployed site and check to see if you
-successfully deployed your Flask application to Render! You can find the URL for
-your site just below the name of the Web Service at the top of the page.
+<p>
+  ADD SOLUTIONS HERES!
+</p>
 
-[Render.com]: https://render.com/
-[Dashboard]: https://dashboard.render.com/
+<hr />
+<br />
+
+## Reduncrate Was Built By:
+
+* Christopher Cohen - [GitHub](https://github.com/cmcohen89) - [LinkedIn](https://www.linkedin.com/in/christopher-cohen-94ab06236/)
+* Sara Dunlop - [GitHub](https://github.com/Risclover) - [LinkedIn](https://www.linkedin.com/in/sara-dunlop-66375a146/)
+* Mike Miller - [GitHub](https://github.com/mikemillercodes) - [LinkedIn](https://www.linkedin.com/in/mike-miller-546a1832/)
+* Gray Nance - [GitHub](https://github.com/g-wn) - [LinkedIn](https://www.linkedin.com/in/gray-nance/)
