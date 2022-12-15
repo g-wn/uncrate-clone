@@ -23,19 +23,17 @@ const SingleProduct = () => {
   const cart = useSelector(state => state.cart);
   let thisCartItem;
   for (let item in cart.cartItems) {
-    if (cart.cartItems[item].productId == id) thisCartItem = cart.cartItems[item];
+    if (+cart.cartItems[item].productId === +id) thisCartItem = cart.cartItems[item];
   }
 
   useEffect(() => {
     dispatch(getSingleProduct(id));
+    const shuffled = availableProducts.sort(() => 0.5 - Math.random());
+    const selected = shuffled.slice(0, 8);
     setSuggested(selected);
   }, [dispatch, id]);
 
-  const shuffled = availableProducts.sort(() => 0.5 - Math.random());
-
   // Get sub-array of first n elements after shuffled
-  const selected = shuffled.slice(0, 8);
-  console.log('SELECTED ---------->', selected);
 
   let imgList = [];
 
