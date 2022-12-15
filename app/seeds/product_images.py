@@ -82,13 +82,13 @@ def seed_product_images():
     ]
 
     [db.session.add(image) for image in gear_images]
-    # [db.session.add(image) for image in style_images]
-    # [db.session.add(image) for image in cars_images]
-    # [db.session.add(image) for image in tech_images]
-    # [db.session.add(image) for image in shelter_images]
-    # [db.session.add(image) for image in vices_images]
-    # [db.session.add(image) for image in body_images]
-    # [db.session.add(image) for image in etc_images]
+    [db.session.add(image) for image in style_images]
+    [db.session.add(image) for image in cars_images]
+    [db.session.add(image) for image in tech_images]
+    [db.session.add(image) for image in shelter_images]
+    [db.session.add(image) for image in vices_images]
+    [db.session.add(image) for image in body_images]
+    [db.session.add(image) for image in etc_images]
 
     db.session.commit()
 
