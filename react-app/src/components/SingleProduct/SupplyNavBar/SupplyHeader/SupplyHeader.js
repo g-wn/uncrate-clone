@@ -47,10 +47,11 @@ export default function SupplyHeader() {
               <LoginForm setShowCartModal={setShowLoginModal} />
             </Modal>
           )}
-          <Cart
-            setShowCartModal={() => setShowCartModal(!showCartModal)}
-            showCartModal={showCartModal}
-          />
+          {showCartModal && (
+            <Modal onClose={() => setShowCartModal(false)}>
+              <Cart setShowCartModal={setShowCartModal} />
+            </Modal>
+          )}
           <span className="cart-badge"></span>
         </div>
       </div>

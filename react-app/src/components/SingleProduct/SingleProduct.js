@@ -106,10 +106,11 @@ const SingleProduct = () => {
                 ADD TO CART
               </button>
             )}
-            <Cart
-              setShowCartModal={() => setShowCartModal(!showCartModal)}
-              showCartModal={showCartModal}
-            />
+            {showCartModal && (
+              <Modal onClose={() => setShowCartModal(false)}>
+                <Cart setShowCartModal={setShowCartModal} />
+              </Modal>
+            )}
             {showLoginModal && (
               <Modal onClose={() => setShowLoginModal(false)}>
                 <LoginForm setShowLoginModal={setShowLoginModal} />

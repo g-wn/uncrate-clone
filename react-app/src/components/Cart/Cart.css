@@ -1,17 +1,17 @@
 .cart-container {
-  min-width: 390.55px;
+  min-width: 386.55px;
   position: fixed;
   top: 0;
   height: 100vh;
   border-left: 1px solid black;
   background-color: white;
-  right: -150vh;
-  transition: right 0.2s ease-in;
+  right: 0;
+  /* transition: right 0.2s ease-in; */
   z-index: 10;
   color: black;
 }
 
-.cart-container.Show {
+/* .cart-container.Show {
   right: 0;
 }
 
@@ -27,13 +27,12 @@
 }
 
 .Cart-Overlay.Show {
-  /* transition: opacity 10s ease-in; */
   background-color: rgba(0, 0, 0, 0.55);
   display: block;
   z-index: 5;
   right: 391px;
   opacity: 1;
-}
+} */
 
 .cart-header {
   display: flex;

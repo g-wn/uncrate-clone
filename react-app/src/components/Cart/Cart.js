@@ -23,11 +23,7 @@ const Cart = ({ setShowCartModal, showCartModal }) => {
   if (!cart || !cartItems) return null;
 
   return (
-    <div className={`cart-container ${showCartModal ? "Show" : ""}`}>
-      <div
-        className={`Cart-Overlay ${showCartModal ? "Show" : ""}`}
-        onClick={() => setShowCartModal(false)}
-      ></div>
+    <div className="cart-container">
       <div className="cart-header">
         <h1 className="cart-title">YOUR CRATE</h1>
         <button

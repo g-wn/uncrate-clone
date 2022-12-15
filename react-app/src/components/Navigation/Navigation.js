@@ -130,10 +130,11 @@ function Navigation({ isHovering, setIsHovering }) {
                   <i className="fa-sharp fa-solid fa-box"></i>
                 </button>
               )}
-              <Cart
-                setShowCartModal={() => setShowCartModal(!showCartModal)}
-                showCartModal={showCartModal}
-              />
+              {showCartModal && (
+                <Modal onClose={() => setShowCartModal(false)}>
+                  <Cart setShowCartModal={setShowCartModal} />
+                </Modal>
+              )}
             </div>
           </div>
         </div>
