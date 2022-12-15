@@ -70,7 +70,7 @@ def post_product():
         db.session.commit()
 
         return new_product.to_dict()
-    return render_template("test_form.html", form=form)
+    return {"errors": form.errors}
     # CHECK AND ADD ERROR HANDLING
 
 
@@ -104,7 +104,7 @@ def update_product(id):
 
         db.session.commit()
         return product.to_dict()
-    return render_template("test_update_product.html", form=form, id=id)
+    return {"errors": form.errors}
 
 
 # DELETE A SINGLE PRODUCT:
