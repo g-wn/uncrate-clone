@@ -1,8 +1,8 @@
 """create all tables
 
-Revision ID: 763998658088
+Revision ID: 48980ae98cf1
 Revises:
-Create Date: 2022-12-12 09:43:42.236072
+Create Date: 2022-12-15 15:17:26.810578
 
 """
 from alembic import op
@@ -13,7 +13,7 @@ environment = os.getenv("FLASK_ENV")
 SCHEMA = os.environ.get("SCHEMA")
 
 # revision identifiers, used by Alembic.
-revision = '763998658088'
+revision = '48980ae98cf1'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -101,13 +101,14 @@ def upgrade():
     op.create_table('product_images',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('product_id', sa.Integer(), nullable=False),
-    sa.Column('url', sa.String(length=255), nullable=False),
+    sa.Column('url', sa.String(length=1500), nullable=False),
     sa.ForeignKeyConstraint(['product_id'], ['products.id'], ),
     sa.PrimaryKeyConstraint('id')
     )
 
     if environment == "production":
         op.execute(f"ALTER TABLE product_images SET SCHEMA {SCHEMA};")
+
     # ### end Alembic commands ###
 
 
