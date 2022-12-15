@@ -5,6 +5,20 @@
     box-sizing: border-box;
 }
 
+body {
+    overflow-y: scroll;
+}
+
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
 /* font-family: 'Roboto', sans-serif;
 font-family: 'Domine', serif;
 font-family: 'Oswald', sans-serif; */

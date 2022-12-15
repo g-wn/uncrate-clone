@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { getProducts } from '../../store/all_products';
@@ -7,7 +7,7 @@ import Navigation from '../Navigation/Navigation';
 
 const ProductIndex = () => {
     const dispatch = useDispatch();
-
+    const [isHovering, setIsHovering] = useState(false);
     const products = useSelector((state) => Object.values(state.products));
 
     useEffect(() => {
@@ -18,8 +18,8 @@ const ProductIndex = () => {
 
     return (
         <>
-            <Navigation />
-            <div className='all-products-index'>
+            <Navigation isHovering={isHovering} setIsHovering={setIsHovering} />
+            <div className='all-products-index' onMouseEnter={() => setIsHovering(false)}>
                 <div className='featured-product'>
                     <NavLink
                         className='product-link'

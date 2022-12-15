@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import "./SupplyHeader.css";
 import { Modal } from "../../../../context/Modal";
 import Cart from "../../../Cart/Cart";
@@ -17,7 +18,7 @@ export default function SupplyHeader() {
                     REDUNCRATE.
                 </p>
                 <div className="header-icons">
-                    <i className="fa-solid fa-magnifying-glass"></i>
+                    <NavLink to='/search'><i className="fa-solid fa-magnifying-glass"></i></NavLink>
                     <button className="supply-header-crate-button" onClick={() => setShowCartModal(true)}>
                         <i className="fa-solid fa-box crate-icon"></i>
                     </button>
