@@ -23,8 +23,8 @@ const Favorites = () => {
       <Navigation isHovering={isHovering} setIsHovering={setIsHovering} />
       <div className="stash-title">{`${user.first_name}'s Stash`}</div>
       <div className="user-favorites">
-        {favorites.map((favorite) => (
-          <div className="outer">
+        {favorites.map((favorite, idx) => (
+          <div key={idx} className="outer">
             <NavLink className="image" to={`/products/${favorite.id}`}>
               <img
                 alt="main-product-img"
