@@ -1,54 +1,84 @@
-import React, { useState, useMemo, useEffect } from "react";
+import React, { useState, useMemo, useEffect, useLayoutEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getProducts } from "../../store/all_products";
+import { NavLink } from "react-router-dom";
 import Navigation from "../Navigation/Navigation";
+import { searchQuery } from "../../store/all_products";
 import "./Search.css";
 
 export default function Search() {
-    const [searchValue, setSearchValue] = useState("");
-    const [searchInput, setSearchInput] = useState("");
-    const [isHovering, setIsHovering] = useState(false);
-    const dispatch = useDispatch();
+  const [searchValue, setSearchValue] = useState("");
+  const [submitted, setSubmitted] = useState(false);
+  const [searchResults, setSearchResults] = useState([]);
+  const dispatch = useDispatch();
 
-    const products = useSelector((state) => Object.values(state.products));
-    // const productImages = useSelector(state => Object.values(state.product_images))
+  const products = useSelector((state) => Object.values(state.products));
 
-    useEffect(() => {
-        dispatch(getProducts());
-        // dispatch(getProductImages());
-    }, [dispatch]);
+  useEffect(() => {
+    dispatch(getProducts());
+  }, [dispatch]);
 
-    const handleChange = (e) => {
-        e.preventDefault();
-        setSearchInput(e.target.value.toUpperCase());
-    };
+  const handleChange = (e) => {
+    e.preventDefault();
+    setSearchValue(e.target.value);
+  };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        setSearchValue(searchInput);
-    };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setSearchResults(await dispatch(searchQuery(searchValue)).query);
+    setTimeout(() => setSubmitted(true), 300);
 
-    //   const finalList = [];
-    const filteredJobs = useMemo(() =>
-        searchValue.length > 0
-            ? products.filter((job) => job.title.includes(searchValue), [searchValue])
-            : []
-    );
+    console.log(searchResults);
+  };
 
-    if (!products || products.length === 0) return null;
-
-    return (
-        <div>
-            <Navigation isHovering={isHovering} setIsHovering={setIsHovering} />
-            <div className="search-container">
-                <input className="searchbar" type="text" onChange={handleChange} />
-                <button className="submit-search" onClick={handleSubmit}>
-                    Submit
-                </button>
-                {filteredJobs.length > 0
-                    ? filteredJobs.map((job) => <p>{job.title}</p>)
-                    : ""}
+  return (
+    <div>
+      <Navigation />
+      <div className="search-container">
+        <div className="search-area">
+          <div className="search-form">
+            <p className="search-title">Search for something on Reduncrate.</p>
+            <div className="search-field">
+              <label className="searchbar-search">Search</label>
+              <input
+                className="searchbar"
+                placeholder="Enter a search term."
+                type="text"
+                onChange={handleChange}
+                value={searchValue}
+              />
             </div>
+            <button className="submit-search" onClick={handleSubmit}>
+              Submit
+            </button>
+          </div>
         </div>
-    );
+        <div className="search-results">
+          {submitted ? (
+            Object.keys(products).length > 0 ? (
+              products.map((product) => (
+                <div className="search-result">
+                  <NavLink to={`/products/${product.id}`}>
+                    <img
+                      src={product.productImages[product.previewImgId].url}
+                    />
+                  </NavLink>
+                  <div className="search-result-details">
+                    {" "}
+                    <NavLink to={`/products/${product.id}`}>
+                      {product.title}
+                    </NavLink>
+                  </div>
+                </div>
+              ))
+            ) : (
+              <div className="no-results">No search results found</div>
+            )
+          ) : (
+            ""
+          )}
+        </div>
+      </div>
+    </div>
+  );
 }

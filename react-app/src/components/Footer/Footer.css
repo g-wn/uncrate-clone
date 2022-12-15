@@ -1,0 +1,17 @@
+.footer-wrapper {
+  width: 100%;
+  background-image: url("https://uncrate.com/img/lambo.jpg");
+  background-color: #000;
+  background-repeat: no-repeat;
+  background-position: center top;
+  height: 1000px;
+  margin-top: 20px;
+}
+
+.footer {
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  padding-top: 70px;
+}

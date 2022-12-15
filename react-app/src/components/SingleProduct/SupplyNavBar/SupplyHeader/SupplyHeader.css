@@ -17,6 +17,7 @@
 
 .fa-magnifying-glass {
   margin-right: 30px;
+  color: black;
 }
 
 sup {
@@ -101,7 +102,7 @@ sup {
 }
 
 .supply-header-crate-button {
-    background-color: white;
-    border: none;
-    font-size: 16px;
+  background-color: white;
+  border: none;
+  font-size: 16px;
 }
