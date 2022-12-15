@@ -1,6 +1,6 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { getFavorites } from "../../store/favorites";
 import Navigation from "../Navigation/Navigation";
 import './Favorites.css'
@@ -8,10 +8,8 @@ import './Favorites.css'
 
 const Favorites = () => {
     const dispatch = useDispatch();
-    const { userId } = useParams();
-
     const user = useSelector((state) => state.session.user);
-
+    const [isHovering, setIsHovering] = useState(false);
     const favorites = useSelector((state) => Object.values(state.favorites));
     const usDollar = Intl.NumberFormat("en-US");
 
@@ -23,7 +21,7 @@ const Favorites = () => {
 
     return (
         <>
-            <Navigation />
+             <Navigation isHovering={isHovering} setIsHovering={setIsHovering} />
                 <div className="stash-title">
 
                 {`${user.first_name}'s Stash`}
