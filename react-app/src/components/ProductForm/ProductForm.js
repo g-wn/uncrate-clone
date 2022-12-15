@@ -30,7 +30,7 @@ const ProductForm = ({
     setTitle(product?.title);
     setDescription(product?.description);
     set_detailed_description(product?.detailedDescription);
-    set_category_id(product?.categoryId);
+    product && set_category_id(product?.categoryId);
     setPrice(product?.price);
   }, [
     product?.title,
@@ -42,7 +42,8 @@ const ProductForm = ({
     setDescription,
     set_detailed_description,
     set_category_id,
-    setPrice
+    setPrice,
+    product
   ]);
   return (
     <>
