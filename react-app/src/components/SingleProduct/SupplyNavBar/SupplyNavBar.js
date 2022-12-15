@@ -29,9 +29,26 @@ export default function SupplyNavBar() {
                     </div>
                     <div className="topbar-middle">
                         <ul>
-                            <li>UNCRATE.COM</li>
-                            <li>UNCRATE.SUPPLY</li>
-                            <li>UNCRATE.TV</li>
+                            <ul>
+                                <li>
+                                    <a
+                                        target="_blank"
+                                        className="header-link"
+                                        href="https://www.linkedin.com/in/jwily/"
+                                    >
+                                        JOHN LEE | PROJECT ADVISOR
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        target="_blank"
+                                        className="header-link"
+                                        href="https://www.linkedin.com/in/brad-simpson-a6b1b7b2/"
+                                    >
+                                        BRAD SIMPSON | MOD INSTRUCTOR
+                                    </a>
+                                </li>
+                            </ul>
                         </ul>
                     </div>
                     {!user ? (

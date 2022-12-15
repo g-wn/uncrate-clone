@@ -101,7 +101,7 @@
   font-size: 24px;
   max-width: 660px;
   margin: 0 auto;
-  padding-top: 6px;
+  padding-top: 10px;
   padding-bottom: 10px;
 }
 
@@ -119,7 +119,7 @@
 .nav-bar-categories-border {
   max-width: 960px;
   margin: 0 auto;
-  border-bottom: 3px solid black;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.422);
   margin-bottom: 2px;
 }
 
@@ -150,4 +150,8 @@
     font-size: 18px;
     background-color: black;
     color: white;
-  }
+}
+
+.nav {
+    margin-top: 20px;
+}

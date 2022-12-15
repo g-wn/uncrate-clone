@@ -25,10 +25,11 @@ export const getCart = () => async dispatch => {
     }
 }
 
-export const purchaseCart = () => async dispatch => {
+export const purchaseCart = (total) => async dispatch => {
     const response = await fetch('/api/carts', {
         method: 'PUT',
-        headers: { 'Content-Type': 'application/json' }
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ "total": total })
     })
 
     if (response.ok) {

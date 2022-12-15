@@ -79,9 +79,13 @@
     color: white;
     font-weight: 700;
     border: none;
-    font-family: "Arimo", sans-serif;
+    font-family: "Roboto", sans-serif;
     height: 36px;
     line-height: 1;
     background-color: rgb(113, 73, 73);
     cursor: pointer;
+}
+
+.my-listings-title {
+    margin-left: 30px;
 }
