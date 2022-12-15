@@ -12,6 +12,7 @@ import { postCartItem, editCartItem } from "../../store/cart_items";
 import { Modal } from "../../context/Modal";
 import Cart from "../Cart/Cart";
 import { getCart } from "../../store/cart";
+import LoginForm from "../auth/LoginForm";
 
 const availableProducts = [
     {
@@ -337,6 +338,7 @@ const SingleProduct = () => {
     const singleProduct = useSelector((state) => state.product[id]);
     const history = useHistory();
     const [showCartModal, setShowCartModal] = useState(false);
+    const [showLoginModal, setShowLoginModal] = useState(false);
 
     const cart = useSelector((state) => state.cart)
     let thisCartItem;
@@ -346,6 +348,7 @@ const SingleProduct = () => {
 
     useEffect(() => {
         dispatch(getSingleProduct(id));
+        dispatch(getCart());
     }, [dispatch, id]);
 
     let productList = [];
@@ -390,10 +393,11 @@ const SingleProduct = () => {
                         IN STOCK AND SHIPS FREE WITH EASY RETURNS.
                     </p>
                     <div className="single-product-details-btns">
-                        <button
+                        {user ? <button
                             className="single-product-details-btn btn-add-cart"
                             onClick={async (e) => {
                                 e.preventDefault();
+                                console.log(thisCartItem)
                                 if (thisCartItem) {
                                     await dispatch(editCartItem(thisCartItem, thisCartItem.quantity + 1))
                                     await dispatch(getCart())
@@ -405,9 +409,22 @@ const SingleProduct = () => {
                         >
                             ADD TO CART
                         </button>
+                            :
+                            <button
+                                className="single-product-details-btn btn-add-cart"
+                                onClick={() => { setShowLoginModal(true) }}
+                            >
+                                ADD TO CART
+                            </button>
+                        }
                         {showCartModal && (
                             <Modal onClose={() => setShowCartModal(false)}>
                                 <Cart setShowCartModal={setShowCartModal} />
+                            </Modal>
+                        )}
+                        {showLoginModal && (
+                            <Modal onClose={() => setShowLoginModal(false)}>
+                                <LoginForm setShowLoginModal={setShowLoginModal} />
                             </Modal>
                         )}
                         <button className="single-product-details-btn btn-stash-later" onClick={async (e) => {

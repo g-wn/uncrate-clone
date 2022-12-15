@@ -35,9 +35,8 @@ function Navigation({ isHovering, setIsHovering }) {
                                 </div>
                                 <div className="header-top-bar-middle">
                                     <ul>
-                                        <li><a target='_blank' className='header-link' href='https://www.appacademy.io/'>APPACADEMY.IO</a></li>
-                                        <li><a target='_blank' className='header-link' href='https://www.linkedin.com/in/jwily/'>JOHN LEE | LINKEDIN</a></li>
-                                        <li><a target='_blank' className='header-link' href='https://github.com/bradsimpson213'>BRAD SIMPSON | GITHUB</a></li>
+                                        <li><a target='_blank' className='header-link' href='https://www.linkedin.com/in/jwily/'>JOHN LEE | PROJECT ADVISOR</a></li>
+                                        <li><a target='_blank' className='header-link' href='https://www.linkedin.com/in/brad-simpson-a6b1b7b2/'>BRAD SIMPSON | MOD INSTRUCTOR</a></li>
                                     </ul>
                                 </div>
                                 {!user ? (
@@ -100,13 +99,9 @@ function Navigation({ isHovering, setIsHovering }) {
                                     <i className="fa-sharp fa-solid fa-box"></i>
                                 </button>
                             ) : (
-                                <NavLink
-                                    className="nav-bar-crate"
-                                    to=""
-                                    onClick={() => setShowLoginModal(true)}
-                                >
+                                <button className="nav-bar-crate-button" onClick={() => setShowLoginModal(true)}>
                                     <i className="fa-sharp fa-solid fa-box"></i>
-                                </NavLink>
+                                </button>
                             )}
                             {showCartModal && (
                                 <Modal onClose={() => setShowCartModal(false)}>

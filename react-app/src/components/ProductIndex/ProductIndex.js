@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import { getProducts } from '../../store/all_products';
 import './ProductIndex.css';
 import Navigation from '../Navigation/Navigation';
+import { getCart } from '../../store/cart';
 
 const ProductIndex = () => {
     const dispatch = useDispatch();
@@ -12,6 +13,7 @@ const ProductIndex = () => {
 
     useEffect(() => {
         dispatch(getProducts());
+        dispatch(getCart());
     }, [dispatch]);
 
     if (!products || products.length === 0) return null;
