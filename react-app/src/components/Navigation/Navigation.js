@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import "./Navigation.css";
 import { Modal } from "../../context/Modal";
@@ -40,6 +40,7 @@ function Navigation({ isHovering, setIsHovering }) {
                         target="_blank"
                         className="header-link"
                         href="https://www.linkedin.com/in/jwily/"
+                        rel="noreferrer"
                       >
                         JOHN LEE | PROJECT ADVISOR
                       </a>
@@ -49,6 +50,7 @@ function Navigation({ isHovering, setIsHovering }) {
                         target="_blank"
                         className="header-link"
                         href="https://www.linkedin.com/in/brad-simpson-a6b1b7b2/"
+                        rel="noreferrer"
                       >
                         BRAD SIMPSON | MOD INSTRUCTOR
                       </a>

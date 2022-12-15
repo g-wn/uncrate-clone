@@ -60,7 +60,7 @@ const SingleProduct = () => {
       <div className="single-product">
         <Carousel infinite imageLength={imgList.length}>
           {imgList.map((img, idx) => (
-            <img src={imgList[idx]} alt="single-product" />
+            <img key={idx} src={img} alt="single-product" />
           ))}
         </Carousel>
         <div className="single-product-details">

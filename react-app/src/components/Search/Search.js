@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect, useLayoutEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getProducts } from "../../store/all_products";
 import { NavLink } from "react-router-dom";
@@ -62,10 +62,11 @@ export default function Search() {
                   <NavLink to={`/products/${product.id}`}>
                     <img
                       src={product.productImages[product.previewImgId].url}
+                      alt='search-result-product'
                     />
                   </NavLink>
                   <div className="search-result-details">
-                    {" "}
+                    {/* {" "} */}
                     <NavLink to={`/products/${product.id}`}>
                       {product.title}
                     </NavLink>

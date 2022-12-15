@@ -26,7 +26,7 @@
 
 .add-edit-image-form {
     margin: 0 auto;
-    max-width: 641px;
+    max-width: 960px;
     padding: 1em;
     width: 93%;
 }
@@ -34,10 +34,12 @@
 .back-btn {
     align-self: flex-start;
     position: relative;
-    top: .5em;
+    top: .15em;
 }
 
 .image-form {
+    border: 2px solid black;
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
     padding: 2em;

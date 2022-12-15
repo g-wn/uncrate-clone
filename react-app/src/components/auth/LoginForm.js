@@ -19,6 +19,14 @@ const LoginForm = ({ setShowLoginModal }) => {
         }
     };
 
+    const handleDemo = async (e) => {
+        e.preventDefault();
+        const data = await dispatch(login('demo@aa.io', 'password'));
+        if (data) {
+            errors ? setErrors(data) : setShowLoginModal(false);
+        }
+    }
+
     const updateEmail = (e) => {
         setEmail(e.target.value);
     };
@@ -32,6 +40,7 @@ const LoginForm = ({ setShowLoginModal }) => {
     }
 
     return (
+        <>
         <form className='login-form' onSubmit={onLogin}>
             <h1 className='login-form-title'>LOG IN</h1>
             <div className='login-form-errors'>
@@ -61,8 +70,12 @@ const LoginForm = ({ setShowLoginModal }) => {
                     onChange={updatePassword}
                 />
             </div>
-            <button className='login-submit' type='submit'>Login</button>
+            <div className="login-form-btns">
+                <button className='login-submit' type='submit'>Login</button>
+                <button className="login-with-demo-submit login-submit" onClick={handleDemo}>Login With Demo User</button>
+            </div>
         </form>
+        </>
     );
 };
 

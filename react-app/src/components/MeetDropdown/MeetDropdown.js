@@ -44,14 +44,14 @@ const MeetDropdown = () => {
     return (
         <div className="meet-team-links-wrapper">
             <ul className="meet-team-links">
-                {devs.map(dev => (
-                    <li className="one-meet-team-link">
+                {devs.map((dev, idx) => (
+                    <li key={idx} className="one-meet-team-link">
                         <div>
                             {dev.name}
                         </div>
                         <div className='meet-team-icons'>
-                            <a className='meet-team-icon' target='_blank' href={dev.gitHub}><BsGithub size={20} /></a>
-                            <a className='meet-team-icon' target='_blank' href={dev.linkedIn}><BsLinkedin size={20} /></a>
+                            <a className='meet-team-icon' target='_blank' href={dev.gitHub} rel='noreferrer'><BsGithub size={20} /></a>
+                            <a className='meet-team-icon' target='_blank' href={dev.linkedIn} rel='noreferrer'><BsLinkedin size={20} /></a>
                         </div>
                     </li>
                 ))}
