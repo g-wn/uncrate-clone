@@ -6,6 +6,7 @@ from .product_images import seed_product_images, undo_product_images
 from .carts import seed_carts, undo_carts
 from .cart_items import seed_cart_items, undo_cart_items
 from app.models.db import db, environment, SCHEMA
+from app.models import Product
 
 # Creates a seed group to hold our commands
 # So we can type `flask seed --help`
@@ -32,6 +33,12 @@ def seed():
     seed_product_images()
     seed_carts()
     seed_cart_items()
+
+    all_product_seeds = Product.query.all()
+    for product in all_product_seeds:
+        setattr(product, "preview_img_id", product.product_images[0].to_dict()['id'])
+
+    db.session.commit()
     # Add other seed functions here
 
 
