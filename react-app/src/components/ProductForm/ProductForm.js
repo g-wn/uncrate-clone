@@ -39,11 +39,8 @@ const ProductForm = ({
         product?.categoryId,
         product?.price,
         setTitle,
-        description,
         setDescription,
-        detailed_description,
         set_detailed_description,
-        category_id,
         set_category_id,
         setPrice,
         product
