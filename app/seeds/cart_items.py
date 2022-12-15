@@ -18,7 +18,7 @@ all_cart_items = [
 def seed_cart_items():
     cart_items = [
         CartItem(
-            id=item["id"],
+            # id=item["id"],
             cart_id=item["cart_id"],
             product_id=item["product_id"],
             quantity=item["quantity"]
