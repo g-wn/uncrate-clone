@@ -121,7 +121,7 @@
 .nav-bar-categories-border {
   max-width: 960px;
   margin: 0 auto;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.422);
+  border-bottom: .5px solid rgba(0, 0, 0, 0.422);
   margin-bottom: 2px;
 }
 
