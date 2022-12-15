@@ -63,69 +63,71 @@ const SingleProduct = () => {
             <img src={imgList[idx]} alt="single-product" />
           ))}
         </Carousel>
-        <div className="single-product-details">
-          <p className="single-product-category">
-            <a href="#hi">{singleProduct.productCategory.name}</a>
-          </p>
-          <h1>
-            {singleProduct.title.toUpperCase()} / ${singleProduct.price}
-          </h1>
-          <p className="single-product-detailed-description">
-            {singleProduct.detailedDescription}
-          </p>
-          <p className="single-product-details-greentxt">
-            IN STOCK AND SHIPS FREE WITH EASY RETURNS.
-          </p>
-          <div className="single-product-details-btns">
-            {user ? (
+        <div className="single-product-details-wrapper">
+          <div className="single-product-details">
+            <p className="single-product-category">
+              <a href="#hi">{singleProduct.productCategory.name}</a>
+            </p>
+            <h1>
+              {singleProduct.title.toUpperCase()} / ${singleProduct.price}
+            </h1>
+            <p className="single-product-detailed-description">
+              {singleProduct.detailedDescription}
+            </p>
+            <p className="single-product-details-greentxt">
+              IN STOCK AND SHIPS FREE WITH EASY RETURNS.
+            </p>
+            <div className="single-product-details-btns">
+              {user ? (
+                <button
+                  className="single-product-details-btn btn-add-cart"
+                  onClick={async (e) => {
+                    e.preventDefault();
+                    console.log(thisCartItem);
+                    if (thisCartItem) {
+                      await dispatch(
+                        editCartItem(thisCartItem, thisCartItem.quantity + 1)
+                      );
+                      await dispatch(getCart());
+                    } else {
+                      await dispatch(postCartItem(singleProduct.id));
+                    }
+                    setShowCartModal(true);
+                  }}
+                >
+                  ADD TO CART
+                </button>
+              ) : (
+                <button
+                  className="single-product-details-btn btn-add-cart"
+                  onClick={() => {
+                    setShowLoginModal(true);
+                  }}
+                >
+                  ADD TO CART
+                </button>
+              )}
+              {showCartModal && (
+                <Modal onClose={() => setShowCartModal(false)}>
+                  <Cart setShowCartModal={setShowCartModal} />
+                </Modal>
+              )}
+              {showLoginModal && (
+                <Modal onClose={() => setShowLoginModal(false)}>
+                  <LoginForm setShowLoginModal={setShowLoginModal} />
+                </Modal>
+              )}
               <button
-                className="single-product-details-btn btn-add-cart"
+                className="single-product-details-btn btn-stash-later"
                 onClick={async (e) => {
                   e.preventDefault();
-                  console.log(thisCartItem);
-                  if (thisCartItem) {
-                    await dispatch(
-                      editCartItem(thisCartItem, thisCartItem.quantity + 1)
-                    );
-                    await dispatch(getCart());
-                  } else {
-                    await dispatch(postCartItem(singleProduct.id));
-                  }
-                  setShowCartModal(true);
+                  await dispatch(addToFavorites(singleProduct.id));
+                  history.push(`/my-stash`);
                 }}
               >
-                ADD TO CART
+                STASH FOR LATER
               </button>
-            ) : (
-              <button
-                className="single-product-details-btn btn-add-cart"
-                onClick={() => {
-                  setShowLoginModal(true);
-                }}
-              >
-                ADD TO CART
-              </button>
-            )}
-            {showCartModal && (
-              <Modal onClose={() => setShowCartModal(false)}>
-                <Cart setShowCartModal={setShowCartModal} />
-              </Modal>
-            )}
-            {showLoginModal && (
-              <Modal onClose={() => setShowLoginModal(false)}>
-                <LoginForm setShowLoginModal={setShowLoginModal} />
-              </Modal>
-            )}
-            <button
-              className="single-product-details-btn btn-stash-later"
-              onClick={async (e) => {
-                e.preventDefault();
-                await dispatch(addToFavorites(singleProduct.id));
-                history.push(`/my-stash`);
-              }}
-            >
-              STASH FOR LATER
-            </button>
+            </div>
           </div>
         </div>
         <div className="suggested-products">

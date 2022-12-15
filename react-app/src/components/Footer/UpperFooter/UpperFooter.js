@@ -24,7 +24,18 @@ export default function UpperFooter() {
             </h2>
             <p>— DOUG STEPHENS, RETAIL FUTURIST</p>
           </div>
-          <div className="quote-module-right"></div>
+          <div className="quote-module-right">
+            <div className="quote-module-right-left">
+              <img src="https://uncrate.com/img/app-devices.png" />
+            </div>
+            <div className="quote-module-right-right">
+              <img
+                className="app-store-icon"
+                src="https://uncrate.com/img/app-store.jpg"
+              />
+              <img src="https://uncrate.com/img/google-play.jpg" />
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -22,7 +22,7 @@ export default function SupplyHeader() {
           OBJECTS OF DESIRE & TOOLS OF THE TRADE, STOCKED & SHIPPED BY
           REDUNCRATE.
         </p>
-        <div className="header-icons">
+        <div className="supply-icons">
           <NavLink to="/search">
             <i className="fa-solid fa-magnifying-glass"></i>
           </NavLink>

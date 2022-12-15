@@ -63,6 +63,7 @@
   font-family: "Roboto", sans-serif;
   padding: 0 14px;
   height: 36px;
+  font-size: 13px;
   line-height: 1.5;
   font-weight: 500;
 }
@@ -80,6 +81,13 @@
   display: flex;
 }
 
+.quote-module {
+  max-width: 960px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
 .quote-module-left {
   float: left;
   width: 65%;
@@ -93,4 +101,39 @@
   font-size: 13px;
   font-weight: 600;
   margin-top: 10px;
+}
+
+.quote-module-right {
+  float: right;
+  width: 35%;
+  margin: 20px 0;
+  display: flex;
+}
+
+.quote-module-right-left {
+  width: 47%;
+  margin-left: 10px;
+  float: left;
+}
+
+.quote-module-right-left img {
+  max-width: 100%;
+}
+
+.quote-module-right-right {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  float: right;
+  width: 50%;
+}
+
+.quote-module-right-right img {
+  width: auto;
+
+  border: 1px solid #666;
+}
+
+.app-store-icon {
+  margin-bottom: 15px;
 }
