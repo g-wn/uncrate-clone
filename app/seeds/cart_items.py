@@ -12,7 +12,7 @@ all_cart_items = [
     {"id": 9, "cart_id": 5, "product_id": 9, "quantity": 1},
     {"id": 10, "cart_id": 5, "product_id": 10, "quantity": 1},
     {"id": 11, "cart_id": 6, "product_id": 11, "quantity": 2},
-    {"id": 12, "cart_id": 6, "product_id": 12, "quantity": 1},
+    # {"id": 12, "cart_id": 6, "product_id": 12, "quantity": 1},
 ]
 
 def seed_cart_items():
