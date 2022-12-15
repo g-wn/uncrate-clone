@@ -14,7 +14,7 @@ all_categories = [
 
 def seed_categories():
     categories = [
-        Category(id=category["id"], name=category["name"])
+        Category(name=category["name"])
         for category in all_categories
     ]
 

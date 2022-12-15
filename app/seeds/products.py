@@ -15,7 +15,7 @@ from ._08_products_etc import products_etc, products_etc_imgs
 def seed_products():
     gear = [
         Product(
-            id=product["id"],
+            # id=product["id"],
             title=product["title"],
             description=product["description"],
             detailed_description=product["detailed_description"],
@@ -29,7 +29,7 @@ def seed_products():
 
     style = [
         Product(
-            id=product["id"],
+            # id=product["id"],
             title=product["title"],
             description=product["description"],
             detailed_description=product["detailed_description"],
@@ -43,7 +43,7 @@ def seed_products():
 
     cars = [
         Product(
-            id=product["id"],
+            # id=product["id"],
             title=product["title"],
             description=product["description"],
             detailed_description=product["detailed_description"],
@@ -57,7 +57,7 @@ def seed_products():
 
     tech = [
         Product(
-            id=product["id"],
+            # id=product["id"],
             title=product["title"],
             description=product["description"],
             detailed_description=product["detailed_description"],
@@ -71,7 +71,7 @@ def seed_products():
 
     shelter = [
         Product(
-            id=product["id"],
+            # id=product["id"],
             title=product["title"],
             description=product["description"],
             detailed_description=product["detailed_description"],
@@ -85,7 +85,7 @@ def seed_products():
 
     vices = [
         Product(
-            id=product["id"],
+            # id=product["id"],
             title=product["title"],
             description=product["description"],
             detailed_description=product["detailed_description"],
@@ -99,7 +99,7 @@ def seed_products():
 
     body = [
         Product(
-            id=product["id"],
+            # id=product["id"],
             title=product["title"],
             description=product["description"],
             detailed_description=product["detailed_description"],
@@ -113,7 +113,7 @@ def seed_products():
 
     etc = [
         Product(
-            id=product["id"],
+            # id=product["id"],
             title=product["title"],
             description=product["description"],
             detailed_description=product["detailed_description"],
@@ -126,13 +126,13 @@ def seed_products():
     ]
 
     [db.session.add(product) for product in gear]
-    [db.session.add(product) for product in style]
-    [db.session.add(product) for product in cars]
-    [db.session.add(product) for product in tech]
-    [db.session.add(product) for product in shelter]
-    [db.session.add(product) for product in vices]
-    [db.session.add(product) for product in body]
-    [db.session.add(product) for product in etc]
+    # [db.session.add(product) for product in style]
+    # [db.session.add(product) for product in cars]
+    # [db.session.add(product) for product in tech]
+    # [db.session.add(product) for product in shelter]
+    # [db.session.add(product) for product in vices]
+    # [db.session.add(product) for product in body]
+    # [db.session.add(product) for product in etc]
 
     db.session.commit()
 

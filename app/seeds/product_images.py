@@ -11,7 +11,7 @@ from ._08_products_etc import products_etc_imgs
 def seed_product_images():
     gear_images = [
         ProductImage(
-            id=image["id"],
+            # id=image["id"],
             product_id=image["product_id"],
             url=image["url"]
         )
@@ -20,7 +20,7 @@ def seed_product_images():
 
     style_images = [
         ProductImage(
-            id=image["id"],
+            # id=image["id"],
             product_id=image["product_id"],
             url=image["url"]
         )
@@ -29,7 +29,7 @@ def seed_product_images():
 
     cars_images = [
         ProductImage(
-            id=image["id"],
+            # id=image["id"],
             product_id=image["product_id"],
             url=image["url"]
         )
@@ -38,7 +38,7 @@ def seed_product_images():
 
     tech_images = [
         ProductImage(
-            id=image["id"],
+            # id=image["id"],
             product_id=image["product_id"],
             url=image["url"]
         )
@@ -47,7 +47,7 @@ def seed_product_images():
 
     shelter_images = [
         ProductImage(
-            id=image["id"],
+            # id=image["id"],
             product_id=image["product_id"],
             url=image["url"]
         )
@@ -56,7 +56,7 @@ def seed_product_images():
 
     vices_images = [
         ProductImage(
-            id=image["id"],
+            # id=image["id"],
             product_id=image["product_id"],
             url=image["url"]
         )
@@ -65,7 +65,7 @@ def seed_product_images():
 
     body_images = [
         ProductImage(
-            id=image["id"],
+            # id=image["id"],
             product_id=image["product_id"],
             url=image["url"]
         )
@@ -74,7 +74,7 @@ def seed_product_images():
 
     etc_images = [
         ProductImage(
-            id=image["id"],
+            # id=image["id"],
             product_id=image["product_id"],
             url=image["url"]
         )
@@ -82,13 +82,13 @@ def seed_product_images():
     ]
 
     [db.session.add(image) for image in gear_images]
-    [db.session.add(image) for image in style_images]
-    [db.session.add(image) for image in cars_images]
-    [db.session.add(image) for image in tech_images]
-    [db.session.add(image) for image in shelter_images]
-    [db.session.add(image) for image in vices_images]
-    [db.session.add(image) for image in body_images]
-    [db.session.add(image) for image in etc_images]
+    # [db.session.add(image) for image in style_images]
+    # [db.session.add(image) for image in cars_images]
+    # [db.session.add(image) for image in tech_images]
+    # [db.session.add(image) for image in shelter_images]
+    # [db.session.add(image) for image in vices_images]
+    # [db.session.add(image) for image in body_images]
+    # [db.session.add(image) for image in etc_images]
 
     db.session.commit()
 
