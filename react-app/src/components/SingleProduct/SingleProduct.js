@@ -111,6 +111,7 @@ const SingleProduct = () => {
                         <button className="single-product-details-btn btn-stash-later" onClick={async (e) => {
                             e.preventDefault();
                             await dispatch(addToFavorites(singleProduct.id))
+                            history.push(`/my-stash`)
                         }}>
                             STASH FOR LATER
                         </button>

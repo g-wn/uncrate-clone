@@ -45,7 +45,7 @@ export const addToFavorites = (productId) => async dispatch => {
 }
 
 export const getFavorites = (userId) => async dispatch => {
-    const response = await fetch(`api/favorites/${userId}`);
+    const response = await fetch(`/api/favorites/${userId}`);
 
     if (response.ok) {
         const favorites = await response.json();
@@ -58,10 +58,16 @@ export const getFavorites = (userId) => async dispatch => {
 
 const initialState = {};
 
-// const allFavoritesReducer = (state = initialState, action) => {
-//     switch (action.type) {
-//         case LOAD_FAVORITES:
-//             return action.favorites.
-//     }
-// }
+const allFavoritesReducer = (state = initialState, action) => {
+    switch (action.type) {
+        case LOAD_FAVORITES:
+            return action.favorites.Favorites.reduce((favorites, favorite) => {
+                favorites[favorite.id] = favorite;
+                return favorites;
+            }, {});
+        default:
+            return state;
+    }
+}
 
+export default allFavoritesReducer;
