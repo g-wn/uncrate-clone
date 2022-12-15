@@ -33,7 +33,7 @@ def get_one_product(id):
 
 
 # CREATE A NEW PRODUCT:
-@products_routes.route("", methods=["GET", "POST"])
+@products_routes.route("", methods=["POST"])
 @login_required
 def post_product():
     """
@@ -75,7 +75,7 @@ def post_product():
 
 
 # UPDATE A SINGLE PRODUCT:
-@products_routes.route("/<int:id>/update", methods=["GET", "PUT", "POST"])
+@products_routes.route("/<int:id>/update", methods=["PUT"])
 @login_required
 def update_product(id):
     """

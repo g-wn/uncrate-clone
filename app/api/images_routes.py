@@ -22,7 +22,7 @@ def get_images():
 
 
 # CREATE A NEW IMAGE:
-@images_routes.route("/<int:product_id>/new", methods=["GET", "POST"])
+@images_routes.route("/<int:product_id>/new", methods=["POST"])
 def create_image(product_id):
     """
     A logged-in user can send a post request to add a new image to one of their products by product id.
@@ -42,7 +42,7 @@ def create_image(product_id):
 
 
 # UPDATE A SINGLE IMAGE URL:
-@images_routes.route("<int:id>/update", methods=["GET", "PUT", "POST"])
+@images_routes.route("<int:id>/update", methods=["PUT"])
 # @login_required
 def update_product_image(id):
     """
