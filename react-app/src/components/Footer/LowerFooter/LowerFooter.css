@@ -1,0 +1,35 @@
+.lower-footer-container {
+  padding-top: 20px;
+  border-top: 1px solid #666;
+}
+
+.lower-footer-link-list {
+  width: 16.6%;
+  text-align: center;
+}
+
+.lower-footer-link-list ul {
+  color: white;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  list-style-type: none;
+}
+
+.lower-footer-link-list li {
+  margin-bottom: 3px;
+}
+
+.lower-footer-link-list-title {
+  text-transform: uppercase;
+  margin-bottom: 3px;
+  color: #666;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}

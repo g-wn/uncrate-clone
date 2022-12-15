@@ -5,6 +5,7 @@
   width: 100%;
   border: 1px solid #c7c7c7;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .suggested-products a {
@@ -20,7 +21,6 @@
   text-transform: uppercase;
   line-height: 1.5;
   letter-spacing: 0.5px;
-  margin-bottom: 20px;
 }
 
 .suggested-products img {
@@ -36,4 +36,24 @@
   width: 100%;
   text-align: center;
   padding: 0 20px;
+}
+
+.suggested-product-item {
+  flex: 1 0 21%;
+  margin-bottom: 20px;
+}
+@media (max-width: 767px) {
+  .suggested-products img {
+    max-width: 60%;
+  }
+
+  .suggested-product-item {
+    flex: 1 0 42%;
+  }
+}
+
+@media (max-width: 480px) {
+  .suggested-product-item img {
+    max-width: 65%;
+  }
 }

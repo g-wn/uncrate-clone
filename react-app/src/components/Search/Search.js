@@ -32,6 +32,12 @@ export default function Search() {
     console.log(searchResults);
   };
 
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter") {
+      handleSubmit(e);
+    }
+  };
+
   return (
     <div>
       <Navigation isHovering={isHovering} setIsHovering={setIsHovering} />
@@ -42,6 +48,7 @@ export default function Search() {
             <div className="search-field">
               <label className="searchbar-search">Search</label>
               <input
+                onKeyPress={(e) => handleKeyPress(e)}
                 className="searchbar"
                 placeholder="Enter a search term."
                 type="text"
@@ -74,7 +81,7 @@ export default function Search() {
                 </div>
               ))
             ) : (
-              <div className="no-results">No search results found</div>
+              <div className="no-results">No search results found.</div>
             )
           ) : (
             ""
