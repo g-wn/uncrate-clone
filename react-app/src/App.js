@@ -145,7 +145,7 @@ function App() {
                     <User />
                 </ProtectedRoute>
                 <ProtectedRoute
-                    path='/favorites/:userId'
+                    path='/my-stash'
                     exact={true}
                 >
                     <Favorites />

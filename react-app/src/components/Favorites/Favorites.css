@@ -1,0 +1,42 @@
+.user-products {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding-top: 40px;
+    justify-content: space-evenly;
+    margin: 0 22%;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    align-items: center;
+    text-align: center;
+    grid-column-gap: 2em;
+}
+
+.product-img {
+    width: 468px;
+    height: 313px;
+    margin-bottom: -5px;
+  }
+
+  .stash-title {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 30px;
+  }
+
+  .product-name {
+    margin-bottom: 20px;
+    padding-top: 20px;
+  }
+
+  .outer a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .outer {
+    border: 1px solid rgb(128, 128, 128, 0.3);
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }

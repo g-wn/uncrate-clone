@@ -37,11 +37,18 @@ def get_user_favorites(id):
     """
     queried_user = User.query.get(id)
 
-    favorites = Product.query.join(favorites).all()
+    users_favorites = queried_user.user_favorites       
 
-    user_favorites = queried_user.favorites       
-
-    return {product.to_dict() for product in user_favorites}
+    print("""
+    
+    
+    
+    
+    
+    
+    
+    """, {"Favorites": [product.to_dict() for product in users_favorites]})
+    return {"Favorites": [product.to_dict() for product in users_favorites]}
 
 
 

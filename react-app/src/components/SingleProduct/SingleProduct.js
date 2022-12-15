@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { useParams, useHistory } from "react-router-dom";
+import { useParams, useHistory, NavLink } from "react-router-dom";
 import { getSingleProduct } from "../../store/one_product";
 import { getProducts } from "../../store/all_products";
 import { addToFavorites } from "../../store/favorites";
@@ -410,9 +410,11 @@ const SingleProduct = () => {
                                 <Cart setShowCartModal={setShowCartModal} />
                             </Modal>
                         )}
+                        
                         <button className="single-product-details-btn btn-stash-later" onClick={async (e) => {
                             e.preventDefault();
                             await dispatch(addToFavorites(singleProduct.id))
+                            history.push(`/my-stash`)
                         }}>
                             STASH FOR LATER
                         </button>
