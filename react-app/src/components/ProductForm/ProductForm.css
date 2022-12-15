@@ -37,6 +37,7 @@ input[type=number] {
 }
 
 .product-form {
+    max-width: 641px;
     width: 44%;
 }
 
@@ -47,10 +48,15 @@ input[type=number] {
 }
 
 .product-form-header {
+    /* border: 1px solid red; */
+    font-family: "Oswald", sans-serif;
+    font-size: 18px;
     align-items: center;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     text-transform: uppercase;
+    margin-right: 10px;
+    margin-bottom: 30px;
 }
 
 .product-form-submit {
@@ -60,6 +66,8 @@ input[type=number] {
     cursor: pointer;
     padding: 1em;
     margin-top: .75em;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
 }
 
 .title-container,
@@ -68,6 +76,8 @@ input[type=number] {
 .category-container,
 .price-container,
 .preview-img-container {
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
     align-items: center;
     border: 1px solid black;
     display: flex;
@@ -81,6 +91,8 @@ input[type=number] {
 .category-input,
 .price-input,
 .preview-img-input {
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
     border: none;
     width: 50%;
 }
@@ -97,4 +109,8 @@ input[type=number] {
 
 label {
     font-weight: 500;
+}
+
+.category-input {
+    margin-right: 3px;
 }

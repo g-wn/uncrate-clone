@@ -1,34 +1,163 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { useState } from "react";
+import { useSelector } from "react-redux";
+import { NavLink, useHistory } from "react-router-dom";
 import SupplyHeader from "./SupplyHeader/SupplyHeader";
 import "./SupplyNavBar.css";
-
+import { Modal } from "../../../context/Modal";
+import LoginForm from "../../auth/LoginForm";
+import SignUpForm from "../../auth/SignUpForm";
+import LogoutButton from "../../auth/LogoutButton";
+import Cart from "../../Cart/Cart";
 export default function SupplyNavBar() {
-  return (
-    <div className="supply-nav-bar">
-      <div className="topbar-wrapper">
-        <div className="topbar">
-          <div className="topbar-left">
-            <NavLink to="/">
-              {" "}
-              <img
-                src="/images/reduncrate-white2.png"
-                className="reduncrate-logo-mini"
-                alt="header-logo"
-              ></img>
-            </NavLink>
-          </div>
-          <div className="topbar-middle">
-            <ul>
-              <li>UNCRATE.COM</li>
-              <li>UNCRATE.SUPPLY</li>
-              <li>UNCRATE.TV</li>
-            </ul>
-          </div>
-          <div className="topbar-right">FOLLOW @ UNCRATE</div>
+    const history = useHistory();
+    const [showCartModal, setShowCartModal] = useState(false);
+
+    const [showLoginModal, setShowLoginModal] = useState(false);
+    const [showSignupModal, setShowSignupModal] = useState(false);
+    const user = useSelector((state) => state.session.user);
+    return (
+        <div className="supply-nav-bar">
+            <div className="topbar-wrapper">
+                <div className="topbar">
+                    <div className="topbar-left">
+                        <NavLink to="/">
+                            {" "}
+                            <img
+                                src="/images/reduncrate-white2.png"
+                                className="reduncrate-logo-mini"
+                                alt="header-logo"
+                            ></img>
+                        </NavLink>
+                    </div>
+                    <div className="topbar-middle">
+                        <ul>
+                            <li>
+                                <a
+                                    target="_blank"
+                                    className="header-link"
+                                    href="https://www.linkedin.com/in/jwily/"
+                                >
+                                    JOHN LEE | PROJECT ADVISOR
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    target="_blank"
+                                    className="header-link"
+                                    href="https://www.linkedin.com/in/brad-simpson-a6b1b7b2/"
+                                >
+                                    BRAD SIMPSON | MOD INSTRUCTOR
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div className="supply-nav-rightbtns">
+                        {!user ? (
+                            <div>
+                                <button
+                                    className="login-button"
+                                    onClick={() => setShowLoginModal(true)}
+                                >
+                                    LOG IN
+                                </button>
+                                &nbsp;&nbsp; | &nbsp;&nbsp;
+                                <button
+                                    className="login-button"
+                                    onClick={() => setShowSignupModal(true)}
+                                >
+                                    SIGN UP
+                                </button>
+                                <div className="supply-icons-alt">
+                                    &nbsp;&nbsp; | &nbsp;&nbsp;
+                                    <NavLink to="/search">
+                                        <i className="fa-solid fa-magnifying-glass"></i>
+                                    </NavLink>
+                                    {user ? (
+                                        <button
+                                            className="supply-header-crate-button"
+                                            onClick={() => setShowCartModal(true)}
+                                        >
+                                            <i className="fa-solid fa-box crate-icon"></i>
+                                        </button>
+                                    ) : (
+                                        <button
+                                            className="supply-header-crate-button"
+                                            onClick={() => setShowLoginModal(true)}
+                                        >
+                                            <i className="fa-solid fa-box crate-icon"></i>
+                                        </button>
+                                    )}
+                                    {showLoginModal && (
+                                        <Modal onClose={() => setShowLoginModal(false)}>
+                                            <LoginForm setShowCartModal={setShowLoginModal} />
+                                        </Modal>
+                                    )}
+                                    {showCartModal && (
+                                        <Modal onClose={() => setShowCartModal(false)}>
+                                            <Cart setShowCartModal={setShowCartModal} />
+                                        </Modal>
+                                    )}
+                                    <span className="cart-badge"></span>
+                                </div>
+                                {showLoginModal && (
+                                    <Modal onClose={() => setShowLoginModal(false)}>
+                                        <LoginForm setShowLoginModal={setShowLoginModal} />
+                                    </Modal>
+                                )}
+                                {showSignupModal && (
+                                    <Modal onClose={() => setShowSignupModal(false)}>
+                                        <SignUpForm />
+                                    </Modal>
+                                )}
+                            </div>
+                        ) : (
+                            <div>
+                                <LogoutButton setShowLoginModal={setShowLoginModal} />
+                                &nbsp;&nbsp; | &nbsp;&nbsp;
+                                <button
+                                    className="profile-button"
+                                    onClick={() => history.push(`/profile`)}
+                                >
+                                    PROFILE
+                                </button>
+                                <div className="supply-icons-alt">
+                                    &nbsp;&nbsp; | &nbsp;&nbsp;
+                                    <NavLink to="/search">
+                                        <i className="fa-solid fa-magnifying-glass"></i>
+                                    </NavLink>
+                                    {user ? (
+                                        <button
+                                            className="supply-header-crate-button"
+                                            onClick={() => setShowCartModal(true)}
+                                        >
+                                            <i className="fa-solid fa-box crate-icon"></i>
+                                        </button>
+                                    ) : (
+                                        <button
+                                            className="supply-header-crate-button"
+                                            onClick={() => setShowLoginModal(true)}
+                                        >
+                                            <i className="fa-solid fa-box crate-icon"></i>
+                                        </button>
+                                    )}
+                                    {showLoginModal && (
+                                        <Modal onClose={() => setShowLoginModal(false)}>
+                                            <LoginForm setShowCartModal={setShowLoginModal} />
+                                        </Modal>
+                                    )}
+                                    {showCartModal && (
+                                        <Modal onClose={() => setShowCartModal(false)}>
+                                            <Cart setShowCartModal={setShowCartModal} />
+                                        </Modal>
+                                    )}
+                                    <span className="cart-badge"></span>
+                                </div>
+                            </div>
+                        )}
+                    </div>
+                </div>
+            </div>
+            <SupplyHeader />
         </div>
-      </div>
-      <SupplyHeader />
-    </div>
-  );
+    );
 }

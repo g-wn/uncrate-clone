@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { NavLink, useHistory } from 'react-router-dom';
 import { AiOutlinePlusCircle } from 'react-icons/ai';
@@ -10,6 +10,7 @@ const UserProfile = () => {
     const dispatch = useDispatch();
     const history = useHistory();
     const user = useSelector((state) => state.session.user);
+    const [isHovering, setIsHovering] = useState(false);
 
     const allProducts = useSelector(state => Object.values(state.products));
 
@@ -21,9 +22,10 @@ const UserProfile = () => {
 
     return (
         <>
-            <Navigation />
+            <Navigation isHovering={isHovering} setIsHovering={setIsHovering} />
             <div className='my-listings'>
-                {`${user.first_name}'s Listings`}
+                <div className="hidden-spacer"></div>
+                <span className='my-listings-title'>{`${user.first_name}'s Listings`}</span>
                 <NavLink
                     className='add-product-btn'
                     to={'/products/new'}
@@ -74,7 +76,7 @@ const UserProfile = () => {
                                         dispatch(getProducts());
                                     }}
                                 >
-                                    Yeet From Reduncrate
+                                    Delete From Reduncrate
                                 </button>
                             </div>
                         )

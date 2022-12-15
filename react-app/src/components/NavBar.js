@@ -18,12 +18,10 @@ const NavBar = () => {
                         </NavLink>
                     </li>
                     <li>
-                        {/* <NavLink to='/login' exact={true} activeClassName='active'> */}
                         <button onClick={() => setShowModal(true)}>
                             Login
                         </button>
                         {showModal && <Modal onClose={() => setShowModal(false)}><LoginForm /></Modal>}
-                        {/* </NavLink> */}
                     </li>
                     <li>
                         <NavLink to='/sign-up' exact={true} activeClassName='active'>

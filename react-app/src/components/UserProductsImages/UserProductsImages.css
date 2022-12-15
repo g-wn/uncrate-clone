@@ -18,7 +18,7 @@
     font-size: 24px;
     font-weight: bold;
     font-family: 'Oswald', sans-serif;
-    justify-content: center;
+    justify-content: space-between;
     padding-bottom: 10px;
     position: relative;
     text-transform: uppercase;
@@ -26,6 +26,7 @@
 
 .add-edit-image-form {
     margin: 0 auto;
+    max-width: 960px;
     padding: 1em;
     width: 93%;
 }
@@ -33,10 +34,12 @@
 .back-btn {
     align-self: flex-start;
     position: relative;
-    top: .5em;
+    top: 0.15em;
 }
 
 .image-form {
+    border: 2px solid black;
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
     padding: 2em;
@@ -147,9 +150,9 @@
 }
 
 .title {
+    font-family: Oswald, sans-serif;
     font-weight: 700;
     font-size: 30px;
-    left: 0;
     position: absolute;
     text-align: center;
     text-transform: uppercase;

@@ -16,7 +16,8 @@
   }
 
 .my-listings {
-    margin-top: 20px;
+    margin: 20px auto auto auto;
+    max-width: 960px;
     padding-bottom: 10px;
     font-size: 24px;
     display: flex;
@@ -24,7 +25,7 @@
     font-weight: bold;
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
-    justify-content: center;
+    justify-content: space-between;
     padding-top: 20px;
     text-decoration: underline;
 }
@@ -32,9 +33,11 @@
 .user-products {
     display: grid;
     grid-template-columns: auto auto;
+    grid-column-gap: 1em;
     padding-top: 40px;
     justify-content: space-evenly;
-    margin: 0 22%;
+    margin: 0 auto;
+    max-width: 960px;
 }
 
 .product-details {
@@ -52,7 +55,7 @@
 }
 
 .edit-listing {
-    margin-top: 15px;
+    margin-top: 10px;
     width: 400px;
     padding: 12px 7px;
     text-transform: uppercase;
@@ -76,10 +79,13 @@
     color: white;
     font-weight: 700;
     border: none;
-    font-family: "Arimo", sans-serif;
+    font-family: "Roboto", sans-serif;
     height: 36px;
     line-height: 1;
     background-color: rgb(113, 73, 73);
     cursor: pointer;
-    margin-bottom: 15px;
+}
+
+.my-listings-title {
+    margin-left: 30px;
 }

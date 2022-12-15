@@ -2,7 +2,7 @@
   font-family: "Oswald", sans-serif;
   font-size: 26px;
   text-align: center;
-  margin-top: 15px;
+  margin-top: 10px;
   font-weight: 600;
 }
 
@@ -17,10 +17,11 @@
   text-align: center;
 }
 
-.single-product-details {
+.single-product-details-wrapper {
   padding: 0 20px;
   padding-bottom: 20px;
   border: 1px solid #c7c7c7;
+  border-top: none;
 }
 
 .single-product-details-btns button:hover {
@@ -31,19 +32,19 @@
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   color: #989898;
-  letter-spacing: -0.5px;
+  letter-spacing: 0.5px;
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 500;
   text-decoration: none;
 }
 
 .single-product-category {
-  margin-top: 20px;
+  padding-top: 10px;
 }
 
 .single-product-detailed-description {
   font-family: "Domine", serif;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
   line-height: 28px;
   text-align: center;
@@ -63,10 +64,10 @@
   text-transform: uppercase;
   font-size: 13px;
   color: white;
-  font-weight: 700;
+  font-weight: 500;
   border: none;
   font-family: "Roboto", sans-serif;
-  letter-spacing: -0.5px;
+  letter-spacing: 0.5px;
   height: 36px;
   line-height: 1;
 }
@@ -81,7 +82,7 @@
   font-weight: 700;
   border: none;
   font-family: "Roboto", sans-serif;
-  letter-spacing: -0.5px;
+  letter-spacing: 0.5px;
   height: 36px;
   line-height: 1;
 }
@@ -107,4 +108,34 @@
   font-family: "Animo", sans-serif;
   font-size: 12px;
   font-weight: 700;
+}
+
+@media (max-width: 980px) {
+  .single-product {
+    padding: 0 20px;
+  }
+
+  .single-product-details-wrapper {
+    width: 100%;
+  }
+
+  .single-product-details {
+    max-width: 680px;
+    margin: 0 auto;
+  }
+  .single-product-detailed-description {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .single-product-details button {
+    width: 100%;
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 780px) {
+  .single-product {
+    margin-top: 60px;
+  }
 }
