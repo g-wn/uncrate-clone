@@ -38,8 +38,7 @@ def create_image(product_id):
         db.session.commit()
 
         return new_img.to_dict()
-    return render_template("test_image_form.html", form=form, product_id=product_id)
-
+    return {"errors": form.errors}
 
 # UPDATE A SINGLE IMAGE URL:
 @images_routes.route("<int:id>/update", methods=["PUT"])
@@ -61,8 +60,7 @@ def update_product_image(id):
 
         db.session.commit()
         return product_image.to_dict()
-    return render_template("test_update_image.html", form=form, id=id)
-
+    return {"errors": form.errors}
 
 # DELETE A SINGLE PRODUCT IMAGE:
 @images_routes.route("/<int:id>", methods=["DELETE"])
