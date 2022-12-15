@@ -93,3 +93,48 @@
   text-decoration: none;
   color: #ae9e85;
 }
+
+@media (max-width: 1000px) {
+    .splash-header-icons-wrapper {
+        position: absolute;
+        right: 200px;
+    }
+
+    .featured-product {
+        max-width: 80vw;
+    }
+
+    .featured-product-image {
+        max-width: 80vw;
+        height: auto;
+    }
+
+    .all-other-products {
+        grid-template-columns: auto;
+        max-width: 80vw;
+    }
+
+    .all-other-products-image {
+        width: 80vw;
+        height: auto;
+    }
+
+    .featured-product-description,
+    .all-other-products-description {
+        width: 60vw;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 700px) {
+    .topbar ul,
+    .nav-bar-categories,
+    .nav-bar-categories-border {
+        display: none;
+    }
+    .reduncrate-logo {
+        width: 300px;
+        margin-top: 39px;
+        height: auto;
+    }
+}

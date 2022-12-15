@@ -7,91 +7,91 @@ import SelectField from "../SelectField/SelectField";
 import "./Cart.css";
 
 const Cart = ({ setShowCartModal, showCartModal }) => {
-  const dispatch = useDispatch();
-  const cart = useSelector((state) => state.cart);
+    const dispatch = useDispatch();
+    const cart = useSelector((state) => state.cart);
 
-  useEffect(() => {
-    dispatch(getCart());
-  }, [dispatch]);
+    useEffect(() => {
+        dispatch(getCart());
+    }, [dispatch]);
 
-  const usDollar = Intl.NumberFormat("en-US");
-  let totalPrice = 0;
+    const usDollar = Intl.NumberFormat("en-US");
+    let totalPrice = 0;
 
-  let cartItems;
-  if (cart && cart.cartItems) cartItems = Object.values(cart.cartItems);
+    let cartItems;
+    if (cart && cart.cartItems) cartItems = Object.values(cart.cartItems);
 
-  if (!cart || !cartItems) return null;
+    if (!cart || !cartItems) return null;
 
-  return (
-    <div className="cart-container">
-      <div className="cart-header">
-        <h1 className="cart-title">YOUR CRATE</h1>
-        <button
-          className="cart-header-x"
-          onClick={() => setShowCartModal(false)}
-        >
-          <i className="fa-sharp fa-solid fa-xmark"></i>
-        </button>
-      </div>
-      <div className="cart-item-container">
-        {cartItems.map((item) => (
-          <div className="one-cart-item" key={item.id}>
-            <NavLink to={`/products/${item.product.id}`}>
-              <img
-                className="cart-item-image"
-                src={item.product.productImages[item.product.previewImgId].url}
-                alt="cart item"
-              />
-            </NavLink>
-            <div className="cart-item-title-and-remove">
-              {item.product.title}
-              <button
-                className="cart-remove-button"
-                onClick={async (e) => {
-                  e.preventDefault();
-                  await dispatch(removeCartItem(item.id));
-                  dispatch(getCart());
-                }}
-              >
-                REMOVE
-              </button>
+    return (
+        <div className="cart-container">
+            <div className="cart-header">
+                <h1 className="cart-title">YOUR CRATE</h1>
+                <button
+                    className="cart-header-x"
+                    onClick={() => setShowCartModal(false)}
+                >
+                    <i className="fa-sharp fa-solid fa-xmark"></i>
+                </button>
             </div>
-            <div className="cart-quantity-and-price">
-              <div className="cart-quantity-container">
-                <SelectField currentItem={item} />
-              </div>
-              <div className="cart-price">
-                ${usDollar.format(item.product.price * item.quantity)}
-                {(totalPrice += item.product.price * item.quantity) && false}
-              </div>
+            <div className="cart-item-container">
+                {cartItems.map((item) => (
+                    <div className="one-cart-item" key={item.id}>
+                        <NavLink to={`/products/${item.product.id}`}>
+                            <img
+                                className="cart-item-image"
+                                src={item.product.productImages[item.product.previewImgId].url}
+                                alt="cart item"
+                            />
+                        </NavLink>
+                        <div className="cart-item-title-and-remove">
+                            {item.product.title}
+                            <button
+                                className="cart-remove-button"
+                                onClick={async (e) => {
+                                    e.preventDefault();
+                                    await dispatch(removeCartItem(item.id));
+                                    dispatch(getCart());
+                                }}
+                            >
+                                REMOVE
+                            </button>
+                        </div>
+                        <div className="cart-quantity-and-price">
+                            <div className="cart-price">
+                                ${usDollar.format(item.product.price * item.quantity)}
+                                {(totalPrice += item.product.price * item.quantity) && false}
+                            </div>
+                            <div className="cart-quantity-container">
+                                <SelectField currentItem={item} />
+                            </div>
+                        </div>
+                    </div>
+                ))}
             </div>
-          </div>
-        ))}
-      </div>
-      <div className="cart-checkout-div">
-        <div className="cart-total-container">
-          <span className="cart-total-text">TOTAL</span>
-          <span className="cart-total-price">
-            ${usDollar.format(totalPrice)}
-          </span>
+            <div className="cart-checkout-div">
+                <div className="cart-total-container">
+                    <span className="cart-total-text">TOTAL</span>
+                    <span className="cart-total-price">
+                        ${usDollar.format(totalPrice)}
+                    </span>
+                </div>
+                <div className="cart-checkout-button-container">
+                    <NavLink to='/checkout'><button className="cart-checkout-button">CHECKOUT</button></NavLink>
+                </div>
+                <div className="cart-checkout-text-container">
+                    <p className="cart-checkout-text">
+                        FREE SHIPPING OVER $200 IN THE U.S. INTERNATIONAL RATES AT CHECKOUT.
+                    </p>
+                </div>
+                <div className="cart-checkout-text-container">
+                    <p className="cart-checkout-text">
+                        WE'RE PROUD TO OFFER A DISCOUNT TO MILITARY, NURSES, AND FIRST
+                        RESPONDERS.
+                    </p>
+                </div>
+            </div>
         </div>
-        <div className="cart-checkout-button-container">
-          <button className="cart-checkout-button">CHECKOUT</button>
-        </div>
-        <div className="cart-checkout-text-container">
-          <p className="cart-checkout-text">
-            FREE SHIPPING OVER $200 IN THE U.S. INTERNATIONAL RATES AT CHECKOUT.
-          </p>
-        </div>
-        <div className="cart-checkout-text-container">
-          <p className="cart-checkout-text">
-            WE'RE PROUD TO OFFER A DISCOUNT TO MILITARY, NURSES, AND FIRST
-            RESPONDERS.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
+    );
 };
 
 export default Cart;

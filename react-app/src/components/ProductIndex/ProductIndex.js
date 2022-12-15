@@ -53,7 +53,7 @@ const ProductIndex = () => {
                         </p>
                         <span className='featured-product-buy-link'>
                             <NavLink
-                                className='product-link'
+                                className='product-link-buy'
                                 to={`/products/${products[0].id}`}
                             >
                                 Buy From Uncrate Supply
@@ -104,7 +104,7 @@ const ProductIndex = () => {
                                 </p>
                                 <span className='featured-product-buy-link'>
                                     <NavLink
-                                        className='product-link'
+                                        className='product-link-buy'
                                         to={`/products/${product.id}`}
                                     >
                                         Buy From Uncrate Supply

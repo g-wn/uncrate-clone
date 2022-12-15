@@ -25,7 +25,7 @@ const UserProfile = () => {
             <Navigation isHovering={isHovering} setIsHovering={setIsHovering} />
             <div className='my-listings'>
                 <div className="hidden-spacer"></div>
-                {`${user.first_name}'s Listings`}
+                <span className='my-listings-title'>{`${user.first_name}'s Listings`}</span>
                 <NavLink
                     className='add-product-btn'
                     to={'/products/new'}
@@ -76,7 +76,7 @@ const UserProfile = () => {
                                         dispatch(getProducts());
                                     }}
                                 >
-                                    Yeet From Reduncrate
+                                    Delete From Reduncrate
                                 </button>
                             </div>
                         )

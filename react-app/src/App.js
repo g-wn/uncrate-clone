@@ -18,6 +18,7 @@ import ProductCreateForm from "./components/ProductForm/CreateProduct";
 import UserProfile from "./components/UserProfile/UserProfile";
 import Favorites from "./components/Favorites/Favorites";
 import Checkout from "./components/Checkout/Checkout";
+import PurchaseComplete from "./components/Checkout/PurchaseComplete";
 
 function App() {
     const [loaded, setLoaded] = useState(false);
@@ -156,6 +157,12 @@ function App() {
                     exact={true}
                 >
                     <Checkout />
+                </ProtectedRoute>
+                <ProtectedRoute
+                    path='/checkout/complete'
+                    exact={true}
+                >
+                    <PurchaseComplete />
                 </ProtectedRoute>
                 <Route
                     path='/'

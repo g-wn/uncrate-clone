@@ -1,36 +1,26 @@
-import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { NavLink, useHistory } from "react-router-dom";
-import { Modal } from "../../context/Modal";
-import { getCart, purchaseCart } from "../../store/cart";
+import { useState } from "react";
+import { useHistory } from "react-router-dom";
 import Navigation from "../Navigation/Navigation";
-import './Checkout.css';
-import PurchaseComplete from "./PurchaseComplete";
 
-const Checkout = () => {
-    const dispatch = useDispatch();
+const PurchaseComplete = () => {
     const history = useHistory();
-    const cart = useSelector(state => state.cart);
     const [isHovering, setIsHovering] = useState(false);
-
-    useEffect(() => {
-        dispatch(getCart());
-    }, [dispatch])
-
-    let totalPrice = 0;
-    const usDollar = Intl.NumberFormat("en-US");
-
-    let cartItems;
-    if (cart && cart.cartItems) cartItems = Object.values(cart.cartItems)
-
-    if (!cart || !cartItems) return null;
-
     return (
         <>
             <Navigation isHovering={isHovering} setIsHovering={setIsHovering} />
             <div className="checkout-page">
-                <h1 className='checkout-title'>CHECKOUT</h1>
-                <div className="checkout-items-container">
+                <h1 className='checkout-title'>PURCHASE COMPLETE!</h1>
+                <div className="cart-checkout-button-container">
+                    <button className="cart-checkout-button" onClick={() => {
+                        history.push('/');
+                    }}>RETURN HOME</button>
+                </div>
+                <div className="cart-checkout-button-container">
+                    <button className="cart-checkout-button" onClick={() => {
+                        history.push('/profile');
+                    }}>GO TO PROFILE</button>
+                </div>
+                {/* <div className="checkout-items-container">
                     <div className="checkout-items">
                         {cartItems.map(item => (
                             <div className="one-checkout-item">
@@ -66,10 +56,15 @@ const Checkout = () => {
                             history.push('/checkout/complete');
                         }}>PURCHASE</button>
                     </div>
-                </div>
+                    {showPurchaseComplete && (
+                        <Modal onClose={() => setShowPurchaseComplete(false)}>
+                            <PurchaseComplete setShowPurchaseComplete={setShowPurchaseComplete} />
+                        </Modal>
+                    )}
+                </div> */}
             </div>
         </>
     )
 }
 
-export default Checkout;
+export default PurchaseComplete;
