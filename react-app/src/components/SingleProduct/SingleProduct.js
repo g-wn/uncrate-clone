@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { useParams, useHistory } from "react-router-dom";
+import { useParams, useHistory, NavLink } from "react-router-dom";
 import { getSingleProduct } from "../../store/one_product";
 import { addToFavorites } from "../../store/favorites";
 import "./SingleProduct.css";
@@ -46,7 +46,10 @@ const SingleProduct = () => {
 
   if (singleProduct) {
     for (let id in singleProduct.productImages) {
-      if (singleProduct.productImages[id].productId === singleProduct.id) {
+      if (
+        singleProduct.productImages[id].productId === singleProduct.id &&
+        !singleProduct.productImages[id].url.includes("shopify")
+      ) {
         imgList.push(singleProduct.productImages[id].url);
       }
     }
@@ -66,7 +69,11 @@ const SingleProduct = () => {
         <div className="single-product-details-wrapper">
           <div className="single-product-details">
             <p className="single-product-category">
-              <a href="#hi">{singleProduct.productCategory.name}</a>
+              <NavLink
+                to={`/category/${singleProduct.productCategory.name.toLowerCase()}`}
+              >
+                {singleProduct.productCategory.name}
+              </NavLink>
             </p>
             <h1>
               {singleProduct.title.toUpperCase()} / ${singleProduct.price}
@@ -136,6 +143,7 @@ const SingleProduct = () => {
           ))}
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
