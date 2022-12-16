@@ -28,8 +28,6 @@ export default function Search() {
     e.preventDefault();
     setSearchResults(await dispatch(searchQuery(searchValue)).query);
     setTimeout(() => setSubmitted(true), 300);
-
-    console.log(searchResults);
   };
 
   const handleKeyPress = (e) => {

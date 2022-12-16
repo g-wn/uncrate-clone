@@ -85,7 +85,6 @@ const SingleProduct = () => {
                   className='single-product-details-btn btn-add-cart'
                   onClick={async e => {
                     e.preventDefault();
-                    console.log(thisCartItem);
                     if (thisCartItem) {
                       await dispatch(editCartItem(thisCartItem, thisCartItem.quantity + 1));
                       await dispatch(getCart());

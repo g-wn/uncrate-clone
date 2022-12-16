@@ -11,7 +11,6 @@ from ._08_products_etc import products_etc_imgs
 def seed_product_images():
     gear_images = [
         ProductImage(
-            # id=image["id"],
             product_id=image["product_id"],
             url=image["url"]
         )
@@ -20,7 +19,6 @@ def seed_product_images():
 
     style_images = [
         ProductImage(
-            # id=image["id"],
             product_id=image["product_id"],
             url=image["url"]
         )
@@ -29,7 +27,6 @@ def seed_product_images():
 
     cars_images = [
         ProductImage(
-            # id=image["id"],
             product_id=image["product_id"],
             url=image["url"]
         )
@@ -38,7 +35,6 @@ def seed_product_images():
 
     tech_images = [
         ProductImage(
-            # id=image["id"],
             product_id=image["product_id"],
             url=image["url"]
         )
@@ -47,7 +43,6 @@ def seed_product_images():
 
     shelter_images = [
         ProductImage(
-            # id=image["id"],
             product_id=image["product_id"],
             url=image["url"]
         )
@@ -56,7 +51,6 @@ def seed_product_images():
 
     vices_images = [
         ProductImage(
-            # id=image["id"],
             product_id=image["product_id"],
             url=image["url"]
         )
@@ -65,7 +59,6 @@ def seed_product_images():
 
     body_images = [
         ProductImage(
-            # id=image["id"],
             product_id=image["product_id"],
             url=image["url"]
         )
@@ -74,7 +67,6 @@ def seed_product_images():
 
     etc_images = [
         ProductImage(
-            # id=image["id"],
             product_id=image["product_id"],
             url=image["url"]
         )
