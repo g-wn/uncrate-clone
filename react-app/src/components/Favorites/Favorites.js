@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import { getFavorites } from "../../store/favorites";
 import Navigation from "../Navigation/Navigation";
 import "./Favorites.css";
+import Footer from "../Footer/Footer";
 
 const Favorites = () => {
   const dispatch = useDispatch();
@@ -38,6 +39,7 @@ const Favorites = () => {
           </div>
         ))}
       </div>
+      <Footer />
     </>
   );
 };

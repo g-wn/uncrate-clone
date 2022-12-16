@@ -5,6 +5,7 @@ import { getProducts } from "../../store/all_products";
 import "./ProductIndex.css";
 import Navigation from "../Navigation/Navigation";
 import { getCart } from "../../store/cart";
+import Footer from "../Footer/Footer";
 
 const ProductIndex = () => {
   const dispatch = useDispatch();
@@ -112,6 +113,7 @@ const ProductIndex = () => {
             </div>
           ))}
         </div>
+        <Footer />
       </div>
     </>
   );

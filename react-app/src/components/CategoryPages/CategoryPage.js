@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { getProducts } from "../../store/all_products";
 import Navigation from "../Navigation/Navigation";
+import Footer from "../Footer/Footer";
 
 import "./CategoryPage.css";
 import "../ProductIndex/ProductIndex.css";
@@ -128,6 +129,7 @@ export default function CategoryPage({ categoryName }) {
           )}
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

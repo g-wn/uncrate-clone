@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom";
 import Navigation from "../Navigation/Navigation";
 import { searchQuery } from "../../store/all_products";
 import "./Search.css";
+import Footer from "../Footer/Footer";
 
 export default function Search() {
   const [searchValue, setSearchValue] = useState("");
@@ -69,7 +70,7 @@ export default function Search() {
                   <NavLink to={`/products/${product.id}`}>
                     <img
                       src={product.productImages[product.previewImgId].url}
-                      alt='search-result-product'
+                      alt="search-result-product"
                     />
                   </NavLink>
                   <div className="search-result-details">
@@ -88,6 +89,7 @@ export default function Search() {
           )}
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
