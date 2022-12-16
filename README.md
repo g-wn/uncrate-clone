@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://reduncrate.onrender.com" target="_blank">
-     REDUNCRATE LOGO PLACEHOLDER
+     ![Reduncrate Logo](https://raw.githubusercontent.com/g-wn/uncrate-clone/main/react-app/public/images/reduncrate-white2.png)
   </a>
 
   <h1 style="border-bottom:none" align="center">reduncrate</h1>
