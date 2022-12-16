@@ -10,6 +10,8 @@
 }
 
 .product-preview-img {
+    object-fit: cover;
+    object-position: center;
     width: 468px;
     height: 313px;
     margin-bottom: 10px;

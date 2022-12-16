@@ -3,33 +3,48 @@ import { useDispatch } from 'react-redux';
 import { getProducts } from '../../store/all_products';
 import { putProductImage, postProductImage } from '../../store/one_product';
 
-const ImageForm = ({ modalData, setShowEditModal, setShowAddModal, formType }) => {
+const ImageForm = ({ modalData, setShowEditModal, setShowEditMainModal, setShowAddModal, formType }) => {
   const dispatch = useDispatch();
   const [url, setUrl] = useState('');
+  const [errors, setErrors] = useState([]);
 
   const handleEdit = async e => {
     e.preventDefault();
-    await dispatch(putProductImage(modalData, url));
-    dispatch(getProducts());
-    setShowEditModal(false);
+    const updatedProductImage = await dispatch(putProductImage(modalData, url));
+    if (updatedProductImage) {
+      updatedProductImage.errors
+        ? setErrors(updatedProductImage.errors)
+        : await dispatch(getProducts()).then(() =>
+            formType === 'edit' ? setShowEditModal(false) : setShowEditMainModal(false)
+          );
+    }
   };
 
   const handleCreate = async e => {
     e.preventDefault();
-    await dispatch(postProductImage(modalData, url))
-    dispatch(getProducts())
-    setShowAddModal(false)
-  }
+    const newProductImage = await dispatch(postProductImage(modalData, url));
+    if (newProductImage) {
+      newProductImage.errors
+        ? setErrors(newProductImage.errors)
+        : await dispatch(getProducts()).then(() => setShowAddModal(false));
+    }
+  };
 
   return (
     <form
       className='image-form'
       onSubmit={formType === 'create' ? handleCreate : handleEdit}
     >
-      {formType === 'create' ? (
-        <header className='image-form-header'>Enter an image URL</header>
+      {errors.length > 0 ? (
+        <ul className='image-form-header-errors'>
+          {errors.map((error, idx) => (
+            <li key={idx}>{error}</li>
+          ))}
+        </ul>
       ) : (
-      <header className='image-form-header'>Enter a new image URL</header>
+        <h2 className='image-form-header'>
+          {formType === 'create' ? 'Enter an image URL' : 'Enter a new image URL'}
+        </h2>
       )}
       <div className='url-container'>
         <label htmlFor='url-input'>URL</label>
@@ -38,7 +53,7 @@ const ImageForm = ({ modalData, setShowEditModal, setShowAddModal, formType }) =
           onChange={e => setUrl(e.target.value)}
           name='url-input'
           placeholder='Enter a new image URL...'
-          type='url'
+          type='text'
           value={url}
         />
       </div>
@@ -46,7 +61,7 @@ const ImageForm = ({ modalData, setShowEditModal, setShowAddModal, formType }) =
         className='image-submit-btn'
         type='submit'
       >
-        {formType === 'edit' ? 'EDIT IMAGE' : 'ADD IMAGE'}
+        {formType === 'create' ? 'ADD IMAGE' : 'EDIT IMAGE'}
       </button>
     </form>
   );

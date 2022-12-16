@@ -24,6 +24,17 @@
     text-transform: uppercase;
 }
 
+.image-form-header,
+.image-form-header-errors {
+    /* border: 1px solid red; */
+    margin: 0 auto;
+    padding: 0;
+}
+
+.image-form-header-errors {
+    min-height: 37.5505px;
+}
+
 .add-edit-image-form {
     margin: 0 auto;
     max-width: 960px;
@@ -42,9 +53,24 @@
     border-radius: 5px;
     display: flex;
     flex-direction: column;
+    height: 16em;
     padding: 2em;
     row-gap: 1em;
     width: 25em;
+}
+
+.image-form-header-errors {
+    color: red;
+    display: flex;
+    flex-direction: column;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    gap: .5em;
+    justify-content: center;
+    list-style: none;
+    max-width: 641px;
+    padding-bottom: 10px;
 }
 
 .image-submit-btn {
@@ -95,7 +121,7 @@
 
 .main-image {
     aspect-ratio: 2/1.334;
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, .25);
@@ -124,7 +150,7 @@
 
 .single-image-container {
     aspect-ratio: 2/1.334;
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, .25);

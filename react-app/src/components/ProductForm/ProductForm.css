@@ -48,7 +48,6 @@ input[type=number] {
 }
 
 .product-form-header {
-    /* border: 1px solid red; */
     font-family: "Oswald", sans-serif;
     font-size: 18px;
     align-items: center;
@@ -57,6 +56,20 @@ input[type=number] {
     text-transform: uppercase;
     margin-right: 10px;
     margin-bottom: 30px;
+}
+
+.product-form-header-errors {
+    color: red;
+    display: flex;
+    flex-direction: column;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    gap: .5em;
+    justify-content: center;
+    list-style: none;
+    max-width: 641px;
+    padding-bottom: 10px;
 }
 
 .product-form-submit {

@@ -2,6 +2,7 @@ from flask import Blueprint, jsonify, render_template, request, redirect
 from flask_login import login_required, current_user
 from app.models import db, Product, ProductImage
 from app.forms import ProductUpdateForm, ProductForm
+from .auth_routes import validation_errors_to_error_messages
 
 
 products_routes = Blueprint("products", __name__)
@@ -70,8 +71,8 @@ def post_product():
         db.session.commit()
 
         return new_product.to_dict()
-    return {"errors": form.errors}
-    # CHECK AND ADD ERROR HANDLING
+    print(validation_errors_to_error_messages(form.errors))
+    return {"errors": validation_errors_to_error_messages(form.errors)}, 403
 
 
 # UPDATE A SINGLE PRODUCT:
@@ -104,7 +105,8 @@ def update_product(id):
 
         db.session.commit()
         return product.to_dict()
-    return {"errors": form.errors}
+    print(validation_errors_to_error_messages(form.errors))
+    return {"errors": validation_errors_to_error_messages(form.errors)}, 403
 
 
 # DELETE A SINGLE PRODUCT:

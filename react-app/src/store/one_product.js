@@ -1,25 +1,25 @@
 /* ------------------------- ACTIONS ------------------------- */
 
-const LOAD_SINGLE_PRODUCT = "products/LOAD_SINGLE";
-const UPDATE_SINGLE_PRODUCT = "products/UPDATE_SINGLE";
+const LOAD_SINGLE_PRODUCT = 'products/LOAD_SINGLE';
+const UPDATE_SINGLE_PRODUCT = 'products/UPDATE_SINGLE';
 
-export const loadSingleProduct = (product) => {
+export const loadSingleProduct = product => {
   return {
     type: LOAD_SINGLE_PRODUCT,
-    product,
+    product
   };
 };
 
-export const updateSingleProduct = (updatedProduct) => {
+export const updateSingleProduct = updatedProduct => {
   return {
     type: UPDATE_SINGLE_PRODUCT,
-    updatedProduct,
+    updatedProduct
   };
 };
 
 /* ------------------------- THUNKS -------------------------- */
 
-export const getSingleProduct = (productId) => async (dispatch) => {
+export const getSingleProduct = productId => async dispatch => {
   const response = await fetch(`/api/products/${productId}`);
 
   if (response.ok) {
@@ -47,7 +47,8 @@ export const putSingleProduct = product => async dispatch => {
     dispatch(updateSingleProduct(data));
     return data;
   }
-  return response;
+  const data = await response.json();
+  return data;
 };
 
 export const postProductImage = (productId, url) => async dispatch => {
@@ -58,10 +59,11 @@ export const postProductImage = (productId, url) => async dispatch => {
   });
 
   if (response.ok) {
-    const data = response.json();
+    const data = await response.json();
     return data;
   }
-  return response;
+  const data = await response.json()
+  return data;
 };
 
 export const deleteProductImage = productImageId => async dispatch => {
@@ -86,10 +88,11 @@ export const putProductImage = (productImageId, url) => async dispatch => {
   });
 
   if (response.ok) {
-    const data = response.json();
+    const data = await response.json();
     return data;
   }
-  return response;
+  const data = await response.json()
+  return data;
 };
 
 export const getProductById = id => state => state.products[id];

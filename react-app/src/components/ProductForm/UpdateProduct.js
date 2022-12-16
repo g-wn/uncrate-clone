@@ -31,7 +31,6 @@ const ProductUpdateForm = () => {
 
   const handleSubmit = async e => {
     e.preventDefault();
-    setErrors([]);
 
     const updatedProduct = await dispatch(
       putSingleProduct({
@@ -42,12 +41,11 @@ const ProductUpdateForm = () => {
         category_id,
         price
       })
-    ).catch(async res => {
-      const data = await res.json();
-      if (data && data.errors) setErrors(Object.values(data.errors));
-    });
+    )
 
-    if (updatedProduct) history.push(`/profile`);
+    if (updatedProduct) {
+      updatedProduct.errors ? setErrors(updatedProduct.errors) : history.push(`/profile`)
+    };
   };
 
   if (!product) return null;
