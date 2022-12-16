@@ -114,7 +114,7 @@ export default function SupplyNavBar() {
               </div>
             ) : (
               <div>
-                <LogoutButton setShowLoginModal={setShowLoginModal} />
+                <LogoutButton setShowLoginModal={setShowLoginModal} setShowSignupModal={setShowSignupModal} />
                 &nbsp;&nbsp; | &nbsp;&nbsp;
                 <button
                   className="profile-button"
