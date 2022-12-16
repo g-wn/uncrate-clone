@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
-import { useHistory, useParams } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { BiArrowBack } from 'react-icons/bi';
 import './ProductForm.css';
-import { useSelector } from 'react-redux';
 
 const ProductForm = ({
   product,
