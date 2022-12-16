@@ -2,6 +2,7 @@ import React from "react";
 import "./Footer.css";
 import UpperFooter from "./UpperFooter/UpperFooter";
 import LowerFooter from "./LowerFooter/LowerFooter";
+import BottomFooter from "./BottomFooter/BottomFooter";
 
 export default function Footer() {
   return (
@@ -9,6 +10,7 @@ export default function Footer() {
       <div className="footer">
         <UpperFooter />
         <LowerFooter />
+        <BottomFooter />
       </div>
     </div>
   );

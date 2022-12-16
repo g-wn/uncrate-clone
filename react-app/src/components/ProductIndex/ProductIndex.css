@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding-top: 20px;
+  padding: 20px;
 }
 
 .featured-product {
@@ -12,6 +12,7 @@
   max-width: 960px;
   border: 1px solid #c7c7c7;
   margin-bottom: 35px;
+  width: 100%;
 }
 
 .featured-product-image {
@@ -95,46 +96,66 @@
 }
 
 @media (max-width: 1000px) {
-    .splash-header-icons-wrapper {
-        position: absolute;
-        right: 200px;
-    }
+  .header-top-bar .topbar-wrapper {
+    margin: 0 20px !important;
+    border-bottom: 1px solid white;
+  }
 
-    .featured-product {
-        max-width: 80vw;
-    }
+  .header-top-bar {
+    border: 0;
+  }
+  .splash-header-icons-wrapper {
+    position: absolute;
+    right: 200px;
+  }
 
-    .featured-product-image {
-        max-width: 80vw;
-        height: auto;
-    }
+  .splash-header-icons {
+    left: 100px;
+  }
 
-    .all-other-products {
-        grid-template-columns: auto;
-        max-width: 80vw;
-    }
+  .featured-product {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 
-    .all-other-products-image {
-        width: 80vw;
-        height: auto;
-    }
+  .featured-product-image {
+    max-width: 100%;
+    height: auto;
+  }
 
-    .featured-product-description,
-    .all-other-products-description {
-        width: 60vw;
-        margin: 0 auto;
-    }
+  .all-other-products {
+    grid-template-columns: auto;
+    max-width: 100%;
+  }
+
+  .all-other-products-image {
+    width: 100%;
+    max-height: 100%;
+    height: auto;
+  }
+
+  .featured-product-description,
+  .all-other-products-description {
+    width: 80vw;
+    margin: 0 auto;
+  }
+
+  .all-other-products-one-product {
+    border: 1px solid #c7c7c7;
+    margin: 0;
+    margin-bottom: 20px;
+  }
 }
 
-@media (max-width: 700px) {
-    .topbar ul,
-    .nav-bar-categories,
-    .nav-bar-categories-border {
-        display: none;
-    }
-    .reduncrate-logo {
-        width: 300px;
-        margin-top: 39px;
-        height: auto;
-    }
+@media (max-width: 780px) {
+  .topbar ul,
+  .nav-bar-categories,
+  .nav-bar-categories-border {
+    display: none;
+  }
+  .reduncrate-logo {
+    width: 300px;
+    margin-top: 39px;
+    height: auto;
+  }
 }

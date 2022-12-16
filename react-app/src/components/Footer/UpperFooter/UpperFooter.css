@@ -1,5 +1,6 @@
 .footer-module-container {
-  width: 960px;
+  max-width: 960px;
+  width: 100%;
   display: inline-block;
 }
 
@@ -10,7 +11,7 @@
 }
 
 .subscribe-module {
-  height: 210px;
+  /* height: 210px; */
 }
 
 .subscribe-module {
@@ -59,7 +60,7 @@
 .subscribe-module button {
   width: 100%;
   color: white;
-  background: black;
+  background-color: black;
   font-family: "Roboto", sans-serif;
   padding: 0 14px;
   height: 36px;
@@ -128,6 +129,21 @@
   width: 50%;
 }
 
+.subscribe-success {
+  width: 100%;
+  color: white;
+  background-color: black;
+  font-family: "Roboto", sans-serif;
+  height: 36px;
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: 500;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  display: none;
+}
+
 .quote-module-right-right img {
   width: auto;
 
@@ -136,4 +152,110 @@
 
 .app-store-icon {
   margin-bottom: 15px;
+}
+
+@media (max-width: 1020px) {
+  .subscribe-module {
+    display: inline-block;
+    padding-top: 30%;
+    width: 100%;
+  }
+
+  .subscribe-module h1 {
+    padding: 0 5%;
+    font-weight: 400;
+    font-size: 20px;
+  }
+
+  .subscribe-module-wrapper {
+    max-width: 480px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    margin-bottom: 20px;
+  }
+
+  .subscribe-success {
+    margin-top: -20px;
+  }
+
+  .subscribe-module button {
+    background-color: #666;
+    width: 100%;
+  }
+
+  .quote-module {
+    flex-direction: column;
+    padding-top: 13px;
+    border-top: 1px solid #666;
+    max-width: 90%;
+    margin: 0 auto;
+    margin-top: 0px !important;
+  }
+
+  .quote-module-left {
+    text-align: center;
+    width: 90%;
+    margin: 0 auto 14px;
+    padding: 0 20px;
+    max-width: 680px;
+  }
+
+  .quote-module-left h2 {
+    font-size: 21px !important;
+    font-weight: 500 !important;
+    line-height: 1.3 !important;
+  }
+
+  .quote-module-right-left {
+    display: none;
+  }
+
+  .quote-module-right {
+    max-width: 100%;
+    width: 90%;
+    float: none;
+    padding: 0;
+    margin: 0 auto 20px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .quote-module-right-right {
+    width: 40%;
+    padding: 0;
+    flex: 1 1 40%;
+    max-width: 440px;
+    margin: 0 auto;
+    flex-direction: row;
+  }
+
+  .quote-module-right-right img {
+    width: 48%;
+    display: block;
+    margin-bottom: 0;
+  }
+
+  .quote-module-right-right img:first-child {
+    margin-right: 4%;
+  }
+}
+
+@media (max-width: 640px) {
+  .subscribe-module-wrapper {
+    padding: 0 2px;
+  }
+  .subscribe-module {
+    padding: 20px;
+    padding-bottom: 0;
+  }
+
+  .quote-module h2 {
+    padding: 0;
+  }
+
+  .quote-module-right {
+    width: 100%;
+  }
 }

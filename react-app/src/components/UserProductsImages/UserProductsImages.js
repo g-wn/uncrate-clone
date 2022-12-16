@@ -1,23 +1,23 @@
-import { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { useHistory, useParams } from 'react-router-dom';
-import { AiTwotoneEdit } from 'react-icons/ai';
-import { AiOutlinePlusCircle } from 'react-icons/ai';
-import { BiArrowBack } from 'react-icons/bi';
-import { MdDelete } from 'react-icons/md';
-import { getProducts } from '../../store/all_products';
-import { Modal } from '../../context/Modal';
-import ImageForm from './ImageForm';
-import SupplyNavBar from '../SingleProduct/SupplyNavBar/SupplyNavBar';
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useHistory, useParams } from "react-router-dom";
+import { AiTwotoneEdit } from "react-icons/ai";
+import { AiOutlinePlusCircle } from "react-icons/ai";
+import { BiArrowBack } from "react-icons/bi";
+import { MdDelete } from "react-icons/md";
+import { getProducts } from "../../store/all_products";
+import { Modal } from "../../context/Modal";
+import ImageForm from "./ImageForm";
+import SupplyNavBar from "../SingleProduct/SupplyNavBar/SupplyNavBar";
 
-import './UserProductsImages.css';
-import { deleteProductImage } from '../../store/one_product';
+import "./UserProductsImages.css";
+import { deleteProductImage } from "../../store/one_product";
 
 const UserProductsImages = () => {
   const history = useHistory();
   const dispatch = useDispatch();
   const { id } = useParams();
-  const products = useSelector(state => state.products);
+  const products = useSelector((state) => state.products);
   const product = products[id];
   const [showEditMainModal, setShowEditMainModal] = useState(false);
   const [showEditModal, setShowEditModal] = useState(false);
@@ -35,7 +35,7 @@ const UserProductsImages = () => {
   for (const image in product.productImages) {
     if (
       product.productImages[image].id !== product.previewImgId &&
-      !product.productImages[image].url.includes('shopify')
+      !product.productImages[image].url.includes("shopify")
     ) {
       productImageUrls.push(product.productImages[image]);
     }
@@ -44,17 +44,14 @@ const UserProductsImages = () => {
   return (
     <>
       <SupplyNavBar />
-      <div className='add-edit-image-form'>
-        <div className='add-edit-image-header'>
-          <button
-            onClick={() => history.goBack()}
-            className='back-btn'
-          >
+      <div className="add-edit-image-form">
+        <div className="add-edit-image-header">
+          <button onClick={() => history.goBack()} className="back-btn">
             <BiArrowBack size={25} />
           </button>
           <header>Add or Edit an Image</header>
           <button
-            className='add-image-btn'
+            className="add-image-btn"
             onClick={() => {
               setModalData(product.id);
               setShowAddModal(true);
@@ -66,7 +63,7 @@ const UserProductsImages = () => {
             <Modal onClose={() => setShowAddModal(false)}>
               <ImageForm
                 modalData={modalData}
-                formType={'create'}
+                formType={"create"}
                 setShowAddModal={setShowAddModal}
               />
             </Modal>
@@ -74,78 +71,71 @@ const UserProductsImages = () => {
         </div>
 
         <div
-          className='main-image'
+          className="main-image"
           style={{
-            backgroundImage: `url("${product.productImages[product.previewImgId].url}")`
+            backgroundImage: `url("${
+              product.productImages[product.previewImgId].url
+            }")`,
           }}
         >
-          <p className='title'>Main Product Image</p>
-          <div className='overlay'></div>
+          <p className="title">Main Product Image</p>
+          <div className="overlay"></div>
           <button
-            className='main-image-edit-btn'
+            className="main-image-edit-btn"
             onClick={() => {
               setModalData(product.productImages[product.previewImgId].id);
               setShowEditMainModal(true);
             }}
           >
-            <AiTwotoneEdit
-              size={45}
-              className='edit-icon'
-            />
+            <AiTwotoneEdit size={45} className="edit-icon" />
           </button>
           {showEditMainModal && (
             <Modal onClose={() => setShowEditMainModal(false)}>
               <ImageForm
                 modalData={modalData}
-                formType={'edit-main'}
+                formType={"edit-main"}
                 setShowEditMainModal={setShowEditMainModal}
               />
             </Modal>
           )}
         </div>
 
-        <div className='product-images-container'>
+        <div className="product-images-container">
           {product ? (
             productImageUrls.map((image, idx) => (
               <div
-                className='single-image-container'
+                className="single-image-container"
                 key={idx}
                 style={{
-                  backgroundImage: `url("${image.url}")`
+                  backgroundImage: `url("${image.url}")`,
                 }}
               >
-                <div className='overlay'></div>
-                <div className='buttons'>
+                <div className="overlay"></div>
+                <div className="buttons">
                   <button
-                    className='delete-btn'
+                    className="delete-btn"
                     onClick={async () => {
                       await dispatch(deleteProductImage(image.id));
                       dispatch(getProducts());
                     }}
                   >
-                    <MdDelete
-                      size={45}
-                      className='delete-icon'
-                    />
+                    <MdDelete size={45} className="delete-icon" />
                   </button>
                   <button
-                    className='edit-btn'
+                    className="edit-btn"
                     onClick={() => {
                       setModalData(image.id);
                       setShowEditModal(true);
                     }}
                   >
-                    <AiTwotoneEdit
-                      size={45}
-                      className='edit-icon'
-                    />
+                    <AiTwotoneEdit size={45} className="edit-icon" />
                   </button>
                 </div>
                 {showEditModal && (
                   <Modal onClose={() => setShowEditModal(false)}>
                     <ImageForm
                       modalData={modalData}
-                      formType={'edit'}
+                      formType={"edit"}
                       setShowEditModal={setShowEditModal}
                     />
                   </Modal>
