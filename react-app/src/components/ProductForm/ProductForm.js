@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 import { BiArrowBack } from 'react-icons/bi';
 import './ProductForm.css';
+import { useSelector } from 'react-redux';
 
 const ProductForm = ({
   product,
@@ -26,12 +27,12 @@ const ProductForm = ({
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    setIsLoaded(true);
-    setTitle(product?.title || title);
-    setDescription(product?.description || description);
-    set_detailed_description(product?.detailedDescription || detailed_description);
-    product && set_category_id(product?.categoryId || category_id);
-    setPrice(product?.price || price);
+    formType === 'update' ? product && setIsLoaded(true) : setIsLoaded(true);
+    formType === 'update' && setTitle(product?.title);
+    formType === 'update' && setDescription(product?.description);
+    formType === 'update' && set_detailed_description(product?.detailedDescription);
+    formType === 'update' && product && set_category_id(product?.categoryId);
+    formType === 'update' && setPrice(product?.price);
   }, [
     product?.title,
     product?.description,
@@ -43,8 +44,12 @@ const ProductForm = ({
     set_detailed_description,
     set_category_id,
     setPrice,
-    product
+    product,
+    formType
   ]);
+
+  if (!isLoaded) return null;
+
   return (
     <>
       {isLoaded && (

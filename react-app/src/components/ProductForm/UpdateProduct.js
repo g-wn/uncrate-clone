@@ -1,22 +1,23 @@
 import { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useHistory, useParams } from 'react-router-dom';
 
-import { putSingleProduct } from '../../store/one_product';
+import { getSingleProduct, putSingleProduct } from '../../store/one_product';
 import ProductForm from './ProductForm';
 import SupplyNavBar from '../SingleProduct/SupplyNavBar/SupplyNavBar';
 import { useEffect } from 'react';
-import { getProducts } from '../../store/all_products';
 
 const ProductUpdateForm = () => {
   const history = useHistory();
   const dispatch = useDispatch();
   const { id } = useParams();
-  const products = useSelector(state => state.products);
-  const product = products[id];
+  const [product, setProduct] = useState(null);
 
   useEffect(() => {
-    dispatch(getProducts());
+    (async function fetchProduct() {
+      const res = await dispatch(getSingleProduct(id));
+      setProduct(res);
+    })();
   }, [dispatch, id]);
 
   const [title, setTitle] = useState(product?.title);
@@ -41,11 +42,11 @@ const ProductUpdateForm = () => {
         category_id,
         price
       })
-    )
+    );
 
     if (updatedProduct) {
-      updatedProduct.errors ? setErrors(updatedProduct.errors) : history.push(`/profile`)
-    };
+      updatedProduct.errors ? setErrors(updatedProduct.errors) : history.push(`/profile`);
+    }
   };
 
   if (!product) return null;

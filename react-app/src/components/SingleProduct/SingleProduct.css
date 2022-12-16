@@ -49,6 +49,7 @@
   line-height: 28px;
   text-align: center;
   margin: 0 120px 20px 120px;
+  word-break: break-word;
 }
 
 .single-product-details-btns {
@@ -123,6 +124,7 @@
     max-width: 680px;
     margin: 0 auto;
   }
+
   .single-product-detailed-description {
     margin-left: 0;
     margin-right: 0;
