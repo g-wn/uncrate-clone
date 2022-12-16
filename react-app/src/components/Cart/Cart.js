@@ -6,7 +6,7 @@ import { removeCartItem } from "../../store/cart_items";
 import SelectField from "../SelectField/SelectField";
 import "./Cart.css";
 
-const Cart = ({ setShowCartModal, showCartModal }) => {
+const Cart = ({ setShowCartModal }) => {
     const dispatch = useDispatch();
     const cart = useSelector((state) => state.cart);
 
@@ -76,7 +76,11 @@ const Cart = ({ setShowCartModal, showCartModal }) => {
                     </span>
                 </div>
                 <div className="cart-checkout-button-container">
-                    <NavLink to='/checkout'><button className="cart-checkout-button">CHECKOUT</button></NavLink>
+                    {cartItems.length > 0 ?
+                        <NavLink to='/checkout'><button className="cart-checkout-button">CHECKOUT</button></NavLink>
+                        :
+                        <button className="cart-checkout-button-disabled">ADD AN ITEM TO ENABLE CHECKOUT</button>
+                    }
                 </div>
                 <div className="cart-checkout-text-container">
                     <p className="cart-checkout-text">

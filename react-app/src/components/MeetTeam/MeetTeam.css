@@ -1,0 +1,57 @@
+.all-devs-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.all-devs {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.one-dev {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    border: 2px solid black;
+    padding: 20px;
+    margin: 2em 2em;
+    background-color: rgba(113, 73, 73, 0.898);
+    border-radius: 10px;
+}
+
+.dev-pic {
+    margin-top: 20px;
+    width: 350px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.dev-name {
+    margin-top: 20px;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    text-decoration: underline;
+}
+
+.dev-links {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.dev-link {
+    margin: 0 30px;
+    color: black;
+}
+
+.dev-link:hover {
+    color: rgba(0, 0, 0, 0.501);
+}
+
+.meet-title {
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}

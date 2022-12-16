@@ -33,6 +33,7 @@ export default function SupplyNavBar() {
                         <ul>
                             <li>
                                 <a
+                                    rel="noreferrer"
                                     target="_blank"
                                     className="header-link"
                                     href="https://www.linkedin.com/in/jwily/"
@@ -42,6 +43,7 @@ export default function SupplyNavBar() {
                             </li>
                             <li>
                                 <a
+                                    rel="noreferrer"
                                     target="_blank"
                                     className="header-link"
                                     href="https://www.linkedin.com/in/brad-simpson-a6b1b7b2/"

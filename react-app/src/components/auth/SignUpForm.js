@@ -17,12 +17,20 @@ const SignUpForm = () => {
 
     const onSignUp = async (e) => {
         e.preventDefault();
-        const errors = [];
+        let errors = [];
         if (/\d/.test(first_name) || /\d/.test(last_name)) errors.push("Your name has numbers in it? Doubt it.")
         if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) errors.push("That's not a valid email address. Told you we'd check.");
         if (username.length < 5) errors.push("Let's make that username a bit longer. 5 characters should do.")
         if (password !== repeatPassword) errors.push('You really botched that whole "repeat password" thing.');
-        errors.length > 0 ? setErrors(errors) : await dispatch(signUp(first_name, last_name, username, email, password));
+        if (errors.length > 0) {
+            setErrors(errors);
+        } else {
+            errors = [];
+            const data = await dispatch(signUp(first_name, last_name, username, email, password));
+            if (data) {
+                if (errors) setErrors(data);
+            }
+        }
     };
 
     const updateFirstName = (e) => {

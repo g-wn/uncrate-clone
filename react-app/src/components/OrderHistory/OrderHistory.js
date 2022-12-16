@@ -28,10 +28,10 @@ const OrderHistory = () => {
                 <h1 className='checkout-title'>{user.first_name}'S ORDER HISTORY</h1>
                 <div className='order-history-grid'>
                     {purchasedCarts.map(cart => (
-                        <div className="checkout-items-container">
+                        <div key={cart.id} className="checkout-items-container">
                             <div className="checkout-items">
-                                {Object.values(cart.cartItems).map(item => (
-                                    <div className="one-checkout-item">
+                                {Object.values(cart.cartItems).map((item, idx) => (
+                                    <div key={idx} className="one-checkout-item">
                                         <NavLink to={`/products/${item.product.id}`}>
                                             <img
                                                 className='cart-item-image'

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { useParams, useHistory } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { getSingleProduct } from '../../store/one_product';
 import { addToFavorites, getFavorites } from '../../store/favorites';
 import './SingleProduct.css';
@@ -13,11 +13,9 @@ import Cart from '../Cart/Cart';
 import { getCart } from '../../store/cart';
 import SuggestedProduct from './SuggestedProducts/SuggestedProduct';
 import LoginForm from '../auth/LoginForm';
-import Footer from '../Footer/Footer';
 
 const SingleProduct = () => {
     const dispatch = useDispatch();
-    const history = useHistory();
     const { id } = useParams();
     const singleProduct = useSelector(state => state.product[id]);
     const [showCartModal, setShowCartModal] = useState(false);
@@ -37,11 +35,9 @@ const SingleProduct = () => {
         const shuffled = availableProducts.sort(() => 0.5 - Math.random());
         const selected = shuffled.slice(0, 8);
         setSuggested(selected);
-        dispatch(getCart());
-        dispatch(getFavorites(user.id));
-    }, [dispatch, id]);
-
-    // Get sub-array of first n elements after shuffled
+        if (user) dispatch(getCart());
+        if (user) dispatch(getFavorites(user.id));
+    }, [dispatch, id, user]);
 
     let imgList = [];
 
@@ -53,7 +49,6 @@ const SingleProduct = () => {
         }
     }
 
-    console.log(favorites)
     if (!singleProduct || !favorites) return null;
 
     return (

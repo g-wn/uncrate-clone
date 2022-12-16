@@ -15,6 +15,7 @@ import Favorites from "./components/Favorites/Favorites";
 import Checkout from "./components/Checkout/Checkout";
 import PurchaseComplete from "./components/Checkout/PurchaseComplete";
 import OrderHistory from "./components/OrderHistory/OrderHistory";
+import MeetTeam from "./components/MeetTeam/MeetTeam";
 
 function App() {
     const [loaded, setLoaded] = useState(false);
@@ -136,6 +137,11 @@ function App() {
                 >
                     <OrderHistory />
                 </ProtectedRoute>
+                <Route
+                    path='/meet-the-team'
+                >
+                    <MeetTeam />
+                </Route>
                 <Route>
                     <h1>404 Not Found</h1>
                 </Route>

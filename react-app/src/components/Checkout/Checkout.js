@@ -1,12 +1,10 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink, useHistory } from "react-router-dom";
-import { Modal } from "../../context/Modal";
 import { getCart, purchaseCart } from "../../store/cart";
 import CategoriesNav from "../Navigation/CategoriesNav";
 import Navigation from "../Navigation/Navigation";
 import './Checkout.css';
-import PurchaseComplete from "./PurchaseComplete";
 
 const Checkout = () => {
     const dispatch = useDispatch();
@@ -35,7 +33,7 @@ const Checkout = () => {
                 <div className="checkout-items-container">
                     <div className="checkout-items">
                         {cartItems.map(item => (
-                            <div className="one-checkout-item">
+                            <div key={item.id} className="one-checkout-item">
                                 <NavLink to={`/products/${item.product.id}`}>
                                     <img
                                         className='cart-item-image'

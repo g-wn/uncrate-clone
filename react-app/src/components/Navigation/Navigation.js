@@ -28,6 +28,7 @@ function Navigation({ isHovering, setIsHovering }) {
                                     <span
                                         className="meet-button"
                                         onMouseEnter={() => setIsHovering(true)}
+                                        onClick={() => history.push('/meet-the-team')}
                                     >
                                         MEET THE TEAM
                                     </span>
@@ -84,7 +85,7 @@ function Navigation({ isHovering, setIsHovering }) {
                                     </div>
                                 ) : (
                                     <div>
-                                        <LogoutButton setShowLoginModal={setShowLoginModal} />&nbsp;&nbsp; | &nbsp;&nbsp;
+                                        <LogoutButton setShowLoginModal={setShowLoginModal} setShowSignupModal={setShowSignupModal} />&nbsp;&nbsp; | &nbsp;&nbsp;
                                         <button
                                             className="profile-button"
                                             onClick={() => history.push(`/profile`)}

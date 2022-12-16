@@ -11,11 +11,12 @@ const ProductIndex = () => {
     const dispatch = useDispatch();
     const [isHovering, setIsHovering] = useState(false);
     const products = useSelector((state) => Object.values(state.products));
+    const user = useSelector((state) => state.session.user)
 
     useEffect(() => {
         dispatch(getProducts());
-        dispatch(getCart());
-    }, [dispatch]);
+        if (user) dispatch(getCart());
+    }, [dispatch, user]);
 
     if (!products || products.length === 0) return null;
 
