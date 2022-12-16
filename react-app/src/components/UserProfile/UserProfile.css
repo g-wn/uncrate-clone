@@ -1,3 +1,8 @@
+.profile-page {
+    display: flex;
+    flex-direction: column;
+}
+
 .add-product-btn {
     color: black;
     position: relative;
@@ -10,7 +15,7 @@
 }
 
 .product-preview-img {
-    width: 468px;
+    width: 465px;
     height: 313px;
     margin-bottom: 10px;
   }
@@ -27,13 +32,13 @@
     text-transform: uppercase;
     justify-content: space-between;
     padding-top: 20px;
-    text-decoration: underline;
+    text-decoration: none;
+    align-items: center;
 }
 
 .user-products {
     display: grid;
     grid-template-columns: auto auto;
-    grid-column-gap: 1em;
     padding-top: 40px;
     justify-content: space-evenly;
     margin: 0 auto;
@@ -47,6 +52,8 @@
     padding-bottom: 20px;
     margin-bottom: 80px;
     margin-top: 10px;
+    margin-left: 2em;
+    margin-right: 2em;
     position: relative;
     border: 1px solid rgb(128, 128, 128, 0.4);
     max-width: 468px;
@@ -87,5 +94,6 @@
 }
 
 .my-listings-title {
-    margin-left: 30px;
+    margin-left: 32px;
+    font-size: 32px;
 }

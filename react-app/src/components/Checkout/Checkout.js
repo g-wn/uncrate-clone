@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { NavLink, useHistory } from "react-router-dom";
 import { Modal } from "../../context/Modal";
 import { getCart, purchaseCart } from "../../store/cart";
+import CategoriesNav from "../Navigation/CategoriesNav";
 import Navigation from "../Navigation/Navigation";
 import './Checkout.css';
 import PurchaseComplete from "./PurchaseComplete";
@@ -28,6 +29,7 @@ const Checkout = () => {
     return (
         <>
             <Navigation isHovering={isHovering} setIsHovering={setIsHovering} />
+            <CategoriesNav setIsHovering={setIsHovering} />
             <div className="checkout-page">
                 <h1 className='checkout-title'>CHECKOUT</h1>
                 <div className="checkout-items-container">

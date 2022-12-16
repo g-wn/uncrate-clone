@@ -5,6 +5,7 @@ import { getProducts } from '../../store/all_products';
 import './ProductIndex.css';
 import Navigation from '../Navigation/Navigation';
 import { getCart } from '../../store/cart';
+import CategoriesNav from '../Navigation/CategoriesNav';
 
 const ProductIndex = () => {
     const dispatch = useDispatch();
@@ -21,6 +22,7 @@ const ProductIndex = () => {
     return (
         <>
             <Navigation isHovering={isHovering} setIsHovering={setIsHovering} />
+            <CategoriesNav setIsHovering={setIsHovering} />
             <div className='all-products-index' onMouseEnter={() => setIsHovering(false)}>
                 <div className='featured-product'>
                     <NavLink

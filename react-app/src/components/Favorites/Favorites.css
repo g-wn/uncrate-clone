@@ -1,3 +1,8 @@
+.user-favorites-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
 .user-favorites {
   display: grid;
   grid-template-columns: auto auto;
@@ -8,7 +13,6 @@
   text-transform: uppercase;
   align-items: center;
   text-align: center;
-  grid-column-gap: 2em;
   max-width: 960px;
 }
 
@@ -22,12 +26,13 @@
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
   text-align: center;
-  margin-top: 30px;
-  font-size: 30px;
+  margin-top: 40px;
+  font-size: 32px;
+  font-weight: bold;
 }
 
-.product-name {
-  margin-bottom: 20px;
+.stash-product-name {
+  margin-bottom: 5px;
   padding-top: 20px;
 }
 
@@ -40,4 +45,7 @@
   border: 1px solid rgb(128, 128, 128, 0.3);
   margin-top: 15px;
   margin-bottom: 20px;
+  margin-left: 2em;
+  margin-right: 2em;
+  padding-bottom: 20px;
 }

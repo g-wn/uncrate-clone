@@ -6,6 +6,7 @@ import Navigation from "../Navigation/Navigation";
 
 import "./CategoryPage.css";
 import "../ProductIndex/ProductIndex.css";
+import CategoriesNav from "../Navigation/CategoriesNav";
 
 export default function CategoryPage({ categoryName }) {
     const dispatch = useDispatch();
@@ -22,6 +23,7 @@ export default function CategoryPage({ categoryName }) {
     return (
         <div className="category-page">
             <Navigation isHovering={isHovering} setIsHovering={setIsHovering} />
+            <CategoriesNav setIsHovering={setIsHovering} />
             <div className="category-name-container">
                 <h1 className="category-page-name">{categoryName}</h1>
             </div>

@@ -1,24 +1,20 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import LoginForm from "./components/auth/LoginForm";
-import SignUpForm from "./components/auth/SignUpForm";
 import UserProductsImages from "./components/UserProductsImages/UserProductsImages";
 import ProtectedRoute from "./components/auth/ProtectedRoute";
-import UsersList from "./components/UsersList";
-import User from "./components/User";
 import Search from "./components/Search/Search";
 import CategoryPage from "./components/CategoryPages/CategoryPage";
 import { authenticate } from "./store/session";
 import ProductIndex from "./components/ProductIndex/ProductIndex";
 import SingleProduct from "./components/SingleProduct/SingleProduct";
-import Cart from "./components/Cart/Cart";
 import ProductUpdateForm from "./components/ProductForm/UpdateProduct";
 import ProductCreateForm from "./components/ProductForm/CreateProduct";
 import UserProfile from "./components/UserProfile/UserProfile";
 import Favorites from "./components/Favorites/Favorites";
 import Checkout from "./components/Checkout/Checkout";
 import PurchaseComplete from "./components/Checkout/PurchaseComplete";
+import OrderHistory from "./components/OrderHistory/OrderHistory";
 
 function App() {
     const [loaded, setLoaded] = useState(false);
@@ -63,28 +59,10 @@ function App() {
                     <UserProductsImages />
                 </ProtectedRoute>
                 <Route
-                    path='/login'
-                    exact={true}
-                >
-                    <LoginForm />
-                </Route>
-                <Route
-                    path='/sign-up'
-                    exact={true}
-                >
-                    <SignUpForm />
-                </Route>
-                <Route
                     path='/search'
                     exact={true}
                 >
                     <Search />
-                </Route>
-                <Route
-                    path='/cart'
-                    exact={true}
-                >
-                    <Cart />
                 </Route>
                 <Route
                     path='/category/gear'
@@ -135,18 +113,6 @@ function App() {
                     <CategoryPage categoryName='tech' />
                 </Route>
                 <ProtectedRoute
-                    path='/users'
-                    exact={true}
-                >
-                    <UsersList />
-                </ProtectedRoute>
-                <ProtectedRoute
-                    path='/users/:userId'
-                    exact={true}
-                >
-                    <User />
-                </ProtectedRoute>
-                <ProtectedRoute
                     path='/my-stash'
                     exact={true}
                 >
@@ -164,11 +130,14 @@ function App() {
                 >
                     <PurchaseComplete />
                 </ProtectedRoute>
-                <Route
-                    path='/'
+                <ProtectedRoute
+                    path='/order-history'
                     exact={true}
                 >
-                    <h1>My Home Page</h1>
+                    <OrderHistory />
+                </ProtectedRoute>
+                <Route>
+                    <h1>404 Not Found</h1>
                 </Route>
             </Switch>
         </BrowserRouter>

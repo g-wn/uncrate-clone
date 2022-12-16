@@ -1,14 +1,15 @@
 .checkout-page {
+    margin-top: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 60vh;
 }
 
 .checkout-title {
-    font-family: Oswald, sans-serif;
+    font-family: 'Oswald', sans-serif;
     margin-bottom: 30px;
+    text-transform: uppercase;
 }
 
 .checkout-items-container {
@@ -16,10 +17,11 @@
     border: 1px solid rgba(0, 0, 0, 0.469);
     border-radius: 3px;
     padding: 20px;
+    margin: 3em 6em;
 }
 
 .checkout-items {
-    max-height: 30vh;
+    height: 250px;
     overflow-y: auto;
 }
 
@@ -47,6 +49,7 @@
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
+    width: 60px;
 }
 
 .checkout-item-price {

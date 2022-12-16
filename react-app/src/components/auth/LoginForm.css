@@ -92,6 +92,11 @@
   cursor: pointer;
 }
 
+.login-with-demo-submit {
+    margin-top: 15px;
+    background-color: rgb(113, 73, 73);
+}
+
 .login-form-input:-webkit-autofill,
 .login-form-input:-webkit-autofill:hover,
 .login-form-input:-webkit-autofill:focus,

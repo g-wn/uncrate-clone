@@ -1,10 +1,18 @@
-const LOAD_CART = 'carts/LOAD'
-const PURCHASE_CART = 'carts/PURCHASE'
+const LOAD_CART = 'carts/LOAD';
+const PURCHASE_CART = 'carts/PURCHASE';
+const LOAD_HISTORY = 'carts/HISTORY';
 
 export const loadCart = (cart) => {
     return {
         type: LOAD_CART,
         cart
+    }
+}
+
+export const loadCartHistory = (carts) => {
+    return {
+        type: LOAD_HISTORY,
+        carts
     }
 }
 
@@ -22,6 +30,16 @@ export const getCart = () => async dispatch => {
         const cart = await response.json();
         dispatch(loadCart(cart));
         return cart;
+    }
+}
+
+export const getCartHistory = () => async dispatch => {
+    const response = await fetch(`/api/carts/history`);
+
+    if (response.ok) {
+        const carts = await response.json();
+        dispatch(loadCartHistory(carts));
+        return carts;
     }
 }
 
@@ -49,6 +67,8 @@ const cartReducer = (state = initialState, action) => {
             return action.cart;
         case PURCHASE_CART:
             return { [action.cart.id]: action.cart };
+        case LOAD_HISTORY:
+            return { ...state, 'orderHistory': action.carts.OrderHistory };
         default:
             return state;
     };
