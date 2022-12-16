@@ -29,7 +29,7 @@ const ImageForm = ({ modalData, setShowEditModal, setShowAddModal, formType }) =
       {formType === 'create' ? (
         <header className='image-form-header'>Enter an image URL</header>
       ) : (
-      <header className='image-form-header'>Enter a new image URL</header>
+        <header className='image-form-header'>Enter a new image URL</header>
       )}
       <div className='url-container'>
         <label htmlFor='url-input'>URL</label>
