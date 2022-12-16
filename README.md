@@ -1,9 +1,6 @@
-<p align="center">
-  <a href="https://reduncrate.onrender.com" target="_blank">
-     ![Reduncrate Logo](https://raw.githubusercontent.com/g-wn/uncrate-clone/main/react-app/public/images/reduncrate-white2.png)
-  </a>
+![Reduncrate Logo](https://raw.githubusercontent.com/g-wn/uncrate-clone/main/react-app/public/images/reduncrate-white2.png)
 
-  <h1 style="border-bottom:none" align="center">reduncrate</h1>
+<p align="center">
 
   <p align="center">
     <a href="https://reduncrate.onrender.com" target="_blank">- Check out the live site -</a>
