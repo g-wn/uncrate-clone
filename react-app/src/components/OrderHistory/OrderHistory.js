@@ -55,7 +55,7 @@ const OrderHistory = () => {
               </div>
               <div className="checkout-total-container">
                 <span className="checkout-total">TOTAL</span>
-                <span className="checkout-price">USD ${cart.total}</span>
+                <span className="checkout-price">USD ${usDollar.format(cart.total)}</span>
               </div>
             </div>
           ))}

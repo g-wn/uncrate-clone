@@ -20,6 +20,13 @@ function Navigation({ isHovering, setIsHovering }) {
   return (
     <>
       <header className="splash-page-header">
+        <div className={`cart-modal cart-container ${showCartModal ? "cart-show" : ""}`}>
+          <Cart setShowCartModal={setShowCartModal} />
+        </div>
+        <div
+          className={`cart-overlay ${showCartModal ? "cart-show" : ""}`}
+          onClick={() => setShowCartModal(!showCartModal)}
+        />
         <div className="splash-page-top-bar-container">
           <div className="header-top-bar">
             <div className="topbar-wrapper">
@@ -117,26 +124,12 @@ function Navigation({ isHovering, setIsHovering }) {
               <NavLink to="/search" className="magnifying-glass-link">
                 <i className="fa-solid fa-magnifying-glass"></i>
               </NavLink>
-              {user ? (
-                <button
-                  className="nav-bar-crate-button"
-                  onClick={() => setShowCartModal(true)}
-                >
-                  <i className="fa-sharp fa-solid fa-box"></i>
-                </button>
-              ) : (
-                <button
-                  className="nav-bar-crate-button"
-                  onClick={() => setShowLoginModal(true)}
-                >
-                  <i className="fa-sharp fa-solid fa-box"></i>
-                </button>
-              )}
-              {showCartModal && (
-                <Modal onClose={() => setShowCartModal(false)}>
-                  <Cart setShowCartModal={setShowCartModal} />
-                </Modal>
-              )}
+              <button
+                className="nav-bar-crate-button"
+                onClick={() => user ? setShowCartModal(true) : setShowLoginModal(true)}
+              >
+                <i className="fa-sharp fa-solid fa-box"></i>
+              </button>
             </div>
           </div>
         </div>

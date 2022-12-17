@@ -13,59 +13,62 @@ export default function SupplyHeader() {
   const user = useSelector((state) => state.session.user);
 
   return (
-    <div className="supply-header">
-      <div className="supply-header-title">
-        <h1>
-          REDUNCRATE SUPPLY<sup>™</sup>
-        </h1>
-        <p>
-          OBJECTS OF DESIRE & TOOLS OF THE TRADE, STOCKED & SHIPPED BY
-          REDUNCRATE.
-        </p>
-        <div className="supply-icons">
-          <NavLink to="/search">
-            <i className="fa-solid fa-magnifying-glass"></i>
-          </NavLink>
-          {user ? (
-            <button
-              className="supply-header-crate-button"
-              onClick={() => setShowCartModal(true)}
-            >
-              <i className="fa-solid fa-box crate-icon"></i>
-            </button>
-          ) : (
-            <button
-              className="supply-header-crate-button"
-              onClick={() => setShowLoginModal(true)}
-            >
-              <i className="fa-solid fa-box crate-icon"></i>
-            </button>
-          )}
-
-          {showLoginModal && (
-            <Modal onClose={() => setShowLoginModal(false)}>
-              <LoginForm setShowCartModal={setShowLoginModal} />
-            </Modal>
-          )}
-          {showCartModal && (
-            <Modal onClose={() => setShowCartModal(false)}>
-              <Cart setShowCartModal={setShowCartModal} />
-            </Modal>
-          )}
-          <span className="cart-badge"></span>
-        </div>
+    <>
+      <div className={`cart-modal cart-container ${showCartModal ? "cart-show" : ""}`}>
+        <Cart setShowCartModal={setShowCartModal} />
       </div>
-      <div className="supply-header-categories">
-        <div className="categorybar-top">
-          {/* <ul>
+      <div
+        className={`cart-overlay ${showCartModal ? "cart-show" : ""}`}
+        onClick={() => setShowCartModal(!showCartModal)}
+      />
+      <div className="supply-header">
+        <div className="supply-header-title">
+          <h1>
+            REDUNCRATE SUPPLY<sup>™</sup>
+          </h1>
+          <p>
+            OBJECTS OF DESIRE & TOOLS OF THE TRADE, STOCKED & SHIPPED BY
+            REDUNCRATE.
+          </p>
+          <div className="supply-icons">
+            <NavLink to="/search">
+              <i className="fa-solid fa-magnifying-glass"></i>
+            </NavLink>
+            {user ? (
+              <button
+                className="supply-header-crate-button"
+                onClick={() => setShowCartModal(true)}
+              >
+                <i className="fa-solid fa-box crate-icon"></i>
+              </button>
+            ) : (
+              <button
+                className="supply-header-crate-button"
+                onClick={() => setShowLoginModal(true)}
+              >
+                <i className="fa-solid fa-box crate-icon"></i>
+              </button>
+            )}
+
+            {showLoginModal && (
+              <Modal onClose={() => setShowLoginModal(false)}>
+                <LoginForm setShowCartModal={setShowLoginModal} />
+              </Modal>
+            )}
+            <span className="cart-badge"></span>
+          </div>
+        </div>
+        <div className="supply-header-categories">
+          <div className="categorybar-top">
+            {/* <ul>
                         <li>NEW ITEMS &nbsp;&nbsp;</li>/
                         <li>&nbsp;&nbsp; TOP PICKS &nbsp;&nbsp;</li>/
                         <li>&nbsp;&nbsp; BACK IN STOCK &nbsp;&nbsp;</li>/
                         <li>&nbsp;&nbsp; BRANDS &nbsp;&nbsp;</li>/
                         <li className="nav-surplus">&nbsp;&nbsp; SURPLUS</li>
                     </ul> */}
-        </div>
-        {/* <div className="categorybar-bottom">
+          </div>
+          {/* <div className="categorybar-bottom">
                     <ul>
                         <li>APPAREL &nbsp;&nbsp;/</li>
                         <li>&nbsp;&nbsp; HOME &nbsp;&nbsp;</li>/
@@ -82,7 +85,8 @@ export default function SupplyHeader() {
                         <li>&nbsp;&nbsp; VEHICLES</li>
                     </ul>
                 </div> */}
+        </div>
       </div>
-    </div>
+    </>
   );
 }

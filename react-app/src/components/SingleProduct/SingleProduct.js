@@ -59,6 +59,13 @@ const SingleProduct = () => {
   return (
     <div className="single-product-page">
       <SupplyNavBar />
+      <div className={`cart-modal cart-container ${showCartModal ? "cart-show" : ""}`}>
+        <Cart setShowCartModal={setShowCartModal} />
+      </div>
+      <div
+        className={`cart-overlay ${showCartModal ? "cart-show" : ""}`}
+        onClick={() => setShowCartModal(!showCartModal)}
+      />
       <div className="single-product">
         <Carousel infinite imageLength={imgList.length}>
           {imgList.map((img, idx) => (
@@ -89,15 +96,16 @@ const SingleProduct = () => {
                   className="single-product-details-btn btn-add-cart"
                   onClick={async (e) => {
                     e.preventDefault();
-                    console.log(thisCartItem);
                     if (thisCartItem) {
-                      await dispatch(
-                        editCartItem(thisCartItem, thisCartItem.quantity + 1)
-                      );
-                      await dispatch(getCart());
+                      if (thisCartItem.quantity < 10) {
+                        await dispatch(
+                          editCartItem(thisCartItem, thisCartItem.quantity + 1)
+                        );
+                      }
                     } else {
                       await dispatch(postCartItem(singleProduct.id));
                     }
+                    await dispatch(getCart());
                     setShowCartModal(true);
                   }}
                 >
@@ -112,11 +120,6 @@ const SingleProduct = () => {
                 >
                   ADD TO CART
                 </button>
-              )}
-              {showCartModal && (
-                <Modal onClose={() => setShowCartModal(false)}>
-                  <Cart setShowCartModal={setShowCartModal} />
-                </Modal>
               )}
               {showLoginModal && (
                 <Modal onClose={() => setShowLoginModal(false)}>

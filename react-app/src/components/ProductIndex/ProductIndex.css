@@ -95,6 +95,37 @@
   color: #ae9e85;
 }
 
+.cart-overlay {
+  background-color: rgba(0, 0, 0, 0.55);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 5;
+  transition: all .15s ease-out .15s;
+}
+
+.cart-overlay.cart-show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.cart-modal {
+  position: fixed;
+  right: -150vw;
+  background-color: #fff;
+  box-shadow: 0 0 4px 0px rgba(0, 0, 0, 0.15);
+  transition: all .3s ease-out;
+  z-index: 10;
+}
+
+.cart-modal.cart-show {
+  right: 0;
+}
+
 @media (max-width: 1000px) {
   .header-top-bar .topbar-wrapper {
     margin: 0 20px !important;
@@ -153,9 +184,38 @@
   .nav-bar-categories-border {
     display: none;
   }
+
+  .splash-page-header {
+    height: 42px;
+  }
+
+  .splash-header-icons-wrapper {
+    position: absolute;
+    top: 11px;
+    left: 55px;
+  }
+
+  .magnifying-glass-link {
+    margin-right: 20px;
+  }
+
+  .splash-header-icons {
+    display: block;
+    padding: 0;
+  }
+
+  .header-logo {
+    position: absolute;
+    padding: 0;
+    top: 10px;
+    left: 15px;
+  }
+
+  .meet-button {
+    display: none;
+  }
+
   .reduncrate-logo {
-    width: 300px;
-    margin-top: 39px;
-    height: auto;
+    height: 20px;
   }
 }

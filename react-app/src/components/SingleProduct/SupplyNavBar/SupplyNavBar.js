@@ -94,11 +94,6 @@ export default function SupplyNavBar() {
                       <LoginForm setShowCartModal={setShowLoginModal} />
                     </Modal>
                   )}
-                  {showCartModal && (
-                    <Modal onClose={() => setShowCartModal(false)}>
-                      <Cart setShowCartModal={setShowCartModal} />
-                    </Modal>
-                  )}
                   <span className="cart-badge"></span>
                 </div>
                 {showLoginModal && (
@@ -145,11 +140,6 @@ export default function SupplyNavBar() {
                   {showLoginModal && (
                     <Modal onClose={() => setShowLoginModal(false)}>
                       <LoginForm setShowCartModal={setShowLoginModal} />
-                    </Modal>
-                  )}
-                  {showCartModal && (
-                    <Modal onClose={() => setShowCartModal(false)}>
-                      <Cart setShowCartModal={setShowCartModal} />
                     </Modal>
                   )}
                   <span className="cart-badge"></span>

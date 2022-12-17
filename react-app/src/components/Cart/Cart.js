@@ -23,7 +23,7 @@ const Cart = ({ setShowCartModal }) => {
   if (!cart || !cartItems) return null;
 
   return (
-    <div className="cart-container">
+    <div>
       <div className="cart-header">
         <h1 className="cart-title">YOUR CRATE</h1>
         <button

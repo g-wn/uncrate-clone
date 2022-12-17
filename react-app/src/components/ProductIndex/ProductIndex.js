@@ -7,6 +7,7 @@ import Navigation from "../Navigation/Navigation";
 import { getCart } from "../../store/cart";
 import Footer from "../Footer/Footer";
 import CategoriesNav from '../Navigation/CategoriesNav';
+import Cart from "../Cart/Cart";
 
 const ProductIndex = () => {
   const dispatch = useDispatch();

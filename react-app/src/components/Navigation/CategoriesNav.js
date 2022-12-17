@@ -13,7 +13,6 @@ const CategoriesNav = ({ setIsHovering }) => {
         <NavLink to="/category/vices">VICES</NavLink>
         <NavLink to="/category/body">BODY</NavLink>
         <NavLink to="/category/etc">ETC</NavLink>
-        <NavLink to="/my-stash" id='my-stash-link'>MY STASH</NavLink>
       </div>
       <div className="nav-bar-categories-border" />
     </nav>
