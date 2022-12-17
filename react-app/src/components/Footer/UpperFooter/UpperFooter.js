@@ -35,14 +35,15 @@ export default function UpperFooter() {
           </div>
           <div className="quote-module-right">
             <div className="quote-module-right-left">
-              <img src="https://uncrate.com/img/app-devices.png" />
+              <img src="https://uncrate.com/img/app-devices.png" alt="devices" />
             </div>
             <div className="quote-module-right-right">
               <img
+                alt="app store"
                 className="app-store-icon"
                 src="https://uncrate.com/img/app-store.jpg"
               />
-              <img src="https://uncrate.com/img/google-play.jpg" />
+              <img src="https://uncrate.com/img/google-play.jpg" alt="google play" />
             </div>
           </div>
         </div>

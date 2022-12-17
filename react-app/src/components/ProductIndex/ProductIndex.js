@@ -6,22 +6,25 @@ import "./ProductIndex.css";
 import Navigation from "../Navigation/Navigation";
 import { getCart } from "../../store/cart";
 import Footer from "../Footer/Footer";
+import CategoriesNav from '../Navigation/CategoriesNav';
 
 const ProductIndex = () => {
   const dispatch = useDispatch();
   const [isHovering, setIsHovering] = useState(false);
   const products = useSelector((state) => Object.values(state.products));
+  const user = useSelector((state) => state.session.user)
 
   useEffect(() => {
     dispatch(getProducts());
-    dispatch(getCart());
-  }, [dispatch]);
+    if (user) dispatch(getCart());
+  }, [dispatch, user]);
 
   if (!products || products.length === 0) return null;
 
   return (
     <>
       <Navigation isHovering={isHovering} setIsHovering={setIsHovering} />
+      <CategoriesNav setIsHovering={setIsHovering} />
       <div
         className="all-products-index"
         onMouseEnter={() => setIsHovering(false)}

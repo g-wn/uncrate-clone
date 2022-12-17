@@ -127,3 +127,16 @@ def purchase_cart():
     setattr(cart, "total", request.json['total'])
     db.session.commit()
     return cart.to_dict()
+
+
+@carts_routes.route("/history")
+@login_required
+def get_history():
+    """
+    Query for the current user's purchased carts and and return them in a list of cart dictionaries.
+    """
+    carts = Cart.query \
+                .filter(Cart.user_id == current_user.get_id()) \
+                .filter(Cart.purchased == True).all()
+
+    return {"OrderHistory": [cart.to_dict() for cart in carts]}

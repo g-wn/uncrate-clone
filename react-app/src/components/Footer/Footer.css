@@ -4,6 +4,9 @@
   background-repeat: no-repeat;
   background-position: center top;
   margin-top: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
 
 .footer {

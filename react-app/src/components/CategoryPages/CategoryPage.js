@@ -7,16 +7,14 @@ import Footer from "../Footer/Footer";
 
 import "./CategoryPage.css";
 import "../ProductIndex/ProductIndex.css";
+import CategoriesNav from "../Navigation/CategoriesNav";
 
 export default function CategoryPage({ categoryName }) {
   const dispatch = useDispatch();
   const [isHovering, setIsHovering] = useState(false);
   const products = useSelector((state) => Object.values(state.products));
 
-  let categoryList = products.filter(
-    (product) =>
-      product.productCategory.name.toLowerCase() === categoryName.toLowerCase()
-  );
+  let categoryList = products.filter((product) => product.productCategory.name.toLowerCase() === categoryName.toLowerCase());
 
   useEffect(() => {
     dispatch(getProducts());
@@ -26,6 +24,7 @@ export default function CategoryPage({ categoryName }) {
   return (
     <div className="category-page">
       <Navigation isHovering={isHovering} setIsHovering={setIsHovering} />
+      <CategoriesNav setIsHovering={setIsHovering} />
       <div className="category-name-container">
         <h1 className="category-page-name">{categoryName}</h1>
       </div>

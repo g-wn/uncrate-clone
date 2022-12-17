@@ -15,8 +15,8 @@ const ImageForm = ({ modalData, setShowEditModal, setShowEditMainModal, setShowA
       updatedProductImage.errors
         ? setErrors(updatedProductImage.errors)
         : await dispatch(getProducts()).then(() =>
-            formType === 'edit' ? setShowEditModal(false) : setShowEditMainModal(false)
-          );
+          formType === 'edit' ? setShowEditModal(false) : setShowEditMainModal(false)
+        );
     }
   };
 

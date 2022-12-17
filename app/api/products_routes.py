@@ -116,21 +116,7 @@ def delete_product(id):
     """
     Query for a single product by id and delete the product if authorized.
     """
-    print(
-        """id
 
-
-
-
-
-
-
-
-
-
-    """,
-        id,
-    )
     product = Product.query.get(id)
     db.session.delete(product)
     db.session.commit()

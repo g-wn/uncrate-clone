@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { useParams, useHistory, NavLink } from "react-router-dom";
+import { useParams, NavLink } from "react-router-dom";
 import { getSingleProduct } from "../../store/one_product";
-import { addToFavorites } from "../../store/favorites";
+import { addToFavorites, getFavorites } from "../../store/favorites";
 import "./SingleProduct.css";
 import Carousel from "./ImageCarousel/Carousel";
 import SupplyNavBar from "./SupplyNavBar/SupplyNavBar";
@@ -17,13 +17,13 @@ import Footer from "../Footer/Footer";
 
 const SingleProduct = () => {
   const dispatch = useDispatch();
-  const history = useHistory();
   const { id } = useParams();
   const singleProduct = useSelector((state) => state.product[id]);
   const [showCartModal, setShowCartModal] = useState(false);
   const [suggested, setSuggested] = useState([]);
   const [showLoginModal, setShowLoginModal] = useState(false);
-  const user = useSelector((state) => state.session.user);
+  const user = useSelector(state => state.session.user);
+  const favorites = useSelector(state => state.favorites);
 
   const cart = useSelector((state) => state.cart);
   let thisCartItem;
@@ -37,10 +37,9 @@ const SingleProduct = () => {
     const shuffled = availableProducts.sort(() => 0.5 - Math.random());
     const selected = shuffled.slice(0, 8);
     setSuggested(selected);
-    dispatch(getCart());
-  }, [dispatch, id]);
-
-  // Get sub-array of first n elements after shuffled
+    if (user) dispatch(getCart());
+    if (user) dispatch(getFavorites(user.id));
+  }, [dispatch, id, user]);
 
   let imgList = [];
 
@@ -55,7 +54,7 @@ const SingleProduct = () => {
     }
   }
 
-  if (!singleProduct) return null;
+  if (!singleProduct || !favorites) return null;
 
   return (
     <div className="single-product-page">
@@ -124,16 +123,17 @@ const SingleProduct = () => {
                   <LoginForm setShowLoginModal={setShowLoginModal} />
                 </Modal>
               )}
-              <button
-                className="single-product-details-btn btn-stash-later"
-                onClick={async (e) => {
+              {!favorites[singleProduct.id] ? <button
+                className='single-product-details-btn btn-stash-later'
+                onClick={async e => {
                   e.preventDefault();
                   await dispatch(addToFavorites(singleProduct.id));
-                  user ? history.push(`/my-stash`) : setShowLoginModal(true);
+                  user ? dispatch(getFavorites(user.id)) : setShowLoginModal(true);
                 }}
               >
                 STASH FOR LATER
-              </button>
+              </button> : <span className='already-in-stash'>Stashed</span>
+              }
             </div>
           </div>
         </div>

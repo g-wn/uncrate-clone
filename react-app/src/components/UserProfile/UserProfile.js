@@ -6,6 +6,7 @@ import { getProducts, deleteProduct } from "../../store/all_products";
 import Navigation from "../Navigation/Navigation";
 import Footer from "../Footer/Footer";
 import "./UserProfile.css";
+import ProfileNav from '../ProfileNav/ProfileNav';
 
 const UserProfile = () => {
   const dispatch = useDispatch();
@@ -13,7 +14,7 @@ const UserProfile = () => {
   const user = useSelector((state) => state.session.user);
   const [isHovering, setIsHovering] = useState(false);
 
-  const allProducts = useSelector((state) => Object.values(state.products));
+  const allProducts = useSelector(state => Object.values(state.products));
 
   useEffect(() => {
     dispatch(getProducts());
@@ -24,6 +25,7 @@ const UserProfile = () => {
   return (
     <>
       <Navigation isHovering={isHovering} setIsHovering={setIsHovering} />
+      <ProfileNav />
       <div className="my-listings">
         <div className="hidden-spacer"></div>
         <span className="my-listings-title">{`${user.first_name}'s Listings`}</span>

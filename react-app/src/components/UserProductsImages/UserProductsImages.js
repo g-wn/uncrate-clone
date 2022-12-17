@@ -73,9 +73,8 @@ const UserProductsImages = () => {
         <div
           className="main-image"
           style={{
-            backgroundImage: `url("${
-              product.productImages[product.previewImgId].url
-            }")`,
+            backgroundImage: `url("${product.productImages[product.previewImgId].url
+              }")`,
           }}
         >
           <p className="title">Main Product Image</p>
