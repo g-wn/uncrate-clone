@@ -7,11 +7,9 @@ import { Modal } from "../../../context/Modal";
 import LoginForm from "../../auth/LoginForm";
 import SignUpForm from "../../auth/SignUpForm";
 import LogoutButton from "../../auth/LogoutButton";
-import Cart from "../../Cart/Cart";
 export default function SupplyNavBar() {
   const history = useHistory();
   const [showCartModal, setShowCartModal] = useState(false);
-
   const [showLoginModal, setShowLoginModal] = useState(false);
   const [showSignupModal, setShowSignupModal] = useState(false);
   const user = useSelector((state) => state.session.user);

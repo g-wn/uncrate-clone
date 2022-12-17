@@ -12,28 +12,17 @@ const ProductIndex = () => {
   const dispatch = useDispatch();
   const [isHovering, setIsHovering] = useState(false);
   const [products, setProducts] = useState([]);
-  const all_products = useSelector((state) => Object.values(state.products));
   const user = useSelector((state) => state.session.user)
 
   useEffect(() => {
-    dispatch(getProducts());
-    shuffle(all_products);
-    setProducts(all_products);
+    (async function fetchProducts() {
+      const all_products = await dispatch(getProducts());
+      const shuffled = all_products.Products.sort(() => 0.5 - Math.random());
+      const selected = shuffled.slice(0, 87);
+      setProducts(selected);
+    })()
     if (user) dispatch(getCart());
   }, [dispatch, user]);
-
-  function shuffle(arr) {
-    let curr = arr.length
-    let randomNum;
-
-    while (curr > 0) {
-      randomNum = Math.floor(Math.random() * curr);
-      curr--;
-      [arr[curr], arr[randomNum]] = [arr[randomNum], arr[curr]];
-    }
-
-    return arr;
-  }
 
   if (!products || products.length === 0) return null;
 
