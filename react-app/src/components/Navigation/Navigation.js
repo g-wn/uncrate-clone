@@ -1,21 +1,31 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import "./Navigation.css";
 import { Modal } from "../../context/Modal";
 import LoginForm from "../auth/LoginForm";
 import SignUpForm from "../auth/SignUpForm";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import LogoutButton from "../auth/LogoutButton";
 import { NavLink } from "react-router-dom";
 import Cart from "../Cart/Cart";
 import MeetDropdown from "../MeetDropdown/MeetDropdown";
+import { getCart } from "../../store/cart";
 
 function Navigation({ isHovering, setIsHovering }) {
+  const dispatch = useDispatch();
   const [showLoginModal, setShowLoginModal] = useState(false);
   const [showSignupModal, setShowSignupModal] = useState(false);
   const [showCartModal, setShowCartModal] = useState(false);
   const user = useSelector((state) => state.session.user);
+  const cart = useSelector((state) => state.cart);
   const history = useHistory();
+
+  let cartItemCount;
+  if (cart && cart.cartItems) cartItemCount = Object.keys(cart.cartItems).length
+
+  useEffect(() => {
+    if (user) dispatch(getCart());
+  }, [dispatch, user]);
 
   return (
     <>
@@ -130,6 +140,7 @@ function Navigation({ isHovering, setIsHovering }) {
               >
                 <i className="fa-sharp fa-solid fa-box"></i>
               </button>
+              {cartItemCount ? <span className="cart-item-count-splash">{cartItemCount}</span> : ""}
             </div>
           </div>
         </div>

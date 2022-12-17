@@ -162,3 +162,30 @@
 .nav {
     margin-top: 20px;
 }
+
+.cart-item-count-splash {
+  position: absolute;
+  text-align: center;
+  right: 29px;
+  bottom: 14px;
+  width: 15px;
+  height: 15px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 9px;
+  background-color: #E74E3C;
+  border-radius: 100%;
+}
+
+.cart-item-count-single {
+  position: absolute;
+  text-align: center;
+  right: -8px;
+  bottom: 15px;
+  width: 15px;
+  height: 15px;
+  font-family: 'Oswald', sans-serif;
+  color: white;
+  font-size: 9px;
+  background-color: #E74E3C;
+  border-radius: 100%;
+}

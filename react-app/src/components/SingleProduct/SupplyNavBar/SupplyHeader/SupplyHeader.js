@@ -11,6 +11,10 @@ export default function SupplyHeader() {
   const [showLoginModal, setShowLoginModal] = useState(false);
 
   const user = useSelector((state) => state.session.user);
+  const cart = useSelector(state => state.cart)
+
+  let cartItemCount;
+  if (cart && cart.cartItems) cartItemCount = Object.keys(cart.cartItems).length
 
   return (
     <>
@@ -52,10 +56,10 @@ export default function SupplyHeader() {
 
             {showLoginModal && (
               <Modal onClose={() => setShowLoginModal(false)}>
-                <LoginForm setShowCartModal={setShowLoginModal} />
+                <LoginForm setShowLoginModal={setShowLoginModal} />
               </Modal>
             )}
-            <span className="cart-badge"></span>
+            {cartItemCount ? <span className="cart-item-count-single">{cartItemCount}</span> : ""}
           </div>
         </div>
         <div className="supply-header-categories">

@@ -4,7 +4,6 @@ import { NavLink } from "react-router-dom";
 import { getProducts } from "../../store/all_products";
 import "./ProductIndex.css";
 import Navigation from "../Navigation/Navigation";
-import { getCart } from "../../store/cart";
 import Footer from "../Footer/Footer";
 import CategoriesNav from '../Navigation/CategoriesNav';
 
@@ -21,7 +20,6 @@ const ProductIndex = () => {
       const selected = shuffled.slice(0, 87);
       setProducts(selected);
     })()
-    if (user) dispatch(getCart());
   }, [dispatch, user]);
 
   if (!products || products.length === 0) return null;
