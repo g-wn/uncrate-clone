@@ -1,8 +1,8 @@
 .user-favorites-wrapper {
-    display: flex;
-    flex-direction: column;
-    max-width: 960px;
-    margin: auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 960px;
+  margin: auto;
 }
 
 .user-favorites {
@@ -51,4 +51,12 @@
   margin-left: 2em;
   margin-right: 2em;
   padding-bottom: 20px;
+}
+
+.no-favorites-msg {
+  text-align: center;
+  margin: 40px 0;
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  font-size: 22px;
 }

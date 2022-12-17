@@ -6,6 +6,7 @@
   margin-top: 20px;
   position: relative;
   bottom: 0;
+  height: 100%;
   width: 100%;
 }
 
@@ -42,6 +43,8 @@
 
 @media (max-wdith: 1020px) {
   .footer-wrapper {
+    position: relative;
+    bottom: 0;
     background-size: 500px 500px;
   }
 }

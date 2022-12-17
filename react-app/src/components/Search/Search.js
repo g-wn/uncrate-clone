@@ -5,7 +5,6 @@ import { NavLink } from "react-router-dom";
 import Navigation from "../Navigation/Navigation";
 import { searchQuery } from "../../store/all_products";
 import "./Search.css";
-import Footer from "../Footer/Footer";
 
 export default function Search() {
   const [searchValue, setSearchValue] = useState("");
@@ -38,7 +37,7 @@ export default function Search() {
   };
 
   return (
-    <div>
+    <div className="search-wrapper">
       <Navigation isHovering={isHovering} setIsHovering={setIsHovering} />
       <div className="search-container">
         <div className="search-area">
@@ -87,7 +86,6 @@ export default function Search() {
           )}
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

@@ -11,7 +11,8 @@
   text-align: center;
 }
 
-.lower-footer-link-list ul {
+.lower-footer-link-list ul,
+.lower-footer-link-list-team ul {
   color: white;
   font-family: "Roboto", sans-serif;
   text-align: center;
@@ -37,7 +38,8 @@
   align-items: center;
 }
 
-.meet-team-ul li {
+.lower-footer-link-list-team li {
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -51,6 +53,7 @@
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1px;
+  text-align: center;
 }
 
 .dev-links {
@@ -69,7 +72,8 @@
   color: #c7c7c7;
 }
 
-.lower-footer-link-list a {
+.lower-footer-link-list a,
+.lower-footer-link-list-team a {
   color: white;
   text-transform: uppercase;
   text-decoration: none;
@@ -85,7 +89,7 @@
   }
 }
 
-@media (max-width: 660px) {
+@media (max-width: 725px) {
   .lower-footer-container {
     padding-top: 20px;
     border-top: 1px solid #666;
@@ -95,11 +99,16 @@
   }
 
   .lower-footer-link-list {
-    width: 150px;
+    width: 120px;
     text-align: center;
   }
 
-  .lower-footer-link-list ul {
+  .lower-footer-link-list-team {
+    width: 140px;
+  }
+
+  .lower-footer-link-list ul,
+  .lower-footer-link-list-team ul {
     color: white;
     font-family: "Roboto", sans-serif;
     text-align: center;
@@ -107,18 +116,19 @@
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 1px;
-    list-style-type: none;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
   }
 
   .meet-team-ul {
     justify-content: space-between;
+    text-align: center;
   }
 
-  .lower-footer-link-list li {
+  .lower-footer-link-list li,
+  .lower-footer-link-list-team li {
     width: 100%;
     justify-content: center;
     display: flex;
@@ -132,6 +142,7 @@
   }
 
   .lower-footer-link-list-title {
+    text-align: center;
     text-transform: uppercase;
     margin-bottom: 3px;
     color: #666;
@@ -156,5 +167,9 @@
 
   .lower-footer-link-list-divider {
     display: none;
+  }
+
+  .list-links {
+    margin-right: 20px;
   }
 }

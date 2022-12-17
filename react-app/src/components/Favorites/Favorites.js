@@ -26,31 +26,37 @@ const Favorites = () => {
       <ProfileNav />
       <div className="stash-title">{`${user.first_name}'s Stash`}</div>
       <div className="user-favorites-wrapper">
-        <div className="user-favorites">
-          {favorites.map((favorite, idx) => (
-            <div key={idx} className="outer">
-              <NavLink className="image" to={`/products/${favorite.id}`}>
-                <img
-                  alt="main-product-img"
-                  className="product-img"
-                  src={favorite.productImages[favorite.previewImgId].url}
-                ></img>
-                <div className="stash-product-name">
-                  {favorite.title} / ${usDollar.format(favorite.price)}
-                </div>
-              </NavLink>
-              <button
-                className='delete-listing'
-                onClick={async e => {
-                  e.preventDefault();
-                  await dispatch(deleteFavorite(favorite.id));
-                }}
-              >
-                Remove From Stash
-              </button>
-            </div>
-          ))}
-        </div>
+        {favorites.length === 0 ? (
+          <div className="no-favorites-msg">
+            You haven't stashed any items yet - get browsing!
+          </div>
+        ) : (
+          <div className="user-favorites">
+            {favorites.map((favorite, idx) => (
+              <div key={idx} className="outer">
+                <NavLink className="image" to={`/products/${favorite.id}`}>
+                  <img
+                    alt="main-product-img"
+                    className="product-img"
+                    src={favorite.productImages[favorite.previewImgId].url}
+                  ></img>
+                  <div className="stash-product-name">
+                    {favorite.title} / ${usDollar.format(favorite.price)}
+                  </div>
+                </NavLink>
+                <button
+                  className="delete-listing"
+                  onClick={async (e) => {
+                    e.preventDefault();
+                    await dispatch(deleteFavorite(favorite.id));
+                  }}
+                >
+                  Remove From Stash
+                </button>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
       <Footer />
     </>

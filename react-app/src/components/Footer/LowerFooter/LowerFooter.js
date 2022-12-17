@@ -1,8 +1,11 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import "./LowerFooter.css";
 
 export default function LowerFooter() {
+  const user = useSelector((state) => state.session.user);
+
   function shuffle(arr) {
     let curr = arr.length;
     let randomNum;
@@ -43,7 +46,7 @@ export default function LowerFooter() {
   return (
     <div className="lower-footer-container">
       <div className="lower-footer-link-list">
-        <p className="lower-footer-link-list-title">reduncrate.com</p>
+        <p className="lower-footer-link-list-title">reduncrate</p>
         <ul>
           <NavLink to={`/category/gear`}>
             <li>Gear</li>
@@ -80,7 +83,31 @@ export default function LowerFooter() {
           </NavLink>
         </ul>
       </div>
-      <div className="lower-footer-link-list">
+      {user ? (
+        <div className="lower-footer-link-list list-links">
+          <p className="lower-footer-link-list-title">Site Links</p>
+          <ul>
+            <NavLink to={`/order-history`}>
+              <li>Order History</li>
+            </NavLink>{" "}
+            <span className="lower-footer-link-list-divider">
+              &nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
+            </span>
+            <NavLink to={`/profile`}>
+              <li>My Listings</li>
+            </NavLink>{" "}
+            <span className="lower-footer-link-list-divider">
+              &nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
+            </span>
+            <NavLink to={`/my-stash`}>
+              <li>My Stash</li>
+            </NavLink>{" "}
+          </ul>
+        </div>
+      ) : (
+        ""
+      )}
+      <div className="lower-footer-link-list-team">
         <p className="lower-footer-link-list-title">Meet the team</p>
         <ul className="meet-team-ul">
           {devs.map((dev, i) =>
