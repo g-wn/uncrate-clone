@@ -2,6 +2,10 @@ import React from "react";
 import "./UpperFooter.css";
 
 export default function UpperFooter() {
+  const handleClick = () => {
+    const successMessage = document.querySelector(".subscribe-success");
+    successMessage.style.display = "flex";
+  };
   return (
     <div className="upper-footer-container">
       <div className="footer-module-container">
@@ -11,8 +15,13 @@ export default function UpperFooter() {
             Be the first to know about the newest gear, automobiles, and
             apparel.
           </p>
-          <input type="text" placeholder="YOUR EMAIL" />
-          <button className="subscribe-btn">SUBSCRIBE</button>
+          <div className="subscribe-module-wrapper">
+            <input type="text" placeholder="YOUR EMAIL" />
+            <div className="subscribe-success">YOU'RE NOW ON THE LIST.</div>
+            <button className="subscribe-btn" onClick={handleClick}>
+              SUBSCRIBE
+            </button>
+          </div>
         </div>
       </div>
       <div className="footer-module-container">
@@ -26,14 +35,15 @@ export default function UpperFooter() {
           </div>
           <div className="quote-module-right">
             <div className="quote-module-right-left">
-              <img src="https://uncrate.com/img/app-devices.png" />
+              <img src="https://uncrate.com/img/app-devices.png" alt="devices" />
             </div>
             <div className="quote-module-right-right">
               <img
+                alt="app store"
                 className="app-store-icon"
                 src="https://uncrate.com/img/app-store.jpg"
               />
-              <img src="https://uncrate.com/img/google-play.jpg" />
+              <img src="https://uncrate.com/img/google-play.jpg" alt="google play" />
             </div>
           </div>
         </div>

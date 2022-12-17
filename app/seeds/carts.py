@@ -4,39 +4,33 @@ from app.models import db, environment, SCHEMA, Cart
 # Adds a demo user, you can add other users here if you want
 def seed_carts():
     cart_1 = Cart(
-        # id=1,
         user_id=1,
-        total=150,
+        total=2633,
         purchased=True,
     )
     cart_2 = Cart(
-        # id=2,
         user_id=1,
-        total=200,
+        total=0,
         purchased=False,
     )
     cart_3 = Cart(
-        # id=3,
         user_id=2,
-        total=250,
+        total=1245,
         purchased=True,
     )
     cart_4 = Cart(
-        # id=4,
         user_id=2,
-        total=300,
+        total=0,
         purchased=False,
     )
     cart_5 = Cart(
-        # id=5,
         user_id=3,
-        total=350,
+        total=46000040,
         purchased=True,
     )
     cart_6 = Cart(
-        # id=6,
         user_id=3,
-        total=400,
+        total=0,
         purchased=False,
     )
 

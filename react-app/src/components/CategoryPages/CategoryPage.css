@@ -15,3 +15,12 @@
   text-transform: capitalize;
   border-bottom: .5px solid rgba(0, 0, 0, 0.422);
 }
+
+.featured-product-category a {
+  color: #989898;
+  text-decoration: none;
+}
+
+.featured-product-buy-link a {
+  color: #ae9e85;
+}

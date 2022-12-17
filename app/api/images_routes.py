@@ -2,6 +2,7 @@ from flask import Blueprint, jsonify, request, redirect, render_template
 from flask_login import login_required
 from app.models import db, Product, ProductImage
 from app.forms import ImageForm
+from .auth_routes import validation_errors_to_error_messages
 
 
 images_routes = Blueprint("images", __name__)
@@ -37,8 +38,9 @@ def create_image(product_id):
         db.session.add(new_img)
         db.session.commit()
 
-        return new_img.to_dict()
-    return {"errors": form.errors}
+        return new_img.to_dict(), 201
+    print(validation_errors_to_error_messages(form.errors))
+    return {"errors": validation_errors_to_error_messages(form.errors)}, 403
 
 # UPDATE A SINGLE IMAGE URL:
 @images_routes.route("<int:id>/update", methods=["PUT"])
@@ -60,7 +62,8 @@ def update_product_image(id):
 
         db.session.commit()
         return product_image.to_dict()
-    return {"errors": form.errors}
+    print(validation_errors_to_error_messages(form.errors))
+    return {"errors": validation_errors_to_error_messages(form.errors)}, 403
 
 # DELETE A SINGLE PRODUCT IMAGE:
 @images_routes.route("/<int:id>", methods=["DELETE"])

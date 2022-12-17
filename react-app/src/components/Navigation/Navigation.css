@@ -95,6 +95,11 @@
   margin-right: 30px;
 }
 
+.magnifying-glass-link {
+  margin-right: 30px;
+  color: white;
+}
+
 .nav-bar-categories {
   display: flex;
   justify-content: space-evenly;

@@ -85,6 +85,16 @@
     margin-left: 5px;
   }
 
+  .topbar-left {
+    margin: 0;
+    padding-left: 20px;
+  }
+
+  .supply-nav-rightbtns {
+    margin: 0;
+    padding-right: 20px;
+  }
+
   .topbar-middle {
     display: none;
   }
