@@ -16,7 +16,6 @@
   align-items: center;
   text-align: center;
   max-width: 960px;
-  width: 100%;
 }
 
 .product-img {
@@ -31,6 +30,15 @@
   text-align: center;
   margin-top: 40px;
   font-size: 32px;
+  font-weight: bold;
+}
+
+.empty-message {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 220px 0;
+  font-size: 52px;
   font-weight: bold;
 }
 

@@ -7,18 +7,33 @@ import Navigation from "../Navigation/Navigation";
 import { getCart } from "../../store/cart";
 import Footer from "../Footer/Footer";
 import CategoriesNav from '../Navigation/CategoriesNav';
-import Cart from "../Cart/Cart";
 
 const ProductIndex = () => {
   const dispatch = useDispatch();
   const [isHovering, setIsHovering] = useState(false);
-  const products = useSelector((state) => Object.values(state.products));
+  const [products, setProducts] = useState([]);
+  const all_products = useSelector((state) => Object.values(state.products));
   const user = useSelector((state) => state.session.user)
 
   useEffect(() => {
     dispatch(getProducts());
+    shuffle(all_products);
+    setProducts(all_products);
     if (user) dispatch(getCart());
   }, [dispatch, user]);
+
+  function shuffle(arr) {
+    let curr = arr.length
+    let randomNum;
+
+    while (curr > 0) {
+      randomNum = Math.floor(Math.random() * curr);
+      curr--;
+      [arr[curr], arr[randomNum]] = [arr[randomNum], arr[curr]];
+    }
+
+    return arr;
+  }
 
   if (!products || products.length === 0) return null;
 

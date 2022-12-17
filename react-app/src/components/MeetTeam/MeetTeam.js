@@ -1,4 +1,5 @@
 import { BsGithub, BsLinkedin } from "react-icons/bs";
+import Footer from "../Footer/Footer";
 import SupplyNavBar from "../SingleProduct/SupplyNavBar/SupplyNavBar";
 import './MeetTeam.css'
 
@@ -63,6 +64,7 @@ const MeetTeam = () => {
           ))}
         </div>
       </div>
+      <Footer />
     </>
   )
 }

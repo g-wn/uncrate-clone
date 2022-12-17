@@ -15,6 +15,7 @@ const UserProfile = () => {
   const [isHovering, setIsHovering] = useState(false);
 
   const allProducts = useSelector(state => Object.values(state.products));
+  const userProducts = allProducts.filter(product => product.productOwner.id == user.id)
 
   useEffect(() => {
     dispatch(getProducts());
@@ -33,48 +34,51 @@ const UserProfile = () => {
           <AiOutlinePlusCircle size={30} />
         </NavLink>
       </div>
-      <div className="user-products">
-        {allProducts.map(
-          (product, idx) =>
-            product.productOwner.id === user.id && (
-              <div key={idx} className="product-details">
-                <NavLink className="image" to={`/products/${product.id}`}>
-                  <img
-                    alt="product-main-img"
-                    className="product-preview-img"
-                    src={product.productImages[product.previewImgId].url}
-                  ></img>
-                </NavLink>
-                {product.title}
-                <button
-                  className="edit-listing"
-                  onClick={() => {
-                    history.push(`/products/${product.id}/update`);
-                  }}
-                >
-                  Edit Product Details
-                </button>
-                <button
-                  className="edit-listing"
-                  onClick={() => {
-                    history.push(`/${product.id}/images/add-edit`);
-                  }}
-                >
-                  Add/Edit Images
-                </button>
-                <button
-                  className="delete-listing"
-                  onClick={async (e) => {
-                    e.preventDefault();
-                    await dispatch(deleteProduct(product.id));
-                    dispatch(getProducts());
-                  }}
-                >
-                  Delete From Reduncrate
-                </button>
-              </div>
-            )
-        )}
+      <div className="profile-page">
+
+        {userProducts.length ?
+          <div className="user-products">
+            {userProducts.map(
+              (product, idx) =>
+                <div key={idx} className="product-details">
+                  <NavLink className="image" to={`/products/${product.id}`}>
+                    <img
+                      alt="product-main-img"
+                      className="product-preview-img"
+                      src={product.productImages[product.previewImgId].url}
+                    ></img>
+                  </NavLink>
+                  {product.title}
+                  <button
+                    className="edit-listing"
+                    onClick={() => {
+                      history.push(`/products/${product.id}/update`);
+                    }}
+                  >
+                    Edit Product Details
+                  </button>
+                  <button
+                    className="edit-listing"
+                    onClick={() => {
+                      history.push(`/${product.id}/images/add-edit`);
+                    }}
+                  >
+                    Add/Edit Images
+                  </button>
+                  <button
+                    className="delete-listing"
+                    onClick={async (e) => {
+                      e.preventDefault();
+                      await dispatch(deleteProduct(product.id));
+                      dispatch(getProducts());
+                    }}
+                  >
+                    Delete From Reduncrate
+                  </button>
+                </div>
+            )}
+          </div> : <h1 className="empty-message">You don't have any listings!</h1>
+        }
       </div>
       <Footer />
     </>
