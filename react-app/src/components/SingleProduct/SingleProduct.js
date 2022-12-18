@@ -14,6 +14,7 @@ import { getCart } from "../../store/cart";
 import SuggestedProduct from "./SuggestedProducts/SuggestedProduct";
 import LoginForm from "../auth/LoginForm";
 import Footer from "../Footer/Footer";
+import { getProducts } from "../../store/all_products";
 
 const SingleProduct = () => {
   const dispatch = useDispatch();
@@ -22,8 +23,9 @@ const SingleProduct = () => {
   const [showCartModal, setShowCartModal] = useState(false);
   const [suggested, setSuggested] = useState([]);
   const [showLoginModal, setShowLoginModal] = useState(false);
-  const user = useSelector(state => state.session.user);
-  const favorites = useSelector(state => state.favorites);
+  const user = useSelector((state) => state.session.user);
+  const favorites = useSelector((state) => state.favorites);
+  const products = useSelector((state) => Object.values(state.products));
 
   const cart = useSelector((state) => state.cart);
   let thisCartItem;
@@ -34,9 +36,26 @@ const SingleProduct = () => {
 
   useEffect(() => {
     dispatch(getSingleProduct(id));
-    const shuffled = availableProducts.sort(() => 0.5 - Math.random());
-    const selected = shuffled.slice(0, 8);
-    setSuggested(selected);
+    (async function fetchProducts() {
+      const allProducts = await dispatch(getProducts());
+      const shuffled = allProducts.Products.sort(() => 0.5 - Math.random());
+      const selected = shuffled.slice(0, 8);
+      setSuggested(selected);
+
+      for (let [key, item] of Object.entries(allProducts.Products)) {
+        let flag = false;
+
+        for (let [key, img] of Object.entries(item.productImages)) {
+          if (img.url.includes("shopify")) {
+            flag = true;
+          }
+        }
+        if (!flag) {
+          console.log(item);
+        }
+      }
+    })();
+
     if (user) dispatch(getCart());
     if (user) dispatch(getFavorites(user.id));
   }, [dispatch, id, user]);
@@ -123,17 +142,22 @@ const SingleProduct = () => {
                   <LoginForm setShowLoginModal={setShowLoginModal} />
                 </Modal>
               )}
-              {!favorites[singleProduct.id] ? <button
-                className='single-product-details-btn btn-stash-later'
-                onClick={async e => {
-                  e.preventDefault();
-                  await dispatch(addToFavorites(singleProduct.id));
-                  user ? dispatch(getFavorites(user.id)) : setShowLoginModal(true);
-                }}
-              >
-                STASH FOR LATER
-              </button> : <span className='already-in-stash'>Stashed</span>
-              }
+              {!favorites[singleProduct.id] ? (
+                <button
+                  className="single-product-details-btn btn-stash-later"
+                  onClick={async (e) => {
+                    e.preventDefault();
+                    await dispatch(addToFavorites(singleProduct.id));
+                    user
+                      ? dispatch(getFavorites(user.id))
+                      : setShowLoginModal(true);
+                  }}
+                >
+                  STASH FOR LATER
+                </button>
+              ) : (
+                <span className="already-in-stash">Stashed</span>
+              )}
             </div>
           </div>
         </div>

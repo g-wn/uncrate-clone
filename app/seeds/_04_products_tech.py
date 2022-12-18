@@ -63,7 +63,7 @@ products_tech = [
     },
     {
         "id": 40,
-        "title": "IT'S OKAY NIGHT EDITION BLUETOOTH CASETTE PLAYER",
+        "title": "IT'S OK NIGHT EDITION BLUETOOTH CASETTE PLAYER",
         "description": "Bluetooth, a built-in mic, and physical controls make this tape player a great blend of old and new. $120.",
         "detailed_description": "Inspired by the darkness of night, It's OK's latest cassette player is a sleek way to enjoy your legacy media. Bluetooth 5.0 support lets it play nice with modern wireless headphones and speakers, while a built-in mic lets you record your thoughts to the included blank tape. Alongside the playback controls, you'll find a physical volume wheel, sliding power switch, and 3.5mm headphone jack, as well as a detachable belt clip and a transparent black cover to offer a view of the currently playing selection.",
         "category_id": 4,
@@ -171,193 +171,248 @@ products_tech_imgs = [
         "url": "https://uncrate.com/assets_c/2022/06/tivoli-audio-portable-radio-1-thumb-960xauto-148651.jpg",
     },
     {
-        "id": 181,
+        "id": 222,
         "product_id": 34,
         "url": "https://uncrate.com/assets_c/2022/12/nocs-monolith-speaker-2-thumb-960xauto-155292.jpg",
     },
     {
-        "id": 182,
+        "id": 223,
         "product_id": 34,
         "url": "https://uncrate.com/assets_c/2022/12/nocs-monolith-speaker-3-thumb-960xauto-155294.jpg",
     },
     {
-        "id": 183,
+        "id": 224,
         "product_id": 34,
         "url": "https://uncrate.com/assets_c/2022/12/nocs-monolith-speaker-4-thumb-960xauto-155296.jpg",
     },
     {
-        "id": 184,
+        "id": 225,
         "product_id": 34,
         "url": "https://uncrate.com/assets_c/2022/12/nocs-monolith-speaker-6-thumb-960xauto-155297.jpg",
     },
     {
-        "id": 186,
+        "id": 226,
+        "product_id": 34,
+        "url": "https://cdn.shopify.com/s/files/1/0248/6216/products/nocs-design-monolith-speaker-21.jpg?v=1670451015"
+    },
+    {
+        "id": 227,
         "product_id": 35,
         "url": "https://uncrate.com/assets_c/2020/11/uturn-orbit-pro-3-thumb-960xauto-123584.jpg",
     },
     {
-        "id": 187,
+        "id": 228,
         "product_id": 35,
         "url": "https://uncrate.com/assets_c/2020/11/uturn-orbit-pro-4-thumb-960xauto-123585.jpg",
     },
     {
-        "id": 188,
+        "id": 229,
         "product_id": 35,
         "url": "https://uncrate.com/assets_c/2020/11/uturn-orbit-pro-5-thumb-960xauto-123586.jpg",
     },
     {
-        "id": 189,
+        "id": 230,
         "product_id": 35,
         "url": "https://uncrate.com/assets_c/2020/11/uturn-orbit-pro-2-thumb-960xauto-123583.jpg",
     },
     {
-        "id": 191,
+        "id": 231,
+        "product_id": 35,
+        "url": "https://cdn.shopify.com/s/files/1/0248/6216/products/uturn-orbit-pro-10.jpg?v=1604940280"
+    },
+    {
+        "id": 232,
         "product_id": 36,
         "url": "https://uncrate.com/assets_c/2021/12/night-watch-apple-watch-stand-1-thumb-960xauto-140923.jpg",
     },
     {
-        "id": 192,
+        "id": 233,
         "product_id": 36,
         "url": "https://uncrate.com/assets_c/2021/12/night-watch-apple-watch-stand-2-thumb-960xauto-140924.jpg",
     },
     {
-        "id": 193,
+        "id": 234,
         "product_id": 36,
         "url": "https://uncrate.com/assets_c/2021/12/night-watch-apple-watch-stand-35-thumb-960xauto-140926.jpg",
     },
     {
-        "id": 194,
+        "id": 235,
         "product_id": 36,
         "url": "https://uncrate.com/assets_c/2021/12/night-watch-apple-watch-stand-4-thumb-960xauto-140925.jpg",
     },
     {
-        "id": 196,
+        "id": 236,
+        "product_id": 36,
+        "url": "https://cdn.shopify.com/s/files/1/0248/6216/products/night-watch-apple-watch-stand-5.jpg?v=1638724614"
+    },
+    {
+        "id": 237,
         "product_id": 37,
         "url": "https://uncrate.com/assets_c/2022/01/master-dynamic-mw08-black-2-thumb-960xauto-142472.jpg",
     },
     {
-        "id": 197,
+        "id": 238,
         "product_id": 37,
         "url": "https://uncrate.com/assets_c/2022/01/master-dynamic-mw08-black-3-thumb-960xauto-142474.jpg",
     },
     {
-        "id": 199,
+        "id": 239,
+        "product_id": 37,
+        "url": "https://cdn.shopify.com/s/files/1/0248/6216/products/master-dynamic-mw08-silver-4.jpg?v=1642538327"
+    },
+    {
+        "id": 240,
         "product_id": 38,
         "url": "https://uncrate.com/assets_c/2020/01/gear-box-turntable-4-thumb-960xauto-110562.jpg",
     },
     {
-        "id": 200,
+        "id": 241,
         "product_id": 38,
         "url": "https://uncrate.com/assets_c/2020/01/gear-box-turntable-3-thumb-960xauto-110563.jpg",
     },
     {
-        "id": 201,
+        "id": 242,
         "product_id": 38,
         "url": "https://uncrate.com/assets_c/2020/01/gear-box-turntable-6-thumb-960xauto-110565.jpg",
     },
     {
-        "id": 202,
+        "id": 243,
         "product_id": 38,
         "url": "https://uncrate.com/assets_c/2020/01/gear-box-turntable-2-thumb-960xauto-110561.jpg",
     },
     {
-        "id": 204,
+        "id": 244,
+        "product_id": 38,
+        "url": "https://cdn.shopify.com/s/files/1/0248/6216/products/gear-box-turntable-7.jpg?v=1579554831"
+    },
+    {
+        "id": 245,
         "product_id": 39,
         "url": "https://uncrate.com/assets_c/2021/06/nitecore-nps600-powerstation-2-thumb-960xauto-132694.jpg",
     },
     {
-        "id": 205,
+        "id": 246,
         "product_id": 39,
         "url": "https://uncrate.com/assets_c/2021/06/nitecore-nps600-powerstation-3-thumb-960xauto-132695.jpg",
     },
     {
-        "id": 206,
+        "id": 247,
         "product_id": 39,
         "url": "https://uncrate.com/assets_c/2021/06/nitecore-nps600-powerstation-6-thumb-960xauto-132698.jpg",
     },
     {
-        "id": 207,
+        "id": 248,
         "product_id": 39,
         "url": "https://uncrate.com/assets_c/2021/06/nitecore-nps600-powerstation-5-thumb-960xauto-132697.jpg",
     },
     {
-        "id": 209,
+        "id": 249,
+        "product_id": 39,
+        "url": "https://cdn.shopify.com/s/files/1/0248/6216/products/nitecore-nps600-powerstation-7.jpg?v=1623248273"
+    },
+    {
+        "id": 250,
         "product_id": 40,
         "url": "https://uncrate.com/assets_c/2021/02/its-ok-cassette-player-black-2-thumb-960xauto-127302.jpg",
     },
     {
-        "id": 210,
+        "id": 251,
         "product_id": 40,
         "url": "https://uncrate.com/assets_c/2021/02/its-ok-cassette-player-black-3-thumb-960xauto-127303.jpg",
     },
     {
-        "id": 212,
+        "id": 252,
+        "product_id": 40,
+        "url": "https://cdn.shopify.com/s/files/1/0248/6216/products/its-ok-cassette-player-black-4.jpg?v=1612809301"
+    },
+    {
+        "id": 253,
         "product_id": 41,
         "url": "https://uncrate.com/assets_c/2019/07/punkt-mp02-12-thumb-960xauto-102294.jpg",
     },
     {
-        "id": 213,
+        "id": 254,
         "product_id": 41,
         "url": "https://uncrate.com/assets_c/2019/07/punkt-mp02-13-thumb-960xauto-102295.jpg",
     },
     {
-        "id": 215,
+        "id": 255,
+        "product_id": 41,
+        "url": "https://cdn.shopify.com/s/files/1/0248/6216/products/punkt-mp02-4.jpg?v=1562592856"
+    },
+    {
+        "id": 256,
         "product_id": 42,
         "url": "https://uncrate.com/assets_c/2022/11/keysmart-chargebook-1-thumb-960xauto-154224.jpg",
     },
     {
-        "id": 216,
+        "id": 257,
         "product_id": 42,
         "url": "https://uncrate.com/assets_c/2022/11/keysmart-chargebook-2-thumb-960xauto-154173.jpg",
     },
     {
-        "id": 217,
+        "id": 258,
         "product_id": 42,
         "url": "https://uncrate.com/assets_c/2022/11/keysmart-chargebook-3-thumb-960xauto-154174.jpg",
     },
     {
-        "id": 218,
+        "id": 259,
         "product_id": 42,
         "url": "https://uncrate.com/assets_c/2022/11/keysmart-chargebook-6-thumb-960xauto-154177.jpg",
     },
     {
-        "id": 220,
+        "id": 260,
+        "product_id": 42,
+        "url": "https://cdn.shopify.com/s/files/1/0248/6216/products/keysmart-chargebook-9.jpg?v=1668178406"
+    },
+    {
+        "id": 261,
         "product_id": 43,
         "url": "https://uncrate.com/assets_c/2018/07/barisiuer-coffee-clock-5-thumb-960xauto-87533.jpg",
     },
     {
-        "id": 221,
+        "id": 262,
         "product_id": 43,
         "url": "https://uncrate.com/assets_c/2018/07/barisiuer-coffee-clock-7-thumb-960xauto-87536.jpg",
     },
     {
-        "id": 222,
+        "id": 263,
         "product_id": 43,
         "url": "https://uncrate.com/assets_c/2022/11/joy-wireless-charger-1-thumb-960xauto-154342.jpg",
     },
     {
-        "id": 223,
+        "id": 264,
         "product_id": 43,
         "url": "https://uncrate.com/assets_c/2022/11/joy-wireless-charger-2-thumb-960xauto-154341.jpg",
     },
     {
-        "id": 225,
+        "id": 265,
+        "product_id": 43,
+        "url": "https://cdn.shopify.com/s/files/1/0248/6216/products/barisiuer-coffee-clock-8.jpg?v=1532367542"
+    },
+    {
+        "id": 266,
         "product_id": 44,
         "url": "https://uncrate.com/assets_c/2022/06/tivoli-audio-portable-radio-2-thumb-960xauto-148650.jpg",
     },
     {
-        "id": 226,
+        "id": 267,
         "product_id": 44,
         "url": "https://uncrate.com/assets_c/2022/06/tivoli-audio-portable-radio-3-thumb-960xauto-148652.jpg",
     },
     {
-        "id": 227,
+        "id": 268,
         "product_id": 44,
         "url": "https://uncrate.com/assets_c/2022/06/tivoli-audio-portable-radio-4-thumb-960xauto-148653.jpg",
     },
     {
-        "id": 228,
+        "id": 269,
         "product_id": 44,
         "url": "https://uncrate.com/assets_c/2022/06/tivoli-audio-portable-radio-5-thumb-960xauto-148654.jpg",
+    },
+    {
+        "id": 270,
+        "product_id": 44,
+        "url": "https://cdn.shopify.com/s/files/1/0248/6216/products/tivoli-audio-portable-radio-6.jpg?v=1656613428"
     },
 ]
