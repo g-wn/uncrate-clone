@@ -50,7 +50,7 @@ function Navigation() {
                     onMouseOut={() => setShowMeet(false)}
                   >
                     MEET THE TEAM
-                    <span className={showMeet ? 'show-meet' : "no-show-meet"}><MeetDropdown /></span>
+                    <span className={showMeet ? 'show-meet meet-button-hover' : "no-show-meet"}><MeetDropdown /></span>
                   </span>
                 </div>
                 <div className="header-top-bar-middle">
@@ -78,7 +78,7 @@ function Navigation() {
                   </ul>
                 </div>
                 {!user ? (
-                  <div>
+                  <div className="header-top-bar-right">
                     <button
                       className="login-button"
                       onClick={() => setShowLoginModal(true)}
@@ -103,7 +103,7 @@ function Navigation() {
                     )}
                   </div>
                 ) : (
-                  <div>
+                  <div className="header-top-bar-right">
                     <LogoutButton setShowLoginModal={setShowLoginModal} setShowSignupModal={setShowSignupModal} />&nbsp;&nbsp; | &nbsp;&nbsp;
                     <button
                       className="profile-button"
