@@ -1,5 +1,7 @@
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import Footer from "../Footer/Footer";
+import CategoriesNav from "../Navigation/CategoriesNav";
+import Navigation from "../Navigation/Navigation";
 import SupplyNavBar from "../SingleProduct/SupplyNavBar/SupplyNavBar";
 import './MeetTeam.css'
 
@@ -48,7 +50,8 @@ const MeetTeam = () => {
 
   return (
     <>
-      <SupplyNavBar />
+      <Navigation />
+      <CategoriesNav />
       <h1 className="meet-title">Meet the Team</h1>
       <div className="all-devs-container">
         <div className="all-devs">
