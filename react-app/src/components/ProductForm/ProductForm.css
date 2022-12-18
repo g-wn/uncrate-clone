@@ -67,6 +67,7 @@ input[type="number"] {
   font-weight: 400;
   gap: 0.5em;
   justify-content: center;
+  text-align: center;
   list-style: none;
   max-width: 641px;
   padding-bottom: 10px;
