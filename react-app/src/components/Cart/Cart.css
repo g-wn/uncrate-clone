@@ -1,44 +1,21 @@
 .cart-container {
-  width: 386.55px;
+  width: 399px;
   position: fixed;
   top: 0;
   height: 100vh;
   border-left: 1px solid black;
   background-color: white;
-  right: 0;
-  /* transition: right 0.2s ease-in; */
+  right: -150vw;
   z-index: 10;
   color: black;
 }
-
-/* .cart-container.Show {
-  right: 0;
-}
-
-.Cart-Overlay {
-  top: 0;
-  bottom: 0;
-  opacity: 0;
-  left: 0;
-  right: 0;
-  position: fixed;
-  display: none;
-  transition: opacity 10s ease-in;
-}
-
-.Cart-Overlay.Show {
-  background-color: rgba(0, 0, 0, 0.55);
-  display: block;
-  z-index: 5;
-  right: 391px;
-  opacity: 1;
-} */
 
 .cart-header {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid black;
   align-items: center;
+  width: 100%;
 }
 
 .cart-title {
@@ -72,8 +49,7 @@
 }
 
 .cart-item-image {
-  height: 50px;
-  border: 1px solid rgba(0, 0, 0, 0.575);
+  height: 65px;
 }
 
 .cart-item-title-and-remove {
@@ -82,11 +58,13 @@
   font-family: "Roboto", sans-serif;
   font-size: 13px;
   font-weight: 500;
-  letter-spacing: 0px;
+  letter-spacing: 0.2px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  margin-top: 10px;
+  line-height: 1;
 }
 
 .cart-remove-button {
@@ -144,13 +122,12 @@
   justify-content: space-evenly;
   width: 100px;
   margin-right: 5px;
+  margin-top: 10px;
 }
 
 .cart-checkout-div {
-  width: 100%;
   height: 18vh;
   border-top: 1px solid black;
-  position: absolute;
   bottom: 0;
 }
 

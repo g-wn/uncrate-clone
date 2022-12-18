@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { getProducts } from "../../store/all_products";
@@ -11,10 +11,12 @@ import CategoriesNav from "../Navigation/CategoriesNav";
 
 export default function CategoryPage({ categoryName }) {
   const dispatch = useDispatch();
-  const [isHovering, setIsHovering] = useState(false);
   const products = useSelector((state) => Object.values(state.products));
 
-  let categoryList = products.filter((product) => product.productCategory.name.toLowerCase() === categoryName.toLowerCase());
+  let categoryList = products.filter(
+    (product) =>
+      product.productCategory.name.toLowerCase() === categoryName.toLowerCase()
+  );
 
   useEffect(() => {
     dispatch(getProducts());
@@ -23,8 +25,8 @@ export default function CategoryPage({ categoryName }) {
   if (!products || products.length === 0) return null;
   return (
     <div className="category-page">
-      <Navigation isHovering={isHovering} setIsHovering={setIsHovering} />
-      <CategoriesNav setIsHovering={setIsHovering} />
+      <Navigation />
+      <CategoriesNav />
       <div className="category-name-container">
         <h1 className="category-page-name">{categoryName}</h1>
       </div>

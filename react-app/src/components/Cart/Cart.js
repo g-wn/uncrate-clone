@@ -18,12 +18,21 @@ const Cart = ({ setShowCartModal }) => {
   let totalPrice = 0;
 
   let cartItems;
-  if (cart && cart.cartItems) cartItems = Object.values(cart.cartItems);
+  if (cart && cart.cartItems) {
+    cartItems = Object.values(cart.cartItems);
+    for (let [key, item] of Object.entries(cartItems)) {
+      for (let [key, img] of Object.entries(item.product.productImages)) {
+        if (img.url.includes('shopify')) {
+          item.cartImg = img.url;
+        }
+      }
+    }
+  }
 
   if (!cart || !cartItems) return null;
 
   return (
-    <div className="cart-container">
+    <div>
       <div className="cart-header">
         <h1 className="cart-title">YOUR CRATE</h1>
         <button
@@ -39,7 +48,7 @@ const Cart = ({ setShowCartModal }) => {
             <NavLink to={`/products/${item.product.id}`}>
               <img
                 className="cart-item-image"
-                src={item.product.productImages[item.product.previewImgId].url}
+                src={item.cartImg}
                 alt="cart item"
               />
             </NavLink>

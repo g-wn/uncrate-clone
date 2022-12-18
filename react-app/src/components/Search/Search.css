@@ -32,6 +32,10 @@
   margin: 10px;
 }
 
+.search-wrapper {
+  height: 100%;
+  min-height: 100vh;
+}
 .search-result-details {
   text-align: center;
   font-family: "Oswald", sans-serif;

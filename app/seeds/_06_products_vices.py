@@ -13,12 +13,12 @@ products_vices = [
     },
     {
         "id": 57,
-        "title": "SHARPIE MUSTACHE COCKTAIL RECIPE",
-        "description": "A blend of Amaro, gin, and rye, this drink is equally good as a punch or sipped out of a flask.",
-        "detailed_description": "Created by Chris Elford while at Amor Y Amargo in NYC, the Sharpie Mustache still gets ordered long after his departure to Seattle. Whether batched and served out of a hip flask (one for the road) or stirred and poured over a big clear ice cube, this blend of Amaro, gin, and rye will be ordered again and again, by you or your dinner guests.",
+        "title": "SAIL AWAY COLD BREW BOX TAP",
+        "description": "A 96-ounce supply of organic cold brew coffee on tap for all-day fueling. $30.",
+        "detailed_description": "Some mornings call for a cup of coffee while others require a keg. For the latter, there's the Sail Away Tap. The box holds 96 glorious ounces of organic cold brew that comes ready to drink. No mixing or measuring, just pour it straight into your cup, or mouth, We don't judge. Each 8-ounce serving delivers 120mg of caffeine to fuel you through the day. Once it's been opened, the slim box fits neatly in the fridge.",
         "category_id": 6,
         "owner_id": randint(1, 3),
-        "price": 0,
+        "price": 30,
         "preview_img_id": 57,
     },
     {
@@ -33,12 +33,12 @@ products_vices = [
     },
     {
         "id": 59,
-        "title": "20TH CENTURY COCKTAIL RECIPE",
-        "description": "A refreshing mix of lemon, gin, and créme de cacao, this cocktail is an exercise in opulence.",
-        "detailed_description": "Named for the 20th Century Limited express passenger train, this refreshing mix of lemon, gin, crème de cacao, and aromatized French wine will have you hoping the journey will take a while in anticipation of ordering another round. Velvety, crisp, and a sight to behold, just like that smoking jacket you packed along for the ride.",
+        "title": "KINTO COFFEE BREWER STAND SET",
+        "description": "Slow down and enjoy the brew with this minimalist pour-over coffee set. $150.",
+        "detailed_description": "Emphasizing simplicity and aesthetics, Kinto encourages users to slow down and enjoy the process. Their coffee brewer set elevates the morning ritual with a minimalist stainless steel stand and sleek porcelain brewer that are made to be displayed. Ideal for pour-overs, the heat‐resistant glass carafe can hold two cups and is microwave and dishwasher safe. The set also includes 20 cotton paper filters that produce an exceptional cup of coffee every time.",
         "category_id": 6,
         "owner_id": randint(1, 3),
-        "price": 0,
+        "price": 150,
         "preview_img_id": 59,
     },
     {
@@ -103,12 +103,12 @@ products_vices = [
     },
     {
         "id": 66,
-        "title": "FINAL WARD COCKTAIL RECIPE",
-        "description": "A masterclass in well-balanced flavor, this drink merges vanilla flavors with a citrus brightness.",
-        "detailed_description": "Sometimes minor swaps totally transform a drink. The shift in spirit and citrus in the Final Ward from Phil Ward brings a calming vanilla of whiskey and a rounded out splash of brightness from lemon juice. Equal parts cocktails are tough to balance, but this is a masterclass.",
+        "title": "HERBAL GOODS PRE-ROLLED SMOKING CONES",
+        "description": "100% natural, these cones offer the smooth burn of a pre-roll with the familiarity of personal flower. $25.",
+        "detailed_description": "Enjoy the smooth, slow burn of a pre-roll with your leaf of choice by packing it into one of Herbal Goods' all natural Smoking Cones. Rolled and tied by hand without the use of additives, glues, or toxins, they're made using a natural corn husk filter and ebony leaves. Five 3/4 gram cones come in each box, individually packaged in a flat-bottom, air-tight glass vile with cork top.",
         "category_id": 6,
         "owner_id": randint(1, 3),
-        "price": 0,
+        "price": 25,
         "preview_img_id": 66,
     },
 ]
@@ -122,7 +122,7 @@ products_vices_imgs = [
     {
         "id": 57,
         "product_id": 57,
-        "url": "https://uncrate.com/assets_c/2022/11/sharpie-mustache-cocktail-thumb-960xauto-154570.jpg",
+        "url": "https://uncrate.com/assets_c/2020/11/sail-away-box-cold-brew-1-thumb-960xauto-123343.jpg",
     },
     {
         "id": 58,
@@ -132,7 +132,7 @@ products_vices_imgs = [
     {
         "id": 59,
         "product_id": 59,
-        "url": "https://uncrate.com/assets_c/2022/10/20th-century-cocktail-thumb-960xauto-153114.jpg",
+        "url": "https://uncrate.com/assets_c/2021/02/kinto-coffee-filter-set-1-thumb-960xauto-126993.jpg",
     },
     {
         "id": 60,
@@ -167,126 +167,242 @@ products_vices_imgs = [
     {
         "id": 66,
         "product_id": 66,
-        "url": "https://uncrate.com/assets_c/2022/01/final-ward-cocktail-thumb-960xauto-142361.jpg",
+        "url": "https://uncrate.com/assets_c/2021/02/herbal-goods-new-packaging-3-thumb-960xauto-126935.jpg",
     },
     {
-        "id": 252,
+        "id": 309,
         "product_id": 56,
         "url": "https://uncrate.com/assets_c/2022/11/military-edition-humidor-8-thumb-960xauto-154720.jpg",
     },
     {
-        "id": 253,
+        "id": 310,
         "product_id": 56,
         "url": "https://uncrate.com/assets_c/2022/11/military-edition-humidor-3-thumb-960xauto-154715.jpg",
     },
     {
-        "id": 254,
+        "id": 311,
         "product_id": 56,
         "url": "https://uncrate.com/assets_c/2022/11/military-edition-humidor-2-thumb-960xauto-154714.jpg"
     },
     {
-        "id": 255,
+        "id": 312,
         "product_id": 56,
         "url": "https://uncrate.com/assets_c/2022/11/military-edition-humidor-5-thumb-960xauto-154717.jpg",
     },
     {
-        "id": 258,
+        "id": 313,
+        "product_id": 56,
+        "url": "https://cdn.shopify.com/s/files/1/0248/6216/products/klaro-humidor-black-9.jpg?v=1669060458"
+    },
+    {
+        "id": 314,
+        "product_id": 57,
+        "url": "https://cdn.shopify.com/s/files/1/0248/6216/products/sail-away-box-cold-brew-9.jpg?v=1606152729"
+    },
+    {
+        "id": 315,
+        "product_id": 57,
+        "url": "https://uncrate.com/assets_c/2020/11/sail-away-box-cold-brew-2-thumb-960xauto-123344.jpg"
+    },
+    {
+        "id": 316,
+        "product_id": 57,
+        "url": "https://uncrate.com/assets_c/2020/11/sail-away-box-cold-brew-3-thumb-960xauto-123346.jpg"
+    },
+    {
+        "id": 317,
+        "product_id": 57,
+        "url": "https://uncrate.com/assets_c/2020/11/sail-away-box-cold-brew-4-thumb-960xauto-123345.jpg"
+    },
+    {
+        "id": 318,
         "product_id": 58,
         "url": "https://uncrate.com/assets_c/2022/11/alessi-ashtray-3-thumb-960xauto-154383.jpg",
     },
     {
-        "id": 259,
+        "id": 319,
         "product_id": 58,
         "url": "https://uncrate.com/assets_c/2022/11/alessi-ashtray-2-thumb-960xauto-154381.jpg",
     },
     {
-        "id": 261,
-        "product_id": 60,
-        "url": "https://uncrate.com/assets_c/2022/10/cigar-lifestyle-shots-1-thumb-960xauto-152669.jpg"
+        "id": 320,
+        "product_id": 58,
+        "url": "https://cdn.shopify.com/s/files/1/0248/6216/products/alessi-ashtray-4.jpg?v=1668529138"
     },
     {
-        "id": 262,
+        "id": 321,
+        "product_id": 59,
+        "url": "https://cdn.shopify.com/s/files/1/0248/6216/products/FI1i_eug.jpg?v=1612212484"
+    },
+    {
+        "id": 322,
+        "product_id": 59,
+        "url": "https://uncrate.com/assets_c/2021/02/kinto-coffee-filter-set-2-thumb-960xauto-126996.jpg"
+    },
+    {
+        "id": 323,
+        "product_id": 59,
+        "url": "https://uncrate.com/assets_c/2021/02/kinto-coffee-filter-set-3-thumb-960xauto-126994.jpg"
+    },
+    {
+        "id": 324,
+        "product_id": 59,
+        "url": "https://uncrate.com/assets_c/2021/02/kinto-coffee-filter-set-4-thumb-960xauto-126995.jpg"
+    },
+    {
+        "id": 325,
+        "product_id": 59,
+        "url": "https://uncrate.com/assets_c/2021/02/kinto-coffee-filter-set-5-thumb-960xauto-126997.jpg"
+    },
+    {
+        "id": 326,
+        "product_id": 60,
+        "url": "https://cdn.shopify.com/s/files/1/0248/6216/products/nude-cigar-tray-single-clear-glass-21.jpg?v=1665409788"
+    },
+    {
+        "id": 327,
         "product_id": 60,
         "url": "https://uncrate.com/assets_c/2022/10/nude-cigar-tray-single-clear-glass-1-thumb-960xauto-152671.jpg",
     },
     {
-        "id": 263,
+        "id": 328,
         "product_id": 60,
         "url": "https://uncrate.com/assets_c/2022/10/nude-cigar-tray-single-clear-glass-2-thumb-960xauto-152672.jpg",
     },
     {
-        "id": 264,
+        "id": 329,
         "product_id": 60,
         "url": "https://uncrate.com/assets_c/2022/10/nude-cigar-tray-single-clear-glass-3-thumb-960xauto-152674.jpg",
     },
     {
-        "id": 265,
+        "id": 330,
+        "product_id": 60,
+        "url": "https://uncrate.com/assets_c/2022/10/nude-cigar-tray-single-clear-glass-5-thumb-960xauto-152668.jpg"
+    },
+
+    {
+        "id": 331,
         "product_id": 61,
         "url": "https://uncrate.com/assets_c/2022/10/cigar-lifestyle-shots-5-thumb-960xauto-152637.jpg"
     },
     {
-        "id": 266,
+        "id": 332,
         "product_id": 61,
         "url": "https://uncrate.com/assets_c/2022/10/nude-glass-black-double-cigar-tray-1-thumb-960xauto-152621.jpg",
     },
     {
-        "id": 267,
+        "id": 333,
         "product_id": 61,
         "url": "https://uncrate.com/assets_c/2022/10/nude-glass-black-double-cigar-tray-4-thumb-960xauto-152625.jpg",
     },
     {
-        "id": 268,
+        "id": 334,
         "product_id": 61,
         "url": "https://uncrate.com/assets_c/2022/10/nude-glass-black-double-cigar-tray-3-thumb-960xauto-152624.jpg",
     },
     {
-        "id": 270,
+        "id": 335,
+        "product_id": 61,
+        "url": "https://cdn.shopify.com/s/files/1/0248/6216/products/nude-glass-black-double-cigar-tray-21.jpg?v=1665409502"
+    },
+
+    {
+        "id": 336,
         "product_id": 62,
         "url": "https://uncrate.com/assets_c/2022/01/hemson-black-pipe-3-thumb-960xauto-142903.jpg",
     },
     {
-        "id": 271,
+        "id": 337,
         "product_id": 62,
         "url": "https://uncrate.com/assets_c/2022/01/hemson-black-pipe-1-thumb-960xauto-142901.jpg",
     },
     {
-        "id": 273,
+        "id": 338,
+        "product_id": 62,
+        "url": "https://cdn.shopify.com/s/files/1/0248/6216/products/hemson-black-pipe-4.jpg?v=1643653839"
+    },
+
+    {
+        "id": 339,
         "product_id": 63,
         "url": "https://uncrate.com/assets_c/2022/03/brouk-and-co-humidor-canister-3-thumb-960xauto-144276.jpg",
     },
     {
-        "id": 274,
+        "id": 340,
         "product_id": 63,
         "url": "https://uncrate.com/assets_c/2022/03/brouk-and-co-humidor-canister-2-thumb-960xauto-144275.jpg",
     },
     {
-        "id": 276,
+        "id": 341,
+        "product_id": 63,
+        "url": "https://cdn.shopify.com/s/files/1/0248/6216/products/brouk-and-co-humidor-canister-4.jpg?v=1646684172"
+    },
+
+    {
+        "id": 342,
         "product_id": 64,
         "url": "https://uncrate.com/assets_c/2022/03/brouk-and-co-single-humidor-2-thumb-960xauto-144176.jpg",
     },
     {
-        "id": 277,
+        "id": 343,
         "product_id": 64,
         "url": "https://uncrate.com/assets_c/2022/03/brouk-and-co-single-humidor-3-thumb-960xauto-144177.jpg",
     },
     {
-        "id": 280,
+        "id": 344,
+        "product_id": 64,
+        "url": "https://cdn.shopify.com/s/files/1/0248/6216/products/brouk-and-co-single-humidor-4.jpg?v=1646683821"
+    },
+
+    {
+        "id": 345,
         "product_id": 65,
         "url": "https://uncrate.com/assets_c/2022/03/broku-co-cf-humidor-3-thumb-960xauto-144142.jpg",
     },
     {
-        "id": 281,
+        "id": 346,
         "product_id": 65,
         "url": "https://uncrate.com/assets_c/2022/03/broku-co-cf-humidor-4-thumb-960xauto-144143.jpg",
     },
     {
-        "id": 283,
+        "id": 347,
         "product_id": 65,
         "url": "https://uncrate.com/assets_c/2022/03/broku-co-cf-humidor-5-thumb-960xauto-144144.jpg",
     },
     {
-        "id": 284,
+        "id": 348,
         "product_id": 65,
         "url": "https://uncrate.com/assets_c/2022/03/broku-co-cf-humidor-6-thumb-960xauto-144145.jpg",
     },
+    {
+        "id": 349,
+        "product_id": 65,
+        "url": "https://cdn.shopify.com/s/files/1/0248/6216/products/broku-co-cf-humidor-7.jpg?v=1646677267"
+    },
+    {
+        "id": 350,
+        "product_id": 66,
+        "url": "https://cdn.shopify.com/s/files/1/0248/6216/products/herbal-goods-ebony-leaf-5.jpg?v=1612206163"
+    },
+    {
+        "id": 351,
+        "product_id": 66,
+        "url": "https://uncrate.com/assets_c/2020/02/herbal-goods-ebony-leaf-3-thumb-960xauto-111647.jpg"
+    },
+    {
+        "id": 352,
+        "product_id": 66,
+        "url": "https://uncrate.com/assets_c/2020/02/herbal-goods-ebony-leaf-1-thumb-960xauto-111645.jpg"
+    },
+    {
+        "id": 353,
+        "product_id": 66,
+        "url": "https://uncrate.com/assets_c/2021/02/herbal-goods-new-packaging-1-thumb-960xauto-126933.jpg"
+    },
+    {
+        "id": 354,
+        "product_id": 66,
+        "url": "https://uncrate.com/assets_c/2021/02/herbal-goods-new-packaging-2-thumb-960xauto-126934.jpg"
+    },
+
 ]

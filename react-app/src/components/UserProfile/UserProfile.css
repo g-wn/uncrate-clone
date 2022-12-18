@@ -25,7 +25,7 @@
 .my-listings {
     margin: 20px auto auto auto;
     max-width: 960px;
-    padding-bottom: 10px;
+    width: 100%;
     font-size: 24px;
     display: flex;
     column-gap: 1em;
@@ -98,4 +98,10 @@
 .my-listings-title {
     margin-left: 32px;
     font-size: 32px;
+}
+
+@media (max-width: 1000px) {
+  .user-products {
+    grid-template-columns: auto;
+  }
 }

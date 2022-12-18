@@ -8,7 +8,6 @@
 
 .checkout-title {
     font-family: 'Oswald', sans-serif;
-    margin-bottom: 30px;
     text-transform: uppercase;
 }
 
@@ -31,6 +30,7 @@
     padding: 10px 10px 10px 10px;
     font-family: 'Roboto', sans-serif;
     letter-spacing: 0.3px;
+    margin-right: 10px;
 }
 
 .checkout-item-title {
@@ -42,6 +42,7 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    margin-top: 10px;
 }
 
 .checkout-item-quantity-and-price {
@@ -50,6 +51,7 @@
     align-items: flex-end;
     justify-content: center;
     width: 60px;
+    margin-top: 10px;
 }
 
 .checkout-item-price {

@@ -24,7 +24,7 @@ const SelectField = ({ currentItem }) => {
           required
           onChange={e => setQuantity(e.target.value)}
           name='quantity-input'
-          value={quantity}
+          value={currentItem.quantity}
         >
           {nums.map((num, idx) => (
             <option

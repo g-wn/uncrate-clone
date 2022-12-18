@@ -11,12 +11,23 @@ import Cart from "../../Cart/Cart";
 export default function SupplyNavBar() {
   const history = useHistory();
   const [showCartModal, setShowCartModal] = useState(false);
-
   const [showLoginModal, setShowLoginModal] = useState(false);
   const [showSignupModal, setShowSignupModal] = useState(false);
   const user = useSelector((state) => state.session.user);
+  const cart = useSelector(state => state.cart);
+
+  let cartItemCount;
+  if (cart && cart.cartItems) cartItemCount = Object.keys(cart.cartItems).length
+
   return (
     <div className="supply-nav-bar">
+      <div className={`cart-modal cart-container ${showCartModal ? "cart-show" : ""}`}>
+        <Cart setShowCartModal={setShowCartModal} />
+      </div>
+      <div
+        className={`cart-overlay ${showCartModal ? "cart-show" : ""}`}
+        onClick={() => setShowCartModal(!showCartModal)}
+      />
       <div className="topbar-wrapper">
         <div className="topbar">
           <div className="topbar-left">
@@ -94,11 +105,6 @@ export default function SupplyNavBar() {
                       <LoginForm setShowCartModal={setShowLoginModal} />
                     </Modal>
                   )}
-                  {showCartModal && (
-                    <Modal onClose={() => setShowCartModal(false)}>
-                      <Cart setShowCartModal={setShowCartModal} />
-                    </Modal>
-                  )}
                   <span className="cart-badge"></span>
                 </div>
                 {showLoginModal && (
@@ -147,12 +153,7 @@ export default function SupplyNavBar() {
                       <LoginForm setShowCartModal={setShowLoginModal} />
                     </Modal>
                   )}
-                  {showCartModal && (
-                    <Modal onClose={() => setShowCartModal(false)}>
-                      <Cart setShowCartModal={setShowCartModal} />
-                    </Modal>
-                  )}
-                  <span className="cart-badge"></span>
+                  {cartItemCount ? <span className="cart-item-count-single-alt">{cartItemCount}</span> : ""}
                 </div>
               </div>
             )}

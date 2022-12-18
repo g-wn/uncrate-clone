@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink, useHistory } from "react-router-dom";
 import { getCart, purchaseCart } from "../../store/cart";
@@ -10,7 +10,6 @@ const Checkout = () => {
   const dispatch = useDispatch();
   const history = useHistory();
   const cart = useSelector(state => state.cart);
-  const [isHovering, setIsHovering] = useState(false);
 
   useEffect(() => {
     dispatch(getCart());
@@ -20,14 +19,23 @@ const Checkout = () => {
   const usDollar = Intl.NumberFormat("en-US");
 
   let cartItems;
-  if (cart && cart.cartItems) cartItems = Object.values(cart.cartItems)
+  if (cart && cart.cartItems) {
+    cartItems = Object.values(cart.cartItems);
+    for (let [key, item] of Object.entries(cartItems)) {
+      for (let [key, img] of Object.entries(item.product.productImages)) {
+        if (img.url.includes('shopify')) {
+          item.cartImg = img.url;
+        }
+      }
+    }
+  }
 
   if (!cart || !cartItems) return null;
 
   return (
     <>
-      <Navigation isHovering={isHovering} setIsHovering={setIsHovering} />
-      <CategoriesNav setIsHovering={setIsHovering} />
+      <Navigation />
+      <CategoriesNav />
       <div className="checkout-page">
         <h1 className='checkout-title'>CHECKOUT</h1>
         <div className="checkout-items-container">
@@ -37,7 +45,7 @@ const Checkout = () => {
                 <NavLink to={`/products/${item.product.id}`}>
                   <img
                     className='cart-item-image'
-                    src={item.product.productImages[item.product.previewImgId].url}
+                    src={item.cartImg}
                     alt='cart item'
                   />
                 </NavLink>

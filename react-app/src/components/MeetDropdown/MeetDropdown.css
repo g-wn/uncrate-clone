@@ -1,16 +1,15 @@
 .meet-team-links-wrapper {
+    background-color: transparent;
     position: relative;
+    top: 22px;
+    right: 13px;
 }
 
 .meet-team-links {
-    position: absolute;
     display: flex;
     flex-direction: column;
-    top: 22px;
-    left: -12px;
     background-color: transparent;
     list-style: none;
-    width: 180px;
     font-family: "Roboto", sans-serif;
     font-size: 12px;
     font-weight: 900;
@@ -34,8 +33,4 @@
 
 .meet-team-icon:hover {
     color: #c7c7c7;
-}
-
-.meet-button {
-    cursor: pointer;
 }

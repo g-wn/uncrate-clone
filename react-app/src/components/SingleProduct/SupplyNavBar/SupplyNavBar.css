@@ -55,6 +55,21 @@
 .supply-icons-alt {
   display: none;
 }
+
+.cart-item-count-single-alt {
+  position: absolute;
+  text-align: center;
+  right: 10px;
+  bottom: 25px;
+  width: 15px;
+  height: 15px;
+  font-family: 'Oswald', sans-serif;
+  color: white;
+  font-size: 9px;
+  background-color: #E74E3C;
+  border-radius: 100%;
+}
+
 @media (max-width: 980px) {
   .supply-nav-rightbtns {
     display: flex;

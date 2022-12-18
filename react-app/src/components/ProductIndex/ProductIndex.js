@@ -4,31 +4,31 @@ import { NavLink } from "react-router-dom";
 import { getProducts } from "../../store/all_products";
 import "./ProductIndex.css";
 import Navigation from "../Navigation/Navigation";
-import { getCart } from "../../store/cart";
 import Footer from "../Footer/Footer";
 import CategoriesNav from '../Navigation/CategoriesNav';
 
 const ProductIndex = () => {
   const dispatch = useDispatch();
-  const [isHovering, setIsHovering] = useState(false);
-  const products = useSelector((state) => Object.values(state.products));
+  const [products, setProducts] = useState([]);
   const user = useSelector((state) => state.session.user)
 
   useEffect(() => {
-    dispatch(getProducts());
-    if (user) dispatch(getCart());
+    (async function fetchProducts() {
+      const all_products = await dispatch(getProducts());
+      const shuffled = all_products.Products.sort(() => 0.5 - Math.random());
+      const selected = shuffled.slice(0, 87);
+      setProducts(selected);
+    })()
   }, [dispatch, user]);
 
   if (!products || products.length === 0) return null;
 
   return (
     <>
-      <Navigation isHovering={isHovering} setIsHovering={setIsHovering} />
-      <CategoriesNav setIsHovering={setIsHovering} />
+      <Navigation />
+      <CategoriesNav />
       <div
-        className="all-products-index"
-        onMouseEnter={() => setIsHovering(false)}
-      >
+        className="all-products-index">
         <div className="featured-product">
           <NavLink className="product-link" to={`/products/${products[0].id}`}>
             <img

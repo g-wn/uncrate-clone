@@ -14,6 +14,10 @@
   padding: 28px 0 33px 0;
 }
 
+.supply-header-title h1 {
+  cursor: pointer;
+}
+
 .supply-icons {
   position: absolute;
   right: 0;
@@ -22,6 +26,7 @@
 .supply-icons .fa-magnifying-glass {
   margin-right: 30px;
   color: black;
+  font-size: 18px;
 }
 
 sup {
@@ -108,7 +113,7 @@ sup {
 .supply-header-crate-button {
   background-color: white;
   border: none;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 @media (max-width: 780px) {
