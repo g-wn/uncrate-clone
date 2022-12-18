@@ -32,7 +32,7 @@ products_gear = [
         "preview_img_id": 3,
     },
     {
-        "id": 4,
+        "id": 3,
         "title": "POWERUP 4.0 POWERED PAPER AIRPLANE",
         "description": "A childhood staple becomes far more engaging with this lightweight app-enabled propeller system. $69.",
         "detailed_description": "We're all looking for fun ways to pass the time at home. Making paper airplanes is fun; giving them an actual engine is even more so. PowerUp's 4.0 paper airplane propeller can turn any piece of paper into an advanced flying machine. The lightweight motor has an onboard computer and stabilizers that let you fly even in the wind, Bluetooth for wireless control via smartphone, and up to 10 minutes of flight time per charge. It comes with four paper templates in the box, can work with both Balsa wood and foam models weighing up to 20 grams, and offers flight analytics like heading, thrust levels, and turn angles in real-time so you can use the data to help improve future flights.",
