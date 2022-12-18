@@ -21,14 +21,15 @@
 }
 
 .featured-product-text {
-  height: 200px;
+  min-height: 200px;
+  padding: 0 10px 20px 10px;
 }
 
 .featured-product-category {
   font-family: "Roboto", sans-serif;
   color: #989898;
   font-size: 13px;
-  padding: 12px 0;
+  padding: 12px 10px;
   font-weight: 500;
   letter-spacing: -0.5px;
 }
@@ -69,7 +70,8 @@
 }
 
 .all-other-products-text {
-  height: 210px;
+  min-height: 210px;
+  padding-bottom: 10px;
 }
 
 .all-other-products-title {

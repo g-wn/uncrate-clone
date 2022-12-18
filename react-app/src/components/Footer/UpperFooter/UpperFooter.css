@@ -36,16 +36,15 @@
   letter-spacing: 1px;
   font-weight: 500;
   margin-top: 8px;
+  margin-bottom: 20px;
 }
 
 .subscribe-module input {
   width: 100%;
-  margin-bottom: 20px;
   padding: 10px;
   text-align: center;
   outline: 0;
   border: 0;
-  margin-top: 20px;
 }
 
 .subscribe-module input::placeholder {
@@ -64,6 +63,7 @@
   font-family: "Roboto", sans-serif;
   padding: 0 14px;
   height: 36px;
+  margin-top: 15px;
   font-size: 13px;
   line-height: 1.5;
   font-weight: 500;
@@ -129,21 +129,6 @@
   width: 50%;
 }
 
-.subscribe-success {
-  width: 100%;
-  color: white;
-  background-color: black;
-  font-family: "Roboto", sans-serif;
-  height: 36px;
-  font-size: 13px;
-  line-height: 1.5;
-  font-weight: 500;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-  display: none;
-}
-
 .quote-module-right-right img {
   width: auto;
 
@@ -152,6 +137,51 @@
 
 .app-store-icon {
   margin-bottom: 15px;
+}
+
+.email-input-wrapper-red {
+  padding: 0;
+  border: 2px solid #e85c41;
+}
+
+.email-input-wrapper-black {
+  border: 2px solid black;
+}
+
+.email-input-wrapper {
+  border: 0;
+}
+
+.email-input-wrapper-red ul {
+  list-style-type: none;
+}
+
+.email-error-msg {
+  width: 100%;
+  color: white;
+  background-color: #e85c41;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  padding: 5px;
+  font-weight: 600;
+}
+.subscribe-msg {
+  width: 100%;
+  color: white;
+
+  background-color: black;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  padding: 5px;
+  font-weight: 600;
 }
 
 @media (max-width: 1020px) {
@@ -173,10 +203,6 @@
     margin: 0 auto;
     padding: 0 20px;
     margin-bottom: 20px;
-  }
-
-  .subscribe-success {
-    margin-top: -20px;
   }
 
   .subscribe-module button {

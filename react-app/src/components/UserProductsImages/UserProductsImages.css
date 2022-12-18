@@ -46,6 +46,7 @@
   align-self: flex-start;
   position: relative;
   top: 0.15em;
+  margin-top: 7px;
 }
 
 .image-form {
@@ -184,6 +185,7 @@
   transition: top 0.5s ease;
   width: 100%;
   z-index: 1;
+  text-shadow: 2px 2px 5px white;
 }
 
 .url-container {
@@ -204,7 +206,7 @@
   width: 70%;
 }
 
-@media (max-width: 1020px) {
+@media (max-width: 780px) {
   .add-edit-image-header {
     margin-top: 60px;
   }

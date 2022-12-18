@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
 import "./SupplyHeader.css";
 import { Modal } from "../../../../context/Modal";
@@ -10,6 +10,7 @@ export default function SupplyHeader() {
   const [showCartModal, setShowCartModal] = useState(false);
   const [showLoginModal, setShowLoginModal] = useState(false);
 
+  const history = useHistory();
   const user = useSelector((state) => state.session.user);
   const cart = useSelector(state => state.cart)
 
@@ -27,7 +28,7 @@ export default function SupplyHeader() {
       />
       <div className="supply-header">
         <div className="supply-header-title">
-          <h1>
+          <h1 onClick={() => history.push('/')}>
             REDUNCRATE SUPPLY<sup>™</sup>
           </h1>
           <p>

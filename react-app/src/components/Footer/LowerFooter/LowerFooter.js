@@ -1,20 +1,10 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import "./LowerFooter.css";
 
 export default function LowerFooter() {
-  function shuffle(arr) {
-    let curr = arr.length;
-    let randomNum;
-
-    while (curr > 0) {
-      randomNum = Math.floor(Math.random() * curr);
-      curr--;
-      [arr[curr], arr[randomNum]] = [arr[randomNum], arr[curr]];
-    }
-
-    return arr;
-  }
+  const user = useSelector((state) => state.session.user);
 
   const devs = [
     {
@@ -39,11 +29,12 @@ export default function LowerFooter() {
     },
   ];
 
-  shuffle(devs);
+  const shuffledDevs = devs.sort(() => 0.5 - Math.random());
+
   return (
     <div className="lower-footer-container">
       <div className="lower-footer-link-list">
-        <p className="lower-footer-link-list-title">reduncrate.com</p>
+        <p className="lower-footer-link-list-title">reduncrate</p>
         <ul>
           <NavLink to={`/category/gear`}>
             <li>Gear</li>
@@ -80,10 +71,34 @@ export default function LowerFooter() {
           </NavLink>
         </ul>
       </div>
-      <div className="lower-footer-link-list">
+      {user ? (
+        <div className="lower-footer-link-list list-links">
+          <p className="lower-footer-link-list-title">Site Links</p>
+          <ul>
+            <NavLink to={`/order-history`}>
+              <li>Order History</li>
+            </NavLink>{" "}
+            <span className="lower-footer-link-list-divider">
+              &nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
+            </span>
+            <NavLink to={`/profile`}>
+              <li>My Listings</li>
+            </NavLink>{" "}
+            <span className="lower-footer-link-list-divider">
+              &nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
+            </span>
+            <NavLink to={`/my-stash`}>
+              <li>My Stash</li>
+            </NavLink>{" "}
+          </ul>
+        </div>
+      ) : (
+        ""
+      )}
+      <div className="lower-footer-link-list-team">
         <p className="lower-footer-link-list-title">Meet the team</p>
         <ul className="meet-team-ul">
-          {devs.map((dev, i) =>
+          {shuffledDevs.map((dev, i) =>
             i !== devs.length - 1 ? (
               <>
                 <li>

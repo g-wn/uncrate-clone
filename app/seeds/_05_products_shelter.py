@@ -94,12 +94,12 @@ products_shelter = [
     },
     {
         "id": 54,
-        "title": "STEVE MCQUEEN & WIFE FRAMED PRINT",
-        "description": "Steve McQueen was married to actress Neile Adams for 16 years. This photo was... $269.",
-        "detailed_description": "Steve McQueen was married to actress Neile Adams for 16 years. This photo was taken of the couple in 1963 during a trip to Big Sur, California as they relax in Esalen's famous clothing optional sulfur baths with cigarettes and a bottle of wine. Printed to order on Fuji crystal archive paper, numbered and certified, and comes encased inside a hand-made solid wood black frame that's ready to hang. Limited edition of 495.",
+        "title": "ONSEN X UNCRATE TOWEL SET",
+        "description": "Onsen's relaxed, minimalist towels were already our go-to, and now we've taken their hue... $75.",
+        "detailed_description": "Onsen's relaxed, minimalist towels were already our go-to, and now we've taken their hue to our preferred end of the spectrum. Made with American-grown Supima cotton, these special edition black towels are made with longer fibers in a weave pattern that provides an exceptionally soft texture that's also fast-drying. But the key to this obsessively designed towel set isn't what Onsen added, but rather what they eliminated. Standard bath towels go through a chemical bathing process so they feel fluffy — at least at first. Instead of short-lived softness that washes away, Onsen builds in softness from the beginning and utilizes no chemical processes. Bypassing these common treatments eliminates the artificial fluff, resulting instead in a naturally plush surface that just gets better and better, making this quite possibly the last towel set you'll need.",
         "category_id": 5,
         "owner_id": randint(1, 3),
-        "price": 269,
+        "price": 75,
         "preview_img_id": 54,
     },
     {
@@ -164,7 +164,7 @@ products_shelter_imgs = [
     {
         "id": 54,
         "product_id": 54,
-        "url": "https://uncrate.com/assets_c/2018/11/sonic-mcqueen-tub1-thumb-960xauto-92970.jpg",
+        "url": "https://uncrate.com/assets_c/2018/11/onsen-uncrate-00-thumb-960xauto-92183.jpg",
     },
     {
         "id": 55,
@@ -172,119 +172,193 @@ products_shelter_imgs = [
         "url": "https://uncrate.com/assets_c/2022/11/nasa-ipwk-rocket-print-black-1-thumb-960xauto-153854.jpg",
     },
     {
-        "id": 229,
+        "id": 271,
         "product_id": 45,
         "url": "https://uncrate.com/assets_c/2022/12/seiko-mai-alarm-clock-black-and-gold-23-thumb-960xauto-155168.jpg"
     },
     {
-        "id": 230,
+        "id": 272,
         "product_id": 45,
         "url": "https://uncrate.com/assets_c/2022/12/seiko-mai-alarm-clock-black-and-gold-22-thumb-960xauto-155166.jpg"
     },
     {
-        "id": 231,
+        "id": 273,
         "product_id": 45,
         "url": "https://uncrate.com/assets_c/2022/12/seiko-mai-alarm-clock-black-and-gold-24-thumb-960xauto-155170.jpg"
     },
     {
-        "id": 232,
+        "id": 274,
         "product_id": 45,
         "url": "https://uncrate.com/assets_c/2022/12/seiko-mai-alarm-clock-blue-24-thumb-960xauto-155171.jpg"
     },
     {
-        "id": 233,
+        "id": 275,
+        "product_id": 45,
+        "url": "https://cdn.shopify.com/s/files/1/0248/6216/products/seiko-mai-alarm-clock-blue-25.jpg?v=1670604897"
+    },
+    {
+        "id": 276,
         "product_id": 46,
         "url": "https://uncrate.com/assets_c/2021/12/hype-lev-levitator-2-thumb-960xauto-141303.jpg"
     },
     {
-        "id": 234,
+        "id": 277,
         "product_id": 46,
         "url": "https://uncrate.com/assets_c/2021/12/hypelev-white-1-thumb-960xauto-141301.jpg"
     },
     {
-        "id": 235,
+        "id": 278,
         "product_id": 46,
         "url": "https://uncrate.com/assets_c/2021/12/hypelev-white-2-thumb-960xauto-141304.jpg"
     },
     {
-        "id": 236,
+        "id": 279,
+        "product_id": 46,
+        "url": "https://cdn.shopify.com/s/files/1/0248/6216/products/hype-lev-levitator-3.jpg?v=1670008619"
+    },
+    {
+        "id": 280,
         "product_id": 47,
         "url": "https://uncrate.com/assets_c/2022/11/reigning-champ-pendleton-stadium-blanket-2-thumb-960xauto-154677.jpg"
     },
     {
-        "id": 237,
+        "id": 281,
         "product_id": 47,
         "url": "https://uncrate.com/assets_c/2022/11/reigning-champ-pendleton-stadium-blanket-3-thumb-960xauto-154678.jpg"
     },
     {
-        "id": 238,
+        "id": 282,
         "product_id": 47,
         "url": "https://uncrate.com/assets_c/2022/11/reigning-champ-pendleton-stadium-blanket-4-thumb-960xauto-154679.jpg"
     },
     {
-        "id": 239,
+        "id": 283,
         "product_id": 47,
         "url": "https://uncrate.com/assets_c/2022/11/reigning-champ-pendleton-stadium-blanket-5-thumb-960xauto-154681.jpg"
     },
     {
-        "id": 240,
+        "id": 284,
+        "product_id": 47,
+        "url": "https://cdn.shopify.com/s/files/1/0248/6216/products/reigning-champ-pendleton-stadium-blanket-6.jpg?v=1669043563"
+    },
+    {
+        "id": 285,
         "product_id": 48,
         "url": "https://uncrate.com/assets_c/2022/10/herman-miller-nelson-fireplace-toolkit-1-thumb-960xauto-152265.jpg"
     },
     {
-        "id": 241,
+        "id": 286,
         "product_id": 48,
         "url": "https://uncrate.com/assets_c/2022/10/herman-miller-nelson-fireplace-toolkit-3-thumb-960xauto-152267.jpg"
     },
         {
-        "id": 242,
+        "id": 287,
         "product_id": 48,
         "url": "https://uncrate.com/assets_c/2022/10/herman-miller-nelson-fireplace-toolkit-4-thumb-960xauto-152266.jpg"
     },
         {
-        "id": 243,
+        "id": 288,
         "product_id": 48,
         "url": "https://uncrate.com/assets_c/2022/10/herman-miller-nelson-fireplace-toolkit-5-thumb-960xauto-152268.jpg"
     },
     {
-        "id": 244,
+        "id": 289,
+        "product_id": 48,
+        "url": "https://cdn.shopify.com/s/files/1/0248/6216/products/herman-miller-nelson-fireplace-toolkit-6.jpg?v=1664810003"
+    },
+    {
+        "id": 290,
         "product_id": 49,
         "url": "https://uncrate.com/assets_c/2022/11/porsche-356-nose-print-white-1-thumb-960xauto-154584.jpg"
     },
-        {
-        "id": 245,
+    {
+        "id": 291,
+        "product_id": 49,
+        "url": "https://cdn.shopify.com/s/files/1/0248/6216/products/porsche-356-nose-print-black-2.jpg?v=1668782455"
+    },
+    {
+        "id": 292,
         "product_id": 50,
         "url": "https://uncrate.com/assets_c/2022/10/filson-black-checkered-wool-blanket-1-thumb-960xauto-152357.jpg"
     },
         {
-        "id": 246,
+        "id": 293,
         "product_id": 50,
         "url": "https://uncrate.com/assets_c/2022/10/filson-black-checkered-wool-blanket-21-thumb-960xauto-152363.jpg"
     },
         {
-        "id": 247,
+        "id": 294,
         "product_id": 50,
         "url": "https://uncrate.com/assets_c/2022/10/filson-black-checkered-wool-blanket-3-thumb-960xauto-152359.jpg"
     },
     {
-        "id": 248,
+        "id": 295,
+        "product_id": 50,
+        "url": "https://cdn.shopify.com/s/files/1/0248/6216/products/filson-plaid-wool-blanket-2.jpg?v=1668803655"
+    },
+    {
+        "id": 296,
         "product_id": 51,
         "url": "https://uncrate.com/assets_c/2022/11/Ursula-TFSK-bond-print-white-1-thumb-960xauto-154347.jpg"
     },
+    {
+        "id": 297,
+        "product_id": 51,
+        "url": "https://cdn.shopify.com/s/files/1/0248/6216/products/Ursula-TFSK-bond-print-black-2.jpg?v=1668456324"
+    },
         {
-        "id": 249,
+        "id": 298,
         "product_id": 52,
         "url": "https://uncrate.com/assets_c/2022/11/sean-connery-golfing-IPPI-white-1-thumb-960xauto-154316.jpg"
     },
+    {
+        "id": 299,
+        "product_id": 52,
+        "url": "https://cdn.shopify.com/s/files/1/0248/6216/products/sean-connery-golfing-IPPI-black-2.jpg?v=1668093935"
+    },
         {
-        "id": 250,
+        "id": 300,
         "product_id": 53,
         "url": "https://uncrate.com/assets_c/2022/11/warhol-kpzn-print-white-1-thumb-960xauto-154182.jpg"
     },
-        {
-        "id": 251,
+    {
+        "id": 301,
+        "product_id": 53,
+        "url": "https://cdn.shopify.com/s/files/1/0248/6216/products/warhol-kpzn-print-black-2.jpg?v=1668094807"
+    },
+    {
+        "id": 302,
+        "product_id": 54,
+        "url": "https://cdn.shopify.com/s/files/1/0248/6216/products/onsen-x-uncrate-towel-set-1280.jpg?v=1543084220"
+    },
+    {
+        "id": 303,
+        "product_id": 54,
+        "url": "https://uncrate.com/assets_c/2018/11/onsen-x-uncrate-towel-set-7-thumb-960xauto-92172.jpg"
+    },
+    {
+        "id": 304,
+        "product_id": 54,
+        "url": "https://uncrate.com/assets_c/2018/11/onsen-uncrate-01-thumb-960xauto-92182.jpg"
+    },
+    {
+        "id": 305,
+        "product_id": 54,
+        "url": "https://uncrate.com/assets_c/2018/11/onsen-x-uncrate-towel-set-6-thumb-960xauto-92168.jpg"
+    },
+    {
+        "id": 306,
+        "product_id": 54,
+        "url": "https://uncrate.com/assets_c/2018/11/onsen-x-uncrate-towel-set-2-thumb-960xauto-92164.jpg"
+    },
+    {
+        "id": 307,
         "product_id": 55,
         "url": "https://uncrate.com/assets_c/2022/11/nasa-ipwk-rocket-print-white-1-thumb-960xauto-153855.jpg"
-    }
-
+    },
+    {
+        "id": 308,
+        "product_id": 55,
+        "url": "https://cdn.shopify.com/s/files/1/0248/6216/products/nasa-ipwk-rocket-print-black-2.jpg?v=1667571656"
+    },
 ]

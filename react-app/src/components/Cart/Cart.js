@@ -29,12 +29,6 @@ const Cart = ({ setShowCartModal }) => {
     }
   }
 
-
-  // for (let key in cartItems[item].product.productImages) {
-  //   if (cartItems[item].product.productImages[key].url.includes('shopify')) {
-  //     cartItems[item].cartImg = cartItems[item].product.productImages[key].url;
-  //   }
-  // }
   if (!cart || !cartItems) return null;
 
   return (
@@ -54,7 +48,7 @@ const Cart = ({ setShowCartModal }) => {
             <NavLink to={`/products/${item.product.id}`}>
               <img
                 className="cart-item-image"
-                src={item.product.productImages[item.product.previewImgId].url}
+                src={item.cartImg}
                 alt="cart item"
               />
             </NavLink>

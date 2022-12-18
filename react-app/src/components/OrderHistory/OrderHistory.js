@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { getCartHistory } from '../../store/cart';
@@ -15,6 +15,21 @@ const OrderHistory = () => {
   useEffect(() => {
     dispatch(getCartHistory());
   }, [dispatch]);
+
+  let cartItems;
+  if (purchasedCarts && purchasedCarts.length) {
+    for (let cart of purchasedCarts) {
+      cartItems = Object.values(cart.cartItems);
+      for (let [key, item] of Object.entries(cartItems)) {
+        for (let [key, img] of Object.entries(item.product.productImages)) {
+          if (img.url.includes('shopify')) {
+            item.cartImg = img.url;
+            break;
+          }
+        }
+      }
+    }
+  }
 
   const usDollar = Intl.NumberFormat("en-US");
 
@@ -37,7 +52,7 @@ const OrderHistory = () => {
                       <NavLink to={`/products/${item.product.id}`}>
                         <img
                           className='cart-item-image'
-                          src={item.product.productImages[item.product.previewImgId].url}
+                          src={item.cartImg}
                           alt='cart item'
                         />
                       </NavLink>

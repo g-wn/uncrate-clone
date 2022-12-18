@@ -13,7 +13,10 @@ export default function CategoryPage({ categoryName }) {
   const dispatch = useDispatch();
   const products = useSelector((state) => Object.values(state.products));
 
-  let categoryList = products.filter((product) => product.productCategory.name.toLowerCase() === categoryName.toLowerCase());
+  let categoryList = products.filter(
+    (product) =>
+      product.productCategory.name.toLowerCase() === categoryName.toLowerCase()
+  );
 
   useEffect(() => {
     dispatch(getProducts());

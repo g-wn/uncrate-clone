@@ -1,8 +1,8 @@
 .user-favorites-wrapper {
-    display: flex;
-    flex-direction: column;
-    max-width: 960px;
-    margin: auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 960px;
+  margin: auto;
 }
 
 .user-favorites {
@@ -56,8 +56,22 @@
 .outer {
   border: 1px solid rgb(128, 128, 128, 0.3);
   margin-top: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 80px;
   margin-left: 0.75em;
   margin-right: 0.75em;
   padding-bottom: 20px;
+}
+
+.no-favorites-msg {
+  text-align: center;
+  margin: 40px 0;
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  font-size: 22px;
+}
+
+@media (max-width: 1000px) {
+  .user-favorites {
+    grid-template-columns: auto;
+  }
 }

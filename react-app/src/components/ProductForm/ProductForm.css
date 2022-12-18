@@ -62,14 +62,16 @@ input[type="number"] {
   color: red;
   display: flex;
   flex-direction: column;
-  font-family: "Roboto", sans-serif;
-  font-size: 15px;
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
   font-weight: 400;
   gap: 0.5em;
   justify-content: center;
+  text-align: center;
   list-style: none;
   max-width: 641px;
   padding-bottom: 10px;
+  text-transform: uppercase;
 }
 
 .product-form-submit {

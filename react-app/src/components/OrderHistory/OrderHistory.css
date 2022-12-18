@@ -3,3 +3,9 @@
     grid-template-columns: repeat(2, auto);
     margin-bottom: 178px;
 }
+
+@media (max-width: 900px) {
+  .order-history-grid {
+    grid-template-columns: auto;
+  }
+}
