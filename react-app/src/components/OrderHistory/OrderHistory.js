@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { getCartHistory } from '../../store/cart';
@@ -11,7 +11,6 @@ const OrderHistory = () => {
   const dispatch = useDispatch();
   const purchasedCarts = useSelector(state => state.cart.orderHistory)
   const user = useSelector(state => state.session.user)
-  const [isHovering, setIsHovering] = useState(false);
 
   useEffect(() => {
     dispatch(getCartHistory());
@@ -23,7 +22,7 @@ const OrderHistory = () => {
 
   return (
     <>
-      <Navigation isHovering={isHovering} setIsHovering={setIsHovering} />
+      <Navigation />
       <ProfileNav />
       <div className="checkout-page">
         <h1 className='checkout-title'>{user.first_name}'S ORDER HISTORY</h1>

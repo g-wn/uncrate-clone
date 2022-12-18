@@ -176,6 +176,10 @@
     margin: 0;
     margin-bottom: 20px;
   }
+
+  .show-meet {
+    display: none;
+  }
 }
 
 @media (max-width: 780px) {

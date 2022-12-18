@@ -4,8 +4,8 @@ import { logout } from '../../store/session';
 
 const LogoutButton = ({ setShowLoginModal, setShowSignupModal }) => {
   const dispatch = useDispatch()
-  setShowLoginModal(false)
-  setShowSignupModal(false)
+  // setShowLoginModal(false)
+  // setShowSignupModal(false)
   const onLogout = async (e) => {
     await dispatch(logout());
   };

@@ -1,8 +1,8 @@
 import { NavLink } from "react-router-dom";
 
-const CategoriesNav = ({ setIsHovering }) => {
+const CategoriesNav = () => {
   return (
-    <nav className="nav" onMouseEnter={() => setIsHovering(false)}>
+    <nav className="nav">
       <div className="nav-bar-categories-border" />
       <div className="nav-bar-categories">
         <NavLink to="/category/gear">GEAR</NavLink>

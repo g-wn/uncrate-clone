@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink, useHistory } from "react-router-dom";
 import { getCart, purchaseCart } from "../../store/cart";
@@ -10,7 +10,6 @@ const Checkout = () => {
   const dispatch = useDispatch();
   const history = useHistory();
   const cart = useSelector(state => state.cart);
-  const [isHovering, setIsHovering] = useState(false);
 
   useEffect(() => {
     dispatch(getCart());
@@ -26,8 +25,8 @@ const Checkout = () => {
 
   return (
     <>
-      <Navigation isHovering={isHovering} setIsHovering={setIsHovering} />
-      <CategoriesNav setIsHovering={setIsHovering} />
+      <Navigation />
+      <CategoriesNav />
       <div className="checkout-page">
         <h1 className='checkout-title'>CHECKOUT</h1>
         <div className="checkout-items-container">

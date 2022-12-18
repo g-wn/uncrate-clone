@@ -9,7 +9,6 @@ import CategoriesNav from '../Navigation/CategoriesNav';
 
 const ProductIndex = () => {
   const dispatch = useDispatch();
-  const [isHovering, setIsHovering] = useState(false);
   const [products, setProducts] = useState([]);
   const user = useSelector((state) => state.session.user)
 
@@ -26,12 +25,10 @@ const ProductIndex = () => {
 
   return (
     <>
-      <Navigation isHovering={isHovering} setIsHovering={setIsHovering} />
-      <CategoriesNav setIsHovering={setIsHovering} />
+      <Navigation />
+      <CategoriesNav />
       <div
-        className="all-products-index"
-        onMouseEnter={() => setIsHovering(false)}
-      >
+        className="all-products-index">
         <div className="featured-product">
           <NavLink className="product-link" to={`/products/${products[0].id}`}>
             <img

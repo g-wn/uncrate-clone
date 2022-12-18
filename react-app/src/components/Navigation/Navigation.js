@@ -11,11 +11,12 @@ import Cart from "../Cart/Cart";
 import MeetDropdown from "../MeetDropdown/MeetDropdown";
 import { getCart } from "../../store/cart";
 
-function Navigation({ isHovering, setIsHovering }) {
+function Navigation() {
   const dispatch = useDispatch();
   const [showLoginModal, setShowLoginModal] = useState(false);
   const [showSignupModal, setShowSignupModal] = useState(false);
   const [showCartModal, setShowCartModal] = useState(false);
+  const [showMeet, setShowMeet] = useState(false);
   const user = useSelector((state) => state.session.user);
   const cart = useSelector((state) => state.cart);
   const history = useHistory();
@@ -44,12 +45,13 @@ function Navigation({ isHovering, setIsHovering }) {
                 <div className="header-top-bar-left">
                   <span
                     className="meet-button"
-                    onMouseEnter={() => setIsHovering(true)}
                     onClick={() => history.push('/meet-the-team')}
+                    onMouseOver={() => setShowMeet(true)}
+                    onMouseOut={() => setShowMeet(false)}
                   >
                     MEET THE TEAM
+                    <span className={showMeet ? 'show-meet' : "no-show-meet"}><MeetDropdown /></span>
                   </span>
-                  {isHovering && <MeetDropdown setIsHovering={setIsHovering} />}
                 </div>
                 <div className="header-top-bar-middle">
                   <ul>
@@ -117,10 +119,7 @@ function Navigation({ isHovering, setIsHovering }) {
         </div>
         <div className="header-bottom-bar">
           <div></div>
-          <div
-            className="header-logo"
-            onMouseEnter={() => setIsHovering(false)}
-          >
+          <div className="header-logo">
             <NavLink to="/">
               <img
                 src="/images/reduncrate-white2.png"

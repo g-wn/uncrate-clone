@@ -26,6 +26,7 @@
 
 .header-top-bar-left {
   letter-spacing: 0;
+  width: 110px;
 }
 
 .header-link {
@@ -188,4 +189,14 @@
   font-size: 9px;
   background-color: #E74E3C;
   border-radius: 100%;
+}
+
+.no-show-meet {
+  display: none;
+}
+
+.meet-button {
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
 }

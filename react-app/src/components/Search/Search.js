@@ -11,7 +11,6 @@ export default function Search() {
   const [searchValue, setSearchValue] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [searchResults, setSearchResults] = useState([]);
-  const [isHovering, setIsHovering] = useState(false);
   const dispatch = useDispatch();
 
   const products = useSelector((state) => Object.values(state.products));
@@ -39,7 +38,7 @@ export default function Search() {
 
   return (
     <div>
-      <Navigation isHovering={isHovering} setIsHovering={setIsHovering} />
+      <Navigation />
       <div className="search-container">
         <div className="search-area">
           <div className="search-form">

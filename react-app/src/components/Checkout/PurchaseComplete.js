@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import CategoriesNav from "../Navigation/CategoriesNav";
 import Navigation from "../Navigation/Navigation";
@@ -6,11 +5,10 @@ import './PurchaseComplete.css'
 
 const PurchaseComplete = () => {
   const history = useHistory();
-  const [isHovering, setIsHovering] = useState(false);
   return (
     <>
-      <Navigation isHovering={isHovering} setIsHovering={setIsHovering} />
-      <CategoriesNav setIsHovering={setIsHovering} />
+      <Navigation />
+      <CategoriesNav />
       <div className="checkout-page">
         <h1 className='purchase-title'>PURCHASE COMPLETE!</h1>
         <div className="cart-checkout-button-container">
