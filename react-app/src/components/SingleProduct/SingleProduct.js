@@ -34,11 +34,13 @@ const SingleProduct = () => {
       thisCartItem = cart.cartItems[item];
   }
 
+  const usDollar = Intl.NumberFormat("en-US");
+
   useEffect(() => {
     dispatch(getSingleProduct(id));
     (async function fetchProducts() {
       const allProducts = await dispatch(getProducts());
-      const shuffled = allProducts.Products.sort(() => 0.5 - Math.random());
+      const shuffled = allProducts.Products.slice(0, 87).sort(() => 0.5 - Math.random());
       const selected = shuffled.slice(0, 8);
       setSuggested(selected);
 
@@ -101,7 +103,7 @@ const SingleProduct = () => {
               </NavLink>
             </p>
             <h1>
-              {singleProduct.title.toUpperCase()} / ${singleProduct.price}
+              {singleProduct.title.toUpperCase()} / ${usDollar.format(singleProduct.price)}
             </h1>
             <p className="single-product-detailed-description">
               {singleProduct.detailedDescription}

@@ -107,6 +107,7 @@ class ProductUpdateForm(FlaskForm):
                 "You must select a category. Not sure? That's what Etc. is for!"
             )
         ],
+        validate_choice=False
     )
     price = IntegerField("Price", validators=[DataRequired(), NumberRange(0)])
     submit = SubmitField("Submit")

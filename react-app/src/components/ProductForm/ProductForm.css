@@ -71,7 +71,6 @@ input[type="number"] {
   list-style: none;
   max-width: 641px;
   padding-bottom: 10px;
-  text-transform: uppercase;
 }
 
 .product-form-submit {
