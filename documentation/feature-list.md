@@ -1,122 +1,87 @@
-## CART (Core Feature)
+## PRODUCTS
 
-### C:
+### Create:
 
-- Start a new cart.
-- Add an item to the cart.
+- A user can list an item for sale by creating a product post.
 
-### R:
+### Read:
 
-- Look at our cart.
+- A user can view curated splash page featuring a list of products.
+- A user can view an individual product on its own page.
+- A user can view categories of products.
 
-### U:
+### Update:
 
-- Change the contents of the cart.
-- Change the quantity of the items in the cart.
+- A user can edit information about their own posted product.
 
-### D:
+### Delete:
 
-- Remove an item from the cart.
-- If cart is empty, delete the cart.
+- A user can remove their own posted product.
 
+## PRODUCT IMAGES
 
-## PRODUCT POSTS (Core Feature)
+### Create:
 
-### C:
+- A logged in user who owns a product listing can add additional images to the product listing.
 
-- A user can list an item for sale / create a post.
-
-### R:
-
-- A user can view curated splash page / list of items / posts.
-- A user can view an individual item. --> MVP READ
-- A user can view categories of items.
-
-### U:
-
-- A user can edit information about their own posted listing.
-
-### D:
-
-- A user can remove their own posted listing.
-
-## PRODUCT IMAGES (Core Feature)
-
-### C:
-
-- A logged in user who owns a product listing can add an image to the listing.
-
-### R:
+### Read:
 
 - A site visitor can view a product's images.
 
-### U:
+### Update:
 
 - A logged in user who owns a product listing can edit its image(s).
 
-### D:
+### Delete:
 
 - A logged in user who owns a product listing can delete any given image.
 
-## FAVORITES (Bonus Feature)
+## CART
 
-### C:
+### Create:
 
-- Add an item to a users list of favorites. --> MVP CREATE
+- A logged-in user can start a new cart.
+- A logged-in user can add an item to the cart.
 
-### R:
+### Read:
 
-- View a list of all favorited items. --> MVP READ
-- View one favorited item.
+- A logged-in user can see their currently active cart.
 
-### D:
+### Update:
 
-- Remove a favorited item. --> MVP DELETE
+- A logged-in user can change the quantity of the items in the cart.
 
-## SEARCH (Core Feature):
+### Delete:
 
-### C:
+- A logged-in user can remove an item from their cart.
 
-- A user can create a new search / filter.
+## FAVORITES
 
-### R:
+### Create:
+
+- A logged-in user can add an item to a their list of favorites, known on the site as their "Stash".
+
+### Read:
+
+- A logged-in user can view a list of all their favorited items.
+
+### Delete:
+
+- A logged-in user can remove a favorited item.
+
+## SEARCH
+
+### Create:
+
+- A user can create a new search by product title/description.
+
+### Read:
 
 - A user can view the results of their search.
 
-### U:
-
-- A user can update search filters.
-
-### D:
-
-- A user can remove all or some search filters.
-
-
-## ACCESSIBILITY FEATURES (Bonus Feature):
-
-### C:
-
-- A user can apply a filter.
-
-### R:
-
-- The page updates with the applied filter.
-
-### U:
-
-- A user can change the applied filter.
-
-### D:
-
-- A user can remove the applied filter.
-
-
-
-
-## ADDITIONAL / FUTURE BONUS FEATURES:
+## ADDITIONAL BONUS FEATURES:
 
 ### PROFILE PAGE
 ### ABOUT LINKS
 ### PURCHASE HISTORY
 ### EMAIL NEWSLETTER SIGNUP
-### FAVORITES CATEGORIES/NOTES
