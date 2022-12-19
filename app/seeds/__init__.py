@@ -36,7 +36,10 @@ def seed():
 
     all_product_seeds = Product.query.all()
     for product in all_product_seeds:
-        setattr(product, "preview_img_id", product.product_images[0].to_dict()['id'])
+        setattr(product, "preview_img_id", product.product_images[0].to_dict()["id"])
+        for product_image in product.product_images:
+            if "shopify" in product_image.url:
+                setattr(product, "cart_img_url", product_image.url)
 
     db.session.commit()
     # Add other seed functions here

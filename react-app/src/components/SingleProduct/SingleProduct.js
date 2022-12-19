@@ -6,7 +6,6 @@ import { addToFavorites, getFavorites } from "../../store/favorites";
 import "./SingleProduct.css";
 import Carousel from "./ImageCarousel/Carousel";
 import SupplyNavBar from "./SupplyNavBar/SupplyNavBar";
-import availableProducts from "./availableProducts";
 import { postCartItem, editCartItem } from "../../store/cart_items";
 import { Modal } from "../../context/Modal";
 import Cart from "../Cart/Cart";
@@ -25,7 +24,6 @@ const SingleProduct = () => {
   const [showLoginModal, setShowLoginModal] = useState(false);
   const user = useSelector((state) => state.session.user);
   const favorites = useSelector((state) => state.favorites);
-  const products = useSelector((state) => Object.values(state.products));
 
   const cart = useSelector((state) => state.cart);
   let thisCartItem;
@@ -43,19 +41,6 @@ const SingleProduct = () => {
       const shuffled = allProducts.Products.slice(0, 87).sort(() => 0.5 - Math.random());
       const selected = shuffled.slice(0, 8);
       setSuggested(selected);
-
-      for (let [key, item] of Object.entries(allProducts.Products)) {
-        let flag = false;
-
-        for (let [key, img] of Object.entries(item.productImages)) {
-          if (img.url.includes("shopify")) {
-            flag = true;
-          }
-        }
-        if (!flag) {
-          console.log(item);
-        }
-      }
     })();
 
     if (user) dispatch(getCart());

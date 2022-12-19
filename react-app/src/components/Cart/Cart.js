@@ -17,19 +17,8 @@ const Cart = ({ setShowCartModal }) => {
   const usDollar = Intl.NumberFormat("en-US");
   let totalPrice = 0;
 
-  let cartItems;
-  if (cart && cart.cartItems) {
-    cartItems = Object.values(cart.cartItems);
-    for (let [key, item] of Object.entries(cartItems)) {
-      for (let [key, img] of Object.entries(item.product.productImages)) {
-        if (img.url.includes('shopify')) {
-          item.cartImg = img.url;
-        }
-      }
-    }
-  }
 
-  if (!cart || !cartItems) return null;
+  if (!cart || !cart.cartItems) return null;
 
   return (
     <div>
@@ -43,12 +32,12 @@ const Cart = ({ setShowCartModal }) => {
         </button>
       </div>
       <div className="cart-item-container">
-        {cartItems.map((item) => (
+        {Object.values(cart.cartItems).map((item) => (
           <div className="one-cart-item" key={item.id}>
             <NavLink to={`/products/${item.product.id}`}>
               <img
                 className="cart-item-image"
-                src={item.cartImg}
+                src={item.product.cartImgUrl}
                 alt="cart item"
               />
             </NavLink>
@@ -85,8 +74,8 @@ const Cart = ({ setShowCartModal }) => {
           </span>
         </div>
         <div className="cart-checkout-button-container">
-          {cartItems.length > 0 ?
-            <NavLink to='/checkout'><button className="cart-checkout-button">CHECKOUT</button></NavLink>
+          {Object.values(cart.cartItems).length > 0 ?
+            <NavLink to='/checkout'><button className="cart-checkout-button" onClick={() => setShowCartModal(false)}>CHECKOUT</button></NavLink>
             :
             <button className="cart-checkout-button-disabled">ADD AN ITEM TO ENABLE CHECKOUT</button>
           }
