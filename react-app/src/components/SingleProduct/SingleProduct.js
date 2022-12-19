@@ -152,9 +152,9 @@ const SingleProduct = () => {
           </div>
         </div>
         <div className="suggested-products">
-          {suggested.map((product, idx) => (
+          {suggested ? suggested.map((product, idx) => (
             <SuggestedProduct key={idx} product={product} />
-          ))}
+          )) : <h1 style={{textAlign: "center", margin: "219px auto"}}>Loading Suggested Products...</h1>}
         </div>
       </div>
       <Footer />
