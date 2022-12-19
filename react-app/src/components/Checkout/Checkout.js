@@ -36,7 +36,7 @@ const Checkout = () => {
                 <NavLink to={`/products/${item.product.id}`}>
                   <img
                     className='cart-item-image'
-                    src={item.product.cartImgUrl}
+                    src={item.product.cartImgUrl ? item.product.cartImgUrl : item.product.productImages[item.product.previewImgId].url}
                     alt='cart item'
                   />
                 </NavLink>

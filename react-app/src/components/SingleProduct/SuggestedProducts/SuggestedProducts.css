@@ -27,7 +27,8 @@
   max-width: 68%;
   width: 100%;
   margin: 10px auto 5px auto;
-  height: auto;
+  height: 162.859px;
+  width: auto;
 }
 
 .suggested-products span {
@@ -42,6 +43,7 @@
   flex: 1 0 21%;
   margin-bottom: 20px;
 }
+
 @media (max-width: 767px) {
   .suggested-products img {
     max-width: 60%;

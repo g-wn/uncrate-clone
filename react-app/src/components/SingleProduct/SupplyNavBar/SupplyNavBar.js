@@ -153,7 +153,7 @@ export default function SupplyNavBar() {
                       <LoginForm setShowCartModal={setShowLoginModal} />
                     </Modal>
                   )}
-                  {cartItemCount ? <span className="cart-item-count-single-alt">{cartItemCount}</span> : ""}
+                  {user ? (cartItemCount ? <span className="cart-item-count-single-alt">{cartItemCount}</span> : "") : ""}
                 </div>
               </div>
             )}

@@ -61,6 +61,7 @@ const LoginForm = ({ setShowLoginModal }) => {
             placeholder="Your email address goes here."
             value={email}
             onChange={updateEmail}
+            required
           />
         </div>
         <div className="login-form-field">
@@ -74,6 +75,7 @@ const LoginForm = ({ setShowLoginModal }) => {
             placeholder={`Here's hoping it's not "password".`}
             value={password}
             onChange={updatePassword}
+            required
           />
         </div>
         <div className="login-form-btns">
