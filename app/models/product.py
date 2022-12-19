@@ -19,6 +19,7 @@ class Product(db.Model):
     owner_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod(("users.id"))), nullable=False)
     price = db.Column(db.Integer, nullable=False)
     preview_img_id = db.Column(db.Integer, nullable=False)
+    cart_img_url = db.Column(db.String(1000))
 
     # RELATIONSHIPS:
     # product_owner <--> user_products
@@ -48,7 +49,8 @@ class Product(db.Model):
             "previewImgId": self.preview_img_id,
             "productOwner": self.product_owner.to_dict(),
             "productCategory": self.product_category.to_dict(),
-            "productImages": {image.to_dict()["id"]: image.to_dict() for image in self.product_images}
+            "productImages": {image.to_dict()["id"]: image.to_dict() for image in self.product_images},
+            "cartImgUrl": self.cart_img_url
         }
 
     def __repr__(self):

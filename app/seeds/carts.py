@@ -5,7 +5,7 @@ from app.models import db, environment, SCHEMA, Cart
 def seed_carts():
     cart_1 = Cart(
         user_id=1,
-        total=2633,
+        total=269,
         purchased=True,
     )
     cart_2 = Cart(
@@ -15,7 +15,7 @@ def seed_carts():
     )
     cart_3 = Cart(
         user_id=2,
-        total=1245,
+        total=775,
         purchased=True,
     )
     cart_4 = Cart(
@@ -25,7 +25,7 @@ def seed_carts():
     )
     cart_5 = Cart(
         user_id=3,
-        total=46000040,
+        total=12829,
         purchased=True,
     )
     cart_6 = Cart(

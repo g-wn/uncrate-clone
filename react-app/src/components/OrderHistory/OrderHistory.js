@@ -20,14 +20,6 @@ const OrderHistory = () => {
   if (purchasedCarts && purchasedCarts.length) {
     for (let cart of purchasedCarts) {
       cartItems = Object.values(cart.cartItems);
-      for (let [key, item] of Object.entries(cartItems)) {
-        for (let [key, img] of Object.entries(item.product.productImages)) {
-          if (img.url.includes('shopify')) {
-            item.cartImg = img.url;
-            break;
-          }
-        }
-      }
     }
   }
 
@@ -47,12 +39,12 @@ const OrderHistory = () => {
             {purchasedCarts.map(cart => (
               <div key={cart.id} className="checkout-items-container">
                 <div className="checkout-items">
-                  {Object.values(cart.cartItems).map((item, idx) => (
+                  {cartItems.map((item, idx) => (
                     <div key={idx} className="one-checkout-item">
                       <NavLink to={`/products/${item.product.id}`}>
                         <img
                           className='cart-item-image'
-                          src={item.cartImg}
+                          src={item.product.cartImgUrl}
                           alt='cart item'
                         />
                       </NavLink>
