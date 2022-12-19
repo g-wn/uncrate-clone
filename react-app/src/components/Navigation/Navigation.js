@@ -139,7 +139,7 @@ function Navigation() {
               >
                 <i className="fa-sharp fa-solid fa-box"></i>
               </button>
-              {cartItemCount ? <span className="cart-item-count-splash">{cartItemCount}</span> : ""}
+              {user ? (cartItemCount ? <span className="cart-item-count-splash">{cartItemCount}</span> : "") : ""}
             </div>
           </div>
         </div>

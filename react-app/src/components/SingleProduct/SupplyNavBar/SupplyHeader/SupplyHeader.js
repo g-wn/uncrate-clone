@@ -60,7 +60,7 @@ export default function SupplyHeader() {
                 <LoginForm setShowLoginModal={setShowLoginModal} />
               </Modal>
             )}
-            {cartItemCount ? <span className="cart-item-count-single">{cartItemCount}</span> : ""}
+            {user ? (cartItemCount ? <span className="cart-item-count-single">{cartItemCount}</span> : "") : ""}
           </div>
         </div>
         <div className="supply-header-categories">
