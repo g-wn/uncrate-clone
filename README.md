@@ -10,6 +10,15 @@
     <br />
 </p>
 
+## Table of contents
+* [Project Information](#project-information)
+* [Features](#features)
+* [Planned Features](#planned-features)
+* [Technologies](#technologies)
+* [How to Navigate the Site](#how-to-navigate-the-site)
+* [Get Started](#get-started)
+* [Reduncrate Was Built By](#reduncrate-was-built-by)
+
 ## Project Information
 
 <hr />
@@ -21,15 +30,47 @@ Reduncrate is a clone of Uncrate.com. It is a site which provides a feed-like ex
 
 <br />
 
-### Built Using:
+## Features
+
+<hr />
+<br />
+
+Currently implemented features include:
+- Signup and Login functionality for Users
+- Create, read, update, and delete functionality for Products
+- Create, read, update, and delete functionality for Product Images
+- Create, read, update, and delete functionality for Carts
+- Create, read, and delete functionality for Favorites (AKA Stash)
+- Create and read fucntionality for Search
+
+## Planned Features
+
+<hr />
+<br />
+
+Upcoming features include:
+- Create, read, update, and delete functionality for Accessibility
+- Additional parameters for the Search feature
+
+## Technologies:
+
+<hr />
+<br />
+
 * [React](https://beta.reactjs.org/)
 * [Redux](https://redux.js.org/)
 * [Python](https://www.python.org/)
+* [JavaScript](https://devdocs.io/javascript/)
+* [NodeJS](https://nodejs.org/en/docs/)
+* [NPM](https://docs.npmjs.com/)
 * [Flask](https://palletsprojects.com/p/flask/)
 * [SQLAlchemy](https://www.sqlalchemy.org/)
 * [Alembic](https://alembic.sqlalchemy.org/en/latest/)
 * [PostgreSQL](https://www.postgresql.org/docs/)
 * [Sqlite](https://www.sqlite.org/docs.html)
+* [CSS3](https://devdocs.io/css/)
+* [HTML5](https://devdocs.io/html/)
+* [Git](https://devdocs.io/git/)
 
 <br />
 
@@ -133,7 +174,17 @@ Reduncrate is a clone of Uncrate.com. It is a site which provides a feed-like ex
 <hr />
 <br />
 
+## Get Started:
+
+<hr />
+<br />
+
+To run the app locally, navigate to the root directory of the project in the terminal and enter `flask run`. In a separate terminal, navigate to the `/react-app` directory and enter `npm start`. This should automatically launch a browser window navigated to the proper localhost address. By defauly, the app will be running on port 3000.
+
 ## Reduncrate Was Built By:
+
+<hr />
+<br />
 
 * Christopher Cohen - [GitHub](https://github.com/cmcohen89) - [LinkedIn](https://www.linkedin.com/in/christopher-cohen-94ab06236/)
 * Sara Dunlop - [GitHub](https://github.com/Risclover) - [LinkedIn](https://www.linkedin.com/in/sara-dunlop-66375a146/)
