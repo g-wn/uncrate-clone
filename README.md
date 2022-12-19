@@ -39,7 +39,7 @@ Currently implemented features include:
 - Create, read, update, and delete functionality for Product Images
 - Create, read, update, and delete functionality for Carts
 - Create, read, and delete functionality for Favorites (AKA Stash)
-- Create and read fucntionality for Search
+- Create and read functionality for Search
 
 ## Planned Features
 
@@ -170,7 +170,6 @@ Upcoming features include:
 
 <br/>
 
-![add-update-delete-cartitem](./gifs/add-update-delete-cartitem.gif)
 
 <hr />
 <br/>
