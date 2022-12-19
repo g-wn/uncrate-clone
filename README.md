@@ -47,7 +47,7 @@ Reduncrate is a clone of Uncrate.com. It is a site which provides a feed-like ex
 
 <br />
 
-#### PLACEHOLDER FOR INDEX ---> FILTERED BY CATEGORY ---> FILTERED BY SEARCH ---> DETAIL PAGE .gif
+![index-filter-search](./gifs/index-filter-search.gif)
 
 <hr />
 <br />
@@ -58,7 +58,7 @@ Reduncrate is a clone of Uncrate.com. It is a site which provides a feed-like ex
 
 <br />
 
-#### PLACEHOLDER FOR SIGNUP/LOGIN .gif
+![login-demo](./gifs/login-demo.gif)
 
 <hr />
 <br/>
@@ -69,7 +69,7 @@ Reduncrate is a clone of Uncrate.com. It is a site which provides a feed-like ex
 
 <br/>
 
-#### PLACEHOLDER FOR USER PROFILE .gif
+![user-profile](./gifs/user-profile.gif)
 
 <hr />
 <br />
@@ -80,7 +80,7 @@ Reduncrate is a clone of Uncrate.com. It is a site which provides a feed-like ex
 
 <br/>
 
-#### PLACEHOLDER FOR ADD PRODUCT .gif
+![create-product](./gifs/create-product.gif)
 
 <hr />
 <br/>
@@ -91,7 +91,18 @@ Reduncrate is a clone of Uncrate.com. It is a site which provides a feed-like ex
 
 <br/>
 
-#### PLACEHOLDER FOR EDIT PRODUCT/IMAGES .gif
+![update-product](./gifs/update-product.gif)
+
+<hr />
+<br/>
+
+<p>
+  Logged-in Users can choose to add a new image to a product, as well as edit or delete a current image.
+</p>
+
+<br/>
+
+![add-edit-delete-img](./gifs/add-edit-delete-img.gif)
 
 <hr />
 <br/>
@@ -102,7 +113,7 @@ Reduncrate is a clone of Uncrate.com. It is a site which provides a feed-like ex
 
 <br/>
 
-#### PLACEHOLDER FOR VIEW/DELETE-FROM STASH .gif
+![add-delete-stash](./gifs/add-delete-stash.gif)
 
 <hr />
 <br/>
@@ -113,7 +124,20 @@ Reduncrate is a clone of Uncrate.com. It is a site which provides a feed-like ex
 
 <br/>
 
-#### PLACEHOLDER FOR ADD TO CART/UPDATE-QUANTITY/REMOVE FROM CART .gif
+![add-update-delete-cartitem](./gifs/add-update-delete-cartitem.gif)
+
+<hr />
+<br/>
+
+<p>
+  Logged-in Users can checkout their current cart to complete their purchase, and see that reflected in thei order history.
+</p>
+
+![checkout-cart](./gifs/checkout-cart.gif)
+
+<br/>
+
+![add-update-delete-cartitem](./gifs/add-update-delete-cartitem.gif)
 
 <hr />
 <br/>
