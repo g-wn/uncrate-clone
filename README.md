@@ -21,7 +21,6 @@
 
 ## Project Information
 
-<hr />
 <br />
 
 <p>
@@ -32,7 +31,6 @@ Reduncrate is a clone of Uncrate.com. It is a site which provides a feed-like ex
 
 ## Features
 
-<hr />
 <br />
 
 Currently implemented features include:
@@ -45,7 +43,6 @@ Currently implemented features include:
 
 ## Planned Features
 
-<hr />
 <br />
 
 Upcoming features include:
@@ -54,7 +51,6 @@ Upcoming features include:
 
 ## Technologies:
 
-<hr />
 <br />
 
 * [React](https://beta.reactjs.org/)
@@ -76,7 +72,6 @@ Upcoming features include:
 
 ## How to Navigate the Site:
 
-<hr />
 <br />
 
 <p>
@@ -180,34 +175,14 @@ Upcoming features include:
 <hr />
 <br/>
 
-## Challenges During This Project:
-### ADD MAIN CHALLENGES HERE!
-
-<br />
-
-<p>
-  DESCRIBE PROJECT CHALLENGES HERE!
-</p>
-
-<br />
-
-<p>
-  ADD SOLUTIONS HERES!
-</p>
-
-<hr />
-<br />
-
 ## Get Started:
 
-<hr />
 <br />
 
 To run the app locally, navigate to the root directory of the project in the terminal and enter `flask run`. In a separate terminal, navigate to the `/react-app` directory and enter `npm start`. This should automatically launch a browser window navigated to the proper localhost address. By defauly, the app will be running on port 3000.
 
 ## Reduncrate Was Built By:
 
-<hr />
 <br />
 
 * Christopher Cohen - [GitHub](https://github.com/cmcohen89) - [LinkedIn](https://www.linkedin.com/in/christopher-cohen-94ab06236/)
