@@ -1,7 +1,6 @@
-import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink, useHistory } from 'react-router-dom';
-import { getCart, purchaseCart } from '../../store/cart';
+import { purchaseCart } from '../../store/cart';
 import CategoriesNav from '../Navigation/CategoriesNav';
 import Navigation from '../Navigation/Navigation';
 import './Checkout.css';
@@ -10,10 +9,6 @@ const Checkout = () => {
   const dispatch = useDispatch();
   const history = useHistory();
   const cart = useSelector(state => state.cart);
-
-  useEffect(() => {
-    dispatch(getCart());
-  }, [dispatch]);
 
   let totalPrice = 0;
   const usDollar = Intl.NumberFormat('en-US');

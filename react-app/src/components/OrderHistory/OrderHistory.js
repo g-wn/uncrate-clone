@@ -16,12 +16,6 @@ const OrderHistory = () => {
     dispatch(getCartHistory());
   }, [dispatch]);
 
-  let cartItems;
-  if (purchasedCarts && purchasedCarts.length) {
-    for (let cart of purchasedCarts) {
-      cartItems = Object.values(cart.cartItems);
-    }
-  }
 
   const usDollar = Intl.NumberFormat("en-US");
 
@@ -39,7 +33,7 @@ const OrderHistory = () => {
             {purchasedCarts.map(cart => (
               <div key={cart.id} className="checkout-items-container">
                 <div className="checkout-items">
-                  {cartItems.map((item, idx) => (
+                  {Object.values(cart.cartItems).map((item, idx) => (
                     <div key={idx} className="one-checkout-item">
                       <NavLink to={`/products/${item.product.id}`}>
                         <img
