@@ -20,7 +20,6 @@ def get_cart():
         .filter(Cart.purchased == False).count()
 
     if has_active_cart:
-        print("!!!!!HAS AN ACTIVE CART!!!!!")
         cart = Cart.query \
             .filter(Cart.user_id == current_user.get_id()) \
             .filter(Cart.purchased == False).one()
@@ -28,7 +27,6 @@ def get_cart():
         return cart.to_dict()
 
     else:
-        print("!!!!!!!!! NO ACTIVE CART !!!!!!!!!!")
         cart = Cart(
             user_id = current_user.get_id(),
             total = 0,

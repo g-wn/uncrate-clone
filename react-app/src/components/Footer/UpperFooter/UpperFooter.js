@@ -34,7 +34,6 @@ export default function UpperFooter() {
       setErrors(errors);
     }
 
-    console.log(subscribed);
   };
   return (
     <div className="upper-footer-container">
