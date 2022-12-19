@@ -10,9 +10,17 @@
     <br />
 </p>
 
+## Table of contents
+* [Project Information](#project-information)
+* [Features](#features)
+* [Planned Features](#planned-features)
+* [Technologies](#technologies)
+* [How to Navigate the Site](#how-to-navigate-the-site)
+* [Get Started](#get-started)
+* [Reduncrate Was Built By](#reduncrate-was-built-by)
+
 ## Project Information
 
-<hr />
 <br />
 
 <p>
@@ -21,21 +29,49 @@ Reduncrate is a clone of Uncrate.com. It is a site which provides a feed-like ex
 
 <br />
 
-### Built Using:
+## Features
+
+<br />
+
+Currently implemented features include:
+- Signup and Login functionality for Users
+- Create, read, update, and delete functionality for Products
+- Create, read, update, and delete functionality for Product Images
+- Create, read, update, and delete functionality for Carts
+- Create, read, and delete functionality for Favorites (AKA Stash)
+- Create and read fucntionality for Search
+
+## Planned Features
+
+<br />
+
+Upcoming features include:
+- Create, read, update, and delete functionality for Accessibility
+- Additional parameters for the Search feature
+
+## Technologies:
+
+<br />
+
 * [React](https://beta.reactjs.org/)
 * [Redux](https://redux.js.org/)
 * [Python](https://www.python.org/)
+* [JavaScript](https://devdocs.io/javascript/)
+* [NodeJS](https://nodejs.org/en/docs/)
+* [NPM](https://docs.npmjs.com/)
 * [Flask](https://palletsprojects.com/p/flask/)
 * [SQLAlchemy](https://www.sqlalchemy.org/)
 * [Alembic](https://alembic.sqlalchemy.org/en/latest/)
 * [PostgreSQL](https://www.postgresql.org/docs/)
 * [Sqlite](https://www.sqlite.org/docs.html)
+* [CSS3](https://devdocs.io/css/)
+* [HTML5](https://devdocs.io/html/)
+* [Git](https://devdocs.io/git/)
 
 <br />
 
 ## How to Navigate the Site:
 
-<hr />
 <br />
 
 <p>
@@ -44,7 +80,7 @@ Reduncrate is a clone of Uncrate.com. It is a site which provides a feed-like ex
 
 <br />
 
-#### PLACEHOLDER FOR INDEX ---> FILTERED BY CATEGORY ---> FILTERED BY SEARCH ---> DETAIL PAGE .gif
+![index-filter-search](./gifs/index-filter-search.gif)
 
 <hr />
 <br />
@@ -55,7 +91,7 @@ Reduncrate is a clone of Uncrate.com. It is a site which provides a feed-like ex
 
 <br />
 
-#### PLACEHOLDER FOR SIGNUP/LOGIN .gif
+![login-demo](./gifs/login-demo.gif)
 
 <hr />
 <br/>
@@ -66,7 +102,7 @@ Reduncrate is a clone of Uncrate.com. It is a site which provides a feed-like ex
 
 <br/>
 
-#### PLACEHOLDER FOR USER PROFILE .gif
+![user-profile](./gifs/user-profile.gif)
 
 <hr />
 <br />
@@ -77,7 +113,7 @@ Reduncrate is a clone of Uncrate.com. It is a site which provides a feed-like ex
 
 <br/>
 
-#### PLACEHOLDER FOR ADD PRODUCT .gif
+![create-product](./gifs/create-product.gif)
 
 <hr />
 <br/>
@@ -88,7 +124,18 @@ Reduncrate is a clone of Uncrate.com. It is a site which provides a feed-like ex
 
 <br/>
 
-#### PLACEHOLDER FOR EDIT PRODUCT/IMAGES .gif
+![update-product](./gifs/update-product.gif)
+
+<hr />
+<br/>
+
+<p>
+  Logged-in Users can choose to add a new image to a product, as well as edit or delete a current image.
+</p>
+
+<br/>
+
+![add-edit-delete-img](./gifs/add-edit-delete-img.gif)
 
 <hr />
 <br/>
@@ -99,7 +146,7 @@ Reduncrate is a clone of Uncrate.com. It is a site which provides a feed-like ex
 
 <br/>
 
-#### PLACEHOLDER FOR VIEW/DELETE-FROM STASH .gif
+![add-delete-stash](./gifs/add-delete-stash.gif)
 
 <hr />
 <br/>
@@ -110,30 +157,33 @@ Reduncrate is a clone of Uncrate.com. It is a site which provides a feed-like ex
 
 <br/>
 
-#### PLACEHOLDER FOR ADD TO CART/UPDATE-QUANTITY/REMOVE FROM CART .gif
+![add-update-delete-cartitem](./gifs/add-update-delete-cartitem.gif)
 
 <hr />
 <br/>
 
-## Challenges During This Project:
-### ADD MAIN CHALLENGES HERE!
-
-<br />
-
 <p>
-  DESCRIBE PROJECT CHALLENGES HERE!
+  Logged-in Users can checkout their current cart to complete their purchase, and see that reflected in thei order history.
 </p>
 
-<br />
+![checkout-cart](./gifs/checkout-cart.gif)
 
-<p>
-  ADD SOLUTIONS HERES!
-</p>
+<br/>
+
+![add-update-delete-cartitem](./gifs/add-update-delete-cartitem.gif)
 
 <hr />
+<br/>
+
+## Get Started:
+
 <br />
 
+To run the app locally, navigate to the root directory of the project in the terminal and enter `flask run`. In a separate terminal, navigate to the `/react-app` directory and enter `npm start`. This should automatically launch a browser window navigated to the proper localhost address. By defauly, the app will be running on port 3000.
+
 ## Reduncrate Was Built By:
+
+<br />
 
 * Christopher Cohen - [GitHub](https://github.com/cmcohen89) - [LinkedIn](https://www.linkedin.com/in/christopher-cohen-94ab06236/)
 * Sara Dunlop - [GitHub](https://github.com/Risclover) - [LinkedIn](https://www.linkedin.com/in/sara-dunlop-66375a146/)
