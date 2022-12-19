@@ -120,16 +120,16 @@
 
 ## Favorites (AKA Stash)
 
-## Add an item to favorites
+### Add an item to favorites
 
 * As a logged in user, I can add an item to my favorites by clicking the star icon next to a product
     * So I can come back later to remind myself of the most suitable products!
 
-## Read favorites
+### Read favorites
 
 * As a logged in user, I can view my list of favorites
 
-## Delete favorites
+### Delete favorites
 
 * As a logged in user, I can remove a favorited item permanently from my list
 
